@@ -19,8 +19,6 @@ drw-r--r-x
 
 * The permission can also be represented by adding the numbers in each section where       `r=4`,  `w=2` and `x=1`
 
-**Example:**
-
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 -rw-r--r-x      #Can be represented as 645

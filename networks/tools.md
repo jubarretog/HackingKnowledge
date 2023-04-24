@@ -27,9 +27,29 @@ nc $hostname $port
 ```
 {% endcode %}
 
+
+
+* Use only numeric IP no DNS
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -n $IP $port
+```
+{% endcode %}
+
+
+
+* Verbose Output
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -v $hostname $port
+```
+{% endcode %}
+
 ***
 
-* Start in silence mode in the specified port
+* Start in listen mode in the specified port
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -37,7 +57,29 @@ nc -l -p $Port
 ```
 {% endcode %}
 
-####
+
+
+* Make a file transmission
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -lp $port > $incomingfile  #From listening side
+nc -n -v - $port < $file      #From sender side
+$incomingfile -h              #Check is trasmision was correct from listener side
+```
+{% endcode %}
+
+
+
+*
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -l -p $Port -e $program
+```
+{% endcode %}
+
+
 
 ## <mark style="color:green;">Nmap</mark>
 
@@ -210,7 +252,7 @@ ls -l /usr/share/nmap/scripts/*$keyword*           #Using ls
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap $target -Pn 
+nmap $target -Pn
 ```
 {% endcode %}
 

@@ -15,4 +15,5 @@
 * **DNS:** Domain Name System, is an TCP/IP protocol which transforms domain URL into IP adresses.
 * **HTTP:** HyperText Tranfer Protocol, set of rules used for communicating with web servers for the transmitting of webpage data. Usual port is to access is 80.
 * **HTTPS:** HyperText Transfer Protocol Secure, is the secure version of HTTP where data is encrypted, stops people from seeing the data you are receiving and sending. Usual port is to access is 443.
-* WHOIS: Listens on TCP port 43 for incoming requests, server replies with various information related to the domain requested.
+* **WHOIS:** Listens on TCP port 43 for incoming requests, server replies with various information related to the domain requested.
+* **SSH:** Secure Shell, Protocol and program wich let remote access to a server via a secure channel. Allows us to remotely execute commands on another device.Any data between devices is encrypted went traveling through network. It listens on port 22.

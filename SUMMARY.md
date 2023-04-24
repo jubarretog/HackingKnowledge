@@ -22,6 +22,7 @@
   * [File Permissions](linux/file-permissions.md)
   * [Common Directories](linux/common-directories.md)
   * [Crometabs](linux/crometabs.md)
+  * [Enviroment Variables](linux/general-concepts/enviroment-variables.md)
 * [Commands](linux/commands.md)
   * [Command Operators](linux/command-operators.md)
 

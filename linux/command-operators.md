@@ -42,3 +42,28 @@ $command > $filename
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command >> $filename
 </strong></code></pre>
+
+
+
+* Tooks content from a file
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C; $filename
+</strong></code></pre>
+
+
+
+* Pass the result of a commnad as parameter for the other
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 | $command2
+</strong></code></pre>
+
+
+
+* Cath an error into a file
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 2>$filename
+</strong></code></pre>
+
+{% hint style="info" %}
+&#x20;**Note:** The number `2` indicates the `STDERR`
+{% endhint %}

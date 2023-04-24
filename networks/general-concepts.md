@@ -9,7 +9,6 @@
 * **IP adress:** Internet Protocol address, identify a host on a network and can't be active simultaneously more than once within the same network. It's conformed by 4 octets of bits, each octate representes a number in range 0-255.
 * **LAN:** Local Area Network.
 * **Ping:** Way to send ICMP packets to determine the performance of a connection between devices.
-* **SSH:** Secure Shell, Protocol and program wich let remote access to a server via a secure channel. Allows us to remotely execute commands on another device.Any data between devices is encrypted went traveling through network.
 * **SCP:** Secure File Copy, transfer files between two computers using the SSH protocol to provide authentication and encryption.
 * **Switch:** Device designed to aggregate multiple other networking-capable device using ethernet.Sends the package only to the intended target, thus reducing network traffic.
 * **Repeaters:** Same function as switch but replays sent information to all devices connected to it.

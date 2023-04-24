@@ -14,6 +14,8 @@ site:$Domain
 ```
 {% endcode %}
 
+
+
 * Show results with the specified word in url
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -21,6 +23,8 @@ site:$Domain
 inurl:$word
 ```
 {% endcode %}
+
+
 
 * Show results with the specified extension
 
@@ -30,10 +34,22 @@ filetype:$extension
 ```
 {% endcode %}
 
+
+
 * Show results with the specified word in title
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```url
 intitle:$word
+```
+{% endcode %}
+
+
+
+* To exclude a option from search
+
+{% code overflow="wrap" lineNumbers="true" %}
+```url
+-$option:$value
 ```
 {% endcode %}

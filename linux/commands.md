@@ -1,5 +1,47 @@
 # Commands
 
+* Create a bash instance
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+bash
+```
+{% endcode %}
+
+
+
+* Exit from a bash instance
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+exit
+```
+{% endcode %}
+
+
+
+* Change user password
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+passwd
+```
+{% endcode %}
+
+
+
+* See manual/documentation or found a command
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+man $command
+man -k $keyword        #Make search of command by a keyword
+apropos $keyword       #Find a command by description
+```
+{% endcode %}
+
+
+
 * Clean up the console content
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -7,13 +49,6 @@
 clear
 ```
 {% endcode %}
-
-
-
-* Output any text that we provide
-
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>echo $text
-</strong></code></pre>
 
 ***
 
@@ -44,6 +79,7 @@ sudo $command
 ls           #In actual directory
 ls $path     #In path directory
 ls -a        #Include hidden files
+ls -1        #List each file in a single line
 ls -l        #File permissions, associated user and groups, creation date and hour
 ```
 {% endcode %}
@@ -63,34 +99,155 @@ sudo chmod -$permision $filename  #Remove permission
 
 ***
 
+* Shows Actual Working directory
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+pwd
+```
+{% endcode %}
+
+
+
 * Change directory to the specified path
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-cd        #Redirect the home directory
+cd        #Redirect to the home directory
+cd ~      #Redirect to the home directory
 cd $path  #Redirect to the specified file
 cd ../    #Redirect to the upper directory
 ```
 {% endcode %}
 
+
+
+* Get path of file by searching in directories defined at PATH
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+which $filename
+```
+{% endcode %}
+
 ***
+
+* Get path of file by searching in **locate.db**
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+locate $filename
+```
+{% endcode %}
+
+{% hint style="info" %}
+**Note:** `locate.db` is a build in db of system files
+{% endhint %}
+
+
+
+* Update `locate.db` manually
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo updatedb
+```
+{% endcode %}
+
+
+
+* List sockets statistics
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+ss
+```
+{% endcode %}
+
+
+
+* Create an enviroment variable
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+$variablename=$value          #Created only in the current shell
+export $variablename=$value   #Created globally
+```
+{% endcode %}
+
+
+
+* List enviroment variables
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+env
+```
+{% endcode %}
+
+
+
+* List command history
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+history
+export HISTCONTROL=$value          #Set output format for history
+export HISTIGNORE='$regex'         #Set ignore values for history
+export HISTTIMEFORMAT='$options'   #Set time format for history
+```
+{% endcode %}
+
+
+
+* Repeat a command based on hostory
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+!$number   #Repeat the command with that number
+!!         #Repeat last command used
+```
+{% endcode %}
+
+
+
+* Asign a name for simplificated a command or redefine a command
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+alias $name=$command
+alias         #See all defined aliases
+unalias       #Delete alias
+```
+{% endcode %}
+
+
+
+* Output any text that we provide
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>echo $text
+</strong></code></pre>
+
+
+
+* Create a new directory
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+mkdir $dirname
+mkdir ${dirname1,dirname2}            #Create various folders
+mkdir -p $dirname/{$subdir1,$subdir2} #Create a folder with subfolders
+```
+{% endcode %}
+
+
 
 * Shows file content in command-line
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 cat $file
-cat $path     #In the specified file path
-```
-{% endcode %}
-
-***
-
-* Shows Actual Working directory
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-pwd
+cat $path     #File in the specified file path
 ```
 {% endcode %}
 
@@ -114,7 +271,11 @@ find -size  $size$unit     #Find by size
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-wc $filename
+wc $filename      #Count number of lines, words and characters
+wc -l $filename   #Count number of lines
+wc -m $filename   #Count number of characters
+wc -c $filename   #Count number of bytes
+wc -w $filename   #Count number of words
 ```
 {% endcode %}
 
@@ -125,6 +286,29 @@ wc $filename
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 grep "$text" $filename
+grep -i "$text" $filename   #Ignore the value given
+grep -v "$text" $filename   #Returns non-matching results
+```
+{% endcode %}
+
+
+
+* Edit text and streams
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sed '$regex' $filename
+```
+{% endcode %}
+
+
+
+* Extract a section of text from file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+cut -f $fieldnumber -d "$delimiter" $filename
+awk -F "$delimiter" '{print $field, $field}'     #Extraction with AWK
 ```
 {% endcode %}
 
@@ -134,8 +318,12 @@ grep "$text" $filename
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sort $filename     #Ordena alfabeticamente por el primer caracter
-sort -k $campo$separador$posicion frutas #Ordena por campo y posicion dados
+sort $filename     #Order by alphabeth using first character
+sort -f $filename  #Ignore Case sensitive
+sort -u $filename  #Takes only first entry
+sort -r $filename  #Reverse the result
+sort -n $filename  #Compare as numerical value
+sort -k $field$delimitertor$position frutas #Order by field and position
 ```
 {% endcode %}
 
@@ -151,7 +339,25 @@ sort $filename | uniq -c #Count number of ocurrencys
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** Uniq needs a sort file as input for work correctly
+**Note:** `uniq` needs a sort file as input for work correctly
+{% endhint %}
+
+***
+
+* Compare content of files
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+comm $file1 $file2
+comm -$number $file1 $file2  #Supress especified lines
+diff $file1 $file2 
+diff -c $file1 $file2     #Ouput in context format
+diff -u $file1 $file2     #Ouput in unified format
+```
+{% endcode %}
+
+{% hint style="info" %}
+**Note:** In `comm` output first column Represents unique lines for first file, second columns the unique lines for second file, and the third column the lines both share.
 {% endhint %}
 
 ***
@@ -214,16 +420,6 @@ tar -xf $filename         #Extract
 
 ***
 
-* See manual/documentation for a command
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-man $command
-```
-{% endcode %}
-
-***
-
 * Create a file with the specified name
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -260,7 +456,7 @@ cp $filename $newfilename
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 mv $filename $dirname
-mv $filename $newname
+mv $filename $newname  #Rename file
 ```
 {% endcode %}
 
@@ -276,16 +472,30 @@ file $filename
 
 ***
 
-* Shows the initial lines of a file
+* Shows the initial or final lines of a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-head $filename
-head -n $number $filename #Shows the first $number lines
+head $filename #Shows 10 initial lines
+head -n$number $filename #Shows the first $number lines
+tail $filename #Shows 10 final lines
+tail -n$number $filename #Shows the last $number lines
+tail -f $filename #Shows appended lines as data grows
 ```
 {% endcode %}
 
-***
+
+
+* Execute a command at regular intervals
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+watch
+watch -n$number $command #Execute command every $number seconds
+```
+{% endcode %}
+
+
 
 * Change to the specified user
 
@@ -304,7 +514,8 @@ su -l $username  #Redirects to the home directory of the other user
 ```bash
 nano $filename
 nano -B $filename #Make a backup when opening a file with nano
-vim $filename     #More powerful Text Editor
+vi $filename      #More powerful Text Editor
+vim $filename     #Improved version of vi
 ```
 {% endcode %}
 
@@ -326,14 +537,16 @@ du -b $filename    #Shows output in bytes mode
 
 ***
 
-* Download files from the web via HTTP
+* Download files from the web
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-wget URL
-curl $URL 
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">wget URL
+wget -O $name $URL  #Save with a different name
+<strong>curl $URL 
+</strong><strong>curl -o $name $URL  #Save with a different name
+</strong>axel $URL           #Dowload through various connections
+axel -n$number $URL #Specify number of connection to use
+axel -O $name $URL  #Save with a different name
+</code></pre>
 
 
 
@@ -376,6 +589,9 @@ python3 -m $modulename    #Start a python module
 ```bash
 ps        #Show process run in the user sesion
 ps aux    #Shows other user and complete system processes
+ps -e     #Shows all processes
+ps -f     #Display full format listing
+ps -C $commandname  #Shows process with a specified command
 ```
 {% endcode %}
 
@@ -408,19 +624,18 @@ kill -s SIGSTOP $PID   #Stop/suspend a process
 
 ***
 
-* Start or kill a process
+* Manage system process and services
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 systemctl $option $process
 systemctl start $process       #For starting a process
 systemctl stop $process        #For killing a process
+systemctl enable $process      #Set proccess to start at startup
+systemctl disable $process     #Set proccess to not start at startup
+systemctl list-unit-files      #List status of services
 ```
 {% endcode %}
-
-{% hint style="info" %}
-**Note** There are other options like `unable` or `disable` etc...
-{% endhint %}
 
 ***
 
@@ -429,6 +644,10 @@ systemctl stop $process        #For killing a process
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 fg $PID
+fg %$jobID    #Foreground specified list ID process
+fg %$String   #Refers to the beginning of the suspended process
+fg %+         #Refers to the current job
+fg %-         #Refers to the previus job
 ```
 {% endcode %}
 
@@ -438,13 +657,24 @@ fg $PID
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-bg $PID
+bg         #Resume stopped background processes
+bg $PID   
 ```
 {% endcode %}
 
 {% hint style="info" %}
 **Note:** Background can only be used after stopping a process with <mark style="color:orange;">`^z`</mark>
 {% endhint %}
+
+***
+
+* List actual shell process
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+jobs
+```
+{% endcode %}
 
 ***
 
@@ -465,24 +695,38 @@ crontab -i     #Prompt actual crontab and delete it
 
 ***
 
-* Manage packages, repositories and digital signature
+* Manage packages, repositories and digital signature from APT
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-apt-get install $packagename   #Install a package
-apt-get reinstall $packagename #Reinstall a package from scratch
-apt-get remove $packagename    #Remove a package
-apt-get update $packagename    #Update a package
-apt-get update                 #Update all package
-apt-get upgrade                #Update linux system
-add-apt-repository   #Add repositories from developers to your apt lists
-apt-key add $filename    #Add key file to trusted keys list
-apt-key del $keyID       #Remove key trusted keys list
-apt-key list $filename   #Lisr all trusted keys
+apt install $packagename   #Install a package
+apt reinstall $packagename #Reinstall a package from scratch
+apt remove $packagename    #Remove a package
+apt remove --purge $packagename  #Delete package and its configuration
+apt update $packagename    #Update a package
+apt update                 #Update all packages
+apt upgrade                #Update linux system and applications
+apt-get                    #Use first version for actions
+apt-cache search $toolname #Search for a tool in apt repositories
+apt show $packagename      #Show information about a package
+add-apt-repository         #Add repositories from developers to your apt lists
+apt-key add $filename      #Add key file to trusted keys list
+apt-key del $keyID         #Remove key trusted keys list
+apt-key list               #List all trusted keys
 ```
 {% endcode %}
 
-***
+
+
+* Manage packages via Debian
+
+```
+dpkg -i $packagename   #Install a package 
+dpkg -r $packagename   #Remove a package 
+dpkg -P $packagename   #Delete package and its configuration
+```
+
+
 
 * Test if connection to a remote resource is possible
 
@@ -550,5 +794,16 @@ dig @$DNSIPaddress $URLdomain  $record   #Specify record type
 ```bash
 fdisk $device
 fdisk -l $device       #List all current disk partitions
+```
+{% endcode %}
+
+
+
+* Check NIC configuration
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+ifconfig     #For all Interfaces
+iwconfig     #For wireless Interfaces
 ```
 {% endcode %}
