@@ -109,11 +109,20 @@ nc -l -p $Port -e $program
 
 ### **Commands**
 
-* General syntax
+* Basic scans
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap $scantype $options $target
+nmap $scantype $options $target #General syntax
+nmap $ip  #Scan an IP
+nmap $domain  #Scan an IP usign domain
+nmap $ip1 $ip2  # Scan some IPs
+nmap x.x.x.$range1-$range2 #Scan a range of IPs
+nmap x.x.x.x/$mask  #Scan using CIDR notation
+nmap -iL $inputfile #Scan using the IPs form a list
+nmap -iR $number #Scan random hosts
+nmap --exclude $ip  #Scan excluding an specific IP
+nmap --excludefile $file #Scan excludings the IPs from a list
 ```
 {% endcode %}
 
@@ -128,6 +137,7 @@ nmap -sS $target  #TCP SYN scan, default if run with sudo
 nmap -sN $target  #TCP Null scan
 nmap -sF $target  #TCP FIN scan
 nmap -sX $target  #TCP Xmas scan
+nmap -sA $target  #TCP ACK scan
 ```
 {% endcode %}
 

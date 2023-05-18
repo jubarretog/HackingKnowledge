@@ -200,7 +200,7 @@ export HISTTIMEFORMAT='$options'   #Set time format for history
 
 
 
-* Repeat a command based on hostory
+* Repeat a command based on history
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
