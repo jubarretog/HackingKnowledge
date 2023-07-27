@@ -7,3 +7,9 @@ Provides insight into the tactics that hackers employ to attain these objectives
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 * [https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf](https://www.unifiedkillchain.com/assets/The-Unified-Kill-Chain.pdf)
+
+## Cyber Kill Chain
+
+Component of intelligence
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>

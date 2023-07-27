@@ -1,5 +1,13 @@
 # Attacks
 
+## Classification of attacks
+
+* **Passive:** Is focused in monitoring and interception of data flows through network traffic.
+* **Active:** Data tampering, corruption, extraction or disruption of communication between secured systems.
+* **Close-in:** Attacker is in close physical proximity to the objective target. Normally focused in gathering, modification of disruption of access to a system's information.
+* **Insider:** Are performed by trusted persons using privileged access to violate rules or intentionally cause a threat.
+* **Distribution:** Tampering with hardware or software prior to installation.
+
 ## Attack Stages
 
 * **Information Gathering:** Collecting as much publically accessible information about a target/organisation as possible.

@@ -17,7 +17,7 @@ sudo apt install netcat-traditional
 ```
 {% endcode %}
 
-***
+
 
 * Start netcat
 
@@ -47,7 +47,7 @@ nc -v $hostname $port
 ```
 {% endcode %}
 
-***
+
 
 * Start in listen mode in the specified port
 
@@ -126,7 +126,7 @@ nmap --excludefile $file #Scan excludings the IPs from a list
 ```
 {% endcode %}
 
-***
+
 
 * TCP scan
 
@@ -141,7 +141,7 @@ nmap -sA $target  #TCP ACK scan
 ```
 {% endcode %}
 
-***
+
 
 * UDP scan
 
@@ -153,7 +153,7 @@ rts $numberofports $target   #Specify the most common UDP ports
 ```
 {% endcode %}
 
-***
+
 
 * Perform Ping Sweep
 
@@ -163,7 +163,7 @@ nmap -sn $targetIPranges
 ```
 {% endcode %}
 
-***
+
 
 * Detect OS
 
@@ -173,7 +173,7 @@ nmap -O $target
 ```
 {% endcode %}
 
-***
+
 
 * Version of services running
 
@@ -183,7 +183,7 @@ nmap -sV $target
 ```
 {% endcode %}
 
-***
+
 
 * Increase verbosity level of output
 
@@ -194,7 +194,7 @@ nmap -vv $target      #Level 2 verbosity, MOST recommended
 ```
 {% endcode %}
 
-***
+
 
 * Specified Output Format
 
@@ -207,7 +207,7 @@ nmap -oA $target  #All 3 Formats at once
 ```
 {% endcode %}
 
-***
+
 
 * Increase the speed the scan runs at
 
@@ -221,7 +221,7 @@ nmap -T$timinglevel $target
 **Note:** This mode is louder than normal
 {% endhint %}
 
-***
+
 
 * Select which port scan
 
@@ -233,7 +233,7 @@ nmap -p- $target             #Scan all ports
 ```
 {% endcode %}
 
-***
+
 
 * Activate a script from NSE library
 
@@ -245,7 +245,7 @@ nmap -p $port --script=$script --script-args $script.$arg='$argvalue'
 ```
 {% endcode %}
 
-***
+
 
 * Search scripts in NSE
 
@@ -256,7 +256,7 @@ ls -l /usr/share/nmap/scripts/*$keyword*           #Using ls
 ```
 {% endcode %}
 
-***
+
 
 * Scan without pinging a port
 
@@ -266,7 +266,7 @@ nmap $target -Pn
 ```
 {% endcode %}
 
-***
+
 
 * Fragment packets sent in scan
 
@@ -281,7 +281,7 @@ nmap $target -mpu $number   #Specify packet's length
 **Note:** Length must be a multiple of 8
 {% endhint %}
 
-***
+
 
 * Specify delay between packects sent
 
@@ -291,7 +291,7 @@ nmap $target --scan-delay $number ms
 ```
 {% endcode %}
 
-***
+
 
 * Generate invalid checksum for packets
 
@@ -301,7 +301,7 @@ nmap $target --badsum
 ```
 {% endcode %}
 
-***
+
 
 * Append an arbitrary length of random data to the end of packets
 

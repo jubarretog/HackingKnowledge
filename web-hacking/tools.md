@@ -16,7 +16,7 @@ sudo apt-get install steghide
 ```
 {% endcode %}
 
-***
+
 
 * Shows embedded information got from a file
 
@@ -26,7 +26,7 @@ steghide info $filename
 ```
 {% endcode %}
 
-***
+
 
 * Extract embedded data from a file
 

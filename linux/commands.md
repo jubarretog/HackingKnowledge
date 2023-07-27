@@ -50,7 +50,7 @@ clear
 ```
 {% endcode %}
 
-***
+
 
 * Shows the current logged in user
 
@@ -60,7 +60,7 @@ whoami
 ```
 {% endcode %}
 
-***
+
 
 * Executes a command with superuser(root) permises
 
@@ -70,7 +70,7 @@ sudo $command
 ```
 {% endcode %}
 
-***
+
 
 * Show all files and directories in specified
 
@@ -88,7 +88,7 @@ ls -l        #File permissions, associated user and groups, creation date and ho
 **Note:** Hidden files start with a dot.  **Ex:**_`.hiddenfile`_
 {% endhint %}
 
-***
+
 
 * Change permission of a file
 
@@ -97,7 +97,7 @@ sudo chmod +$permision $filename  #Add permission
 sudo chmod -$permision $filename  #Remove permission
 ```
 
-***
+
 
 * Shows Actual Working directory
 
@@ -130,7 +130,7 @@ which $filename
 ```
 {% endcode %}
 
-***
+
 
 * Get path of file by searching in **locate.db**
 
@@ -251,7 +251,7 @@ cat $path     #File in the specified file path
 ```
 {% endcode %}
 
-***
+
 
 * Shows path where is the specified file
 
@@ -265,7 +265,7 @@ find -size  $size$unit     #Find by size
 ```
 {% endcode %}
 
-***
+
 
 * Count the number of entries in a file
 
@@ -279,7 +279,7 @@ wc -w $filename   #Count number of words
 ```
 {% endcode %}
 
-***
+
 
 * Search through a file and shows any entries with the specified value
 
@@ -312,7 +312,7 @@ awk -F "$delimiter" '{print $field, $field}'     #Extraction with AWK
 ```
 {% endcode %}
 
-***
+
 
 * Sort lines of a file
 
@@ -327,7 +327,7 @@ sort -k $field$delimitertor$position frutas #Order by field and position
 ```
 {% endcode %}
 
-***
+
 
 * Find unique ocurrencies in a file
 
@@ -342,7 +342,7 @@ sort $filename | uniq -c #Count number of ocurrencys
 **Note:** `uniq` needs a sort file as input for work correctly
 {% endhint %}
 
-***
+
 
 * Compare content of files
 
@@ -360,7 +360,7 @@ diff -u $file1 $file2     #Ouput in unified format
 **Note:** In `comm` output first column Represents unique lines for first file, second columns the unique lines for second file, and the third column the lines both share.
 {% endhint %}
 
-***
+
 
 * Shows the content of a file with specifications
 
@@ -372,7 +372,7 @@ tr $filename -d $expression #Delete what concidies with expression
 ```
 {% endcode %}
 
-***
+
 
 * Encode or decode base64
 
@@ -383,7 +383,7 @@ base64 $filename -d        #Decode
 ```
 {% endcode %}
 
-***
+
 
 * Transform hexdump
 
@@ -394,7 +394,7 @@ xdd -r $filename     #Reverse hexdump to a file
 ```
 {% endcode %}
 
-***
+
 
 * Compress or extract files
 
@@ -409,7 +409,7 @@ tar -xf $filename         #Extract
 ```
 {% endcode %}
 
-***
+
 
 * Access to a remote machine through ssh
 
@@ -418,7 +418,7 @@ tar -xf $filename         #Extract
 </strong>ssh -T $user@$IP              #Connect trying tunneling
 </code></pre>
 
-***
+
 
 * Create a file with the specified name
 
@@ -428,7 +428,7 @@ touch $filename
 ```
 {% endcode %}
 
-***
+
 
 * Delete a file or directory
 
@@ -439,7 +439,7 @@ rm -R $dirname     #To remove a directory
 ```
 {% endcode %}
 
-***
+
 
 * Copy the content of a file into a new one
 
@@ -449,7 +449,7 @@ cp $filename $newfilename
 ```
 {% endcode %}
 
-***
+
 
 * Move or rename a file
 
@@ -460,7 +460,7 @@ mv $filename $newname  #Rename file
 ```
 {% endcode %}
 
-***
+
 
 * Shows the type of a file
 
@@ -470,7 +470,7 @@ file $filename
 ```
 {% endcode %}
 
-***
+
 
 * Shows the initial or final lines of a file
 
@@ -506,7 +506,7 @@ su -l $username  #Redirects to the home directory of the other user
 ```
 {% endcode %}
 
-***
+
 
 * Create or edit a file in command-line
 
@@ -523,7 +523,7 @@ vim $filename     #Improved version of vi
 **Note:** In Unix `^` represents Ctrl key
 {% endhint %}
 
-***
+
 
 * Shows stimate disk usage of a file
 
@@ -535,7 +535,7 @@ du -b $filename    #Shows output in bytes mode
 ```
 {% endcode %}
 
-***
+
 
 * Download files from the web
 
@@ -550,7 +550,7 @@ axel -O $name $URL  #Save with a different name
 
 
 
-- ***
+* Codificate MD5 encryption for a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -570,7 +570,7 @@ scp -r $dirname $user@$remoteIP:$remotepath   #For copying a directory
 ```
 {% endcode %}
 
-***
+
 
 * Execute python utilities
 
@@ -581,7 +581,7 @@ python3 -m $modulename    #Start a python module
 ```
 {% endcode %}
 
-***
+
 
 * Get information about the system running processes
 
@@ -595,7 +595,7 @@ ps -C $commandname  #Shows process with a specified command
 ```
 {% endcode %}
 
-***
+
 
 * Get real time information about the system running processes
 
@@ -605,7 +605,7 @@ top
 ```
 {% endcode %}
 
-***
+
 
 * Kill a system proccess, we can send some signals to specified type of killing
 
@@ -622,7 +622,7 @@ kill -s SIGSTOP $PID   #Stop/suspend a process
 **Note** Proccess with a PID equal to 0 is a proccess that start with system boot
 {% endhint %}
 
-***
+
 
 * Manage system process and services
 
@@ -637,7 +637,7 @@ systemctl list-unit-files      #List status of services
 ```
 {% endcode %}
 
-***
+
 
 * Foreground a process
 
@@ -651,7 +651,7 @@ fg %-         #Refers to the previus job
 ```
 {% endcode %}
 
-***
+
 
 * Background a process
 
@@ -666,7 +666,7 @@ bg $PID
 **Note:** Background can only be used after stopping a process with <mark style="color:orange;">`^z`</mark>
 {% endhint %}
 
-***
+
 
 * List actual shell process
 
@@ -676,7 +676,7 @@ jobs
 ```
 {% endcode %}
 
-***
+
 
 * Schedule to repeat a process as a crontab
 
@@ -693,7 +693,7 @@ crontab -i     #Prompt actual crontab and delete it
 **Note:** Every user has only one crometab
 {% endhint %}
 
-***
+
 
 * Manage packages, repositories and digital signature from APT
 
@@ -741,7 +741,7 @@ ping $IPaddress -v              #Show a verbose output
 ```
 {% endcode %}
 
-***
+
 
 * Show the path a request takes as it heads to the target machine
 
@@ -754,7 +754,7 @@ traceroute $IPaddress -T #Use TCP SYN for connection probes
 ```
 {% endcode %}
 
-***
+
 
 * Shows domain register information
 
@@ -775,7 +775,7 @@ nslookup -type=$record $URLdomain    #Specify record type
 ```
 {% endcode %}
 
-***
+
 
 * Query recursive DNS servers for domain's information
 
@@ -786,7 +786,7 @@ dig @$DNSIPaddress $URLdomain  $record   #Specify record type
 ```
 {% endcode %}
 
-***
+
 
 * Manage disk partition table
 

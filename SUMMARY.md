@@ -14,6 +14,7 @@
   * [Attacks](cybersecurity-basics/attacks.md)
   * [Technics](cybersecurity-basics/technics.md)
   * [Vulnerabilities](cybersecurity-basics/vulnerabilities.md)
+* [Security Laws and Regulations](cybersecurity-basics/security-laws-and-regulations.md)
 * [CTFs](cybersecurity-basics/ctfs.md)
 
 ## 🐧 Linux
@@ -58,6 +59,7 @@
   * [Protocols](networks/protocols.md)
     * [DNS](networks/general-concepts/protocols/dns.md)
     * [HTTP](networks/general-concepts/protocols/http.md)
+* [Hypervisors](networks/hypervisors.md)
 * [Tips](networks/tips.md)
 * [Tools](networks/tools.md)
 

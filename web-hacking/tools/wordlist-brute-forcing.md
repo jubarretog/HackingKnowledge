@@ -14,7 +14,7 @@ sudo apt install gobuster
 ```
 {% endcode %}
 
-***
+
 
 * Show commands and utilities
 
@@ -24,7 +24,7 @@ gobuster -h
 ```
 {% endcode %}
 
-***
+
 
 * Scan specified URL
 
@@ -34,7 +34,7 @@ gobuster -u $URL
 ```
 {% endcode %}
 
-***
+
 
 * Path to file with wordlist to use
 

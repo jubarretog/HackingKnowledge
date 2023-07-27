@@ -13,6 +13,10 @@
   * **Confidentiality:** Protection of data from unauthorized access and misuse.
   * **Integrity:** Information is kept accurate and consistent unless authorized changes are made.
   * **Availability:** Data must be available and accessible by the user to be useful.
+* **SFU Triangle:** Security, Functionality and Usability, define the level of security implemented in a system.
+  * **Security:** Stablish the restrictions in data access.
+  * **Functionality:** The features of an application.
+  * **Usability:** GUI and user interaction.
 * **PIM:** Privileged Identity Management, translate a user's role within an organisation into an access role on a system.
 * **PAM:** Privileged Access Management, management of the privileges a system's access role has.
 * **Vetting:** Screening process where applicant's backgrounds are examined to establish the risk they pose to an organisation.
@@ -21,3 +25,4 @@
 * **Bug bounty program:** Allows the company to offer a reward for anyone who discovers a security vulnerability in the company’s systems.
 * **Service:** Special type of application that runs in the background
 * **Firewall:** Control what is or isn't allowed to pass through a port.
+* **Non-Repudiation:** Allows to guarane the participation of both parts of a communication.

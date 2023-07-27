@@ -8,7 +8,7 @@ $command &
 ```
 {% endcode %}
 
-***
+
 
 * Execute a list of commands
 
@@ -22,7 +22,7 @@ $command1 && $command2
 **Note:** The next command only will be executed if previous was successful
 {% endhint %}
 
-***
+
 
 * Redirects the output of a command to a file
 
