@@ -25,6 +25,18 @@
 * **RFC 793:** Norm that stablished de right behaviour for TCP protocol.
 * **RFC 3912:** Norm that stablished de right behaviour for WHOIS protocol.
 * **Ping Sweep:** Send an ICMP packet to each possible IP address for a specified network to map it.
-* **CIDR:** Classless Inter-Domain Routing, useful notation for identifying subnets. It takes Ip adress and add netmask at the final of address as _/mask_.  **Ex**: _192.168.34.23/24_ para la masacara _255.255.255.0_
+* **CIDR:** Classless Inter-Domain Routing, useful notation for identifying subnets. It takes Ip adress and add netmask at the final of address as _/mask_.  **Ex**: _192.168.34.23/24_ for the mask _255.255.255.0_
 * **TUN:** Abreviation for TUNnel, simulates a network layer device and operates in layer 3 carrying IP packets.
+* **SSID:** Service Set Identifier, name given to a network to recognized from another networks near by.
+* **Firewall:** Look deeper into a network traffic and identify malicious behavior to blocked.
+  * **Network layer:** Filters communications based on source and destination IP addresses.
+  * **Transport layer:** Filters communications based on source and destination data ports, as well as connection states.
+  * **Aplication layer:** Filters communications based on an application, program or service.
+  * **Context Aware layer:** Filters communications based on the user, device, role, application type and threat profile.
+  * **Proxy:** Filters web content requests like URLs, domain names and media types.
+  * **Reverse proxy:** Placed in front of web servers, reverse proxy servers protect, hide, offload and distribute access to web servers.
+  * **NAT:** Network Acces Translation, hides or masquerades the private addresses of network hosts.
+  * **Host-Based:** Filters ports and system service calls on a single computer operating system.
+* **VPN:** Create a tunnel through the conection to a network where data is encrypted.
+* **Antivirus:** Uses signatures or behavioral analysis of applications to identify and block malicious code.
 

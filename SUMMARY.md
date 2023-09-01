@@ -7,14 +7,16 @@
 
 ## 🔑 Cybersecurity Basics
 
-* [Career Paths](cybersecurity-basics/career-paths.md)
 * [General Concepts](cybersecurity-basics/general-concepts.md)
   * [Unified Kill Chain](cybersecurity-basics/general-concepts/unified-kill-chain.md)
   * [Methodologies](cybersecurity-basics/pen-testing-methodologies.md)
   * [Attacks](cybersecurity-basics/attacks.md)
+  * [Malware](cybersecurity-basics/general-concepts/malware.md)
   * [Technics](cybersecurity-basics/technics.md)
   * [Vulnerabilities](cybersecurity-basics/vulnerabilities.md)
+* [Career Paths](cybersecurity-basics/career-paths.md)
 * [Security Laws and Regulations](cybersecurity-basics/security-laws-and-regulations.md)
+* [Security Models](cybersecurity-basics/security-models.md)
 * [CTFs](cybersecurity-basics/ctfs.md)
 
 ## 🐧 Linux
