@@ -1,6 +1,6 @@
 # SQL
 
-## Information Schema
+## <mark style="color:green;">Information Schema</mark>
 
 DB that save information about all other DB the user has access, find as **`information_schema`**
 
@@ -9,17 +9,21 @@ DB that save information about all other DB the user has access, find as **`info
   * table\_schem
   * table\_name
   * table\_type
-* **`.columns`:** Information of every colum from tables.
+* **`.columns`:** Information of every column from tables.
   * table\_schema: DB where table is.
   * table\_name: Name of the table.
   * column \_name: Name of column from a specified table.
 
-## Commands
+
+
+## <mark style="color:green;">Commands</mark>
 
 * Show database name
 
 <pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>database();
 </strong></code></pre>
+
+***
 
 * Get an Specified column from a query and put it in a string separated by commas
 
@@ -29,6 +33,8 @@ group_concat($column) from $table
 group_concat($column SEPARATOR '$separator') FROM $table #AddSeparator for results
 ```
 {% endcode %}
+
+***
 
 * Select data
 
@@ -50,6 +56,8 @@ SELECT * from $table;-- #Specified everything after -- will be taken as comment
 ```
 {% endcode %}
 
+***
+
 * Select data from multiple tables
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -58,10 +66,14 @@ SELECT * FROM $table1 UNION SELECT * FROM $table2;    #Combine results
 ```
 {% endcode %}
 
+***
+
 * Insert data
 
 <pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>INSERT INTO $table ($column1,$column2) VALUES ('$value1','$value2');
 </strong></code></pre>
+
+***
 
 * Update data
 
@@ -71,6 +83,8 @@ UPDATE $table SET $column1='$value1',$column2='$value2' WHERE $column='$value';
 ```
 {% endcode %}
 
+***
+
 * Delete  data
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -79,3 +93,6 @@ DELETE FROM $table; #Delete all rows
 DELETE FROM $table where username='martin'; #Delete all rows that match condition
 ```
 {% endcode %}
+
+***
+

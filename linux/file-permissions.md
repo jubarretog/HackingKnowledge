@@ -15,7 +15,7 @@ drw-r--r-x
 ```
 {% endcode %}
 
-
+***
 
 * The permission can also be represented by adding the numbers in each section where       `r=4`,  `w=2` and `x=1`
 
@@ -25,3 +25,6 @@ drw-r--r-x
 -rwxrwxr--      #Can be represented as 774
 ```
 {% endcode %}
+
+***
+

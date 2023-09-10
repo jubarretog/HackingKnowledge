@@ -18,7 +18,7 @@ openssl s_client -connect $IP:$port
 ```
 {% endcode %}
 
-
+***
 
 * Generate private key with RSA
 
@@ -27,3 +27,20 @@ openssl s_client -connect $IP:$port
 openssl genrsa -out $name 2048
 ```
 {% endcode %}
+
+***
+
+
+
+## <mark style="color:green;">John the ripper</mark>
+
+* Broke hash
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo john -w=$wordlist $hashfile
+```
+{% endcode %}
+
+***
+

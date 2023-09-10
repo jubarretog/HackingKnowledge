@@ -2,7 +2,9 @@
 
 Open Source Intelligence, practice based on collecting info from open source sites on the web
 
-## Dorking
+
+
+## <mark style="color:green;">Dorking</mark>
 
 Prectice that consist in using google tools and advance serch engine to get information
 
@@ -14,7 +16,7 @@ site:$Domain
 ```
 {% endcode %}
 
-
+***
 
 * Show results with the specified word in url
 
@@ -24,7 +26,7 @@ inurl:$word
 ```
 {% endcode %}
 
-
+***
 
 * Show results with the specified extension
 
@@ -34,7 +36,7 @@ filetype:$extension
 ```
 {% endcode %}
 
-
+***
 
 * Show results with the specified word in title
 
@@ -44,7 +46,7 @@ intitle:$word
 ```
 {% endcode %}
 
-
+***
 
 * To exclude a option from search
 
@@ -53,3 +55,6 @@ intitle:$word
 -$option:$value
 ```
 {% endcode %}
+
+***
+

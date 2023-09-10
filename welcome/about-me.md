@@ -1,6 +1,6 @@
 # About me
 
-Hey!! I'm Juan David, a student of Systems and Computation Engineering from the [Universidad Nacional de Colombia](https://unal.edu.co/).
+Hey!! I'm Juan David, a student of Systems and Computation Engineering in [Universidad Nacional de Colombia](https://unal.edu.co/).
 
 I'm an enthusiastic in the cibersecurity field, hacking practices and also software development.
 

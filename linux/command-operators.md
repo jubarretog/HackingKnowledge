@@ -8,7 +8,7 @@ $command &
 ```
 {% endcode %}
 
-
+***
 
 * Execute a list of commands
 
@@ -22,7 +22,7 @@ $command1 && $command2
 **Note:** The next command only will be executed if previous was successful
 {% endhint %}
 
-
+***
 
 * Redirects the output of a command to a file
 
@@ -36,28 +36,28 @@ $command > $filename
 **Note:** If file doesn't exit it will be created, and if it exists it will be overwrited
 {% endhint %}
 
-
+***
 
 * Redirects the output of a command to a file but it appends it to the final, don't overwrite it
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command >> $filename
 </strong></code></pre>
 
-
+***
 
 * Tooks content from a file
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C; $filename
 </strong></code></pre>
 
-
+***
 
 * Pass the result of a commnad as parameter for the other
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 | $command2
 </strong></code></pre>
 
-
+***
 
 * Cath an error into a file
 
@@ -67,3 +67,6 @@ $command > $filename
 {% hint style="info" %}
 &#x20;**Note:** The number `2` indicates the `STDERR`
 {% endhint %}
+
+***
+

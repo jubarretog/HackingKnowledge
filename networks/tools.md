@@ -1,5 +1,144 @@
 # Tools
 
+## <mark style="color:green;">SMBCLIENT</mark>
+
+### **Characteristics**
+
+* Use of SMB Protocol to list directpries and files remotely
+* Commonly used in port 445
+
+### **Commands**
+
+* Start smb with IP
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo smbclient -I $IP
+```
+{% endcode %}
+
+***
+
+* List elements without password
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo smbclient -L $IP -I $IP -N
+```
+{% endcode %}
+
+***
+
+* Acces to a share instance
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo smbclient //$IP/$ShareName -N
+```
+{% endcode %}
+
+***
+
+* Execute a command
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo smbclient //$IP/$ShareName -N -c "$comand"
+```
+{% endcode %}
+
+***
+
+* Work in conection
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>smb: \> get $filename   #Download a file
+</strong>smb: \> put $filename   #Upload a file
+smb: \> exit            #Close conection
+</code></pre>
+
+***
+
+
+
+### <mark style="color:green;">TELNET</mark>
+
+### **Characteristics**
+
+* Use of Telnet Protocol
+* Commonly used in port 23
+
+### **Commands**
+
+* Start telnet
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo telnet $ip $port
+```
+{% endcode %}
+
+***
+
+* Close conection
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+telnet: \> exit
+```
+{% endcode %}
+
+
+
+## <mark style="color:green;">FTP</mark>
+
+### **Characteristics**
+
+* Use of FTP Protocol
+* Commonly used in port 21
+
+### **Commands**
+
+* Start ftp
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo ftp $ip
+```
+{% endcode %}
+
+***
+
+* Work with files
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+get $filename   #Download a file
+put $filename   #Upload a file
+```
+{% endcode %}
+
+***
+
+* Stablish anonympus conection
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+name: anonymous
+```
+{% endcode %}
+
+***
+
+* Close conection
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+ftp: \> exit
+```
+{% endcode %}
+
+
+
 ## <mark style="color:green;">Netcat</mark>
 
 ### **Characteristics**
@@ -17,7 +156,7 @@ sudo apt install netcat-traditional
 ```
 {% endcode %}
 
-
+***
 
 * Start netcat
 
@@ -47,7 +186,7 @@ nc -v $hostname $port
 ```
 {% endcode %}
 
-
+***
 
 * Start in listen mode in the specified port
 
@@ -71,7 +210,7 @@ $incomingfile -h              #Check is trasmision was correct from listener sid
 
 
 
-*
+* Excute a program
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -126,7 +265,7 @@ nmap --excludefile $file #Scan excludings the IPs from a list
 ```
 {% endcode %}
 
-
+***
 
 * TCP scan
 
@@ -141,29 +280,28 @@ nmap -sA $target  #TCP ACK scan
 ```
 {% endcode %}
 
-
+***
 
 * UDP scan
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nmap -sU $target
-nmap -sU --top-po
-rts $numberofports $target   #Specify the most common UDP ports
+nmap -sU --top-ports $numberofports $target   #Specify the most common UDP ports
 ```
 {% endcode %}
 
-
+***
 
 * Perform Ping Sweep
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap -sn $targetIPranges
+nmap -Pn $targetIPranges
 ```
 {% endcode %}
 
-
+***
 
 * Detect OS
 
@@ -173,7 +311,7 @@ nmap -O $target
 ```
 {% endcode %}
 
-
+***
 
 * Version of services running
 
@@ -183,7 +321,7 @@ nmap -sV $target
 ```
 {% endcode %}
 
-
+***
 
 * Increase verbosity level of output
 
@@ -191,10 +329,11 @@ nmap -sV $target
 ```bash
 nmap -v $target
 nmap -vv $target      #Level 2 verbosity, MOST recommended
+nmap -vvv $target     #Level 3 verbosity
 ```
 {% endcode %}
 
-
+***
 
 * Specified Output Format
 
@@ -207,7 +346,7 @@ nmap -oA $target  #All 3 Formats at once
 ```
 {% endcode %}
 
-
+***
 
 * Increase the speed the scan runs at
 
@@ -221,7 +360,7 @@ nmap -T$timinglevel $target
 **Note:** This mode is louder than normal
 {% endhint %}
 
-
+***
 
 * Select which port scan
 
@@ -233,7 +372,7 @@ nmap -p- $target             #Scan all ports
 ```
 {% endcode %}
 
-
+***
 
 * Activate a script from NSE library
 
@@ -245,7 +384,7 @@ nmap -p $port --script=$script --script-args $script.$arg='$argvalue'
 ```
 {% endcode %}
 
-
+***
 
 * Search scripts in NSE
 
@@ -256,7 +395,7 @@ ls -l /usr/share/nmap/scripts/*$keyword*           #Using ls
 ```
 {% endcode %}
 
-
+***
 
 * Scan without pinging a port
 
@@ -266,7 +405,7 @@ nmap $target -Pn
 ```
 {% endcode %}
 
-
+***
 
 * Fragment packets sent in scan
 
@@ -281,7 +420,7 @@ nmap $target -mpu $number   #Specify packet's length
 **Note:** Length must be a multiple of 8
 {% endhint %}
 
-
+***
 
 * Specify delay between packects sent
 
@@ -291,7 +430,7 @@ nmap $target --scan-delay $number ms
 ```
 {% endcode %}
 
-
+***
 
 * Generate invalid checksum for packets
 
@@ -301,7 +440,7 @@ nmap $target --badsum
 ```
 {% endcode %}
 
-
+***
 
 * Append an arbitrary length of random data to the end of packets
 
@@ -310,3 +449,6 @@ nmap $target --badsum
 nmap $target --data-length  $number  
 ```
 {% endcode %}
+
+***
+

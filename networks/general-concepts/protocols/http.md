@@ -1,6 +1,8 @@
 # HTTP
 
-## Common Request Headers
+## <mark style="color:green;">Request-Response</mark>
+
+### <mark style="color:orange;">Common Request Headers</mark>
 
 * **Host:** Tell it which web site you require, otherwise you'll just receive the default website for the server.
 * **User-Agent:** Tell your browser software and version number.
@@ -8,14 +10,16 @@
 * **Accept-Encoding**: Tells the web server what types of compression methods the browser supports so the data can be made smaller for transmitting over the internet.
 * **Cookie:** Data sent to the server to help remember your information.
 
-## &#x20;Common Response Headers
+### &#x20;<mark style="color:orange;">Common Response Headers</mark>
 
 * **Set-Cookie:** Information to store which gets sent back to the web server on each request.
 * **Cache-Control**: How long to store the content of the response in the browser's cache before it requests it again.
 * **Content-Type:** This tells the client what type of data is being returned to know how to process the data.
 * **Content-Encoding:** What method has been used to compress the data to make it smaller when sending it over the internet.
 
-## Methods
+
+
+## <mark style="color:green;">Methods</mark>
 
 * **GET Request:** Used for getting information from a web server.
 * **POST Request:** Used for submitting data to the web server and potentially creating new records.
@@ -23,13 +27,13 @@
 * **DELETE Request:** Used for deleting information/records from a web server.
 * **HEAD Request:** The only difference between HEAD and GET requests is that for HTTP HEAD, the server only returns headers without body.
 
-## Request and reponses
 
-## Status code
+
+## <mark style="color:green;">Status code types</mark>
 
 <table><thead><tr><th width="374">100-199 - Information Response</th><th>These are sent to tell the client the first part of their request has been accepted and they should continue sending the rest of their request. These codes are no longer very common.</th></tr></thead><tbody><tr><td>200-299 - Success</td><td>This range of status codes is used to tell the client their request was successful.</td></tr><tr><td>300-399 - Redirection</td><td>These are used to redirect the client's request to another resource. This can be either to a different webpage or a different website altogether.</td></tr><tr><td>400-499 - Client Errors</td><td>Used to inform the client that there was an error with their request.</td></tr><tr><td>500-599 - Server Errors</td><td>This is reserved for errors happening on the server-side and usually indicate quite a major problem with the server handling the request.</td></tr></tbody></table>
 
-### Common Status Codes
+### <mark style="color:orange;">Common Status Codes</mark>
 
 | 200 - OK                     | The request was completed successfully.                                                                                                                                                                                       |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -14,7 +14,7 @@ sudo apt install gobuster
 ```
 {% endcode %}
 
-
+***
 
 * Show commands and utilities
 
@@ -24,9 +24,9 @@ gobuster -h
 ```
 {% endcode %}
 
+***
 
-
-* Scan specified URL
+* Scan specify URL
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -34,19 +34,18 @@ gobuster -u $URL
 ```
 {% endcode %}
 
+***
 
-
-* Path to file with wordlist to use
+* Start scanning
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-gobuster -w $file dir
+gobuster -u $url-w $wordlist #Specify wordlist path
+gobuster dir -u $url -w $wordlist #Directory and file mode
+gobuster vhost $url -w $wordlist #Subdomain mode
+gobuster vhost $url -w $wordlist --append-domain #To set de subdomain first
 ```
 {% endcode %}
-
-{% hint style="info" %}
-**Note:** dir is for directory and file mode
-{% endhint %}
 
 ## <mark style="color:green;">ffuf</mark>
 

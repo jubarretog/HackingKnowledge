@@ -1,8 +1,8 @@
 # DNS
 
-## Domain Hierarchy
+## <mark style="color:green;">Domain Hierarchy</mark>
 
-### TLD (Top-Level Domain)
+### <mark style="color:orange;">TLD (Top-Level Domain)</mark>
 
 * Is the righthand part of a domain name.&#x20;
 * Can only use a-z 0-9 and hyphens and cannot start or end with hyphens or have consecutive hyphens.
@@ -10,18 +10,20 @@
   * _gTLD:_ Generic Top Level, tell the user the domain name's purpose.
   * _ccTLD:_ Country Code Top Level Domain, used for geographical purposes.&#x20;
 
-### Second-Level Domain
+### <mark style="color:orange;">Second-Level Domain</mark>
 
 * Most tipical part of the domain that specifies the name of the page.
 * Is limited to 63 characters.
 
-### Subdomain
+### <mark style="color:orange;">Subdomain</mark>
 
 * Describe an specific applications of a page.
 * Can use multiple subdomains but length must be kept to 253 characters or less.
 * There is no limit to the number of subdomains you can create for a domain name.
 
-## Record Types
+
+
+## <mark style="color:green;">Record Types</mark>
 
 * **A Record:** Resolve to IPv4 addresses
 * **AAAA Record:** Resolve to IPv6 addresses

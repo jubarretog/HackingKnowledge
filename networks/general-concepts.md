@@ -39,4 +39,4 @@
   * **Host-Based:** Filters ports and system service calls on a single computer operating system.
 * **VPN:** Create a tunnel through the conection to a network where data is encrypted.
 * **Antivirus:** Uses signatures or behavioral analysis of applications to identify and block malicious code.
-
+* **NTLM:** New Technology Lan Manager, collection of authentication protocols as a challenge-response used to authenticate a client to a resource on an Active Directory domain.

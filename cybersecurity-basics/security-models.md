@@ -1,6 +1,6 @@
 # Security Models
 
-## **CIA Triad**
+## <mark style="color:green;">**CIA Triad**</mark>
 
 Security model that is used in consideration throughout creating a security policy.
 
@@ -10,7 +10,9 @@ Security model that is used in consideration throughout creating a security poli
 * **Integrity:** Information is kept accurate and consistent unless authorized changes are made.
 * **Availability:** Data must be available and accessible by the user to be useful.
 
-## **Maccumber Cube**
+
+
+## <mark style="color:green;">**Maccumber Cube**</mark>
 
 Establish and evaluate information security initiatives by considering all of the related factors that impact them.
 
@@ -24,7 +26,9 @@ Establish and evaluate information security initiatives by considering all of th
 * **Technology:** Software and hardware-based solutions designed to protect information systems.
 * **Policy and procedure:** Administrative controls that provide a base for how an organization implements information assurance.
 
-## **SFU Triangle**
+
+
+## <mark style="color:green;">**SFU Triangle**</mark>
 
 Define the level of security implemented in a system.
 

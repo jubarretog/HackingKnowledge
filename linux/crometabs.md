@@ -19,3 +19,6 @@ $MIN $HOUR $DOM $MON $DOW $COM   #Example below
 {% hint style="info" %}
 **Note:** The<mark style="color:orange;">`*`</mark>let skip the specification of values
 {% endhint %}
+
+***
+

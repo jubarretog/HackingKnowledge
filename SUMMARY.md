@@ -22,10 +22,10 @@
 ## 🐧 Linux
 
 * [General Concepts](linux/general-concepts.md)
-  * [File Permissions](linux/file-permissions.md)
-  * [Common Directories](linux/common-directories.md)
-  * [Crometabs](linux/crometabs.md)
-  * [Enviroment Variables](linux/general-concepts/enviroment-variables.md)
+* [Common Directories](linux/common-directories.md)
+* [File Permissions](linux/file-permissions.md)
+* [Enviroment Variables](linux/enviroment-variables.md)
+* [Crometabs](linux/crometabs.md)
 * [Commands](linux/commands.md)
   * [Command Operators](linux/command-operators.md)
 
@@ -34,8 +34,16 @@
 * [General Concepts](windows/general-concepts/README.md)
   * [File Permissions](windows/general-concepts/file-permissions.md)
   * [System Events](windows/general-concepts/system-events.md)
-* [System Variables and Tools](windows/system-variables-and-tools/README.md)
-  * [cmd Commands](windows/system-variables-and-tools/cmd-commands.md)
+* [System Variables and Tools](windows/system-variables-and-tools.md)
+* [Commands cmd](windows/commands-cmd.md)
+* [Tools](windows/tools.md)
+
+## 🔎 Information Gathering
+
+* [General Concepts](information-gathering/general-concepts.md)
+* [OSINT](information-gathering/osint.md)
+* [Tips](information-gathering/tips.md)
+* [Tools](information-gathering/tools.md)
 
 ## 📄 DataBases
 
@@ -44,13 +52,6 @@
 * [SQL Injection](databases/sql-injection.md)
 * [Tips](databases/tips.md)
 * [Tools](databases/tools.md)
-
-## 🔎 Information Gathering
-
-* [General Concepts](information-gathering/general-concepts.md)
-* [OSINT](information-gathering/osint.md)
-* [Tips](information-gathering/tips.md)
-* [Tools](information-gathering/tools.md)
 
 ## 📶 Networks
 
@@ -67,7 +68,8 @@
 
 ## 📡 Web Hacking
 
-* [General Concepts](web-hacking/general-concepts.md)
+* [General Concepts](web-hacking/general-concepts/README.md)
+  * [File inclusion](web-hacking/general-concepts/file-inclusion.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools.md)
   * [Wordlist Brute-Forcing](web-hacking/tools/wordlist-brute-forcing.md)
@@ -75,16 +77,16 @@
 ## 🔒 Cryptography
 
 * [General Concepts](cryptography/general-concepts.md)
-* [Tips](cryptography/tips.md)
-* [Tools](cryptography/tools.md)
 * [Types of Encryption](cryptography/types-of-encryption.md)
 * [Methods of Encryption](cryptography/methods-of-encryption.md)
+* [Tips](cryptography/tips.md)
+* [Tools](cryptography/tools.md)
 
-## 🔙 Reverse Engineering
+## 🧾 SCRIPTING
 
-* [General Concepts](reverse-engineering/general-concepts.md)
-* [Tips](reverse-engineering/tips.md)
-* [Tools](reverse-engineering/tools.md)
+* [General Concepts](scripting/general-concepts.md)
+* [Reverse Shell](scripting/reverse-shell.md)
+* [Tools](scripting/tools.md)
 
 ## 👣 Digital Forensics
 

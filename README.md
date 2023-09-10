@@ -4,6 +4,6 @@ Hi, this is a page I have decided to create as a recopilation of my write-ups fr
 
 This book collect all concepts, tools, recommendation and practices that I consider relevant to annotate, in the form of a guide book for every person interested in hacking and security of digital information.
 
-In this manner, is expected to cover fields such as basic OS working, Networks, many concepts and tools related to Pentesting practices, and every knowledge wich can be used in hacking.
+In this manner, is expected to cover fields such as basic OS working, Networks, many concepts and tools related to Pentesting practices, and every knowledge which can be used in hacking.
 
 ### _**Developed by: Juan David Barreto Grattz @KryptoCoder**_

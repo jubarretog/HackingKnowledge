@@ -1,6 +1,6 @@
 # Tools
 
-## PDF Info
+## <mark style="color:green;">PDF Info</mark>
 
 Used to extract metadata of a pdf file
 
@@ -14,6 +14,8 @@ sudo apt install poppler-utils
 ```
 {% endcode %}
 
+***
+
 * Read the metadata of a pdf
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -22,7 +24,11 @@ pdfinfo $pdffilename
 ```
 {% endcode %}
 
-## Exiftool
+***
+
+
+
+## <mark style="color:green;">Exiftool</mark>
 
 Used to extract Metadata from files
 
@@ -34,6 +40,8 @@ sudo apt install exiftool
 ```
 {% endcode %}
 
+***
+
 * Read image EXIF data
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -41,3 +49,6 @@ sudo apt install exiftool
 exiftool $imagefilename
 ```
 {% endcode %}
+
+***
+

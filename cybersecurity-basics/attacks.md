@@ -1,6 +1,6 @@
 # Attacks
 
-## Classification of attacks
+## <mark style="color:green;">Classification of attacks</mark>
 
 * **Passive:** Is focused in monitoring and interception of data flows through network traffic.
 * **Active:** Data tampering, corruption, extraction or disruption of communication between secured systems.
@@ -8,7 +8,7 @@
 * **Insider:** Are performed by trusted persons using privileged access to violate rules or intentionally cause a threat.
 * **Distribution:** Tampering with hardware or software prior to installation.
 
-## Attack Stages
+## <mark style="color:green;">Attack Stages</mark>
 
 * **Information Gathering:** Collecting as much publically accessible information about a target/organisation as possible.
 * **Enumeration:** Discovering applications and services running on the systems.
@@ -16,7 +16,7 @@
 * **Privilege Escalation:** Attempt to expand the access to a system.
 * **Post-exploitation:** After getting access we perform pivoting, get additional information that can be gathered, cover the access tracks and report the vulnerabilities.
 
-## Types of Attacks
+## <mark style="color:green;">Types of Attacks</mark>
 
 * **Spoofing:** A networked device pretends to identify as another using its MAC address.
 * **On-path:** Intercept or modify communications between two devices.
@@ -36,6 +36,3 @@
 * **Spraying:** Is based in trying most commonly used passwords and patterns. A dictionary can also be used for this tecn
 * **Rainbow:** Compares the hash of a password with those stored in a dictionary precomputed hashes called _rainbow table._
 * **KRACK:** Key Reinstallation Attack, manipulating and replaying cryptographic handshake messages tricks a wi-fi WPA2 network into reinstalling an already-in-use key.
-
-
-
