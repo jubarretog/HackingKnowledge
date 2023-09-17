@@ -258,10 +258,12 @@ cat $path     #File in the specified file path
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 find -name $filename
+find .                     #All file
+find /                     #All From root directory
 find *.$extension          #All paths to files with the specified extension
 find -group $groupname     #Find by group
 find -user  $username      #Find by owner
-find -size  $size$unit     #Find by size
+find -size  $size$unit     #Find by size, c for bytes
 ```
 {% endcode %}
 
