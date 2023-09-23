@@ -52,3 +52,17 @@ exiftool $imagefilename
 
 ***
 
+
+
+## <mark style="color:green;">SDelete</mark>
+
+Used to delete and overwrite a drive information in Windows
+
+
+
+## <mark style="color:green;">Shred</mark>
+
+Used to delete and overwrite a drive information in Linux
+
+
+
