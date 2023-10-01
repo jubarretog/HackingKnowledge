@@ -13,4 +13,4 @@
 * **Environment variables:** Store information about the operating system environment.
 * **TPM:** Trusted Platform Module, designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations and make devices tamper-resistent.
 * **BitLocker:** Help protect user data ensuring that a computer has not been tampered with while the system was offline.
-* **Volume Shadow Copy Service: C**oordinates the required actions to create a consistent shadow copy (system snapshot).
+* **Volume Shadow Copy Service:** Coordinates the required actions to create a consistent shadow copy (system snapshot).

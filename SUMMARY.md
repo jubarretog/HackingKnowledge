@@ -1,9 +1,9 @@
 # Table of contents
 
-## 💻 Welcome!!
+## 💻 About this site
 
-* [About this page](README.md)
-* [About me](welcome/about-me.md)
+* [WELCOME!!](README.md)
+* [About me](about-this-site/about-me.md)
 
 ## 🔑 Cybersecurity Basics
 
@@ -35,7 +35,7 @@
   * [File Permissions](windows/general-concepts/file-permissions.md)
   * [System Events](windows/general-concepts/system-events.md)
 * [System Variables and Tools](windows/system-variables-and-tools.md)
-* [Commands cmd](windows/commands-cmd.md)
+* [CMD commands](windows/cmd-commands.md)
 * [Tools](windows/tools.md)
 
 ## 🔎 Information Gathering
@@ -72,13 +72,12 @@
   * [File inclusion](web-hacking/general-concepts/file-inclusion.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools.md)
-  * [Wordlist Brute-Forcing](web-hacking/tools/wordlist-brute-forcing.md)
+  * [Enumeration with wordlists](web-hacking/tools/enumeration-with-wordlists.md)
 
 ## 🔒 Cryptography
 
 * [General Concepts](cryptography/general-concepts.md)
-* [Types of Encryption](cryptography/types-of-encryption.md)
-* [Methods of Encryption](cryptography/methods-of-encryption.md)
+* [Types and methods of Encryption](cryptography/types-and-methods-of-encryption.md)
 * [Tips](cryptography/tips.md)
 * [Tools](cryptography/tools.md)
 

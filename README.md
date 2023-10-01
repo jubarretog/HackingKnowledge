@@ -1,9 +1,9 @@
-# About this page
+# WELCOME!!
 
-Hi, this is a page I have decided to create as a recopilation of my write-ups from my study sessions in cibersecurity.&#x20;
+Hi!! This is a page I have decided to create as a recopilation of my write-ups from my study sessions in cibersecurity.&#x20;
 
 This book collect all concepts, tools, recommendation and practices that I consider relevant to annotate, in the form of a guide book for every person interested in hacking and security of digital information.
 
 In this manner, is expected to cover fields such as basic OS working, Networks, many concepts and tools related to Pentesting practices, and every knowledge which can be used in hacking.
 
-### _**Developed by: Juan David Barreto Grattz @KryptoCoder**_
+### _<mark style="color:red;">**Developed by: Juan David Barreto Grattz @KryptoCoder**</mark>_

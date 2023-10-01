@@ -30,7 +30,7 @@ pdfinfo $pdffilename
 
 ## <mark style="color:green;">Exiftool</mark>
 
-Used to extract Metadata from files
+Used to extract Metadata from files, specially image
 
 * Install
 
@@ -42,11 +42,38 @@ sudo apt install exiftool
 
 ***
 
-* Read image EXIF data
+* Read EXIF data
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-exiftool $imagefilename
+exiftool $filename
+```
+{% endcode %}
+
+***
+
+
+
+## <mark style="color:green;">Steghide</mark>
+
+Stenography Program
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt-get install steghide
+```
+{% endcode %}
+
+***
+
+* Commands
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+steghide info $filename #Get info of embedded data
+steghide extract -sf $filename #Extract data from file
 ```
 {% endcode %}
 
@@ -63,6 +90,4 @@ Used to delete and overwrite a drive information in Windows
 ## <mark style="color:green;">Shred</mark>
 
 Used to delete and overwrite a drive information in Linux
-
-
 

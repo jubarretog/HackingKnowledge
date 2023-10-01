@@ -1,18 +1,22 @@
 # Methodologies
 
-## <mark style="color:green;">Pen-Testing Frameworks</mark>
+## Pen-Testing Frameworks
 
 * **OSSTMM:** Open Source Security Testing Methodology Manual, focus on Telecommunications, Wired Networks and Wireless communications.
 * **OWASP:** Open Web Application Security Project, community-driven, is used solely to test the security of web applications and services.
 * **NIST CF 1.1:** National Institute of Standars and Technologhy Cybersecurity Framework, improve organisations cybersecurity standards and manage the risk of cyber threats, provides guidelines on security controls & benchmarks for success.
 * **NCSC CAF:** National Cyber Security Centre Cyber Assessment Framework, is an extensive framework of fourteen principles used to assess the risk of various cyber threats and an organisation's defences against these.
 
-## <mark style="color:green;">Thread Modelling</mark>
+
+
+## Thread Modelling
 
 * **STRIDE:** Spoofing identity, Tampering with data, Repudiation threats, Information disclosure, Denial of Service and Elevation of privileges.
 * **PASTA:** Process for Attack Simulation and Threat Analysis, is a risk-centric threat modeling methodology, focus on the probability of each attack.
 
-## <mark style="color:green;">Incident Response Stages</mark>
+
+
+## Incident Response Stages
 
 * **Preparation:** Evaluate what resourses and plans are available to deal with the security incident.
 * **Identification:** Determinate if threat and the threat actor have been correctly identified.

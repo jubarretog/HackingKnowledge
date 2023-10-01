@@ -10,7 +10,9 @@
 * **Race  conditions:** The output of an event depends on ordered or timed outputs and it don't occur in the correct order or at the proper time.
 * **Cryptojacking:** Hiding on a device or server and using it to mine cryptocurrencies without the user's consent or knowledge.
 
+
+
 ## CVE Sources
 
 * **CVE Mitre:** Website that keeps track of CVEs [https://www.cve.org/](https://www.cve.org/)
-* **NVD:** Website that keeps track of CVEs [https://nvd.nist.gov/vuln/search](https://nvd.nist.gov/vuln/search)
+* **NVD:** Vulnerabilities based  NIST framework [https://nvd.nist.gov/vuln/search](https://nvd.nist.gov/vuln/search)

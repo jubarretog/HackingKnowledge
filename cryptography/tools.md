@@ -2,8 +2,6 @@
 
 ## <mark style="color:green;">Openssl</mark>
 
-### **Characteristics**
-
 * Tool-kit for cryptography
 * Generate keys and certificates
 * Encrypt and Dcrypt data and tipical ciphers
@@ -48,26 +46,14 @@ sudo john -w=$wordlist $hashfile
 
 ## <mark style="color:green;">Dcode.fr</mark>
 
-### **Characteristics**
-
 * Online tool for encrypting, decrypting, coding or decoding cyphers
 * Can identified what cipher is used in a ciphertext
 * [https://www.dcode.fr/cipher-identifier](https://www.dcode.fr/cipher-identifier)
-
-***
 
 
 
 ## <mark style="color:green;">Cyberchef</mark>
 
-### **Characteristics**
-
 * Online tool for encrypting, decrypting, coding or decoding cyphers
 * With the magic mode try to identify and decode automatically the ciphertext
 * [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/)
-
-***
-
-
-
-gzip, tar, unzip, 7z, gpg

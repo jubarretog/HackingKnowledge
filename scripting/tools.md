@@ -4,7 +4,7 @@
 
 Collection of Python classes for working with network protocols
 
-* Check if we have remote command execution
+* Installation
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -19,7 +19,7 @@ sudo apt install python3-impacket
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo impacket-$scriptname -$flag
-sudo impacket-mssqlclient  $user$ip --windows-auth #For windows authentication in sql server
+sudo impacket-mssqlclient  $user@$ip --windows-auth #For windows authentication in sql server
 ```
 {% endcode %}
 

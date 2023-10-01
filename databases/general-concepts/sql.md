@@ -1,6 +1,6 @@
 # SQL
 
-## <mark style="color:green;">Information Schema</mark>
+## Information Schema
 
 DB that save information about all other DB the user has access, find as **`information_schema`**
 
@@ -16,7 +16,7 @@ DB that save information about all other DB the user has access, find as **`info
 
 
 
-## <mark style="color:green;">Commands</mark>
+## Commands
 
 * Show database name
 

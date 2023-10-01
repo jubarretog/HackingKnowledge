@@ -2,9 +2,7 @@
 
 ## <mark style="color:green;">SMBCLIENT</mark>
 
-### **Characteristics**
-
-* Use of SMB Protocol to list directpries and files remotely
+* Use of SMB Protocol to list directories and files remotely
 * Commonly used in port 445
 
 ### **Commands**
@@ -62,8 +60,6 @@ smb: \> exit            #Close conection
 
 ### <mark style="color:green;">TELNET</mark>
 
-### **Characteristics**
-
 * Use of Telnet Protocol
 * Commonly used in port 23
 
@@ -87,11 +83,11 @@ telnet: \> exit
 ```
 {% endcode %}
 
+***
+
 
 
 ## <mark style="color:green;">FTP</mark>
-
-### **Characteristics**
 
 * Use of FTP Protocol
 * Commonly used in port 21
@@ -102,7 +98,8 @@ telnet: \> exit
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo ftp $ip
+ftp $ip
+name: anonymous #Stablish anonymous conection
 ```
 {% endcode %}
 
@@ -112,36 +109,17 @@ sudo ftp $ip
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-get $filename   #Download a file
-put $filename   #Upload a file
+ftp> get $filename   #Download a file
+ftp> put $filename   #Upload a file
+ftp: \> exit         #Close conection
 ```
 {% endcode %}
 
 ***
-
-* Stablish anonympus conection
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-name: anonymous
-```
-{% endcode %}
-
-***
-
-* Close conection
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-ftp: \> exit
-```
-{% endcode %}
 
 
 
 ## <mark style="color:green;">Netcat</mark>
-
-### **Characteristics**
 
 * Unix utility which reads and writes data across network connections
 * Can be used with TCP or UDP protocol
@@ -166,7 +144,7 @@ nc $hostname $port
 ```
 {% endcode %}
 
-
+***
 
 * Use only numeric IP no DNS
 
@@ -176,7 +154,7 @@ nc -n $IP $port
 ```
 {% endcode %}
 
-
+***
 
 * Verbose Output
 
@@ -196,7 +174,7 @@ nc -l -p $Port
 ```
 {% endcode %}
 
-
+***
 
 * Make a file transmission
 
@@ -208,7 +186,7 @@ $incomingfile -h              #Check is trasmision was correct from listener sid
 ```
 {% endcode %}
 
-
+***
 
 * Excute a program
 
@@ -218,13 +196,14 @@ nc -l -p $Port -e $program
 ```
 {% endcode %}
 
+***
+
 
 
 ## <mark style="color:green;">Nmap</mark>
 
-### **Charactetistics**
-
-* Network Mapper, open source tool for network exploration and security auditing
+* Network Mapper
+* Open source tool for network exploration and security auditing
 * Output is a list of scanned targets
 
 ### **NSE**

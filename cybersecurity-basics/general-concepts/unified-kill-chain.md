@@ -6,7 +6,7 @@ Provides insight into the tactics that hackers employ to attain these objectives
 
 
 
-## <mark style="color:green;">Cyber Kill Chain</mark>
+## Cyber Kill Chain
 
 Component of intelligence
 

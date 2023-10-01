@@ -4,7 +4,7 @@ Open Source Intelligence, practice based on collecting info from open source sit
 
 
 
-## <mark style="color:green;">Dorking</mark>
+## Dorking
 
 Prectice that consist in using google tools and advance serch engine to get information
 

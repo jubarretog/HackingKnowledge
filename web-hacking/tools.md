@@ -1,42 +1,6 @@
 # Tools
 
-## <mark style="color:green;">Steghide</mark>
-
-Stenography Program
-
-* Install
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-sudo apt-get install steghide
-```
-{% endcode %}
-
-***
-
-* Shows embedded information got from a file
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-steghide info $filename
-```
-{% endcode %}
-
-***
-
-* Extract embedded data from a file
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-steghide extract -sf $filename
-```
-{% endcode %}
-
-
-
 ## <mark style="color:green;">Burp Suite</mark>
-
-### **Characteristics**
 
 * Digital plattform tha collects tools for specialiced web penetration testing.
 * Framework written in Java that aims to provide a one-stop-shop for web application penetration testing

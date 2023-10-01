@@ -1,4 +1,10 @@
-# Methods of Encryption
+# Types and methods of Encryption
+
+* **Symmetric**
+* #### Asymmetric
+*   #### Polygrafic
+
+
 
 **Morse Code**
 
@@ -17,3 +23,4 @@
 * LM hash or NTLM hash
 * SHA256crypt and SHA512crypt > Linux incorporate hashing for passwords
 * MD5 Hash
+

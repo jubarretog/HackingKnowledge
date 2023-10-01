@@ -2,13 +2,11 @@
 
 Create and manage virtual machines or virtual networks
 
-## <mark style="color:green;">Type I</mark>
+## Type I
 
 * Directly conected to hardware
 
-
-
-### <mark style="color:green;">Type II</mark>
+### Type II
 
 * Software defined, has another layer of abstraction between hardware and operative system.
-* Are easire to used by the cost of performance
+* Are easier to used by the cost of performance

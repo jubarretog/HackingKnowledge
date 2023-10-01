@@ -9,7 +9,7 @@
 * **GDPR:** General Data Protection Regulation [https://gdpr.eu/](https://gdpr.eu/)
 * **DPA:** Data Protection Act 2018 [https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted)
 
-## <mark style="color:green;">Cyber Law in different countries</mark>&#x20;
+## Cyber Law in different countries&#x20;
 
 <figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 
