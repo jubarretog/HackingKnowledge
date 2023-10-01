@@ -28,7 +28,7 @@ steghide info $filename
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-steghide extract -sf $filename #Get info from stego file
+steghide extract -sf $filename
 ```
 {% endcode %}
 

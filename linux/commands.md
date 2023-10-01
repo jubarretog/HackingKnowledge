@@ -264,6 +264,7 @@ find *.$extension          #All paths to files with the specified extension
 find -group $groupname     #Find by group
 find -user  $username      #Find by owner
 find -size  $size$unit     #Find by size, c for bytes
+find 2>/dev/null           #Exclude files with no permissions
 ```
 {% endcode %}
 
