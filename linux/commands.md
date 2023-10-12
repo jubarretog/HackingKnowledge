@@ -62,6 +62,16 @@ whoami
 
 ***
 
+* Get information about the machine and system
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+uname
+```
+{% endcode %}
+
+***
+
 * Executes a command with superuser(root) permises
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -82,6 +92,8 @@ ls $path     #In path directory
 ls -a        #Include hidden files
 ls -1        #List each file in a single line
 ls -l        #File permissions, associated user and groups, creation date and hour
+ls -l -lr    #List and order in z-a order
+ls -l -lt    #List and order by last modified
 ```
 {% endcode %}
 
@@ -260,7 +272,13 @@ mkdir -p $dirname/{$subdir1,$subdir2} #Create a folder with subfolders
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 cat $file
-cat $path     #File in the specified file path
+cat $path  #File in the specified file path
+head $filename #Shows 10 initial lines
+head -n$number $filename #Shows the first $number lines
+tail $filename #Shows 10 final lines
+tail -n$number $filename #Shows the last $number lines
+tail -f $filename #Shows appended lines as data grows
+less $file #Less is lighter, charge one page of content at time
 ```
 {% endcode %}
 
@@ -292,6 +310,7 @@ wc -l $filename   #Count number of lines
 wc -m $filename   #Count number of characters
 wc -c $filename   #Count number of bytes
 wc -w $filename   #Count number of words
+wc $filename $filename #Count various file at time, show total
 ```
 {% endcode %}
 
@@ -351,6 +370,7 @@ sort -k $field$delimitertor$position frutas #Order by field and position
 ```bash
 sort $filename | uniq 
 sort $filename | uniq -c #Count number of ocurrencys
+sort $filename | uniq -b #Get repeated lines
 ```
 {% endcode %}
 
@@ -496,20 +516,6 @@ mv $filename $newname  #Rename file
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 file $filename
-```
-{% endcode %}
-
-***
-
-* Shows the initial or final lines of a file
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-head $filename #Shows 10 initial lines
-head -n$number $filename #Shows the first $number lines
-tail $filename #Shows 10 final lines
-tail -n$number $filename #Shows the last $number lines
-tail -f $filename #Shows appended lines as data grows
 ```
 {% endcode %}
 

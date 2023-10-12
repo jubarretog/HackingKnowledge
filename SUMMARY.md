@@ -93,3 +93,9 @@
   * [Basic Plan](digital-forensics/general-concepts/basic-plan.md)
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
+
+## 👥 ACTIVE DIRECTORY
+
+* [General Concepts](active-directory/general-concepts.md)
+* [Tips](active-directory/tips.md)
+* [Tools](active-directory/tools.md)
