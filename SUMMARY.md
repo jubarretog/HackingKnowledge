@@ -68,8 +68,8 @@
 
 ## 📡 Web Hacking
 
-* [General Concepts](web-hacking/general-concepts/README.md)
-  * [File inclusion](web-hacking/general-concepts/file-inclusion.md)
+* [General Concepts](web-hacking/general-concepts.md)
+* [Code Injection](web-hacking/code-injection.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools.md)
   * [Enumeration with wordlists](web-hacking/tools/enumeration-with-wordlists.md)

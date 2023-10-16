@@ -16,6 +16,11 @@
   * Anchors to other routes `<a`
   * Framework information
   * css and js code
+* Check if url parameters are display directly in screec. This will let us know if code injection can be done
+* Check if there are different error in forms pages with different post values
+  * Check if token parameters are sent
+
+
 
 ## Burp suite Proxy
 

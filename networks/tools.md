@@ -122,6 +122,7 @@ ftp: \> exit         #Close conection
 ## <mark style="color:green;">Netcat</mark>
 
 * Unix utility which reads and writes data across network connections
+* By default makes an TCP conection
 * Can be used with TCP or UDP protocol
 
 ### **Commands**

