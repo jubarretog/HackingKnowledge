@@ -4,7 +4,7 @@
 
 Can be seen in _Event listener_ via _Computer Management_
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Standard logs
 

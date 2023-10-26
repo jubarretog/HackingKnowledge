@@ -69,6 +69,10 @@
 ## 📡 Web Hacking
 
 * [General Concepts](web-hacking/general-concepts.md)
+* [OWASP Top 10](web-hacking/owasp-top-10/README.md)
+  * [Broken Access Control](web-hacking/owasp-top-10/broken-access-control.md)
+  * [Cryptographic Failures](web-hacking/owasp-top-10/cryptographic-failures.md)
+  * [Injection](web-hacking/owasp-top-10/injection.md)
 * [Code Injection](web-hacking/code-injection.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools.md)

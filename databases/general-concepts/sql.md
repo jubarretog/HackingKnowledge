@@ -18,10 +18,15 @@ DB that save information about all other DB the user has access, find as **`info
 
 ## Commands
 
-* Show database name
+* Show databases and tables
 
-<pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>database();
-</strong></code></pre>
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+show databases;
+use $database; #Enter into a database
+show tables; #Only after enter a database
+```
+{% endcode %}
 
 ***
 

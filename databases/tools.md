@@ -50,3 +50,14 @@ sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a 
 
 ***
 
+
+
+## <mark style="color:green;">MySQL</mark>
+
+* Connect to mysql
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+mysql -u $user -h $host -p #Prompt for password
+```
+{% endcode %}

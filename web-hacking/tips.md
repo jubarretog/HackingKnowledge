@@ -16,9 +16,10 @@
   * Anchors to other routes `<a`
   * Framework information
   * css and js code
-* Check if url parameters are display directly in screec. This will let us know if code injection can be done
+* Check if url parameters are display directly in screen. This will let us know if code injection can be done
 * Check if there are different error in forms pages with different post values
   * Check if token parameters are sent
+* Modify html parameters in forms to not limit your index
 
 
 

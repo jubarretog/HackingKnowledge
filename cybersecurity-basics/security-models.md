@@ -4,7 +4,7 @@
 
 Security model that is used in consideration throughout creating a security policy.
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Confidentiality:** Protection of data from unauthorized access and misuse.
 * **Integrity:** Information is kept accurate and consistent unless authorized changes are made.
@@ -32,7 +32,7 @@ Establish and evaluate information security initiatives by considering all of th
 
 Define the level of security implemented in a system.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Security:** Stablish the restrictions in data access.
 * **Functionality:** The features of an application.

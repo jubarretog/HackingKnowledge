@@ -44,7 +44,7 @@ sudo responder -I $networkinterface
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** If error in any port, set _off_ in the service related to that port in _Responder.conf_ file
+**Note:** If ypu get error in any port, set _off_ in the service related to that port in _Responder.conf_ file
 {% endhint %}
 
 ***
@@ -102,3 +102,24 @@ sudo apt install zaproxy
 
 ***
 
+
+
+## <mark style="color:green;">Hacktools</mark>
+
+* Browser extension that help us with scripts, commands and tips for web attacks
+
+### **Features**
+
+* Reverse shell scripts
+* PHP reverse shell scripts
+* TTY Spawn shell
+* Linux commands
+* Powershell commands
+* Windows file transfer methods
+* Local File Inclusion
+* Cross-Site Scripting
+* SQL Injection
+* Data Encoding
+* Obfuscated Files or Information
+* Hash generator
+* MSF Venom Builder
