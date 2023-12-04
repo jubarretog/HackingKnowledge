@@ -16,7 +16,7 @@ Security model that is used in consideration throughout creating a security poli
 
 Establish and evaluate information security initiatives by considering all of the related factors that impact them.
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 * **CIA Triad Elements:** Fundamental principles for protecting information.
 * **Processing:** Data being used to perform an operation.
@@ -32,7 +32,7 @@ Establish and evaluate information security initiatives by considering all of th
 
 Define the level of security implemented in a system.
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * **Security:** Stablish the restrictions in data access.
 * **Functionality:** The features of an application.

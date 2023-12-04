@@ -11,8 +11,8 @@
 
 ## Cyber Law in different countries&#x20;
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>

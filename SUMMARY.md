@@ -7,13 +7,13 @@
 
 ## 🔑 Cybersecurity Basics
 
-* [General Concepts](cybersecurity-basics/general-concepts.md)
+* [General Concepts](cybersecurity-basics/general-concepts/README.md)
   * [Unified Kill Chain](cybersecurity-basics/general-concepts/unified-kill-chain.md)
-  * [Methodologies](cybersecurity-basics/pen-testing-methodologies.md)
-  * [Attacks](cybersecurity-basics/attacks.md)
+  * [Methodologies](cybersecurity-basics/general-concepts/methodologies.md)
+  * [Attacks](cybersecurity-basics/general-concepts/attacks.md)
   * [Malware](cybersecurity-basics/general-concepts/malware.md)
-  * [Technics](cybersecurity-basics/technics.md)
-  * [Vulnerabilities](cybersecurity-basics/vulnerabilities.md)
+  * [Technics](cybersecurity-basics/general-concepts/technics.md)
+  * [Vulnerabilities](cybersecurity-basics/general-concepts/vulnerabilities.md)
 * [Career Paths](cybersecurity-basics/career-paths.md)
 * [Security Laws and Regulations](cybersecurity-basics/security-laws-and-regulations.md)
 * [Security Models](cybersecurity-basics/security-models.md)
@@ -26,8 +26,8 @@
 * [File Permissions](linux/file-permissions.md)
 * [Enviroment Variables](linux/enviroment-variables.md)
 * [Crometabs](linux/crometabs.md)
-* [Commands](linux/commands.md)
-  * [Command Operators](linux/command-operators.md)
+* [Commands](linux/commands/README.md)
+  * [Command Operators](linux/commands/command-operators.md)
 
 ## 🪟 Windows
 
@@ -55,11 +55,11 @@
 
 ## 📶 Networks
 
-* [General Concepts](networks/general-concepts.md)
-  * [OSI Model](networks/osi-model.md)
-  * [TCP/IP Model](networks/tcp-ip-model.md)
+* [General Concepts](networks/general-concepts/README.md)
+  * [OSI Model](networks/general-concepts/osi-model.md)
+  * [TCP/IP Model](networks/general-concepts/tcp-ip-model.md)
   * [URL](networks/general-concepts/url.md)
-  * [Protocols](networks/protocols.md)
+  * [Protocols](networks/general-concepts/protocols/README.md)
     * [DNS](networks/general-concepts/protocols/dns.md)
     * [HTTP](networks/general-concepts/protocols/http.md)
 * [Hypervisors](networks/hypervisors.md)
@@ -75,7 +75,7 @@
   * [Injection](web-hacking/owasp-top-10/injection.md)
 * [Code Injection](web-hacking/code-injection.md)
 * [Tips](web-hacking/tips.md)
-* [Tools](web-hacking/tools.md)
+* [Tools](web-hacking/tools/README.md)
   * [Enumeration with wordlists](web-hacking/tools/enumeration-with-wordlists.md)
 
 ## 🔒 Cryptography
