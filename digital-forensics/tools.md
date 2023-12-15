@@ -81,13 +81,29 @@ steghide extract -sf $filename #Extract data from file
 
 
 
-## <mark style="color:green;">SDelete</mark>
-
-Used to delete and overwrite a drive information in Windows
-
-
-
 ## <mark style="color:green;">Shred</mark>
 
 Used to delete and overwrite a drive information in Linux
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo shred $filename
+sudo shred $filename -f     #Change permissions to allow overwritting
+sudo shred $filename -n $n  #Specify number of times to overwrite
+sudo shred $filename -v     #Verbose mode, show step by step
+sudo shred $filename -u     #Truncate and eliminate file after overwriting
+sudo shred $filename -z     #Overwrite with 0
+sudo shred -vu /dev/$unit   #Delete a memory unit or partition
+```
+{% endcode %}
+
+***
+
+
+
+## <mark style="color:green;">SDelete</mark>
+
+Tool  to delete and overwrite a drive information in Windows
+
+* [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)
 

@@ -1,13 +1,30 @@
 # Tools
 
-ADPEAS
+## <mark style="color:green;">ADPEAS</mark>
 
-kerberos
+* a
 
-kerbruter userenum -m
 
-ldapdomaindump
 
-smbclient -H -u -p
+## <mark style="color:green;">kerberos</mark>
 
-bloodhound
+* a
+
+
+
+## <mark style="color:green;">kerbruter</mark>
+
+* a
+
+
+
+## <mark style="color:green;">ldapdomaindump</mark>
+
+* a
+
+
+
+## <mark style="color:green;">bloodhound</mark>
+
+* a
+

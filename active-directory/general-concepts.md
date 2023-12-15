@@ -1,3 +1,4 @@
 # General Concepts
 
-* certutil: Binario para descargar archivos
+* **certutil:** Binario para descargar archivos
+

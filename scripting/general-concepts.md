@@ -1,3 +1,3 @@
 # General Concepts
 
-* **%20:** indicates an space in a url
+* Here go some general concepts

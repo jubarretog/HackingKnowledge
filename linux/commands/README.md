@@ -441,6 +441,7 @@ gzip -d $filename              #Extract
 bzip2 $filename                #Compress
 bzip2 -d $filename             #Extract
 tar -f $filename               #Compress
+tar -cvz $filename               #Compress
 tar -xf $filename              #Extract
 7z a $namecompressed $filename #Compress
 7z e $filename                 #Extract

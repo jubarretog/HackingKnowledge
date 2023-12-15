@@ -4,7 +4,7 @@
 
 * Tool-kit for cryptography
 * Generate keys and certificates
-* Encrypt and Dcrypt data and tipical ciphers
+* Encrypt and Decrypt data and tipical ciphers
 
 ### **Commands**
 

@@ -10,14 +10,44 @@
 
 ### **Features**
 
-* **Proxy:** Allows us to intercept and modify requests/responses.
-  * _Foxy Proxy:_ Browser Extension for using proxy on Burp
-  * The standart IP for connection with Burp is 127.0.0.1 on port 8080
+* **Proxy:** Allows us to intercept and modify requests/responses.&#x20;
 * **Repeater:** Allows us to capture, modify, then resend the same request numerous times. We could craft requests by hand too.
 * **Intruder:** Allows us to spray an endpoint with requests.
 * **Decoder:** Allows us to transform data, decoding captured information, or encoding a payload.
 * **Comparer:** Allows us to compare two pieces of data at either word or byte level.
 * **Sequencer:** Help us asses random tokens or other generated data.
+
+### Configure
+
+#### Proxy
+
+* We required the _FoxyProxy_ extension
+* Create a proxie profile on FoxyProxy specifying IP 127.0.0.1 and PORT 8080
+* Select the profile on the extension
+* Then go to burpsuite proxy tab and set intercept to _on_
+* Go to _proxy settings_ to the _Response Interception_ part and mark _Intercept responses_ and _Or Request was intercepted_
+
+#### Define scope
+
+* Go to target tab
+* On left side select the IP/Domain
+* Right-click it and select _add to scope_
+* Then go to _proxy settings_ on proxy tab
+* Go to the _Request Interception_ part and mark _And url is in target scope_
+
+#### Configure HTTPS proxy
+
+* Activate proxy and go to [http://burp/cert](http://burp/cert) on browser
+* Download _cacert.der_ file
+* Go to _about:preferences_ on browser
+* Search _Cetificates_ and select _View Certificates_
+* Click on Import and selct the cacer.der
+* Mark _Trust this CA to indetify websites_ and save all
+
+#### Configure HTTPS proxy
+
+* **Ctrl + R:** Send petition to Repeater
+* **Ctlr + U:** URL encode selected text
 
 
 
@@ -107,6 +137,7 @@ sudo apt install zaproxy
 ## <mark style="color:green;">Hacktools</mark>
 
 * Browser extension that help us with scripts, commands and tips for web attacks
+* [https://addons.mozilla.org/en-US/firefox/addon/hacktools/](https://addons.mozilla.org/en-US/firefox/addon/hacktools/)
 
 ### **Features**
 
@@ -123,3 +154,17 @@ sudo apt install zaproxy
 * Obfuscated Files or Information
 * Hash generator
 * MSF Venom Builder
+
+
+
+## <mark style="color:green;">FoxyProxy</mark>
+
+* Browser extension that help us creating proxies, usually for request-response analysis
+* [https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/)
+
+
+
+## <mark style="color:green;">Wappalyzer</mark>
+
+* Browser extension that help us sending anonymous information about websites visited, including domain name and identified technologies.
+* [https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)

@@ -1,20 +1,32 @@
 # CTFs
 
-## Tools
+## Openvpn
 
-* **Openvpn:** Tool for getting acces to a VPN
+* Tool for getting acces to a VPN
 
-```bash=
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 openvpn $ovpnfile
 ```
+{% endcode %}
+
+***
 
 
 
-* **Seacrhsploit**: Kali package for acceding to exploitDB
+## Searchsploit
 
-```bash=
+* Kali package for acceding to exploitDB
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 searchsploit $Keywords
 ```
+{% endcode %}
+
+***
+
+
 
 ## Information Sources
 
@@ -22,31 +34,22 @@ searchsploit $Keywords
 * **LOLBAS:** Contain scripts, binaries and libraries for developing a Living off the Land attack. [https://lolbas-project.github.io/](https://lolbas-project.github.io/)
 * **OWASP Favicon:** Database to identify typical frameworks icons [https://wiki.owasp.org/index.php/OWASP\_favicon\_database](https://wiki.owasp.org/index.php/OWASP\_favicon\_database)
 * **Hacksplaining:** [https://www.hacksplaining.com/lessons](https://www.hacksplaining.com/lessons)
-* MITRE:&#x20;
 
-script /dev/null -c bash
 
+
+## TTY Sanizitation
+
+Executing this commands let us configure a terminal to be interactive an process keybinding as a normal bash. Very usefull when we get a external terminal for example with a reverse shell.
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>openvpn $ovpnfile
+</strong>script /dev/null -c bash
 ctrl +z
-
 stty raw -echo;fg
-
 reset
-
 export TERM=xterm
-
 export SHELL=bash
-
 stty rows 24 columns 126
-
-
-
-cat /etc/passwd
-
-cd /var/www9
-
-sqlite3 con archivo database "file.db9'"
-
-
+</code></pre>
 
 
 

@@ -76,7 +76,7 @@
 * [Code Injection](web-hacking/code-injection.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools/README.md)
-  * [Enumeration with wordlists](web-hacking/tools/enumeration-with-wordlists.md)
+  * [Fuzzing](web-hacking/tools/fuzzing.md)
 
 ## 🔒 Cryptography
 
@@ -89,6 +89,7 @@
 
 * [General Concepts](scripting/general-concepts.md)
 * [Reverse Shell](scripting/reverse-shell.md)
+* [Tips](scripting/tips.md)
 * [Tools](scripting/tools.md)
 
 ## 👣 Digital Forensics
