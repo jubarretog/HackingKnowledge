@@ -1,8 +1,22 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Injection
 
 Occurs when we find a way of sending html, css, js code, database petitions and others, via a petition or URL of a website.
 
-**Example:**
+## <mark style="color:orange;">**Example**</mark>
 
 * Manage a petition using system()
 
@@ -17,7 +31,7 @@ curl -X POST http://192.168.20.40:8000/?msg -d "cmd=whoami"
 
 
 
-## <mark style="color:green;">Cross-site Scripting</mark>
+## <mark style="color:purple;">Cross-site Scripting</mark>
 
 &#x20;XSS scripting allows execution of javascript maliciuos code
 

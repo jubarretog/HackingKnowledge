@@ -1,6 +1,20 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Broken Access Control
 
-It is when a user can see or do things they aren't supposed to. The most common ways in wich it's presented are:
+When a user can see or do things they aren't supposed to. The most common ways in wich it's presented are:
 
 * **IDOR:** Insecure Direct Object Reference, when an application fail to secure access to restringed data to an user
 * **Weak authorization:** Fail to protect sensitive content. Example: Secure admin page with a readable cookie
@@ -9,7 +23,7 @@ It is when a user can see or do things they aren't supposed to. The most common 
 
 
 
-## <mark style="color:green;">Local File Inclusion</mark>
+## <mark style="color:purple;">Local File Inclusion</mark>
 
 Also known as LFI, able to get a website to include a file that was not intended to be an option for this application
 
@@ -65,7 +79,7 @@ http://$url/$query?$param=..\/..\/..\/..\/etc/passwd
 
 
 
-## <mark style="color:green;">Remote File Inclusion</mark>
+## <mark style="color:purple;">Remote File Inclusion</mark>
 
 Also known as RFI, it is possible for an attacker to redirect actions to or from a another server
 

@@ -1,8 +1,22 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # HTTP
 
-## Request-Response
+## <mark style="color:orange;">Request-Response</mark>
 
-### <mark style="color:orange;">Common Request Headers</mark>
+### Common Request Headers
 
 * **Host:** Tell it which web site you require, otherwise you'll just receive the default website for the server.
 * **User-Agent:** Tell your browser software and version number.
@@ -10,7 +24,7 @@
 * **Accept-Encoding**: Tells the web server what types of compression methods the browser supports so the data can be made smaller for transmitting over the internet.
 * **Cookie:** Data sent to the server to help remember your information.
 
-### &#x20;<mark style="color:orange;">Common Response Headers</mark>
+### &#x20;Common Response Headers
 
 * **Set-Cookie:** Information to store which gets sent back to the web server on each request.
 * **Cache-Control**: How long to store the content of the response in the browser's cache before it requests it again.
@@ -19,7 +33,7 @@
 
 
 
-## Methods
+## <mark style="color:orange;">Methods</mark>
 
 * **GET Request:** Used for getting information from a web server.
 * **POST Request:** Used for submitting data to the web server and potentially creating new records.
@@ -29,11 +43,11 @@
 
 
 
-## Status code types
+## <mark style="color:orange;">Status code types</mark>
 
 <table><thead><tr><th width="374">100-199 - Information Response</th><th>These are sent to tell the client the first part of their request has been accepted and they should continue sending the rest of their request. These codes are no longer very common.</th></tr></thead><tbody><tr><td>200-299 - Success</td><td>This range of status codes is used to tell the client their request was successful.</td></tr><tr><td>300-399 - Redirection</td><td>These are used to redirect the client's request to another resource. This can be either to a different webpage or a different website altogether.</td></tr><tr><td>400-499 - Client Errors</td><td>Used to inform the client that there was an error with their request.</td></tr><tr><td>500-599 - Server Errors</td><td>This is reserved for errors happening on the server-side and usually indicate quite a major problem with the server handling the request.</td></tr></tbody></table>
 
-### <mark style="color:orange;">Common Status Codes</mark>
+### Common Status Codes
 
 | 200 - OK                     | The request was completed successfully.                                                                                                                                                                                       |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -47,3 +61,4 @@
 | 404 - Page Not Found         | The page/resource you requested does not exist.                                                                                                                                                                               |
 | 500 - Internal Service Error | The server has encountered some kind of error with your request that it doesn't know how to handle properly.                                                                                                                  |
 | 503 - Service Unavailable    | This server cannot handle your request as it's either overloaded or down for maintenance.                                                                                                                                     |
+

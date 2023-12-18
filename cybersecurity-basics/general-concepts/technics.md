@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Technics
 
 * **Pen-Testing:** Involves using the same tools, techniques, and methodologies that someone with malicious intent to report vulnerabilities of a system.
@@ -5,3 +19,4 @@
 * **Steganography:** Hiding a file or a message inside of another file.
 * **Pivoting:** Use an already compromise machine to jump or get access to another machines of the same network.
 * **Tunneling:** Consist in encapsulate a network protocol over other to create an information tunnel on a computer network.
+

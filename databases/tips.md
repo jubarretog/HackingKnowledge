@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tips
 
 * Check if URL contains a Query
@@ -6,3 +20,4 @@
 * Check comments in php
   * They are with **#**
   * To perform sql injection in form: _**admin'#**_
+

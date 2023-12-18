@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Cryptographic Failures
 
 Any misuse or lack of cryptographic security. Most common examples are weak password hashing, use of http instead of https, vulnerable javascript web tokens.

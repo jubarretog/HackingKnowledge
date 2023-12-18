@@ -1,6 +1,20 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Reverse Shell
 
-## For awscli
+## <mark style="color:purple;">For awscli</mark>
 
 * Check if we have remote command execution
 

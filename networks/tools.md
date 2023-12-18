@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tools
 
 ## <mark style="color:green;">SMBCLIENT</mark>
@@ -58,7 +72,7 @@ smb: \> exit            #Close conection
 
 
 
-### <mark style="color:green;">TELNET</mark>
+## <mark style="color:green;">TELNET</mark>
 
 * Use of Telnet Protocol
 * Commonly used in port 23
@@ -72,6 +86,24 @@ smb: \> exit            #Close conection
 sudo telnet $ip $port
 ```
 {% endcode %}
+
+***
+
+* Example
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo telnet $ip 80 #We connect to http service
+#We send a petition
+GET / HTTP/1.1
+host: telnet
+#Then use enter twice to send
+```
+{% endcode %}
+
+{% hint style="info" %}
+If we don't specify host, we will get an error&#x20;
+{% endhint %}
 
 ***
 
@@ -109,9 +141,9 @@ name: anonymous #Stablish anonymous conection
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ftp> get $filename   #Download a file
-ftp> put $filename   #Upload a file
-ftp: \> exit         #Close conection
+ftp:\> get $filename   #Download a file
+ftp:\> put $filename   #Upload a file
+ftp:\> exit         #Close conection
 ```
 {% endcode %}
 
@@ -122,8 +154,8 @@ ftp: \> exit         #Close conection
 ## <mark style="color:green;">Netcat</mark>
 
 * Unix utility which reads and writes data across network connections
-* By default makes an TCP conection
-* Can be used with TCP or UDP protocol
+* Can act as a server or as a listener server
+* By default makes an TCP conection but can be used with TCP or UDP protocol
 
 ### **Commands**
 
@@ -142,26 +174,8 @@ sudo apt install netcat-traditional
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nc $hostname $port
-```
-{% endcode %}
-
-***
-
-* Use only numeric IP no DNS
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-nc -n $IP $port
-```
-{% endcode %}
-
-***
-
-* Verbose Output
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-nc -v $hostname $port
+nc -n $IP $port        #Use only numeric IP no DNS
+nc -v $hostname $port  #Verbose Output
 ```
 {% endcode %}
 
@@ -172,6 +186,7 @@ nc -v $hostname $port
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nc -l -p $Port
+nc -vnlp $Port     #Best way to make it
 ```
 {% endcode %}
 
@@ -181,9 +196,9 @@ nc -l -p $Port
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nc -lp $port > $incomingfile  #From listening side
-nc -n -v - $port < $file      #From sender side
-$incomingfile -h              #Check is trasmision was correct from listener side
+nc -vnlp $port > $incomingfile  #From listening side
+nc -n -v - $port < $file        #From sender side
+$incomingfile -h                #Check is trasmision was correct from listener side
 ```
 {% endcode %}
 
@@ -196,6 +211,24 @@ $incomingfile -h              #Check is trasmision was correct from listener sid
 nc -l -p $Port -e $program
 ```
 {% endcode %}
+
+***
+
+* Example
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo nc $ip 80 #We connect to http service
+#We send a petition
+GET / HTTP/1.1
+host: netcat
+#Then use enter to send
+```
+{% endcode %}
+
+{% hint style="info" %}
+To make a line jump is neccesare press `SHIFT+ENTER`
+{% endhint %}
 
 ***
 
@@ -227,6 +260,16 @@ nc -l -p $Port -e $program
 * Microsoft windows may respond to a _NULL_, _FIN_ or _Xmas_ scan with a _RST_ for every port.
 
 ### **Commands**
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install nmap
+```
+{% endcode %}
+
+***
 
 * Basic scans
 
@@ -273,11 +316,53 @@ nmap -sU --top-ports $numberofports $target   #Specify the most common UDP ports
 
 ***
 
-* Perform Ping Sweep
+* Select which port scan
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap -Pn $targetIPranges
+nmap -p $port $target
+nmap -p $port-port $target   #Select a range of ports
+nmap -p- $target             #Scan all ports
+```
+{% endcode %}
+
+***
+
+* Perform Ping Sweep (without pinging a port)
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nmap -Pn $target
+```
+{% endcode %}
+
+***
+
+* Only make host discovery
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>sudo nmap -sn $target
+</strong>sudo nmap -sn -PR $target #Only ARP scan
+<strong>sudo nmap -sn -PE $target #Make ICMP echo request
+</strong>sudo nmap -sn -PP $target #Make ICMP timestamp request
+sudo nmap -sn -PM $target #Make adress mask request
+sudo nmap -sn -PS $ports $target #Use TCP SYN ping
+sudo nmap -sn -PA $ports $target #Use TCP ACK ping
+sudo nmap -sn -PU $ports $target #Use UDP ping
+</code></pre>
+
+{% hint style="info" %}
+* If _ICMP_ scans return MAC adresses means the hosts are in the same subnet
+* Ports in TCP scans are optional
+{% endhint %}
+
+***
+
+* DNS resolution
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo nmap -n #Don't use reverse-dns
+sudo nmap -R #Use reverse-dns even with offline hosts
 ```
 {% endcode %}
 
@@ -298,6 +383,16 @@ nmap -O $target
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nmap -sV $target
+```
+{% endcode %}
+
+***
+
+* List hosts to be scanned witouth scanning them
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nmap -sL $targets
 ```
 {% endcode %}
 
@@ -342,48 +437,16 @@ nmap -T$timinglevel $target
 
 ***
 
-* Select which port scan
+* Use scripts from NSE library
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-nmap -p $port $target
-nmap -p $port-port $target   #Select a range of ports
-nmap -p- $target             #Scan all ports
-```
-{% endcode %}
-
-***
-
-* Activate a script from NSE library
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-nmap --script=$scriptfile  $target
-nmap --script=$category  $target  #Active all scripts in the category
-nmap -p $port --script=$script --script-args $script.$arg='$argvalue'
-```
-{% endcode %}
-
-***
-
-* Search scripts in NSE
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>nmap -sC $target    #Script scan
+</strong><strong>nmap --script=$scriptfile  $target
+</strong>nmap --script=$category  $target  #Active all scripts in the category
+nmap -p $port --script=$script --script-args $script.$arg='$argvalue' #Pass arguments to a script
+#Search scripts
 grep $keyword /usr/share/nmap/scripts/script.db    #Using grep
 ls -l /usr/share/nmap/scripts/*$keyword*           #Using ls
-```
-{% endcode %}
-
-***
-
-* Scan without pinging a port
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-nmap $target -Pn
-```
-{% endcode %}
+</code></pre>
 
 ***
 
@@ -427,6 +490,67 @@ nmap $target --badsum
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nmap $target --data-length  $number  
+```
+{% endcode %}
+
+***
+
+
+
+## <mark style="color:green;">ARP-Scan</mark>
+
+* Tool for making host discovery via ARP packets
+* Only Devices in the same subnet can be discoveres via ARP
+
+### **Commands**
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install arp-scan
+```
+{% endcode %}
+
+***
+
+* Scan options
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+arp-scan $tagetRange
+arp-scan -l                           #Scan local network
+arp-scan $tagetRange -I $netInterface #Specify wich network interface to use
+```
+{% endcode %}
+
+***
+
+
+
+## <mark style="color:green;">Masscan</mark>
+
+* Tool for making port scaning
+* More agresive than _arp-scan_
+
+### **Commands**
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install masscan
+```
+{% endcode %}
+
+***
+
+* Scan options
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+masscan $targetRange -p $ports
+masscan $targetRange ‐‐top-ports $n    #Scan the n most used ports
 ```
 {% endcode %}
 

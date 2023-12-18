@@ -1,4 +1,18 @@
-# Commands cmd
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# CMD commands
 
 * Show the name of the system.
 
@@ -29,18 +43,42 @@ $command /
 
 * Show network adress settings.
 
-```shell
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 ipconfig
 ipconfig /all    #Full configuration information
 ```
+{% endcode %}
 
 ***
 
 * Show protocol statistics and current TCP/IP network connections.
 
+{% code overflow="wrap" lineNumbers="true" %}
 ```sh
 netstat
 ```
+{% endcode %}
+
+***
+
+* Makes a ping to a machine
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sh
+ping -n $IPadress
+```
+{% endcode %}
+
+***
+
+* Traces the route taken by the packets from your system to another host
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+tracert $IPadress
+```
+{% endcode %}
 
 ***
 

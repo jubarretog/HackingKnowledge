@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # General Concepts
 
 * **NIC:** Network Interface Card
@@ -40,3 +54,4 @@
 * **VPN:** Create a tunnel through the conection to a network where data is encrypted.
 * **Antivirus:** Uses signatures or behavioral analysis of applications to identify and block malicious code.
 * **NTLM:** New Technology Lan Manager, collection of authentication protocols as a challenge-response used to authenticate a client to a resource on an Active Directory domain.
+

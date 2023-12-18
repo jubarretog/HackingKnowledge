@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # File Permissions
 
 By executing `ls -l` we can see a list of details from a file or directory. The first part represent the permissions associates with the file. It looks as a combination of symbol `-` and letters `d` `r` `c` `w` and can be understood as following:
@@ -6,7 +20,7 @@ By executing `ls -l` we can see a list of details from a file or directory. The 
 * Then, three sections of three letters, each one indicates: `owner`, `group` and `others`
 * Each letter indicates the permissions: read `r` write: `w` or execute `x` for the respective section
 
-**Example:**
+## <mark style="color:orange;">**Example**</mark>
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

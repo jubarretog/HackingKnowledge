@@ -1,12 +1,24 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # OSINT
 
 Open Source Intelligence, practice based on collecting info from open source sites on the web
 
+## <mark style="color:orange;">Dorking</mark>
 
-
-## Dorking
-
-Prectice that consist in using google tools and advance serch engine to get information
+Also know as Google Hacking, practice that consist in using google tools and advance serch engine to get information
 
 * Show results only for the adress specified
 

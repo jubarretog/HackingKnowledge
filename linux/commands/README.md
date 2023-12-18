@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Commands
 
 * Create a bash instance
@@ -62,13 +76,37 @@ whoami
 
 ***
 
+* Get the hostname of the machine
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+hostname
+```
+{% endcode %}
+
+***
+
 * Get information about the machine and system
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 uname
+uname -a #Print all information
 ```
 {% endcode %}
+
+{% hint style="info" %}
+Information come in the following order separated by spaces
+
+* kernel-name
+* nodename
+* kernel release
+* kernel version
+* machine architecture
+* processor architecture
+* hardware platform architecture
+* operating system
+{% endhint %}
 
 ***
 
@@ -78,6 +116,17 @@ uname
 ```bash
 sudo $command
 sudo -l #See what commands can use the user with sudo
+```
+{% endcode %}
+
+***
+
+* See user and group information
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+id
+id $username #Can be used with any user
 ```
 {% endcode %}
 
@@ -180,22 +229,13 @@ ss
 
 ***
 
-* Create an enviroment variable
+* Use enviroment variables
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
+env                           #List current variables
 $variablename=$value          #Created only in the current shell
 export $variablename=$value   #Created globally
-```
-{% endcode %}
-
-***
-
-* List enviroment variables
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-env
 ```
 {% endcode %}
 
@@ -284,20 +324,31 @@ less $file #Less is lighter, charge one page of content at time
 
 ***
 
-* Shows path where is the specified file
+* Find a file or directory
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-find -name $filename
-find .                     #All file
-find /                     #All From root directory
-find *.$extension          #All paths to files with the specified extension
-find -group $groupname     #Find by group
-find -user  $username      #Find by owner
-find -size  $size$unit     #Find by size, c for bytes
-find 2>/dev/null           #Exclude files with no permissions
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">find .                      #All files and directories from the actual directory
+find /                      #All files and directories from root directory
+find $path                  #All files and directories from specific directory
+find . -name $filename      #Find by exact name
+find . -name "*.$extension" #All files with the specified extension
+find . -d $dir              #Only search directories
+find . -f $dir              #Only search files
+<strong>find . -perm $permissions   #Find by specified permissions
+</strong>find . -group $groupname    #Find by group
+find . -user  $username     #Find by owner
+find . -size  $size$unit    #Find by exact size, c for bytes, M for MB
+find . -size  +$size$unit   #Find by larger size than specified
+find . -size  -$size$unit   #Find by smaller size than specified
+find . -mtime $n            #Files modified in the last n days
+find . -atime $n            #Files accesed in the last n days
+<strong>find . -cmin $n             #Files changed in the last n minutes
+</strong>find . -amin $n             #Files accesed in the last n minutes
+find . 2>/dev/null          #Exclude files with no permissions
+</code></pre>
+
+{% hint style="info" %}
+The `-perm` flag can recieve permission such as `777` or `a=x`
+{% endhint %}
 
 ***
 
@@ -631,11 +682,12 @@ python3 -m $modulename    #Start a python module
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ps        #Show process run in the user sesion
-ps aux    #Shows other user and complete system processes
-ps -e     #Shows all processes
-ps -f     #Display full format listing
+ps                  #Show process run in the user sesion
+ps aux              #Shows other user and complete system processes
+ps -A               #Shows all processes
+ps -f               #Display full format listing
 ps -C $commandname  #Shows process with a specified command
+ps axjf             #Show as a tree
 ```
 {% endcode %}
 
@@ -777,11 +829,13 @@ dpkg -P $packagename   #Delete package and its configuration
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 ping $IPaddress
-ping $URLdomain
+ping $URLdomain                 #Use domain name
 ping $IPaddress -4              #Limit to only IPv4 requests
 ping $IPaddress -6              #Limit to only IPv6 requests
-ping $IPaddress -i $seconds     #Set time interval to send each package
+ping $IPaddress -i $seconds     #Set time interval to send each packet
 ping $IPaddress -v              #Show a verbose output
+ping $IPaddress -c $number      #Send an exxact number of packet
+ping $IPaddress -s $size        #Specify number of bytes of the data
 ```
 {% endcode %}
 
@@ -797,6 +851,10 @@ traceroute $IPaddress -i $interface #Specify interface for send packets
 traceroute $IPaddress -T #Use TCP SYN for connection probes
 ```
 {% endcode %}
+
+{% hint style="info" %}
+An `*` on response represent that a package hasn't got a ICMP message from router
+{% endhint %}
 
 ***
 
@@ -825,8 +883,9 @@ nslookup -type=$record $URLdomain    #Specify record type
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-dig @$DNSIPaddress $URLdomain
-dig @$DNSIPaddress $URLdomain  $record   #Specify record type
+dig $URLdomain $record
+dig @$DNSIPaddress $URLdomain           #Look up DNS records
+dig @$DNSIPaddress $URLdomain $record   #Specify record type on DNS records
 ```
 {% endcode %}
 
@@ -843,14 +902,27 @@ fdisk -l $device       #List all current disk partitions
 
 ***
 
-* Check NIC configuration
+* Network utilitis
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ifconfig     #For all Interfaces
-iwconfig     #For wireless Interfaces
+ifconfig     #Check network nterfaces
+iwconfig     #Check only wireless Interfaces
+ip route     #Check existing network routes
+netstat      #Check ports and active connections
+netstat -a   #List all ports and connection
+netstat -l   #List listening ports
+netstat -t   #List only tcp ports
+netstat -u   #List only udp ports
+netstat -s   #List network usage statistics by protocol
+netstat -p   #List with PID and program name
+netstat -ano #Most common use, n to no resolve names, o to display timers
 ```
 {% endcode %}
+
+{% hint style="info" %}
+If with `netstat -p` the PID and name aren't shown it's because the process is owned by another user. Running the command with sudo could show this information
+{% endhint %}
 
 ***
 

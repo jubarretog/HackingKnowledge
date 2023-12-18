@@ -1,7 +1,34 @@
-# Enumeration with wordlists
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
 
-* Use Brute-Forcing to get hidden files, directorys and paths from a website
-* Daniel Miessler Wordlists: [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
+# Fuzzing
+
+Use Brute-Forcing for enumeration to get hidden files, directorys and paths from a website.
+
+## <mark style="color:green;">Daniel Miessler Wordlists</mark>
+
+* Well-known wordlists for every proccess of fuzzing or bruteforcing
+
+### Download
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+git clone https://github.com/danielmiessler/SecLists
+```
+{% endcode %}
+
+***
 
 
 
@@ -110,3 +137,4 @@ sudo apt install nikto
 nikto -h $url
 ```
 {% endcode %}
+

@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Crometabs
 
 Special files with formatting that is recognised by the `cron` process to execute each line step-by-step in a regular time
@@ -17,7 +31,7 @@ $MIN $HOUR $DOM $MON $DOW $COM   #Example below
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** The<mark style="color:orange;">`*`</mark>let skip the specification of values
+**Note:** The`*`let skip the specification of values
 {% endhint %}
 
 ***

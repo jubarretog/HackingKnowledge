@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tools
 
 ## <mark style="color:green;">Burp Suite</mark>
@@ -44,7 +58,7 @@
 * Click on Import and selct the cacer.der
 * Mark _Trust this CA to indetify websites_ and save all
 
-#### Configure HTTPS proxy
+#### Hotkeys
 
 * **Ctrl + R:** Send petition to Repeater
 * **Ctlr + U:** URL encode selected text
@@ -53,7 +67,9 @@
 
 ## <mark style="color:green;">Responder</mark>
 
-Help in passive obtention of credentials by mounting a SMB server in web
+* Help in passive obtention of credentials by mounting a SMB server in web
+
+### Commands
 
 * Configurate file
 
@@ -168,3 +184,4 @@ sudo apt install zaproxy
 
 * Browser extension that help us sending anonymous information about websites visited, including domain name and identified technologies.
 * [https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/](https://addons.mozilla.org/en-US/firefox/addon/wappalyzer/)
+

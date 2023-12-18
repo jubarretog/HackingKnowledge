@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tools
 
 ## <mark style="color:green;">Openssl</mark>
@@ -91,13 +105,20 @@ hashcat -a $attackmode -m $modecode $file.hash $dictionary
 ## <mark style="color:green;">Dcode.fr</mark>
 
 * Online tool for encrypting, decrypting, coding or decoding cyphers
-* Can identified what cipher is used in a ciphertext
-* [https://www.dcode.fr/cipher-identifier](https://www.dcode.fr/cipher-identifier)
+* [https://www.dcode.fr/en](https://www.dcode.fr/en)
+
+{% hint style="info" %}
+Have a cipher identifier: [https://www.dcode.fr/cipher-identifier](https://www.dcode.fr/cipher-identifier)
+{% endhint %}
 
 
 
 ## <mark style="color:green;">Cyberchef</mark>
 
 * Online tool for encrypting, decrypting, coding or decoding cyphers
-* With the magic mode try to identify and decode automatically the ciphertext
 * [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/)
+
+{% hint style="info" %}
+The magic mode help you identify and decode automatically the ciphertext
+{% endhint %}
+

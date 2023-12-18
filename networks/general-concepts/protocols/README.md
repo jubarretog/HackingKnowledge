@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Protocols
 
 * **ICMP:** Internet Control Message Protocol, occurs in network layer, diagnose route state through error messages.
@@ -18,8 +32,8 @@
 * **HTTPS:** HyperText Transfer Protocol Secure, is the secure version of HTTP where data is encrypted, stops people from seeing the data you are receiving and sending. Usual port to access is 443.
 * **WHOIS:** Listens on TCP port 43 for incoming requests, server replies with various information related to the domain requested.
 * **SSH:** Secure Shell, Protocol and program wich let remote access to a server via a secure channel. Allows us to remotely execute commands on another device.Any data between devices is encrypted went traveling through network. It listens on port 22.
-* **Telnet:** Used for terminal to terminal conections and used by other protocols to stablish a Remote Control Chanel. Usually used in port 21.
-* **SMB:** Server Message Block, client-server protocol that control file and directory access and other network resources.Usual port is 445.
+* **Telnet:** Used for terminal to terminal conections and used by other protocols to stablish a Remote Control Chanel. Usually used in port 23.
+* **SMB:** Server Message Block, client-server protocol that control file and directory access and other network resources, it is used a lot in Windows for file transfer or sending files to printers. Default port is 445.
 * **IRC:** Interner Realy Chat.
 * **NTP:** Network Time Protocol, internet protocol that synchronize system clocks via packets routing in a variable latency. Occurs on transport layer using port 123.
 * **IRC:** Internet Relay Chat, comunication protocol real time based for chat channelss where no previous comunication has to be stablished between users. Use port 194.
@@ -29,3 +43,4 @@
 * **SMTPS:** Simple Mail transfer Protocol Secure, uses port 587.
 * **PPP:** Point-to-Point Protocol, occurs on data link layer, used to stablish a direct connection between to nodes of a network.
 * **POP:** Post Office Protocol, normally POP3, used in local clients to get and manage mail messages from a remote POP server.
+

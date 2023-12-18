@@ -1,8 +1,22 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # DNS
 
-## Domain Hierarchy
+## <mark style="color:orange;">Domain Hierarchy</mark>
 
-### <mark style="color:orange;">TLD (Top-Level Domain)</mark>
+### TLD (Top-Level Domain)
 
 * Is the righthand part of a domain name.&#x20;
 * Can only use a-z 0-9 and hyphens and cannot start or end with hyphens or have consecutive hyphens.
@@ -10,12 +24,12 @@
   * _gTLD:_ Generic Top Level, tell the user the domain name's purpose.
   * _ccTLD:_ Country Code Top Level Domain, used for geographical purposes.&#x20;
 
-### <mark style="color:orange;">Second-Level Domain</mark>
+### Second-Level Domain
 
 * Most tipical part of the domain that specifies the name of the page.
 * Is limited to 63 characters.
 
-### <mark style="color:orange;">Subdomain</mark>
+### Subdomain
 
 * Describe an specific applications of a page.
 * Can use multiple subdomains but length must be kept to 253 characters or less.
@@ -23,7 +37,7 @@
 
 
 
-## Record Types
+## <mark style="color:orange;">Record Types</mark>
 
 * **A Record:** Resolve to IPv4 addresses
 * **AAAA Record:** Resolve to IPv6 addresses
@@ -33,3 +47,4 @@
 * **TXT record:** Are free text fields where any text-based data can be stored. Help to list servers that have the authority to send an email on behalf of the domain.
   * Can help in the battle against spam and spoofed email). They&#x20;
   * Can be used to verify ownership of the domain name when signing up for third party services.
+

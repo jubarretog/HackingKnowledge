@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # General Concepts
 
 * **Request:** Message sent to a server to with the information of an action this have to do. It comes from the user or other server.

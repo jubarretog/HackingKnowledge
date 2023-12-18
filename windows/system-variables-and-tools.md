@@ -1,12 +1,28 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # System Variables and Tools
 
-## Environment Variables
+## <mark style="color:orange;">Environment Variables</mark>
 
 * **`%windir%`:** Environment variable for windows folder
 
 
 
-## System Tools
+## <mark style="color:orange;">System Tools</mark>
+
+These can be easily accesed via _Run_ application (Can be open fastly with `Ctrl+R`)
 
 * **`msconfig`:** System configuration, related to startup options.
 * **`taskmgr`:** Task Manager
@@ -17,6 +33,6 @@
 * **`control.exe`:** Control Panel
 * **`UserAccountControlSettings.exe`:** Change UAC settings
 * **`regedit/regedt32`:** Registry Editor, central database used to store information necessary to configure the system for user, applications and hardware devices.
-* **`cmd`:** Command Prompt, execute command from console.
+* **`cmd`:** Command Prompt, execute commands from console.
 * **`control /name Microsoft.WindowsUpdate`:** Access to Windows update
 * **`wf.msc`:** Windows firewall.

@@ -1,30 +1,44 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: false
+  pagination:
+    visible: true
+---
+
 # Tools
 
 ## <mark style="color:green;">ADPEAS</mark>
 
-* a
+* Here goes information
 
 
 
 ## <mark style="color:green;">kerberos</mark>
 
-* a
+* Here goes information
 
 
 
 ## <mark style="color:green;">kerbruter</mark>
 
-* a
+* Here goes information
 
 
 
 ## <mark style="color:green;">ldapdomaindump</mark>
 
-* a
+* Here goes information
 
 
 
 ## <mark style="color:green;">bloodhound</mark>
 
-* a
+* Here goes information
 

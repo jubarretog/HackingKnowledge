@@ -4,20 +4,20 @@
 
 * [WELCOME!!](README.md)
 * [About me](about-this-site/about-me.md)
+* [Disclaimer](about-this-site/disclaimer.md)
 
 ## 🔑 Cybersecurity Basics
 
 * [General Concepts](cybersecurity-basics/general-concepts/README.md)
-  * [Unified Kill Chain](cybersecurity-basics/general-concepts/unified-kill-chain.md)
+  * [Kill Chain](cybersecurity-basics/general-concepts/kill-chain.md)
   * [Methodologies](cybersecurity-basics/general-concepts/methodologies.md)
   * [Attacks](cybersecurity-basics/general-concepts/attacks.md)
   * [Malware](cybersecurity-basics/general-concepts/malware.md)
   * [Technics](cybersecurity-basics/general-concepts/technics.md)
   * [Vulnerabilities](cybersecurity-basics/general-concepts/vulnerabilities.md)
-* [Career Paths](cybersecurity-basics/career-paths.md)
-* [Security Laws and Regulations](cybersecurity-basics/security-laws-and-regulations.md)
 * [Security Models](cybersecurity-basics/security-models.md)
-* [CTFs](cybersecurity-basics/ctfs.md)
+* [Legal Support](cybersecurity-basics/legal-support.md)
+* [Career Paths](cybersecurity-basics/career-paths.md)
 
 ## 🐧 Linux
 
@@ -73,34 +73,52 @@
   * [Broken Access Control](web-hacking/owasp-top-10/broken-access-control.md)
   * [Cryptographic Failures](web-hacking/owasp-top-10/cryptographic-failures.md)
   * [Injection](web-hacking/owasp-top-10/injection.md)
-* [Code Injection](web-hacking/code-injection.md)
+  * [a](web-hacking/owasp-top-10/a.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools/README.md)
   * [Fuzzing](web-hacking/tools/fuzzing.md)
 
 ## 🔒 Cryptography
 
-* [General Concepts](cryptography/general-concepts.md)
-* [Types and methods of Encryption](cryptography/types-and-methods-of-encryption.md)
+* [General Concepts](cryptography/general-concepts/README.md)
+  * [a](cryptography/general-concepts/a.md)
 * [Tips](cryptography/tips.md)
 * [Tools](cryptography/tools.md)
-
-## 🧾 SCRIPTING
-
-* [General Concepts](scripting/general-concepts.md)
-* [Reverse Shell](scripting/reverse-shell.md)
-* [Tips](scripting/tips.md)
-* [Tools](scripting/tools.md)
 
 ## 👣 Digital Forensics
 
 * [General Concepts](digital-forensics/general-concepts/README.md)
-  * [Basic Plan](digital-forensics/general-concepts/basic-plan.md)
+  * [Basic Forensics Plan](digital-forensics/general-concepts/basic-forensics-plan.md)
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
+
+## 🧾 SCRIPTING
+
+* [Reverse Shell](scripting/reverse-shell.md)
+* [Tools](scripting/tools.md)
+
+## ☠ Privelege Escalation
+
+* [General Concepts](privelege-escalation/general-concepts.md)
+* [Introduction](privelege-escalation/introduction.md)
+* [Enumeration](privelege-escalation/enumeration/README.md)
+  * [Tools](privelege-escalation/enumeration/tools.md)
+* [Explotation](privelege-escalation/explotation/README.md)
+  * [Tools](privelege-escalation/explotation/tools.md)
+* [Post-Explotation](privelege-escalation/post-explotation/README.md)
+  * [Tools](privelege-escalation/post-explotation/tools.md)
 
 ## 👥 ACTIVE DIRECTORY
 
 * [General Concepts](active-directory/general-concepts.md)
 * [Tips](active-directory/tips.md)
 * [Tools](active-directory/tools.md)
+
+## 🚩 CTFs
+
+* [Introduction](ctfs/introduction.md)
+* [Tools](ctfs/tools.md)
+* [Writeups](ctfs/writeups/README.md)
+  * [TryHackMe](ctfs/writeups/tryhackme.md)
+  * [Hack The Box](ctfs/writeups/hack-the-box.md)
+  * [PicoCTF](ctfs/writeups/picoctf.md)

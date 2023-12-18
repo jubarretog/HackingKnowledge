@@ -1,3 +1,17 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # Tools
 
 ## <mark style="color:green;">REDIS</mark>
@@ -16,6 +30,11 @@ sudo redis-cli -h $hostname #Specify hostname
 
 
 ## <mark style="color:green;">AWS BUBCKET 3</mark>
+
+* S3 Buckets is a service that allos people to save files and even static website content in the cloud accessible over HTTP and HTTPS
+* [https://aws.amazon.com/es/s3/](https://aws.amazon.com/es/s3/)
+
+### Commands
 
 * Install amazon cli
 
@@ -61,3 +80,4 @@ sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a 
 mysql -u $user -h $host -p #Prompt for password
 ```
 {% endcode %}
+

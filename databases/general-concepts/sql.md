@@ -1,22 +1,38 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
 # SQL
 
-## Information Schema
+Structured Query Language, standart language used for querying relational databases.
+
+## <mark style="color:orange;">Information Schema</mark>
 
 DB that save information about all other DB the user has access, find as **`information_schema`**
 
-* **`.tables`:** Tables of DB
+* **`information_schema.tables`:** Tables of DB
   * table\_catalog
   * table\_schem
   * table\_name
   * table\_type
-* **`.columns`:** Information of every column from tables.
+* **`information_schema.columns`:** Information of every column from tables.
   * table\_schema: DB where table is.
   * table\_name: Name of the table.
   * column \_name: Name of column from a specified table.
 
 
 
-## Commands
+## <mark style="color:orange;">Commands</mark>
 
 * Show databases and tables
 
