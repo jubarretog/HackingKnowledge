@@ -24,7 +24,7 @@ My interest on ethical hacking has grown thanks to all people I've known all the
 
 My actual goal is to get ready for achieving [OSCP](https://www.offsec.com/courses/pen-200/) certification in Pentesting.
 
-## <mark style="color:orange;">Contact information</mark>
+## <mark style="color:blue;">Contact information</mark>
 
 * **Email:** [jubarretog@unal.edu.co](https://app.gitbook.com/u/cdbSbVEtWCP0IKRHa0p28S49E1o2)
 * **Github:** [KryptoCoder](https://github.com/jubarretog)

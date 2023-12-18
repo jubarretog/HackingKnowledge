@@ -16,7 +16,7 @@ layout:
 
 Here goes what is the page
 
-## My Account
+## <mark style="color:blue;">My Account</mark>
 
 Here goes the badge
 

@@ -14,7 +14,7 @@ layout:
 
 # HTTP
 
-## <mark style="color:orange;">Request-Response</mark>
+## <mark style="color:blue;">Request-Response</mark>
 
 ### Common Request Headers
 
@@ -33,7 +33,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Methods</mark>
+## <mark style="color:blue;">Methods</mark>
 
 * **GET Request:** Used for getting information from a web server.
 * **POST Request:** Used for submitting data to the web server and potentially creating new records.
@@ -43,7 +43,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Status code types</mark>
+## <mark style="color:blue;">Status code types</mark>
 
 <table><thead><tr><th width="374">100-199 - Information Response</th><th>These are sent to tell the client the first part of their request has been accepted and they should continue sending the rest of their request. These codes are no longer very common.</th></tr></thead><tbody><tr><td>200-299 - Success</td><td>This range of status codes is used to tell the client their request was successful.</td></tr><tr><td>300-399 - Redirection</td><td>These are used to redirect the client's request to another resource. This can be either to a different webpage or a different website altogether.</td></tr><tr><td>400-499 - Client Errors</td><td>Used to inform the client that there was an error with their request.</td></tr><tr><td>500-599 - Server Errors</td><td>This is reserved for errors happening on the server-side and usually indicate quite a major problem with the server handling the request.</td></tr></tbody></table>
 

@@ -14,7 +14,7 @@ layout:
 
 # DNS
 
-## <mark style="color:orange;">Domain Hierarchy</mark>
+## <mark style="color:blue;">Domain Hierarchy</mark>
 
 ### TLD (Top-Level Domain)
 
@@ -37,7 +37,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Record Types</mark>
+## <mark style="color:blue;">Record Types</mark>
 
 * **A Record:** Resolve to IPv4 addresses
 * **AAAA Record:** Resolve to IPv6 addresses

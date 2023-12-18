@@ -14,7 +14,7 @@ layout:
 
 # System Events
 
-## <mark style="color:orange;">Event Types</mark>
+## <mark style="color:blue;">Event Types</mark>
 
 Can be seen in _Event listener_ via _Computer Management_
 
@@ -22,7 +22,7 @@ Can be seen in _Event listener_ via _Computer Management_
 
 
 
-## <mark style="color:orange;">Standard logs</mark>
+## <mark style="color:blue;">Standard logs</mark>
 
 Are visible under _Windows Logs_ in _Even Viewer_
 

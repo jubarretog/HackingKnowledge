@@ -14,6 +14,41 @@ layout:
 
 # Tools
 
+## <mark style="color:green;">**Exploit DB**</mark>
+
+* Retains exploits for software and applications
+* [https://www.exploit-db.com/](https://www.exploit-db.com/)
+
+
+
+## <mark style="color:green;">Searchsploit</mark>
+
+* Kali package for acceding to exploitDB
+
+### Commands
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install exploitdb
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+searchsploit $Keywords
+```
+{% endcode %}
+
+***
+
+
+
 ## <mark style="color:green;">Metasploit</mark>&#x20;
 
 Explotation framework with tools for every phase of pentesting
@@ -133,36 +168,15 @@ msf6 exploit(windows/smb/ms17_010_eternalblue)\>        #The terminal context se
 
 
 
-## <mark style="color:green;">Searchsploit</mark>
-
-* Kali package for acceding to exploitDB
-
-### Commands
-
-* Installation
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-sudo apt install exploitdb
-```
-{% endcode %}
-
-***
-
-* Usage
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-searchsploit $Keywords
-```
-{% endcode %}
-
-***
-
-
-
 ## <mark style="color:green;">Payloads for Everything</mark>
 
 * Repository that contains payloads for diverses purposes and attackas
 * [https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master)
+
+
+
+## <mark style="color:green;">LOLBAS</mark>
+
+* Contain scripts, binaries and libraries for developing a Living off the Land attack
+* [https://lolbas-project.github.io/](https://lolbas-project.github.io/)
 

@@ -18,7 +18,7 @@ After enumeration comes the explotation phase were we use vulnerabilities found 
 
 Explotation can also set as objective to jump to another machine in the same network via pivoting or even jump to another network.
 
-## <mark style="color:orange;">Useful Tips</mark>
+## <mark style="color:blue;">Useful Tips</mark>
 
 * Run _calc.exe_ on windows as a PoC that we can run command.
 * On metasploit check _Rank_ column of an exploit to ensure its reliability.

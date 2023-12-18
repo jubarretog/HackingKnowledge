@@ -14,7 +14,7 @@ layout:
 
 # Tools
 
-## <mark style="color:orange;">TTY Sanizitation</mark>
+## <mark style="color:blue;">TTY Sanizitation</mark>
 
 Executing this commands let us configure a terminal to be interactive an process keybinding as a normal bash. Very useful when we get a external terminal, for example with a reverse shell.
 
@@ -44,13 +44,3 @@ sudo openvpn $ovpnfile
 
 ***
 
-
-
-## <mark style="color:orange;">Information Sources</mark>
-
-* **LOLBAS:** Contain scripts, binaries and libraries for developing a Living off the Land attack. [https://lolbas-project.github.io/](https://lolbas-project.github.io/)
-* **Hacksplaining:** [https://www.hacksplaining.com/lessons](https://www.hacksplaining.com/lessons)
-
-
-
-##

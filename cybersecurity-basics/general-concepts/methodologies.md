@@ -14,7 +14,7 @@ layout:
 
 # Methodologies
 
-## <mark style="color:orange;">Pen-Testing Frameworks</mark>
+## <mark style="color:blue;">Pen-Testing Frameworks</mark>
 
 * **OSSTMM:** Open Source Security Testing Methodology Manual, focus on Telecommunications, Wired Networks and Wireless communications.
 * **OWASP:** Open Web Application Security Project, community-driven, is used solely to test the security of web applications and services.
@@ -23,14 +23,14 @@ layout:
 
 
 
-## <mark style="color:orange;">Thread Modelling</mark>
+## <mark style="color:blue;">Thread Modelling</mark>
 
 * **STRIDE:** Spoofing identity, Tampering with data, Repudiation threats, Information disclosure, Denial of Service and Elevation of privileges.
 * **PASTA:** Process for Attack Simulation and Threat Analysis, is a risk-centric threat modeling methodology, focus on the probability of each attack.
 
 
 
-## <mark style="color:orange;">Incident Response Stages</mark>
+## <mark style="color:blue;">Incident Response Stages</mark>
 
 * **Preparation:** Evaluate what resourses and plans are available to deal with the security incident.
 * **Identification:** Determinate if threat and the threat actor have been correctly identified.

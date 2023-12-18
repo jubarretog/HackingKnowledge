@@ -14,13 +14,13 @@ layout:
 
 # System Variables and Tools
 
-## <mark style="color:orange;">Environment Variables</mark>
+## <mark style="color:blue;">Environment Variables</mark>
 
 * **`%windir%`:** Environment variable for windows folder
 
 
 
-## <mark style="color:orange;">System Tools</mark>
+## <mark style="color:blue;">System Tools</mark>
 
 These can be easily accesed via _Run_ application (Can be open fastly with `Ctrl+R`)
 

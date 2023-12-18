@@ -14,7 +14,7 @@ layout:
 
 # Attacks
 
-## <mark style="color:orange;">Attack Stages</mark>
+## <mark style="color:blue;">Attack Stages</mark>
 
 * **Information Gathering:** Collecting as much publically accessible information about a target/organisation as possible.
 * **Enumeration:** Discovering applications and services running on the systems.
@@ -24,7 +24,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Classification of attacks</mark>
+## <mark style="color:blue;">Classification of attacks</mark>
 
 * **Passive:** Is focused in monitoring and interception of data flows through network traffic.
 * **Active:** Data tampering, corruption, extraction or disruption of communication between secured systems.
@@ -34,7 +34,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Types of Attacks</mark>
+## <mark style="color:blue;">Types of Attacks</mark>
 
 * **Spoofing:** A networked device pretends to identify as another using its MAC address.
 * **On-path:** Intercept or modify communications between two devices.

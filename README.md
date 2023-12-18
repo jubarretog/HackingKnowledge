@@ -22,4 +22,4 @@ In this manner, is expected to cover fields such as Operating Systems, networks,
 
 Furthermore, at the final part can be found a recopilation of my writeups from machines and CTFs challenges that i've completed from [Hack the box](https://www.hackthebox.com/), [TryHackMe](https://tryhackme.com/) and [PicoCTF](https://picoctf.org/).
 
-### _<mark style="color:red;">**Developed by:**</mark>** **<mark style="color:blue;">**Juan David Barreto Grattz**</mark>** **<mark style="color:red;">**aka**</mark>** **<mark style="color:blue;">**KryptoCoder**</mark>_
+### _<mark style="color:blue;">**Developed by:**</mark>** Juan David Barreto Grattz **<mark style="color:blue;">**aka**</mark>_ _**KryptoCoder**_

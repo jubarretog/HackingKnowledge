@@ -20,7 +20,7 @@ By executing `ls -l` we can see a list of details from a file or directory. The 
 * Then, three sections of three letters, each one indicates: `owner`, `group` and `others`
 * Each letter indicates the permissions: read `r` write: `w` or execute `x` for the respective section
 
-## <mark style="color:orange;">**Example**</mark>
+## <mark style="color:blue;">**Example**</mark>
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

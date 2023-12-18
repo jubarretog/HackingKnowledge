@@ -16,7 +16,7 @@ layout:
 
 Open Source Intelligence, practice based on collecting info from open source sites on the web
 
-## <mark style="color:orange;">Dorking</mark>
+## <mark style="color:blue;">Dorking</mark>
 
 Also know as Google Hacking, practice that consist in using google tools and advance serch engine to get information
 

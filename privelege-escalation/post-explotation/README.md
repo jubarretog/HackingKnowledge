@@ -24,7 +24,7 @@ There are actions that will be possible to do after scalation such as:
 * Changing the privilege of existing (or new) users
 * Jumping to another machine on the network or even to another network
 
-## <mark style="color:orange;">Useful Tips</mark>
+## <mark style="color:blue;">Useful Tips</mark>
 
 * Here go some tips
 

@@ -16,7 +16,7 @@ layout:
 
 Privilege escalation is the action of going from a lower permission account to a higher permission one. This let us gain unauthorized access to resources that are usually restricted from common users.
 
-## <mark style="color:orange;">Phases</mark>
+## <mark style="color:blue;">Phases</mark>
 
 * Enumeration
 * Explotation
@@ -24,7 +24,7 @@ Privilege escalation is the action of going from a lower permission account to a
 
 
 
-## <mark style="color:orange;">Security Messures</mark>
+## <mark style="color:blue;">Security Messures</mark>
 
 Some messures that can be taken to avoid Privilege Escalation are:
 

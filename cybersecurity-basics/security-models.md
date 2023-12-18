@@ -14,7 +14,7 @@ layout:
 
 # Security Models
 
-## <mark style="color:orange;">**CIA Triad**</mark>
+## <mark style="color:blue;">**CIA Triad**</mark>
 
 Security model that is used in consideration throughout creating a security policy.
 
@@ -26,7 +26,7 @@ Security model that is used in consideration throughout creating a security poli
 
 
 
-## <mark style="color:orange;">**Maccumber Cube**</mark>
+## <mark style="color:blue;">**Maccumber Cube**</mark>
 
 Establish and evaluate information security initiatives by considering all of the related factors that impact them.
 
@@ -45,7 +45,7 @@ Establish and evaluate information security initiatives by considering all of th
 
 
 
-## <mark style="color:orange;">**SFU Triangle**</mark>
+## <mark style="color:blue;">**SFU Triangle**</mark>
 
 Define the level of security implemented in a system.
 

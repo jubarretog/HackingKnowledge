@@ -14,7 +14,7 @@ layout:
 
 # Legal Support
 
-## <mark style="color:orange;">**Well-known**</mark> <mark style="color:orange;"></mark><mark style="color:orange;">Security Laws and Regulations</mark>
+## <mark style="color:blue;">**Well-known**</mark> <mark style="color:blue;"></mark><mark style="color:blue;">Security Laws and Regulations</mark>
 
 * **PCI DSS:** Payment Card Industry Data Security Standard, [https://www.pcisecuritystandards.org](https://www.pcisecuritystandards.org/)
 * **ISO/IEC 27001:2013:** [https://www.iso.org/home.html](https://www.iso.org/home.html)

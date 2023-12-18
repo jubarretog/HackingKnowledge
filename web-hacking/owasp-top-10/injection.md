@@ -16,7 +16,7 @@ layout:
 
 Occurs when we find a way of sending html, css, js code, database petitions and others, via a petition or URL of a website.
 
-## <mark style="color:orange;">**Example**</mark>
+## <mark style="color:blue;">**Example**</mark>
 
 * Manage a petition using system()
 

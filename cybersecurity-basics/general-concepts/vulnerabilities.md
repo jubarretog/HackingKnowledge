@@ -16,7 +16,7 @@ layout:
 
 A vulnerability is a weakness or flaw in the design, implementation of a system or application that could be exploited by an attacker.&#x20;
 
-## <mark style="color:orange;">Types of Vulnerabilities</mark>
+## <mark style="color:blue;">Types of Vulnerabilities</mark>
 
 * **Segmentation Flaw:** Vulnerabilitie due to connect different functions of a network all in one, letting the access to all network devices from other unrelationated paths.
 * **Repudiation:** When an application or system does not adopt controls to properly track and log users' actions.
@@ -29,17 +29,16 @@ A vulnerability is a weakness or flaw in the design, implementation of a system 
 
 
 
-## <mark style="color:orange;">CVEs</mark>
+## <mark style="color:blue;">CVEs</mark>
 
 * Common Vulnerabilities and Exposures, is a standart for identify and categorize known vulnerabilities.&#x20;
 * The CVEs follow the structure _CVE-$YEAR-$IDNUMBER_
 
-### CVE Sources
+### <mark style="color:blue;">CVE Sources</mark>
 
 * **CVE Mitre:** Website that keeps track of CVEs [https://www.cve.org/](https://www.cve.org/)
 * **NVD:** Vulnerabilities based on NIST framework [https://nvd.nist.gov/vuln/search](https://nvd.nist.gov/vuln/search)
 * **CVSS Calculator:** [https://www.first.org/cvss/calculator/4.0](https://www.first.org/cvss/calculator/4.0)
 * **NIST CVSS Calculator:** [https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-* **Exploit DB:** retains exploits for software and applications [https://www.exploit-db.com/](https://www.exploit-db.com/)
 * **Linux Kernel CVEs:** [https://www.linuxkernelcves.com/cves](https://www.linuxkernelcves.com/cves)
 

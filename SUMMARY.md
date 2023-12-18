@@ -87,8 +87,8 @@
 
 ## 👣 Digital Forensics
 
-* [General Concepts](digital-forensics/general-concepts/README.md)
-  * [Basic Forensics Plan](digital-forensics/general-concepts/basic-forensics-plan.md)
+* [General Concepts](digital-forensics/general-concepts.md)
+* [Basic Forensics Plan](digital-forensics/basic-forensics-plan.md)
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
 

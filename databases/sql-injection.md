@@ -14,13 +14,13 @@ layout:
 
 # SQL Injection
 
-## <mark style="color:orange;">In-Band</mark>&#x20;
+## In-Band&#x20;
 
 Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
 
 
 
-## <mark style="color:orange;">Out Of Band</mark>
+## <mark style="color:blue;">Out Of Band</mark>
 
 Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
 
@@ -29,13 +29,13 @@ Depends on DB feature of making some kind of external network call based on the 
 
 
 
-## <mark style="color:orange;">Error-Based</mark>
+## <mark style="color:blue;">Error-Based</mark>
 
 Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
 
 
 
-## <mark style="color:orange;">Union-Based</mark>
+## <mark style="color:blue;">Union-Based</mark>
 
 Use SQL UNION operator to return additional results to the page, letting the extraction of large amounts of data.
 
@@ -166,13 +166,13 @@ About | id,firstName,lastName,pfpLink,role,shortRole,bio,$columname None #The re
 
 
 
-## <mark style="color:orange;">Blind</mark>
+## <mark style="color:blue;">Blind</mark>
 
 Results of the attack can't directly be seen on the screen,we get little to no feedback to confirm whether our injected queries were.
 
 
 
-## <mark style="color:orange;">Autenthication Bypass</mark>
+## <mark style="color:blue;">Autenthication Bypass</mark>
 
 Method consisting in consider that the web application isn't interested in the content of the username and password but more whether the two make a matching pair in the users table.
 
@@ -198,7 +198,7 @@ SELECT * from users WHERE username='%username%' and password='%password%' LIMIT 
 
 
 
-## <mark style="color:orange;">Boolean Based</mark>
+## <mark style="color:blue;">Boolean Based</mark>
 
 Use the response we receive back from our injection if this only have two outcomes
 
@@ -296,7 +296,7 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 
 
 
-## <mark style="color:orange;">Time Based</mark>
+## <mark style="color:blue;">Time Based</mark>
 
 Make use of time a response is generated to the request to determinate if query value was found or not. It is used when we don't get a visual return to the injection.
 

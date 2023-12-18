@@ -26,7 +26,7 @@ First step is to do an enumeration of resources of the target machine such as:&#
 * Network interfaces and configuration
 * Applications and programming languages installed
 
-## <mark style="color:orange;">Useful Tips</mark>
+## <mark style="color:blue;">Useful Tips</mark>
 
 * Use `hostname` and `whoami` commands
 * Use `uname -a`

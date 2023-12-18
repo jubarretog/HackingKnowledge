@@ -16,7 +16,7 @@ layout:
 
 Structured Query Language, standart language used for querying relational databases.
 
-## <mark style="color:orange;">Information Schema</mark>
+## <mark style="color:blue;">Information Schema</mark>
 
 DB that save information about all other DB the user has access, find as **`information_schema`**
 
@@ -32,7 +32,7 @@ DB that save information about all other DB the user has access, find as **`info
 
 
 
-## <mark style="color:orange;">Commands</mark>
+## <mark style="color:blue;">Commands</mark>
 
 * Show databases and tables
 
