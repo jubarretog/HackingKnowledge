@@ -39,6 +39,8 @@ Obtaining information about the database structure as error messages from the da
 
 Use SQL UNION operator to return additional results to the page, letting the extraction of large amounts of data.
 
+### Case 1
+
 * Determinating number of colums
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -112,7 +114,7 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 
 ***
 
-### Case 2:
+### Case 2
 
 * Check if  vulnerable by sending a malformed petition with '
 
