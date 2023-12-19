@@ -14,6 +14,22 @@ layout:
 
 # Tools
 
+## <mark style="color:green;">Openvpn</mark>
+
+* Tool for accessing a VPN
+
+### Commands
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo openvpn $ovpnfile
+```
+{% endcode %}
+
+***
+
+
+
 ## <mark style="color:green;">SMBCLIENT</mark>
 
 * Use of SMB Protocol to list directories and files remotely

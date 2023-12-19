@@ -14,7 +14,7 @@ layout:
 
 # OSINT
 
-Open Source Intelligence, practice based on collecting info from open source sites on the web
+Open Source Intelligence, collect public information analyzing data to relationate it and tranform it in useful knowledge.
 
 ## <mark style="color:blue;">Dorking</mark>
 

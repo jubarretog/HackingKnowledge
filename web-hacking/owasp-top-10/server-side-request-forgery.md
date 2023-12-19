@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# Tips
+# Server-side Request Forgery
 
-* Check if hashes in `/etc/shadow` for users are weak to obtain passwords
+When an application allows network reuqest to the internal network of the server
 

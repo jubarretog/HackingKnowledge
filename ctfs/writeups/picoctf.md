@@ -18,5 +18,7 @@ Here goes what is the page
 
 ## <mark style="color:blue;">My Account</mark>
 
-Here goes the badge
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+{% embed url="https://play.picoctf.org/users/KryptoCoder" %}
 

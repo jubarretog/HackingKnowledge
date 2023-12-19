@@ -18,6 +18,7 @@ layout:
 * **Cyberwarfare:** Use of technology to penetrate and attack another nation’s computer systems and networks in an effort to cause damage or disrupt services.
 * **APT:** Advanced Persistent Attack, multi-phase, long term, stealthy and advanced operation against a specific target.
 * **Risk Management:** Formal process of continuously identifying and assessing risk in order to reduce the impact of threats and vulnerabilities.
+* **Pen-Testing:** Involves using the same tools, techniques, and methodologies that someone with malicious intent to report vulnerabilities of a system.
 * **Offensive Security:** Breaking into a computer system to gain unauthorized acces to it. This will help to report bugs, errors and find vulnerabilities to recommend patches.
 * **Defensive security:** Process of protecting an organization's network and computer systems by analyzing and securing any potential digital threats.
 * **Behavior-based security:** Form of threat detection tha captures and analyze the communication between a user on a network. Any changes in normal patterns of behavior are regarded as anomalies, and may indicate an attack.

@@ -14,7 +14,7 @@ layout:
 
 # SQL Injection
 
-## In-Band&#x20;
+## <mark style="color:blue;">In-Band</mark>&#x20;
 
 Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
 
@@ -112,9 +112,7 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 
 ***
 
-***
-
-***
+### Case 2:
 
 * Check if  vulnerable by sending a malformed petition with '
 
@@ -276,10 +274,10 @@ $url/query?$column=$changedvalue' FROM $table_found WHERE %column_found LIKE 'a%
 
 ***
 
-* Value exceptions
+* &#x20;Handle of value exceptions
 
 {% hint style="warning" %}
-If in any point of iteration you found a value that you don't need to get you must exclude it to restringe your injection and go on.This can be seen below:
+If in any point of iteration you found a value that you don't need to get you must exclude it to restringe your injection
 {% endhint %}
 
 {% code overflow="wrap" lineNumbers="true" %}

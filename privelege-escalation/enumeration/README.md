@@ -34,7 +34,6 @@ First step is to do an enumeration of resources of the target machine such as:&#
 * Make `cat /etc/issue` to know OS information
 * Make `ps -A` to show running processes on the current shell (`ps axjf` for tree transformation)
 * Use `env` to see enviroment variables
-* Check `sudo -l`  for sudo execution permissions
 * Use `id` to obtain information abot user and groups, or even info of another user
 * Use `ls -la` to check hidden files
 * Make `cat /etc/passwd | cur -d ":" -f 1` or `cat /etc/passwd | grep "home"` to know existing users&#x20;

@@ -19,16 +19,7 @@ Use Brute-Forcing for enumeration to get hidden files, directorys and paths from
 ## <mark style="color:green;">Daniel Miessler Wordlists</mark>
 
 * Well-known wordlists for every proccess of fuzzing or bruteforcing
-
-### Download
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-git clone https://github.com/danielmiessler/SecLists
-```
-{% endcode %}
-
-***
+* [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
 
 
@@ -66,6 +57,8 @@ gobuster vhost $url -w $wordlist --append-domain #To set de subdomain first
 ```
 {% endcode %}
 
+***
+
 ##
 
 ## <mark style="color:green;">ffuf</mark>
@@ -93,6 +86,8 @@ ffuf -u $URL/FUZZ -w $wordlist -o $filename #get output in a file
 **Note:** Optional keywords can be added after `$wordlist` separating them with `,`&#x20;
 {% endhint %}
 
+***
+
 ##
 
 ## <mark style="color:green;">dirb</mark>
@@ -116,9 +111,15 @@ dirb $URL $wordlist -u $username:$password #Use
 <strong>dirb $URL $wordlist -E $certificate  #Use certificate
 </strong></code></pre>
 
+***
+
 
 
 ## <mark style="color:green;">nikto</mark>
+
+* Tool for scanning vulnerabilities of websites
+
+### Commands
 
 * Installation
 
@@ -137,4 +138,6 @@ sudo apt install nikto
 nikto -h $url
 ```
 {% endcode %}
+
+***
 

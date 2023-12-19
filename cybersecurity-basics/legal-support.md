@@ -27,7 +27,7 @@ layout:
 
 
 
-## <mark style="color:orange;">Cyber Law in different countries</mark>&#x20;
+## <mark style="color:blue;">Cyber Law in different countries</mark>
 
 <figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 

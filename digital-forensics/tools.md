@@ -44,7 +44,9 @@ pdfinfo $pdffilename
 
 ## <mark style="color:green;">Exiftool</mark>
 
-Used to extract Metadata from files, specially image
+* Used to extract Metadata from files, specially image
+
+### Commands
 
 * Install
 
@@ -97,7 +99,11 @@ steghide extract -sf $filename #Extract data from file
 
 ## <mark style="color:green;">Shred</mark>
 
-Used to delete and overwrite a drive information in Linux
+* Used to delete and overwrite drive or file information in Linux
+
+### Commands
+
+* Usage
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -117,7 +123,6 @@ sudo shred -vu /dev/$unit   #Delete a memory unit or partition
 
 ## <mark style="color:green;">SDelete</mark>
 
-Tool  to delete and overwrite a drive information in Windows
-
+* Tool  to delete and overwrite drive or file information in Windows
 * [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)
 

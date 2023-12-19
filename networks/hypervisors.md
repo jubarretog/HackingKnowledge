@@ -22,6 +22,8 @@ Create and manage virtual machines or virtual networks
 
 <figure><img src="../.gitbook/assets/Screenshot_2023-12-18-13-30-18_primary.png" alt=""><figcaption><p><a href="https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor">https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor</a></p></figcaption></figure>
 
+###
+
 ### <mark style="color:blue;">Type II</mark>
 
 * Software defined, has another layer of abstraction between hardware and operative system.

@@ -33,7 +33,7 @@ $command1 && $command2
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** The next command only will be executed if previous was successful
+The next command only will be executed if previous was successful
 {% endhint %}
 
 ***
@@ -47,7 +47,7 @@ $command > $filename
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** If file doesn't exit it will be created, and if it exists it will be overwrited
+If file doesn't exit it will be created, and if it exists it will be overwrited
 {% endhint %}
 
 ***
@@ -79,7 +79,7 @@ $command > $filename
 </strong></code></pre>
 
 {% hint style="info" %}
-&#x20;**Note:** The number `2` indicates the `STDERR`
+The number `2` indicates the `STDERR`
 {% endhint %}
 
 ***

@@ -16,5 +16,5 @@ layout:
 
 Is a list of the most commmon web application security issues and vulnerabilities&#x20;
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://owasp.org/Top10/">https://owasp.org/Top10/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption><p><a href="https://owasp.org/Top10/">https://owasp.org/Top10/</a></p></figcaption></figure>
 

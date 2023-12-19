@@ -18,5 +18,11 @@ Here goes what is the page
 
 ## <mark style="color:blue;">My Account</mark>
 
-Here goes the badge
+<div align="center" data-full-width="false">
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+</div>
+
+{% embed url="https://tryhackme.com/p/KryptoCoder" %}
 

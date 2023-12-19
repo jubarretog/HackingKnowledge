@@ -20,9 +20,9 @@ Hey!! I'm Juan David, a student of Systems and Computation Engineering at [Unive
 
 I'm enthusiastic about the cibersecurity field, hacking practices and also software development.
 
-My interest on ethical hacking has grown thanks to all people I've known all the way when exploring the hacking world and making part of Uqbar is one of my greatest prides.
+My interest on ethical hacking has grown thanks to all people I've known all the way when interacting with the hacking community and making part of Uqbar is one of my greatest prides.
 
-My actual goal is to get ready for achieving [OSCP](https://www.offsec.com/courses/pen-200/) certification in Pentesting.
+My actual goal is to get ready for achieving [OSCP](https://www.offsec.com/courses/pen-200/) certification in pentesting.
 
 ## <mark style="color:blue;">Contact information</mark>
 

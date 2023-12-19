@@ -22,4 +22,5 @@ Explotation can also set as objective to jump to another machine in the same net
 
 * Run _calc.exe_ on windows as a PoC that we can run command.
 * On metasploit check _Rank_ column of an exploit to ensure its reliability.
+* Check `sudo -l`  for sudo execution permissions, then search a
 

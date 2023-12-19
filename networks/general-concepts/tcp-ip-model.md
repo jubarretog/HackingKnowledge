@@ -16,7 +16,7 @@ layout:
 
 Implements TCP to control the flow of data between two endpoints, and the IP to control how packets are addressed are sent. With TCP/IP any data that is lost or corrupted on transmission is re-sent
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p><a href="https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/">https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p><a href="https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/">https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/</a></p></figcaption></figure>
 
 * TCP/IP uses a method called _Three-way handshake_ to stablish connection between devices. It works as following:
   * A request is sent with a _"synchronise"_ bit named _SYN_ to make first contact with server.

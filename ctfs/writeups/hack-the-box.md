@@ -18,5 +18,6 @@ Here goes what is the page
 
 ## <mark style="color:blue;">My Account</mark>
 
-Here goes the badge
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
+{% embed url="https://app.hackthebox.com/profile/1448145" %}

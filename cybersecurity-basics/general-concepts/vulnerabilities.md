@@ -31,8 +31,10 @@ A vulnerability is a weakness or flaw in the design, implementation of a system 
 
 ## <mark style="color:blue;">CVEs</mark>
 
-* Common Vulnerabilities and Exposures, is a standart for identify and categorize known vulnerabilities.&#x20;
-* The CVEs follow the structure _CVE-$YEAR-$IDNUMBER_
+* Common Vulnerabilities and Exposures, is a standart to identify and categorize known vulnerabilities.&#x20;
+* The CVEs follow the structure _CVE-YEAR-IDNUMBER. For example:_ **CVE-2017-0144** associated to the famous exploit _Etenalblue._
+
+
 
 ### <mark style="color:blue;">CVE Sources</mark>
 
