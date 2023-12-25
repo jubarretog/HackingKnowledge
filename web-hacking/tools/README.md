@@ -31,15 +31,14 @@ layout:
 * **Comparer:** Allows us to compare two pieces of data at either word or byte level.
 * **Sequencer:** Help us asses random tokens or other generated data.
 
-### Configure
+### Configuration
 
 #### Proxy
 
 * We required the _FoxyProxy_ extension
-* Create a proxie profile on FoxyProxy specifying IP 127.0.0.1 and PORT 8080
+* Create a proxy profile on FoxyProxy specifying IP 127.0.0.1 and PORT 8080
 * Select the profile on the extension
 * Then go to burpsuite proxy tab and set intercept to _on_
-* Go to _proxy settings_ to the _Response Interception_ part and mark _Intercept responses_ and _Or Request was intercepted_
 
 #### Define scope
 
@@ -48,6 +47,7 @@ layout:
 * Right-click it and select _add to scope_
 * Then go to _proxy settings_ on proxy tab
 * Go to the _Request Interception_ part and mark _And url is in target scope_
+* Go to _proxy settings_ to the _Response Interception_ part and mark _Intercept responses_ and _Or Request was intercepted_
 
 #### Configure HTTPS proxy
 
@@ -62,6 +62,18 @@ layout:
 
 * **Ctrl + R:** Send petition to Repeater
 * **Ctlr + U:** URL encode selected text
+
+### Commands
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install burpsuite
+```
+{% endcode %}
+
+***
 
 
 
@@ -106,7 +118,7 @@ sudo responder -I $networkinterface
 
 ## <mark style="color:green;">ZAP</mark>
 
-* Proxy utility stands for Zed Attack Proxy
+* Proxy utility to intercept network traffict, stands for Zed Attack Proxy
 
 ### **Features**
 
@@ -115,25 +127,36 @@ sudo responder -I $networkinterface
 * **Active scan:** Attacks the website to get more information
 * **Alerts:** Give vulnerabilities found on the web site
 * **Sites:** Shows all the URL spidered with their petitions and vulnerabilities
-* **History:** Shows petitions made to the site
+* **History:** Shows petitions made to target sites
 
-### **Configuration and utilities**
+### **Configuration**
+
+#### **Proxy**
 
 * Install _SwitchyOmega_ extension
-* Configure server to _localhost_ and save changes
-* Go to _adds-on_ tab and from marletplace install: _all release, python scripting, community scripts, custom payloads, json view, jwt support, viewstate_.
-* Go to settings HUD deactivate _Using ZAP desktop and welcome message._
+* Configure server to _localhost_ and port to _8080_ and save changes
+
+#### Configure HTTPS proxy
+
+* Go to _options>Network>Server Certificates_ and save the certificate
+* Go to your browser settings, search for certificates and import the downloadedcertificate to the _Authorities_ section (If your browser don't has this tab just import it on the certificates section)
+* Mark _Trust this CA to indetify websites_ and save all.
+
+#### Utilities
+
+* Go to _adds-on_ tab, update all installed and from marketplace install_, Directory List 2.3, Directory List 2.3 LC, FuzzDB Files, FuzzDB Odensive, python scripting, community scripts, custom payloads, json view, jwt support, viewstate_.
+* Go to _options>HUD_ and unmark _Enable when using the ZAP desktop, welcome screen when a browser is opened._
 
 ### Tips
 
-* Can configure Global Alert Filters to set your own grade for a vulnerability.
-* From _History_ you can right click and select _Resend_ to modify a petition made before
+* Configure _Global Alert Filters_ and _Passive Scan Rules_ on Options to deactivated or set your own grade for the alert of a vulnerability.
+* From _History_ tab you can right click and select _Resend_ to modify a petition made before
 * **For fuzzing:**&#x20;
   * Select a part of the request and right-click _Fuzz_&#x20;
   * Select _Payloads_ button, select dictionary file or enter custom words
   * In _Message Proccesor_s tab add a new one for exclude errors that arent meaningful
   * In Global Settings go to _Anti-CSRF cert token_, an add the tokens detected in forms POST petitions
-  * When getting 304 responses in _Fuzz->Options_ activate _Follow Redirects_
+  * When getting 304 responses go to _Fuzz>Options_ activate _Follow Redirects_
   * When not getting consistent token handle in _Fuzz->Options_ reduce the threads to 1
 
 ### Commands

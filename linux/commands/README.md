@@ -624,20 +624,23 @@ du -b $filename    #Shows output in bytes mode
 
 ***
 
-* Make petitions with http
+* Make petitions to websites
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl $URL #Make a get petition
 </strong>curl -L $URL #Follow redirections
-curl -O $URL/file  #Save a file with same name
-<strong>curl -o $name $URL/file  #Save a file with a different name
-</strong>curl -o $URL/file -o $URL/file #Get various files
-curl –data “$value=$value” $URL #Make post petition
-curl $firstpetition --next $secondpetition #Make variuos petition
+curl -O $URL/$file      #Save a file with same name
+<strong>curl -o $name $URL/$file  #Save a file with a different name
+</strong>curl -o $URL/$file1 -o $URL/$file2 #Get various files
+curl $URL -d "$param=$value"  #Specificate values of body
 curl -X $PETITION $URL #Make an specific type of petition
-curl $URL-H "$header:$value" #Specific header in a petition
+curl $firstpetition --next $secondpetition #Make variuos petition
+curl $URL -H "$header:$value" #Specific header in a petition
+curl $URL -v  #Get verbose output
+
 wget $URL
 wget -O $URL/file  #Save a file with same name
 wget -o $name $URL/file  #Save a file with a different name
+
 axel $URL           #Dowload through various connections
 axel -n$number $URL #Specify number of connection to use
 axel -O $name $URL  #Save with a different name
@@ -923,6 +926,16 @@ netstat -ano #Most common use, n to no resolve names, o to display timers
 {% hint style="info" %}
 If with `netstat -p` the PID and name aren't shown it's because the process is owned by another user. Running the command with sudo could show this information
 {% endhint %}
+
+***
+
+* List capabilities of all binany files
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+getcap -r / 2>/dev/null #Is good practice to redirect errors if not run with sudo
+```
+{% endcode %}
 
 ***
 

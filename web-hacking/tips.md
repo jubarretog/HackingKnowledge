@@ -15,21 +15,21 @@ layout:
 # Tips
 
 * Check URL&#x20;
-  * Check for user information
-  * Check what kind of protocol is using in URL
-  * Make a map of routes
-  * Check favicon
-  * Check robots.txt
-  * Check sitemap.xml
-* Check HTTP request and response
+  * Check for user information and queries
+  * Check what kind of protocol is being used
+* Make a map of routes
+* Check favicon
+* Check robots.txt
+* Check sitemap.xml
+* Check HTTP requests and responses
   * Check Headers and Values
-* Check page source code (Left click or view-source:URL)
+* Check page source code (Left click or _view-source:$URL_)
   * Code commentaries `<!--`
   * Anchors to other routes `<a`
   * Framework information
-  * css and js code
-* Check if url parameters are display directly in screen. This will let us know if code injection can be done
+  * css and js scripts
+* Check if url parameters are display directly in screen. This will tell us that a code injection can be done.
 * Check if there are different error in forms pages with different post values
   * Check if token parameters are sent
-* Modify html parameters in forms to not limit your index
+* Modify html limit parameters in forms
 

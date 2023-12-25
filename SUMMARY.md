@@ -89,10 +89,9 @@
 
 ## 🧾 SCRIPTING
 
-* [TTY Sanizitation](scripting/tty-sanizitation.md)
 * [Reverse Shell](scripting/reverse-shell.md)
-* [Root Shell](scripting/root-shell.md)
 * [Tools](scripting/tools.md)
+* [Utilities](scripting/utilities.md)
 
 ## ☠ Privelege Escalation
 
@@ -101,6 +100,7 @@
 * [Enumeration](privelege-escalation/enumeration/README.md)
   * [Tools](privelege-escalation/enumeration/tools.md)
 * [Explotation](privelege-escalation/explotation/README.md)
+  * [Techniques](privelege-escalation/explotation/techniques.md)
   * [Tools](privelege-escalation/explotation/tools.md)
 * [Post-Explotation](privelege-escalation/post-explotation/README.md)
   * [Tools](privelege-escalation/post-explotation/tools.md)

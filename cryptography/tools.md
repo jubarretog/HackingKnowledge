@@ -42,6 +42,16 @@ openssl genrsa -out $name 2048
 
 ***
 
+* Generate hash for linux user
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+openssl passwd -1 -salt AAA $password
+```
+{% endcode %}
+
+***
+
 
 
 ## <mark style="color:green;">John the ripper</mark>
@@ -60,7 +70,22 @@ sudo apt install john
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo john -w=$wordlist $hashfile
+john -w=$wordlist $hashfile
+```
+{% endcode %}
+
+{% hint style="info" %}
+One famous dictionary is _rockyou.txt_ that can be found by default on Kali Linux on `/usr/share/wordlists/rockyou.txt`
+{% endhint %}
+
+***
+
+* Use unshadow to create crackable file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+unshadow $passwdFile $shadowFile > $outFile
+#passwdFile and shadowFile are the /etc/passwd and /etc/shadow files
 ```
 {% endcode %}
 

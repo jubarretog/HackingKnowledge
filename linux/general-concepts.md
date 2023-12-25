@@ -22,4 +22,6 @@ layout:
 * **apt:** Advanced Package Tool, allows us to manage the packages and sources of Linux.
 * **GPG:** Gnu Privacy Guard, made to encrypt and decrypt text plane, directorys and made digital signature to secure transfer content.
 * **log file:** Contain logging information for applications and services such as access,requests or errors.
+* **SUID:** Set-user Identification, allow files to be executed with the permission level of the file owner. Has the special `s` permission instead of `x` when using `ls -l`.
+* **SGID:** Set-group Identification, allow files to be executed with the permission level of the group owner. Has the special `s` permission instead of `x` when using `ls -l`.
 

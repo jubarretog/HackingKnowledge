@@ -18,6 +18,7 @@ layout:
   * **`/etc/bash.bashrc`:** Script that contains bash settings
   * **`/etc/passwd`:** List of all user accounts
   * **`/etc/issue`:** Usually contains information about the OS
+  * **`/etc/crontab`:** Contains the cronjobs that are executed by the system
 * **`/var`:** Store data that is frequently accessed or written by services or applications running on the system.
   * **`/var/www/html`:** Default store for server root folder&#x20;
 * **`/root`:** Home directory of the root system user
