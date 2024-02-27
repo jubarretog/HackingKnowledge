@@ -40,15 +40,6 @@ layout:
 * Select the profile on the extension
 * Then go to burpsuite proxy tab and set intercept to _on_
 
-#### Define scope
-
-* Go to target tab
-* On left side select the IP/Domain
-* Right-click it and select _add to scope_
-* Then go to _proxy settings_ on proxy tab
-* Go to the _Request Interception_ part and mark _And url is in target scope_
-* Go to _proxy settings_ to the _Response Interception_ part and mark _Intercept responses_ and _Or Request was intercepted_
-
 #### Configure HTTPS proxy
 
 * Activate proxy and go to [http://burp/cert](http://burp/cert) on browser
@@ -58,7 +49,18 @@ layout:
 * Click on Import and selct the cacer.der
 * Mark _Trust this CA to indetify websites_ and save all
 
-#### Hotkeys
+### Utilities
+
+#### Define scope
+
+* Go to target tab
+* On left side select the IP/Domain
+* Right-click it and select _add to scope_
+* Then go to _proxy settings_ on proxy tab
+* Go to the _Request Interception_ part and mark _And url is in target scope_
+* Go to _proxy settings_ to the _Response Interception_ part and mark _Intercept responses_ and _Or Request was intercepted_
+
+### Hotkeys
 
 * **Ctrl + R:** Send petition to Repeater
 * **Ctlr + U:** URL encode selected text
@@ -139,12 +141,12 @@ sudo responder -I $networkinterface
 #### Configure HTTPS proxy
 
 * Go to _options>Network>Server Certificates_ and save the certificate
-* Go to your browser settings, search for certificates and import the downloadedcertificate to the _Authorities_ section (If your browser don't has this tab just import it on the certificates section)
+* Go to your browser settings, search for certificates and import the downloaded certificate in the _Authorities_ section (If your browser don't has this tab just import it on the certificates section)
 * Mark _Trust this CA to indetify websites_ and save all.
 
 #### Utilities
 
-* Go to _adds-on_ tab, update all installed and from marketplace install_, Directory List 2.3, Directory List 2.3 LC, FuzzDB Files, FuzzDB Odensive, python scripting, community scripts, custom payloads, json view, jwt support, viewstate_.
+* Go to _adds-on_ tab, update all installed and from marketplace install_, Directory List 2.3, Directory List 2.3 LC, FuzzDB Files, FuzzDB Ofensive, python scripting, community scripts, custom payloads, json view, jwt support, viewstate_.
 * Go to _options>HUD_ and unmark _Enable when using the ZAP desktop, welcome screen when a browser is opened._
 
 ### Tips
@@ -154,10 +156,11 @@ sudo responder -I $networkinterface
 * **For fuzzing:**&#x20;
   * Select a part of the request and right-click _Fuzz_&#x20;
   * Select _Payloads_ button, select dictionary file or enter custom words
-  * In _Message Proccesor_s tab add a new one for exclude errors that arent meaningful
-  * In Global Settings go to _Anti-CSRF cert token_, an add the tokens detected in forms POST petitions
+  * In _Fuzz>Message Proccesor_s tab add a new one of type _Tag Creator_ and set it to categorize responses with specific content
+  * In _Options>Anti-CSRF cert token_ add the tokens detected in forms POST petitions
+  * When not getting consistent token handle in _Fuzz>Options_ tab reduce the threads to 1
   * When getting 304 responses go to _Fuzz>Options_ activate _Follow Redirects_
-  * When not getting consistent token handle in _Fuzz->Options_ reduce the threads to 1
+  *
 
 ### Commands
 

@@ -14,5 +14,7 @@ layout:
 
 # Server-side Request Forgery
 
-When an application allows network reuqest to the internal network of the server
+When an application allows or is obligated to make requests to the internal network of the server, allowing to enumerate internal network services
+
+Can be detected when an application seems to take internal URLs or network resources that may be able to modify.
 

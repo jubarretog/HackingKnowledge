@@ -14,8 +14,6 @@ layout:
 
 # Fuzzing
 
-Use Brute-Forcing for enumeration to get hidden files, directorys and paths from a website.
-
 ## <mark style="color:green;">Daniel Miessler Wordlists</mark>
 
 * Well-known wordlists for every proccess of fuzzing or bruteforcing

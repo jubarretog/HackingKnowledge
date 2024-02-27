@@ -97,6 +97,13 @@ steghide extract -sf $filename #Extract data from file
 
 
 
+## <mark style="color:green;">d4js</mark>
+
+* Used to deobfuscated javascript code
+* [https://lelinhtinh.github.io/de4js/](https://lelinhtinh.github.io/de4js/)
+
+
+
 ## <mark style="color:green;">Shred</mark>
 
 * Used to delete and overwrite drive or file information in Linux

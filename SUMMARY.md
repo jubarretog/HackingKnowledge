@@ -73,16 +73,23 @@
   * [Broken Access Control](web-hacking/owasp-top-10/broken-access-control.md)
   * [Cryptographic Failures](web-hacking/owasp-top-10/cryptographic-failures.md)
   * [Injection](web-hacking/owasp-top-10/injection.md)
-  * [Uploaded File Exploits](web-hacking/owasp-top-10/uploaded-file-exploits.md)
+  * [Insecure Design](web-hacking/owasp-top-10/insecure-design.md)
+  * [Security Misconfiguration](web-hacking/owasp-top-10/security-misconfiguration.md)
+  * [Vulnerable and Outdated Components](web-hacking/owasp-top-10/vulnerable-and-outdated-components.md)
+  * [Identification and Authentication Failures](web-hacking/owasp-top-10/identification-and-authentication-failures.md)
+  * [Software and Data Integrity Failures](web-hacking/owasp-top-10/software-and-data-integrity-failures.md)
+  * [Security Logging and Monitoring Failures](web-hacking/owasp-top-10/security-logging-and-monitoring-failures.md)
   * [Server-side Request Forgery](web-hacking/owasp-top-10/server-side-request-forgery.md)
+* [Uploaded File Exploits](web-hacking/uploaded-file-exploits.md)
+* [Wordpress Explotation](web-hacking/wordpress-explotation.md)
 * [Tips](web-hacking/tips.md)
 * [Tools](web-hacking/tools/README.md)
   * [Fuzzing](web-hacking/tools/fuzzing.md)
 
 ## 📄 databases attacks
 
-* [General Concepts](databases-attacks/general-concepts/README.md)
-  * [SQL](databases-attacks/general-concepts/sql.md)
+* [General Concepts](databases-attacks/general-concepts.md)
+* [SQL](databases-attacks/sql.md)
 * [SQL Injection](databases-attacks/sql-injection.md)
 * [Tips](databases-attacks/tips.md)
 * [Tools](databases-attacks/tools.md)
@@ -93,7 +100,7 @@
 * [Tools](scripting/tools.md)
 * [Utilities](scripting/utilities.md)
 
-## ☠ Privelege Escalation
+## ☠️ Privelege Escalation
 
 * [General Concepts](privelege-escalation/general-concepts.md)
 * [Introduction](privelege-escalation/introduction.md)
@@ -118,10 +125,10 @@
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
 
-## 🚩 CTFs
+## 🚩 Machines and CTFs Challenges
 
-* [Introduction](ctfs/introduction.md)
-* [Writeups](ctfs/writeups/README.md)
-  * [TryHackMe](ctfs/writeups/tryhackme.md)
-  * [Hack The Box](ctfs/writeups/hack-the-box.md)
-  * [PicoCTF](ctfs/writeups/picoctf.md)
+* [Introduction](machines-and-ctfs-challenges/introduction.md)
+* [Writeups](machines-and-ctfs-challenges/writeups/README.md)
+  * [TryHackMe](machines-and-ctfs-challenges/writeups/tryhackme.md)
+  * [Hack The Box](machines-and-ctfs-challenges/writeups/hack-the-box.md)
+  * [PicoCTF](machines-and-ctfs-challenges/writeups/picoctf.md)

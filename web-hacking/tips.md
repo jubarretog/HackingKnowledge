@@ -29,7 +29,8 @@ layout:
   * Framework information
   * css and js scripts
 * Check if url parameters are display directly in screen. This will tell us that a code injection can be done.
-* Check if there are different error in forms pages with different post values
-  * Check if token parameters are sent
+* Check if there are different error in forms
+  * In the username field of a login form show a different error with especific entries which could means thaht is an existing user
+* Check if token parameters are sent
 * Modify html limit parameters in forms
 

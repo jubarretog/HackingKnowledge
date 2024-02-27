@@ -49,3 +49,39 @@ rm ~/.zsh_history_bad
 
 ***
 
+
+
+## <mark style="color:green;">Docker</mark>
+
+* Help to build, share, and run container applications.
+
+### Commands
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install docker-ce docker-ce-cli containerd.io
+sudo apt install docker-compose-plugin #Install docker compose
+```
+{% endcode %}
+
+***
+
+* Commands
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">sudo docker rm $containerID #Delete a container
+sudo docker build . #Build image from a dockerfile in the actual folder
+<strong>sudo docker image ls #List all installed images
+</strong>sudo docker image rm $imageID #Delete a installed image
+sudo docker container ls        #List all running containers
+sudo docker run $containerID    #Run container using ID
+sudo docker run $containerName  #Run container using Name
+sudo docker run $containerName --rm #Run container but deleted when done
+sudo docker run $containerName -p $hostPort:$containerPort #Specificate run ports
+sudo docker container stop $containerID #Stop a running container
+sudo docker compose up -d #Use .yml file to run various containers in background
+</code></pre>
+
+***
+

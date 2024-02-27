@@ -14,27 +14,6 @@ layout:
 
 # SQL Injection
 
-## <mark style="color:blue;">In-Band</mark>&#x20;
-
-Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
-
-
-
-## <mark style="color:blue;">Out Of Band</mark>
-
-Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
-
-* One to launch the attack  where SQLi is made to send a query.
-* Other to gather the results intercepting response from a DB.
-
-
-
-## <mark style="color:blue;">Error-Based</mark>
-
-Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
-
-
-
 ## <mark style="color:blue;">Union-Based</mark>
 
 Use SQL UNION operator to return additional results to the page, letting the extraction of large amounts of data.
@@ -166,39 +145,46 @@ About | id,firstName,lastName,pfpLink,role,shortRole,bio,$columname None #The re
 
 
 
-## <mark style="color:blue;">Blind</mark>
-
-Results of the attack can't directly be seen on the screen,we get little to no feedback to confirm whether our injected queries were.
-
-
-
 ## <mark style="color:blue;">Autenthication Bypass</mark>
 
-Method consisting in consider that the web application isn't interested in the content of the username and password but more whether the two make a matching pair in the users table.
+Method consisting in consider that the web application isn't interested in the content of the username and password but more they make a matching pair in the users table.
 
 * We asumme the DB use tipical query for authentication
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
-SELECT * from users WHERE username='%username%' and password='%password%' LIMIT 1;
+SELECT * from users WHERE username='%user%' and password='%password%' LIMIT 1;
 ```
 {% endcode %}
 
+{% hint style="info" %}
+`%user%` and `%password%` are the values recieved on a login form
+{% endhint %}
+
 ***
 
-* Make an insertion in password field
+* Make an malicious insertion on password field
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
 ' OR 1=1;--   #Use this comparison to cheat on verification
+#THis will enumerate the users values from the database
 ```
 {% endcode %}
+
+{% hint style="info" %}
+After the `;--` is mandatory to put a space
+{% endhint %}
 
 ***
 
 
 
-## <mark style="color:blue;">Boolean Based</mark>
+## <mark style="color:blue;">Blind</mark>
+
+Results of the attack can't directly be seen on the screen, we get little to no feedback to confirm whether our injected queries were.
+
+### Boolean Based
 
 Use the response we receive back from our injection if this only have two outcomes
 
@@ -294,9 +280,7 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 
 ***
 
-
-
-## <mark style="color:blue;">Time Based</mark>
+### Time Based
 
 Make use of time a response is generated to the request to determinate if query value was found or not. It is used when we don't get a visual return to the injection.
 
@@ -338,4 +322,25 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM $table_f
 {% endcode %}
 
 ***
+
+
+
+## <mark style="color:blue;">In-Band</mark>&#x20;
+
+Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
+
+
+
+## <mark style="color:blue;">Out Of Band</mark>
+
+Depends on DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
+
+* One to launch the attack  where SQLi is made to send a query.
+* Other to gather the results intercepting response from a DB.
+
+
+
+## <mark style="color:blue;">Error-Based</mark>
+
+Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
 

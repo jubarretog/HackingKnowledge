@@ -16,7 +16,7 @@ layout:
 
 ## <mark style="color:green;">**Exploit DB**</mark>
 
-* Retains exploits for software and applications
+* Web repository that retains exploits for software and applications
 * [https://www.exploit-db.com/](https://www.exploit-db.com/)
 
 
@@ -171,7 +171,7 @@ msf6 exploit(windows/smb/ms17_010_eternalblue)\>        #The terminal context se
 ## <mark style="color:green;">Payloads for Everything</mark>
 
 * Repository that contains payloads for diverses purposes and attackas
-* [https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master)
+* [https://github.com/swisskyrepo/PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
 
 
