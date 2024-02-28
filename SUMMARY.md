@@ -125,13 +125,16 @@
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
 
-## 🚩 Machines and CTFs Challenges
+## 🚩 Machines and CTF Challenges
 
-* [Introduction](machines-and-ctfs-challenges/introduction.md)
-* [Writeups](machines-and-ctfs-challenges/writeups/README.md)
-  * [TryHackMe](machines-and-ctfs-challenges/writeups/tryhackme.md)
-  * [Hack The Box](machines-and-ctfs-challenges/writeups/hack-the-box/README.md)
-    * [Starting Point](machines-and-ctfs-challenges/writeups/hack-the-box/starting-point.md)
-    * [Machines](machines-and-ctfs-challenges/writeups/hack-the-box/machines.md)
-    * [Challenges](machines-and-ctfs-challenges/writeups/hack-the-box/challenges.md)
-  * [PicoCTF](machines-and-ctfs-challenges/writeups/picoctf.md)
+* [Introduction](machines-and-ctf-challenges/introduction.md)
+* [TryHackMe](machines-and-ctf-challenges/tryhackme.md)
+* [Hack The Box](machines-and-ctf-challenges/hack-the-box/README.md)
+  * [Starting Point](machines-and-ctf-challenges/hack-the-box/starting-point/README.md)
+    * [Meow](machines-and-ctf-challenges/hack-the-box/starting-point/meow.md)
+    * [Fawn](machines-and-ctf-challenges/hack-the-box/starting-point/fawn.md)
+    * [Dancing](machines-and-ctf-challenges/hack-the-box/starting-point/dancing.md)
+    * [Redeemer](machines-and-ctf-challenges/hack-the-box/starting-point/redeemer.md)
+  * [Machines](machines-and-ctf-challenges/hack-the-box/machines.md)
+  * [Challenges](machines-and-ctf-challenges/hack-the-box/challenges.md)
+* [PicoCTF](machines-and-ctf-challenges/picoctf.md)

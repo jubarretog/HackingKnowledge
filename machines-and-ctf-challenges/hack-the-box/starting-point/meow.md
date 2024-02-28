@@ -12,15 +12,19 @@ layout:
     visible: true
 ---
 
-# Starting Point
+# Meow
 
-## Tier 0
+## <mark style="color:blue;">Description</mark>
 
-### Meow
+* **Tier **<mark style="color:green;">**->**</mark> 0
+* **Difficult** <mark style="color:green;">**->**</mark> Very Easy
+* **Tags **<mark style="color:green;">**->**</mark> Telnet / Protocols / Reconnaissance / Weak Credentials / Misconfiguration
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
-***
+
+
+## <mark style="color:blue;">Write-up</mark>
 
 * We start answering the first questions
 
@@ -80,7 +84,7 @@ layout:
 
 ***
 
-* We could try to connect with telnet service
+* We can try to connect through telnet protocol
 
 {% code lineNumbers="true" %}
 ```bash
@@ -122,7 +126,7 @@ ls
 
 ***
 
-* We check the content of the flag.txt file
+* We check the content of the _flag.txt_ file
 
 ```purebasic
 cat flag.txt
@@ -137,78 +141,3 @@ cat flag.txt
 <figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**b40abdfe23665f766f9c61ecba8a4c19**_
-
-***
-
-
-
-### Fawn
-
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-
-
-### Dancing
-
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* s
-
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
-
-
-
-***
-
-e
-
-
-
-### Redeemer
-
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* e
-
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
-
-
-
-***
-
-* e
-
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
-
-
-
-***
-
-* e
-
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
-
-
-
-***
-
-* e
-
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
-
-
-
-***
-
-e
