@@ -42,19 +42,19 @@ layout:
 
 <figure><img src="../../../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
-> Answer: _**Openvpn**_
+> Answer: _**openvpn**_
 
 ***
 
 <figure><img src="../../../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
 
-> Answer: _**Ping**_
+> Answer: _**ping**_
 
 ***
 
 <figure><img src="../../../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
-> Answer: _**Nmap**_
+> Answer: _**nmap**_
 
 ***
 
@@ -71,7 +71,7 @@ layout:
 
 <figure><img src="../../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
-> Answer: _**Telnet**_
+> Answer: _**telnet**_
 
 ***
 

@@ -26,13 +26,135 @@ layout:
 
 ## <mark style="color:blue;">Write-up</mark>
 
-* e
+* We start answering the first questions
 
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>
-</strong></code></pre>
+<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
-
+> Answer: _**File Transfer Protocol**_
 
 ***
 
-e
+<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**21**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**sftp**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**ping**_
+
+***
+
+* Now we can make an initial port scan
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sh
+nmap -p- -Pn --min-rate 2000 10.129.92.84
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* Then we make an exhaustive scan
+
+{% code lineNumbers="true" %}
+```bash
+nmap -p- -Pn --min-rate 2000 10.129.92.84
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* With this we can answer the next four questions
+
+<figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**vsftpd 3.0.3**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**Unix**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**ftp -h**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**anonymous**_
+
+***
+
+<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>ftp 10.129.92.94
+</strong></code></pre>
+
+<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* We try login with _anonymous_ account and entering an empty password
+
+<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* With this we can answer the next three questions
+
+<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**230**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**ls**_
+
+***
+
+<figure><img src="../../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**get**_
+
+***
+
+* We use _**ls**_ command to list files via ftp and we find a text file
+
+<figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* Now we use _get_ command to pull the _flag.txt_ file via ftp and close the connection
+
+<figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* We check the content of the _flag.txt_ file
+
+<figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* With this we have got the root flag and have pawned the machine
+
+<figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+
+> Answer: _**035db21c881520061c53e0536e44f815**_
