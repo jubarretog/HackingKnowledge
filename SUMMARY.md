@@ -86,15 +86,15 @@
 * [Tools](web-hacking/tools/README.md)
   * [Fuzzing](web-hacking/tools/fuzzing.md)
 
-## 📄 databases attacks
+## 📄 Database Attacks
 
-* [General Concepts](databases-attacks/general-concepts.md)
-* [SQL](databases-attacks/sql.md)
-* [SQL Injection](databases-attacks/sql-injection.md)
-* [Tips](databases-attacks/tips.md)
-* [Tools](databases-attacks/tools.md)
+* [General Concepts](database-attacks/general-concepts.md)
+* [SQL](database-attacks/sql.md)
+* [SQL Injection](database-attacks/sql-injection.md)
+* [Tips](database-attacks/tips.md)
+* [Tools](database-attacks/tools.md)
 
-## 🧾 SCRIPTING
+## 🧾 Scripting
 
 * [Reverse Shell](scripting/reverse-shell.md)
 * [Tools](scripting/tools.md)
@@ -112,7 +112,7 @@
 * [Post-Explotation](privelege-escalation/post-explotation/README.md)
   * [Tools](privelege-escalation/post-explotation/tools.md)
 
-## 👥 ACTIVE DIRECTORY
+## 👥 Active Directory
 
 * [General Concepts](active-directory/general-concepts.md)
 * [Tips](active-directory/tips.md)
