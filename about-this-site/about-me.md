@@ -12,9 +12,9 @@ layout:
     visible: true
 ---
 
-# About me
+# About Me
 
-Hey!! I'm Juan David, a student of Systems and Computation Engineering at [Universidad Nacional de Colombia](https://unal.edu.co/) and I'm part of the student group in cybersecurity [Uqbar](https://www.instagram.com/uqbarun/).
+Hey!! I'm Juan David, a student of Systems and Computing Engineering at [Universidad Nacional de Colombia](https://unal.edu.co/) and I'm part of the student group in cybersecurity [Uqbar](https://www.instagram.com/uqbarun/).
 
 <figure><img src="../.gitbook/assets/image (18).png" alt="" width="375"><figcaption></figcaption></figure>
 

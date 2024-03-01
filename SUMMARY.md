@@ -3,7 +3,7 @@
 ## 💻 About this site
 
 * [Welcome!!](README.md)
-* [About the autor](about-this-site/about-the-autor.md)
+* [About Me](about-this-site/about-me.md)
 * [Disclaimer](about-this-site/disclaimer.md)
 
 ## 🔑 Cybersecurity Basics
