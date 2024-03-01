@@ -18,6 +18,7 @@ layout:
 
 * **Tier **<mark style="color:green;">**->**</mark> 0
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
+* **OS** <mark style="color:green;">**->**</mark> Linux
 * **Tags **<mark style="color:green;">**->**</mark> Telnet / Protocols / Reconnaissance / Weak Credentials / Misconfiguration
 
 <figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>

@@ -18,6 +18,7 @@ layout:
 
 * **Tier **<mark style="color:green;">**->**</mark> 0
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
+* **OS** <mark style="color:green;">**->**</mark> Linux
 * **Tags **<mark style="color:green;">**->**</mark> FTP / Protocols / Reconnaissance / Anonymous-Guest Access
 
 <figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
@@ -102,6 +103,8 @@ nmap -p- -Pn --min-rate 2000 10.129.92.84
 
 ***
 
+* We try connecting through _ftp_ protocol
+
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>ftp 10.129.92.94
 </strong></code></pre>
 
@@ -109,7 +112,7 @@ nmap -p- -Pn --min-rate 2000 10.129.92.84
 
 ***
 
-* We try login with _anonymous_ account and entering an empty password
+* We try login with _anonymous_ account and entering an blank password
 
 <figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
@@ -135,13 +138,13 @@ nmap -p- -Pn --min-rate 2000 10.129.92.84
 
 ***
 
-* We use _**ls**_ command to list files via ftp and we find a text file
+* We use _ls_ command to list files via ftp and we find a text file
 
 <figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Now we use _get_ command to pull the _flag.txt_ file via ftp and close the connection
+* Now we use _get_ command to pull the _flag.txt_ file via ftp and then we close the connection
 
 <figure><img src="../../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 

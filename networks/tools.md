@@ -41,7 +41,7 @@ sudo openvpn $ovpnfile
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo smbclient -I $IP
+smbclient -I $IP
 ```
 {% endcode %}
 
@@ -51,7 +51,7 @@ sudo smbclient -I $IP
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo smbclient -L $IP -I $IP -N
+smbclient -L $IP -I $IP -N
 ```
 {% endcode %}
 
@@ -61,7 +61,7 @@ sudo smbclient -L $IP -I $IP -N
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo smbclient //$IP/$ShareName -N
+smbclient //$IP/$ShareName -N
 ```
 {% endcode %}
 
@@ -71,7 +71,7 @@ sudo smbclient //$IP/$ShareName -N
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo smbclient //$IP/$ShareName -N -c "$comand"
+smbclient //$IP/$ShareName -N -c "$comand"
 ```
 {% endcode %}
 
