@@ -16,7 +16,7 @@ layout:
 
 ## <mark style="color:green;">Daniel Miessler Wordlists</mark>
 
-* Well-known wordlists for every proccess of fuzzing or bruteforcing
+* Well-known wordlists for almost every proccess of fuzzing or bruteforcing
 * [https://github.com/danielmiessler/SecLists](https://github.com/danielmiessler/SecLists)
 
 

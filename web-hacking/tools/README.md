@@ -104,7 +104,7 @@ sudo responder -I $networkinterface
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** If ypu get error in any port, set _off_ in the service related to that port in _Responder.conf_ file
+**Note:** If you get error in any port, set _off_ in the service related to that port in _Responder.conf_ file
 {% endhint %}
 
 ***
