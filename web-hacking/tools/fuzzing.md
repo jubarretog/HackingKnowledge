@@ -50,8 +50,8 @@ gobuster -h
 gobuster -u $URL #Scan url
 gobuster -u $url-w $wordlist #Specify wordlist path
 gobuster dir -u $url -w $wordlist #Directory and file mode
-gobuster vhost $url -w $wordlist #Subdomain mode
-gobuster vhost $url -w $wordlist --append-domain #To set de subdomain first
+gobuster vhost -u $url -w $wordlist #Subdomain mode
+gobuster vhost -u $url -w $wordlist --append-domain #To set de subdomain first
 ```
 {% endcode %}
 

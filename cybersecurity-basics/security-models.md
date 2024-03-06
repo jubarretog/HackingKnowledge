@@ -18,7 +18,7 @@ layout:
 
 Security model that is used in consideration throughout creating a security policy.
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.linkedin.com/posts/jorge-pinto-786074182_informationsecurity-cybersecurity-security-activity-7106718258631704576-3ckw/">https://www.linkedin.com/posts/jorge-pinto-786074182_informationsecurity-cybersecurity-security-activity-7106718258631704576-3ckw/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.linkedin.com/posts/jorge-pinto-786074182_informationsecurity-cybersecurity-security-activity-7106718258631704576-3ckw/">https://www.linkedin.com/posts/jorge-pinto-786074182_informationsecurity-cybersecurity-security-activity-7106718258631704576-3ckw/</a></p></figcaption></figure>
 
 * **Confidentiality:** Protection of data from unauthorized access and misuse.
 * **Integrity:** Information is kept accurate and consistent unless authorized changes are made.

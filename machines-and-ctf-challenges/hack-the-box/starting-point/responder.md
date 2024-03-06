@@ -16,7 +16,7 @@ layout:
 
 ## <mark style="color:blue;">Description</mark>
 
-* **Tier **<mark style="color:green;">**->**</mark> 0
+* **Tier **<mark style="color:green;">**->**</mark>** 1**
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
 * **OS** <mark style="color:green;">**->**</mark> Linux
 * **Tags **<mark style="color:green;">**->**</mark> WinRM / Custom Applications / Protocols / XAMPP / SMB / Responder / PHP\
@@ -231,7 +231,7 @@ page=//10.10.14.195/somefile
 
 ***
 
-* If we search through the system, we will find a file called _flag.txt_ in the _\mike\Desktop_ folder
+* If we search through the system, we will find a file called _flag.txt_ in the _C:\Users\mike\Desktop_ folder
 
 <figure><img src="../../../.gitbook/assets/image (168).png" alt=""><figcaption></figcaption></figure>
 

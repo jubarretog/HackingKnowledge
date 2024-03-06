@@ -74,7 +74,7 @@ sudo aws configure #Set evey parameter to temp
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo aws --endpoint=http://$url s3 $command
+sudo aws --endpoint=http://$url s3 $command #Execute a command on the bucket
 sudo aws --endpoint=http://$url s3 ls #List buckets
 sudo aws --endpoint=http://$url s3 ls s3://$listedurl #Lists elements in the bucket
 sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a bucket
