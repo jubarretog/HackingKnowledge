@@ -15,7 +15,7 @@ layout:
 # General Concepts
 
 * **NIC:** Network Interface Card
-* **Routing:** Process of data traveling through a network
+* **Routing:** Process of data traveling through a network.
 * **ISP:** Internet Service Provider.
 * **Public address:** Used to identify the device on the Internet, are given by teh ISP.
 * **Private address:** Used to identify a device amongst other devices.
@@ -56,4 +56,9 @@ layout:
 * **NTLM:** New Technology Lan Manager, collection of authentication protocols as a challenge-response used to authenticate a client to a resource on an Active Directory domain.
 * **Pivoting:** Use an already compromise machine to jump or get access to another machines of the same network.
 * **Tunneling:** Consist in encapsulate a network protocol over other to create an information tunnel on a computer network.
+* **NAC:** Network Access Control Network access control,  security system that ensures that only authorized and compliant devices are granted access to the network.
+  * **DAC:** Discretionary access control, enables users to manage access to their resources by granting resource owners the responsibility of controlling access permissions.
+  * **MAC:** Mandatory access control, determine resource access based on the resource's security level and the user's security level or process requesting access.
+  * **RBAC:** Role-based access control, users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions.
+* **Monitoring:** Capturing, analyzing, and interpreting network traffic to identify security threats, performance issues, and suspicious behavior.
 

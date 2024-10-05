@@ -1,10 +1,10 @@
 # Table of contents
 
-## 💻 About this site
+## 💻 Homepage
 
 * [Welcome!!](README.md)
-* [About Me](about-this-site/about-me.md)
-* [Disclaimer](about-this-site/disclaimer.md)
+* [About Me](homepage/about-me.md)
+* [Disclaimer](homepage/disclaimer.md)
 
 ## 🔑 Cybersecurity Basics
 
@@ -12,19 +12,20 @@
   * [Attacks](cybersecurity-basics/general-concepts/attacks.md)
   * [Malware](cybersecurity-basics/general-concepts/malware.md)
   * [Vulnerabilities](cybersecurity-basics/general-concepts/vulnerabilities.md)
-* [Kill Chain](cybersecurity-basics/kill-chain.md)
+* [Cyber Kill Chain](cybersecurity-basics/cyber-kill-chain.md)
 * [Security Models](cybersecurity-basics/security-models.md)
 * [Methodologies](cybersecurity-basics/methodologies.md)
 * [Legal Support](cybersecurity-basics/legal-support.md)
 * [Career Paths](cybersecurity-basics/career-paths.md)
+* [Certifications](cybersecurity-basics/certifications.md)
 
 ## 🐧 Linux
 
 * [General Concepts](linux/general-concepts.md)
 * [Common Directories](linux/common-directories.md)
 * [File Permissions](linux/file-permissions.md)
-* [Enviroment Variables](linux/enviroment-variables.md)
-* [Crometabs](linux/crometabs.md)
+* [Environment Variables](linux/environment-variables.md)
+* [Crontabs](linux/crontabs.md)
 * [Commands](linux/commands/README.md)
   * [Command Operators](linux/commands/command-operators.md)
 
@@ -34,8 +35,7 @@
 * [File Permissions](windows/file-permissions.md)
 * [System Variables and Tools](windows/system-variables-and-tools.md)
 * [System Events](windows/system-events.md)
-* [CMD commands](windows/cmd-commands.md)
-* [Tools](windows/tools.md)
+* [Commands](windows/commands.md)
 
 ## 📶 Networks
 
@@ -59,34 +59,36 @@
 * [Tips](cryptography/tips.md)
 * [Tools](cryptography/tools.md)
 
-## 🔎 Information Gathering
+## Penetration Testing
 
-* [General Concepts](information-gathering/general-concepts.md)
-* [OSINT](information-gathering/osint.md)
-* [Tips](information-gathering/tips.md)
-* [Tools](information-gathering/tools.md)
+* [Introduction](penetration-testing/introduction.md)
+* [Information Gathering](penetration-testing/information-gathering/README.md)
+  * [General Concepts](penetration-testing/information-gathering/general-concepts.md)
+  * [OSINT](penetration-testing/information-gathering/osint.md)
+  * [Tips](penetration-testing/information-gathering/tips.md)
+  * [Tools](penetration-testing/information-gathering/tools.md)
 
-## 📡 Web Hacking
+## 📡 Web Explotation
 
-* [General Concepts](web-hacking/general-concepts.md)
-* [OWASP Top 10](web-hacking/owasp-top-10/README.md)
-  * [Broken Access Control](web-hacking/owasp-top-10/broken-access-control.md)
-  * [Cryptographic Failures](web-hacking/owasp-top-10/cryptographic-failures.md)
-  * [Injection](web-hacking/owasp-top-10/injection.md)
-  * [Insecure Design](web-hacking/owasp-top-10/insecure-design.md)
-  * [Security Misconfiguration](web-hacking/owasp-top-10/security-misconfiguration.md)
-  * [Vulnerable and Outdated Components](web-hacking/owasp-top-10/vulnerable-and-outdated-components.md)
-  * [Identification and Authentication Failures](web-hacking/owasp-top-10/identification-and-authentication-failures.md)
-  * [Software and Data Integrity Failures](web-hacking/owasp-top-10/software-and-data-integrity-failures.md)
-  * [Security Logging and Monitoring Failures](web-hacking/owasp-top-10/security-logging-and-monitoring-failures.md)
-  * [Server-side Request Forgery](web-hacking/owasp-top-10/server-side-request-forgery.md)
-* [Uploaded File Exploits](web-hacking/uploaded-file-exploits.md)
-* [Wordpress Explotation](web-hacking/wordpress-explotation.md)
-* [Tips](web-hacking/tips.md)
-* [Tools](web-hacking/tools/README.md)
-  * [Fuzzing](web-hacking/tools/fuzzing.md)
+* [General Concepts](web-explotation/general-concepts.md)
+* [OWASP Top 10](web-explotation/owasp-top-10/README.md)
+  * [Broken Access Control](web-explotation/owasp-top-10/broken-access-control.md)
+  * [Cryptographic Failures](web-explotation/owasp-top-10/cryptographic-failures.md)
+  * [Injection](web-explotation/owasp-top-10/injection.md)
+  * [Insecure Design](web-explotation/owasp-top-10/insecure-design.md)
+  * [Security Misconfiguration](web-explotation/owasp-top-10/security-misconfiguration.md)
+  * [Vulnerable and Outdated Components](web-explotation/owasp-top-10/vulnerable-and-outdated-components.md)
+  * [Identification and Authentication Failures](web-explotation/owasp-top-10/identification-and-authentication-failures.md)
+  * [Software and Data Integrity Failures](web-explotation/owasp-top-10/software-and-data-integrity-failures.md)
+  * [Security Logging and Monitoring Failures](web-explotation/owasp-top-10/security-logging-and-monitoring-failures.md)
+  * [Server-side Request Forgery](web-explotation/owasp-top-10/server-side-request-forgery.md)
+* [Uploaded File Exploits](web-explotation/uploaded-file-exploits.md)
+* [Wordpress Explotation](web-explotation/wordpress-explotation.md)
+* [Tips](web-explotation/tips.md)
+* [Tools](web-explotation/tools/README.md)
+  * [Fuzzing](web-explotation/tools/fuzzing.md)
 
-## 📄 Database Attacks
+## Database Attacks
 
 * [General Concepts](database-attacks/general-concepts.md)
 * [SQL](database-attacks/sql.md)
@@ -100,17 +102,16 @@
 * [Tools](scripting/tools.md)
 * [Utilities](scripting/utilities.md)
 
-## ☠️ Privelege Escalation
+## ☠️ Privilege Escalation
 
-* [General Concepts](privelege-escalation/general-concepts.md)
-* [Introduction](privelege-escalation/introduction.md)
-* [Enumeration](privelege-escalation/enumeration/README.md)
-  * [Tools](privelege-escalation/enumeration/tools.md)
-* [Explotation](privelege-escalation/explotation/README.md)
-  * [Techniques](privelege-escalation/explotation/techniques.md)
-  * [Tools](privelege-escalation/explotation/tools.md)
-* [Post-Explotation](privelege-escalation/post-explotation/README.md)
-  * [Tools](privelege-escalation/post-explotation/tools.md)
+* [General Concepts](privilege-escalation/general-concepts.md)
+* [Introduction](privilege-escalation/introduction.md)
+* [Enumeration](privilege-escalation/enumeration/README.md)
+  * [Tools](privilege-escalation/enumeration/tools.md)
+* [Explotation](privilege-escalation/explotation/README.md)
+  * [Techniques](privilege-escalation/explotation/techniques.md)
+  * [Tools](privilege-escalation/explotation/tools.md)
+* [Post-Explotation](privilege-escalation/post-explotation.md)
 
 ## 👥 Active Directory
 
@@ -121,25 +122,30 @@
 ## 👣 Digital Forensics
 
 * [General Concepts](digital-forensics/general-concepts.md)
-* [Basic Forensics Plan](digital-forensics/basic-forensics-plan.md)
+* [Basic Plan](digital-forensics/basic-plan.md)
 * [Tips](digital-forensics/tips.md)
 * [Tools](digital-forensics/tools.md)
 
-## 🚩 Machines and CTF Challenges
+## 🚩 Practical Skill Development
 
-* [Introduction](machines-and-ctf-challenges/introduction.md)
-* [TryHackMe](machines-and-ctf-challenges/tryhackme.md)
-* [Hack The Box](machines-and-ctf-challenges/hack-the-box/README.md)
-  * [Starting Point](machines-and-ctf-challenges/hack-the-box/starting-point/README.md)
-    * [Meow](machines-and-ctf-challenges/hack-the-box/starting-point/meow.md)
-    * [Fawn](machines-and-ctf-challenges/hack-the-box/starting-point/fawn.md)
-    * [Dancing](machines-and-ctf-challenges/hack-the-box/starting-point/dancing.md)
-    * [Redeemer](machines-and-ctf-challenges/hack-the-box/starting-point/redeemer.md)
-    * [Appointment](machines-and-ctf-challenges/hack-the-box/starting-point/appointment.md)
-    * [Sequel](machines-and-ctf-challenges/hack-the-box/starting-point/sequel.md)
-    * [Crocodile](machines-and-ctf-challenges/hack-the-box/starting-point/crocodile.md)
-    * [Responder](machines-and-ctf-challenges/hack-the-box/starting-point/responder.md)
-    * [Three](machines-and-ctf-challenges/hack-the-box/starting-point/three.md)
-  * [Machines](machines-and-ctf-challenges/hack-the-box/machines.md)
-  * [Challenges](machines-and-ctf-challenges/hack-the-box/challenges.md)
-* [PicoCTF](machines-and-ctf-challenges/picoctf.md)
+* [Learning Platforms](practical-skill-development/learning-platforms/README.md)
+  * [Hack The Box](practical-skill-development/learning-platforms/hack-the-box.md)
+  * [TryHackMe](practical-skill-development/learning-platforms/tryhackme.md)
+  * [PicoCTF](practical-skill-development/learning-platforms/picoctf.md)
+* [Capture The Flag (CTF) Competitions](practical-skill-development/capture-the-flag-ctf-competitions.md)
+
+## 📑 Write-Ups
+
+* [Introduction](write-ups/introduction.md)
+* [HTB Starting Point](write-ups/htb-starting-point/README.md)
+  * [Meow](write-ups/htb-starting-point/meow.md)
+  * [Fawn](write-ups/htb-starting-point/fawn.md)
+  * [Dancing](write-ups/htb-starting-point/dancing.md)
+  * [Redeemer](write-ups/htb-starting-point/redeemer.md)
+  * [Appointment](write-ups/htb-starting-point/appointment.md)
+  * [Sequel](write-ups/htb-starting-point/sequel.md)
+  * [Crocodile](write-ups/htb-starting-point/crocodile.md)
+  * [Responder](write-ups/htb-starting-point/responder.md)
+  * [Three](write-ups/htb-starting-point/three.md)
+* [HTB Machines](write-ups/htb-machines.md)
+* [HTB Challenges](write-ups/htb-challenges.md)

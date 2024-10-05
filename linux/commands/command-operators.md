@@ -14,7 +14,7 @@ layout:
 
 # Command Operators
 
-* Execute a command and run it in background
+* Execute a command and send it to the background
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -29,11 +29,12 @@ $command &
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 $command1 && $command2
+$command1 ; $command2
 ```
 {% endcode %}
 
 {% hint style="info" %}
-The next command only will be executed if previous was successful
+When using `&&` the next command only will be executed if the previous one was successful
 {% endhint %}
 
 ***
@@ -47,7 +48,7 @@ $command > $filename
 {% endcode %}
 
 {% hint style="info" %}
-If file doesn't exit it will be created, and if it exists it will be overwrited
+If the file doesn't exit it will be created, and if it exists it will be overwritten.
 {% endhint %}
 
 ***
@@ -66,7 +67,15 @@ If file doesn't exit it will be created, and if it exists it will be overwrited
 
 ***
 
-* Pass the result of a commnad as parameter for the other
+* Tooks content from a stream
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C;&#x3C; $stream
+</strong><strong>#Ex: cat &#x3C;&#x3C; EOF     
+</strong></code></pre>
+
+***
+
+* Pass the result of a command as a parameter for the other
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 | $command2
 </strong></code></pre>
@@ -81,6 +90,3 @@ If file doesn't exit it will be created, and if it exists it will be overwrited
 {% hint style="info" %}
 The number `2` indicates the `STDERR`
 {% endhint %}
-
-***
-

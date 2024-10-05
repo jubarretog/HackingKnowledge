@@ -14,14 +14,14 @@ layout:
 
 # Welcome!!
 
-Hi!! This is a page I have decided to create as a recopilation of the knowledge I've obtained from my cibersecurity study sessions.&#x20;
+Hi! This is a page I've created to compile the knowledge I've gained from my cybersecurity study sessions.
 
-This page collect all concepts, tools, recommendations and practices that I consider relevant to annotate, in the form of a guide book for every person interested in ethical hacking, offensive security and cybersecurity in general.
+This page compiles all concepts, tools, recommendations, and practices that I consider relevant to annotate, in the form of a guidebook for anyone interested in ethical hacking, offensive security, and cybersecurity in general.
 
 <figure><img src=".gitbook/assets/Hacking_Knowledge_7.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
-In this manner, is expected to cover fields such as operating systems, networks, cryptography, pentesting concepts, techniques and tools, scripting, privilege escalation and every other knowledge which could be relevant in hacking practices.
+In this guide, I aim to cover operating systems, networks, cryptography, penetration testing concepts, techniques and tools, scripting, privilege escalation, and every other relevant topic for ethical hacking practices.
 
-Furthermore, at the final part can be found a recopilation of my writeups from machines and CTFs challenges that I've completed from [Hack the box](https://www.hackthebox.com/), [TryHackMe](https://tryhackme.com/) and [PicoCTF](https://picoctf.org/) platforms.
+Furthermore, the final part contains a compilation of my write-ups from machines and CTF challenges I've completed on platforms such as [Hack The Box](https://www.hackthebox.com/), [TryHackMe](https://tryhackme.com/), and [PicoCT](https://picoctf.org/).
 
 ### _<mark style="color:blue;">**Developed by:**</mark>** ****Juan David Barreto Grattz**** **<mark style="color:blue;">**aka**</mark>** ****KryptoCoder**_

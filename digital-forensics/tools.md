@@ -16,7 +16,7 @@ layout:
 
 ## <mark style="color:green;">PDF Info</mark>
 
-Used to extract metadata of a pdf file
+* Used to extract metadata of a pdf file
 
 ### Commands
 
@@ -38,13 +38,9 @@ pdfinfo $pdffilename
 ```
 {% endcode %}
 
-***
+## <mark style="color:green;">ExifTool</mark>
 
-
-
-## <mark style="color:green;">Exiftool</mark>
-
-* Used to extract Metadata from files, specially image
+* Used to extract Metadata from files, especially image
 
 ### Commands
 
@@ -66,13 +62,11 @@ exiftool $filename
 ```
 {% endcode %}
 
-***
-
-
-
 ## <mark style="color:green;">Steghide</mark>
 
-Stenography Program
+* Stenography tool that is used to hide data within image and audio files, and also to recover hidden data embedded in files.
+
+### Commands
 
 * Install
 
@@ -84,25 +78,19 @@ sudo apt-get install steghide
 
 ***
 
-* Commands
+* Handle embedded data
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-steghide info $filename #Get info of embedded data
+steghide info $filename #Get info from embedded data
 steghide extract -sf $filename #Extract data from file
 ```
 {% endcode %}
 
-***
-
-
-
 ## <mark style="color:green;">d4js</mark>
 
-* Used to deobfuscated javascript code
+* Used to deobfuscated JavaScript code
 * [https://lelinhtinh.github.io/de4js/](https://lelinhtinh.github.io/de4js/)
-
-
 
 ## <mark style="color:green;">Shred</mark>
 
@@ -115,9 +103,9 @@ steghide extract -sf $filename #Extract data from file
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo shred $filename
-sudo shred $filename -f     #Change permissions to allow overwritting
+sudo shred $filename -f     #Change permissions to allow overwriting
 sudo shred $filename -n $n  #Specify number of times to overwrite
-sudo shred $filename -v     #Verbose mode, show step by step
+sudo shred $filename -v     #Verbose mode, show step-by-step
 sudo shred $filename -u     #Truncate and eliminate file after overwriting
 sudo shred $filename -z     #Overwrite with 0
 sudo shred -vu /dev/$unit   #Delete a memory unit or partition
@@ -126,10 +114,7 @@ sudo shred -vu /dev/$unit   #Delete a memory unit or partition
 
 ***
 
-
-
 ## <mark style="color:green;">SDelete</mark>
 
 * Tool  to delete and overwrite drive or file information in Windows
 * [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)
-

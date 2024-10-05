@@ -14,5 +14,4 @@ layout:
 
 # General Concepts
 
-* **certutil:** Binario para descargar archivos
-
+* **`certutil`:** Binary for certificate management, encryption, decryption, hashing, file verification, and remote file download, among others.

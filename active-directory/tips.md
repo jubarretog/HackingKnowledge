@@ -14,5 +14,3 @@ layout:
 
 # Tips
 
-* Here go some tips
-

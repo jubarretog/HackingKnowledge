@@ -14,6 +14,10 @@ layout:
 
 # Commands
 
+As Linux is a command-line-based operating system, the use of commands is crucial for interacting with the system, performing tasks, and managing files and applications.&#x20;
+
+Based on this, here is a list of essential and useful commands:
+
 * Create a bash instance
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -34,22 +38,12 @@ exit
 
 ***
 
-* Change user password
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-passwd
-```
-{% endcode %}
-
-***
-
-* See manual/documentation or found a command
+* See the manual/documentation or find a command
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 man $command
-man -k $keyword        #Make search of command by a keyword
+man -k $keyword        #Make a search of command by a keyword
 apropos $keyword       #Find a command by description
 ```
 {% endcode %}
@@ -66,17 +60,18 @@ clear
 
 ***
 
-* Shows the current logged in user
+* Get information about users logged in
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-whoami
+whoami #Shows the currently logged-in user
+who    #Shows all logged-in users
 ```
 {% endcode %}
 
 ***
 
-* Get the hostname of the machine
+* Get the name of the machine (computer)
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -92,11 +87,13 @@ hostname
 ```bash
 uname
 uname -a #Print all information
+uname -r #Print kernel version
+uname -m #Print machine hardware name
 ```
 {% endcode %}
 
 {% hint style="info" %}
-Information come in the following order separated by spaces
+Information comes in the following order separated by spaces:
 
 * kernel-name
 * nodename
@@ -110,7 +107,7 @@ Information come in the following order separated by spaces
 
 ***
 
-* Executes a command with superuser(root) permises
+* Executes a command with superuser (root) permissions
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -132,32 +129,37 @@ id $username #Can be used with any user
 
 ***
 
-* Show all files and directories in specified
+* List files, directories, devices, and more
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ls           #In actual directory
+ls           #In the actual directory
 ls $path     #In path directory
 ls -a        #Include hidden files
 ls -1        #List each file in a single line
 ls -l        #File permissions, associated user and groups, creation date and hour
 ls -l -lr    #List and order in z-a order
 ls -l -lt    #List and order by last modified
+ls -i        #List with index/inode number
+lsof         #List open files
+lsusb        #List USB devices
+lsblk        #List disk partitions
 ```
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** Hidden files start with a dot.  **Ex:**_`.hiddenfile`_
+Hidden files start with a dot.  **Ex:**_`.hiddenfile`_
 {% endhint %}
 
 ***
 
-* Change permission of a file
+* Change permissions of a file
 
-```bash=
-sudo chmod +$permision $filename  #Add permission
-sudo chmod -$permision $filename  #Remove permission
-sudo chmod -R 777 $filename #Give all permission to everyone
+```bash
+sudo chmod +$permision $filename      #Add permission
+sudo chmod -$permision $filename      #Remove permission
+sudo chmod -R 777 $filename           #Give all permission to everyone
+sudo chown $owner:$group $filename    #Change owner and group of a file
 ```
 
 ***
@@ -172,7 +174,7 @@ pwd
 
 ***
 
-* Change directory to the specified path
+* Change the directory to the specified path
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -180,12 +182,13 @@ cd        #Redirect to the home directory
 cd ~      #Redirect to the home directory
 cd $path  #Redirect to the specified file
 cd ../    #Redirect to the upper directory
+cd -      #Redirect to the last directory
 ```
 {% endcode %}
 
 ***
 
-* Get path of file by searching in directories defined at PATH
+* Get the path of the file by searching in directories defined at PATH
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -195,16 +198,17 @@ which $filename
 
 ***
 
-* Get path of file by searching in **locate.db**
+* Get the path of a file by searching in **locate.db**
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 locate $filename
+sudo updatedb    #Update locate.db
 ```
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** `locate.db` is a build in db of system files
+`locate.db` is a built-in database of system files
 {% endhint %}
 
 ***
@@ -219,7 +223,7 @@ sudo updatedb
 
 ***
 
-* List sockets statistics
+* List sockets/services statistics
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -254,12 +258,12 @@ export HISTTIMEFORMAT='$options'   #Set time format for history
 
 ***
 
-* Repeat a command based on history
+* Repeat a command based on the history
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 !$number   #Repeat the command with that number
-!!         #Repeat last command used
+!!         #Repeat the last command used
 ```
 {% endcode %}
 
@@ -276,7 +280,7 @@ display $imagefile
 
 ***
 
-* Asign a name for simplificated a command or redefine a command
+* Assign a name for simplified a command or redefine a command
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -318,7 +322,8 @@ head -n$number $filename #Shows the first $number lines
 tail $filename #Shows 10 final lines
 tail -n$number $filename #Shows the last $number lines
 tail -f $filename #Shows appended lines as data grows
-less $file #Less is lighter, charge one page of content at time
+more $file #Charge one page of content at the time
+less $file #Same as more but have more features
 ```
 {% endcode %}
 
@@ -326,8 +331,8 @@ less $file #Less is lighter, charge one page of content at time
 
 * Find a file or directory
 
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">find .                      #All files and directories from the actual directory
-find /                      #All files and directories from root directory
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>find .                      #All files and directories from the actual directory
+</strong>find /                      #All files and directories from root directory
 find $path                  #All files and directories from specific directory
 find . -name $filename      #Find by exact name
 find . -name "*.$extension" #All files with the specified extension
@@ -340,61 +345,75 @@ find . -size  $size$unit    #Find by exact size, c for bytes, M for MB
 find . -size  +$size$unit   #Find by larger size than specified
 find . -size  -$size$unit   #Find by smaller size than specified
 find . -mtime $n            #Files modified in the last n days
-find . -atime $n            #Files accesed in the last n days
+find . -atime $n            #Files accessed in the last n days
 <strong>find . -cmin $n             #Files changed in the last n minutes
-</strong>find . -amin $n             #Files accesed in the last n minutes
-find . 2>/dev/null          #Exclude files with no permissions
+</strong>find . -amin $n             #Files accessed in the last n minutes
+find . -newermt $date       #Files newer than the specified date
+find . 2>/dev/null          #Exclude files with standard errors
 </code></pre>
 
 {% hint style="info" %}
-The `-perm` flag can recieve permission such as `777` or `a=x`
+The `-perm`option can receive permission such as `777` or `a=x`
 {% endhint %}
 
 ***
 
-* Count the number of entries in a file
+* Count the number of entries in a file or output
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-wc $filename      #Count number of lines, words and characters
+wc $filename      #Count the number of lines, words, and bytes
 wc -l $filename   #Count number of lines
 wc -m $filename   #Count number of characters
 wc -c $filename   #Count number of bytes
 wc -w $filename   #Count number of words
-wc $filename $filename #Count various file at time, show total
+wc $filename $filename #Count various files and show the total for each one
 ```
 {% endcode %}
 
 ***
 
-* Search through a file and shows any entries with the specified value
+* Search through a file and show any entries with the specified value
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 grep "$text" $filename
 grep -i "$text" $filename   #Ignore the value given
 grep -v "$text" $filename   #Returns non-matching results
+grep -e "$ReGex" $filename  #Use regular expressions
 ```
 {% endcode %}
 
+{% hint style="info" %}
+Remembering the use of RegEx:
+
+(a) -> Close and expression\
+\[a-z] -> Indicates a class of characters (In this case letters)\
+{1,10} -> Indicates how many times a pattern must be repeated (In this case 1 to 10 times)\
+\| -> Works as the _OR_ logical operator\
+.\* -> Works as the _AND_ logical operator
+{% endhint %}
+
 ***
 
-* Edit text and streams
+* Edit text and streams on output
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sed '$regex' $filename
+sed 's/$objetive/$replacement/g' $filename
 ```
 {% endcode %}
 
 ***
 
-* Extract a section of text from file
+* Extract a section of text from the file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 cut -f $fieldnumber -d "$delimiter" $filename
-awk -F "$delimiter" '{print $field, $field}'     #Extraction with AWK
+awk '{print $field, $field}' #By default space as separator, fields are columns
+awk '{print $1, $NF}' #With $1 get first line result, with $NF last line result
+awk -F "$delimiter" '{print $field, $field}' #Spicify delimiter
 ```
 {% endcode %}
 
@@ -404,39 +423,39 @@ awk -F "$delimiter" '{print $field, $field}'     #Extraction with AWK
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sort $filename     #Order by alphabeth using first character
+sort $filename     #Order by alphabet using the first character
 sort -f $filename  #Ignore Case sensitive
-sort -u $filename  #Takes only first entry
+sort -u $filename  #Count and not repeat if the same
 sort -r $filename  #Reverse the result
 sort -n $filename  #Compare as numerical value
-sort -k $field$delimitertor$position frutas #Order by field and position
+sort -k $field$delimitertor$position $filename #Order by field and position
 ```
 {% endcode %}
 
 ***
 
-* Find unique ocurrencies in a file
+* Find unique occurrences in a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sort $filename | uniq 
-sort $filename | uniq -c #Count number of ocurrencys
+sort $filename | uniq -c #Count number of occurrences
 sort $filename | uniq -b #Get repeated lines
 ```
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** `uniq` needs a sort file as input for work correctly
+`uniq` needs a sort file as input to work correctly
 {% endhint %}
 
 ***
 
-* Compare content of files
+* Compare the content of files
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 comm $file1 $file2
-comm -$number $file1 $file2  #Supress especified lines
+comm -$number $file1 $file2  #Supress specified lines
 diff $file1 $file2 
 diff -c $file1 $file2     #Ouput in context format
 diff -u $file1 $file2     #Ouput in unified format
@@ -444,18 +463,29 @@ diff -u $file1 $file2     #Ouput in unified format
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** In `comm` output first column Represents unique lines for first file, second columns the unique lines for second file, and the third column the lines both share.
+In `comm` output first column Represents unique lines for the first file, the second column the unique lines for the second file, and the third column the lines both share.
 {% endhint %}
 
 ***
 
-* Shows the content of a file with specifications
+* Shows the content of a file with replacements on the output
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-tr $filename $expression
-tr $filename -c $expression #Select the complement of expression
-tr $filename -d $expression #Delete what concidies with expression
+tr $filename $expression $replacement
+tr $filename -c $expression $replacement #What not match is replaced
+tr $filename -d $expression #Delete what coincides with expression
+```
+{% endcode %}
+
+***
+
+* Format the output in columns
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+column $file -t         #By default use space as a separator
+column $file -t -s $sep #Use set of characters as separator
 ```
 {% endcode %}
 
@@ -472,12 +502,12 @@ base64 $filename -d        #Decode
 
 ***
 
-* Transform hexdump
+* Transform hex dump
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-xdd $filename        #Show hexdump of the file
-xdd -r $filename     #Reverse hexdump to a file
+xdd $filename        #Show hex dump of the file
+xdd -r $filename     #Reverse hex dump to a file
 ```
 {% endcode %}
 
@@ -512,7 +542,7 @@ gpg -d $filename               #Decrypt data
 
 ***
 
-* Access to a remote machine through ssh
+* Access to a remote machine through SSH
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>ssh $user@$IP
 </strong><strong>ssh -i $privatekey $user@$IP  #Connect with a private key
@@ -563,7 +593,7 @@ mv $filename $newname  #Rename file
 
 ***
 
-* Shows the type of a file
+* Shows the type of file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -595,7 +625,7 @@ su -l $username  #Redirects to the home directory of the other user
 
 ***
 
-* Create or edit a file in command-line
+* Create or edit a file through the command line
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -603,6 +633,7 @@ nano $filename
 nano -B $filename #Make a backup when opening a file with nano
 vi $filename      #More powerful Text Editor
 vim $filename     #Improved version of vi
+vimtutor          #Enter tutor mode for practicing
 ```
 {% endcode %}
 
@@ -612,7 +643,7 @@ vim $filename     #Improved version of vi
 
 ***
 
-* Shows stimate disk usage of a file
+* Shows estimated disk usage of a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -626,29 +657,27 @@ du -b $filename    #Shows output in bytes mode
 
 * Make petitions to websites
 
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl $URL #Make a get petition
-</strong>curl -L $URL #Follow redirections
-curl -O $URL/$file      #Save a file with same name
-<strong>curl -o $name $URL/$file  #Save a file with a different name
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>curl $URL                          #Make a get petition
+</strong>curl -L $URL                       #Follow redirections
+curl -O $URL/$file                 #Save a file with the same name
+<strong>curl -o $name $URL/$file           #Save a file with a different name
 </strong>curl -o $URL/$file1 -o $URL/$file2 #Get various files
-curl $URL -d "$param=$value"  #Specificate values of body
-curl -X $PETITION $URL #Make an specific type of petition
-curl $firstpetition --next $secondpetition #Make variuos petition
-curl $URL -H "$header:$value" #Specific header in a petition
-curl $URL -v  #Get verbose output
-
+curl $URL -d "$param=$value"       #Specificate values of body
+curl -X $PETITION $URL             #Make an specific type of petition
+curl $firstpetition --next $secondpetition #Make various petition
+curl $URL -H "$header:$value"      #Specific header in a petition
+curl $URL -v                       #Get verbose output
 wget $URL
-wget -O $URL/file  #Save a file with same name
-wget -o $name $URL/file  #Save a file with a different name
-
-axel $URL           #Dowload through various connections
-axel -n$number $URL #Specify number of connection to use
-axel -O $name $URL  #Save with a different name
+wget -O $URL/file          #Save a file with the same name
+wget -o $name $URL/file    #Save a file with a different name
+axel $URL                  #Dowload through various connections
+axel -n$number $URL        #Specify the number of connections to use
+axel -O $name $URL         #Save with a different name
 </code></pre>
 
 ***
 
-* Codificate MD5 encryption for a file
+* Verify MD5 encryption for a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -685,95 +714,75 @@ python3 -m $modulename    #Start a python module
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ps                  #Show process run in the user sesion
+ps                  #Show process run in the user session
 ps aux              #Shows other user and complete system processes
 ps -A               #Shows all processes
 ps -f               #Display full format listing
 ps -C $commandname  #Shows process with a specified command
 ps axjf             #Show as a tree
+top                 #Real-time information about the system running processes
 ```
 {% endcode %}
 
 ***
 
-* Get real time information about the system running processes
+* Kill a system process, we can send some signals to specify the type of killing
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-top
-```
-{% endcode %}
-
-***
-
-* Kill a system proccess, we can send some signals to specified type of killing
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-kill $PID
+kill -9 $PID
 kill -s SIGTERM $PID   #Kill the process, but allow  to do some cleanup
 kill -s SIGKILL $PID   #Kill the process but doesn't do any cleanup
 kill -s SIGSTOP $PID   #Stop/suspend a process
+kill -s SIGINT $PID    #Interrupt a process (same as CTRL+C)
+kill -s SIGQUIT $PID   #Quit process (same as CTRL+D)
+kill -s SIGTSTP $PID   #Suspend process but can still be handled (same as CTRL+Z)
+kill -l                #See all possible signals that can be sent
 ```
 {% endcode %}
 
 {% hint style="info" %}
-**Note** Proccess with a PID equal to 0 is a proccess that start with system boot
+The process with a PID equal to 0 is a process that starts when the system boots
 {% endhint %}
 
 ***
 
-* Manage system process and services
+* Manage system processes and services
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 systemctl $option $process
 systemctl start $process       #For starting a process
 systemctl stop $process        #For killing a process
-systemctl enable $process      #Set proccess to start at startup
-systemctl disable $process     #Set proccess to not start at startup
-systemctl list-unit-files      #List status of services
+systemctl enable $process      #Set process to start at startup
+systemctl disable $process     #Set process to not start at startup
+systemctl status $Process      #View the status of a process
+systemctl list-unit-files      #List the status of all processes
+systemctl list-units --type=service #List status of all services
+journalctl -u $service --no-pager #See logs of a service
 ```
 {% endcode %}
 
 ***
 
-* Foreground a process
+* Handle background processes
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-fg $PID
+jobs          #List all actual background processes
+bg            #Resume stopped background processes
+bg $PID       #Send specified process to background
+fg $PID       #Foreground a background process
 fg %$jobID    #Foreground specified list ID process
 fg %$String   #Refers to the beginning of the suspended process
 fg %+         #Refers to the current job
-fg %-         #Refers to the previus job
-```
-{% endcode %}
-
-***
-
-* Background a process
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-bg         #Resume stopped background processes
-bg $PID   
+fg %-         #Refers to the previous job
 ```
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** Background can only be used after stopping a process with <mark style="color:orange;">`^z`</mark>
+&#x20;`bg` can only be used after stopping a process with `^z`
 {% endhint %}
-
-***
-
-* List actual shell process
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-jobs
-```
-{% endcode %}
 
 ***
 
@@ -789,12 +798,12 @@ crontab -i     #Prompt actual crontab and delete it
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** Every user has only one crometab
+Every user has only one crontab.
 {% endhint %}
 
 ***
 
-* Manage packages, repositories and digital signature from APT
+* Manage packages, repositories, and digital signatures from APT
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -804,8 +813,8 @@ apt remove $packagename    #Remove a package
 apt remove --purge $packagename  #Delete package and its configuration
 apt update $packagename    #Update a package
 apt update                 #Update all packages
-apt upgrade                #Update linux system and applications
-apt-get                    #Use first version for actions
+apt upgrade                #Update Linux system and applications
+apt-get                    #Use the first version for actions
 apt-cache search $toolname #Search for a tool in apt repositories
 apt show $packagename      #Show information about a package
 add-apt-repository         #Add repositories from developers to your apt lists
@@ -814,6 +823,11 @@ apt-key del $keyID         #Remove key trusted keys list
 apt-key list               #List all trusted keys
 ```
 {% endcode %}
+
+{% hint style="info" %}
+To see how many packages are installed we can use the following command:\
+`apt list --installed | grep "installed" | wc -l`
+{% endhint %}
 
 ***
 
@@ -827,7 +841,7 @@ dpkg -P $packagename   #Delete package and its configuration
 
 ***
 
-* Test if connection to a remote resource is possible
+* Test if the connection to a remote resource is possible
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -837,8 +851,8 @@ ping $IPaddress -4              #Limit to only IPv4 requests
 ping $IPaddress -6              #Limit to only IPv6 requests
 ping $IPaddress -i $seconds     #Set time interval to send each packet
 ping $IPaddress -v              #Show a verbose output
-ping $IPaddress -c $number      #Send an exxact number of packet
-ping $IPaddress -s $size        #Specify number of bytes of the data
+ping $IPaddress -c $number      #Send an exact number of packet
+ping $IPaddress -s $size        #Specify the number of bytes of the data
 ```
 {% endcode %}
 
@@ -856,7 +870,7 @@ traceroute $IPaddress -T #Use TCP SYN for connection probes
 {% endcode %}
 
 {% hint style="info" %}
-An `*` on response represent that a package hasn't got a ICMP message from router
+An `*` on response represents that a package hasn't got an ICMP message from the router.
 {% endhint %}
 
 ***
@@ -871,7 +885,7 @@ whois $URLdomain
 
 ***
 
-* Obtain IP and record information of a domain
+* Obtain IP and record information from a domain
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -899,24 +913,29 @@ dig @$DNSIPaddress $URLdomain $record   #Specify record type on DNS records
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 fdisk $device
-fdisk -l $device       #List all current disk partitions
+fdisk -l       #List all current disk partitions
 ```
 {% endcode %}
 
 ***
 
-* Network utilitis
+* Network Utilities
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-ifconfig     #Check network nterfaces
+ifconfig     #Check network interfaces
+ifconfig $interface up #Activate a network interface
+ifconfig $interface $IP #Assign IP Address to an Interface
+ifconfig $interface netmask $mask #Assign a Netmask to an Interface
+route add default gw $IP $interface
 iwconfig     #Check only wireless Interfaces
 ip route     #Check existing network routes
+ip link set $interface up #Activate a network interface
 netstat      #Check ports and active connections
 netstat -a   #List all ports and connection
 netstat -l   #List listening ports
-netstat -t   #List only tcp ports
-netstat -u   #List only udp ports
+netstat -t   #List only TCP ports
+netstat -u   #List only UDP ports
 netstat -s   #List network usage statistics by protocol
 netstat -p   #List with PID and program name
 netstat -ano #Most common use, n to no resolve names, o to display timers
@@ -924,12 +943,12 @@ netstat -ano #Most common use, n to no resolve names, o to display timers
 {% endcode %}
 
 {% hint style="info" %}
-If with `netstat -p` the PID and name aren't shown it's because the process is owned by another user. Running the command with sudo could show this information
+If with `netstat -p` the PID and name aren't shown it's because the process is owned by another user. Running the command with sudo could show this information.
 {% endhint %}
 
 ***
 
-* List capabilities of all binany files
+* List capabilities of all binary files
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -939,3 +958,15 @@ getcap -r / 2>/dev/null #Is good practice to redirect errors if not run with sud
 
 ***
 
+* Modify users and groups
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+useradd    #Creates a new user or update default new user information
+userdel    #Deletes a user account and related files
+usermod    #Modifies a user account
+addgroup   #Adds a group to the system
+delgroup   #Deletes a group of the system
+passwd     #Changes user password
+```
+{% endcode %}
