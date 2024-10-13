@@ -14,11 +14,11 @@ layout:
 
 # Commands
 
-In Windows, both Command Prompt (CMD) and PowerShell serve as powerful command-line interfaces that enable users to execute commands, manage system settings, and automate tasks. Therefore, it's important to be familiar with these utilities.
+In Windows, two built-in command-line interfaces allow users to execute commands, manage system settings, and automate tasks. It is important to be familiar with these utilities to fully leverage the potential of the operating system.
 
-To help with that, below we can find a list of common and useful commands for both interfaces:
+## <mark style="color:blue;">CMD</mark>
 
-## <mark style="color:blue;">CMD Commands</mark>
+A command-line interpreter that allows users to execute commands from a text-based interface. It supports a wide range of commands for file manipulation, system configuration, and troubleshooting. Some of the commands that can be used through this interface are:
 
 * Show the name of the system.
 
@@ -86,12 +86,84 @@ tracert $IPadress
 ```
 {% endcode %}
 
-## <mark style="color:blue;">PowerShell Commands</mark>
+## <mark style="color:blue;">PowerShell</mark>
 
-* Here are the PowerShell commands
+A command-line interpreter that supports a wide range of commands for automating administrative tasks, managing complex configurations, and interacting with web services or APIs.&#x20;
+
+Integrates the .NET framework and offers advanced scripting capabilities. Some of the commands for this interface are:
+
+* Retrieves a list of currently running processes
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
-command $command
+Get-Process
+```
+{% endcode %}
+
+***
+
+* Lists all services on the system and their current status
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Get-Service
+```
+{% endcode %}
+
+***
+
+* Configures the execution policy, controlling the ability to run scripts
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Set-ExecutionPolicy $option
+```
+{% endcode %}
+
+***
+
+* Displays detailed help information about commands, including usage examples
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Get-Help $command
+```
+{% endcode %}
+
+***
+
+* Lists the files and directories in a specified location, similar to `dir` or `ls` in other systems.
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Get-ChildItem $path
+```
+{% endcode %}
+
+* Copies files or directories from one location to another.
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Copy-Item -Path $path -Destination $destination
+```
+{% endcode %}
+
+***
+
+* Displays the content of a file, similar to `cat` in Linux.
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Get-Content $filepath
+```
+{% endcode %}
+
+***
+
+* Creates a new file, directory, or other type of item.
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+New-Item -Path $path -ItemType $type
 ```
 {% endcode %}

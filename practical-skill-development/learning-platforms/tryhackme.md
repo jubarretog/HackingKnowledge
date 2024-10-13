@@ -26,7 +26,7 @@ The platform organizes its learning content into "rooms," which are themed, self
 
 <div align="center" data-full-width="false">
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 </div>
 

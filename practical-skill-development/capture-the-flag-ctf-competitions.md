@@ -18,12 +18,12 @@ Competitions that simulate real-world cybersecurity scenarios, where individuals
 
 Each challenge typically involves capturing "flags," which are hidden pieces of information or tokens that participants must find and submit to earn points.&#x20;
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p><a href="https://www.linkedin.com/pulse/capture-flag-cyber-exercises-beginners-aleksandr/">https://www.linkedin.com/pulse/capture-flag-cyber-exercises-beginners-aleksandr/</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22).png" alt="" width="375"><figcaption></figcaption></figure>
 
 CTF competitions can take different forms:
 
 * **Jeopardy-style:** Participants are presented with a board of challenges organized by categories and difficulty levels. Each challenge has a point value based on its complexity, with more difficult challenges offering higher points.
-* Attack-defense: Teams are pitted against each other, and the competition has two main objectives: to defend their systems while attempting to exploit vulnerabilities in their opponents' systems.
+* **Attack-defense:** Teams are pitted against each other, and the competition has two main objectives: to defend their systems while attempting to exploit vulnerabilities in their opponents' systems.
 * **Mixed CTF:** Combines elements of both jeopardy-style and attack-defense formats. Participants can tackle individual challenges while also engaging in attack-defense scenarios.
 
 Also, for the challenges encountered in this type of competition, we can find several categories as follows:

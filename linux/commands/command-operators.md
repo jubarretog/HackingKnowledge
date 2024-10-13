@@ -14,6 +14,8 @@ layout:
 
 # Command Operators
 
+Allow users to control the flow of commands and processes in the terminal, offering greater flexibility and efficiency. Here, we can explore some of their uses:
+
 * Execute a command and send it to the background
 
 {% code overflow="wrap" lineNumbers="true" %}

@@ -14,11 +14,17 @@ layout:
 
 # SQL
 
-Structured Query Language, standart language used for querying relational databases.
+**Structured Query Language (SQL)**, is the standard language for managing and manipulating relational databases. It allows users to create, read, update, and delete data within a database through simple, structured commands.
 
-## <mark style="color:blue;">Information Schema</mark>
+<figure><img src="../.gitbook/assets/image (276).png" alt="" width="375"><figcaption></figcaption></figure>
 
-DB that save information about all other DB the user has access, find as **`information_schema`**
+Mastery of SQL is essential for understanding and manipulating the queries used by systems that utilize this language.
+
+## <mark style="color:blue;">Structure</mark>
+
+We can find that all the SQL Databases have a collection named _Information Schema_ that provides metadata about the database itself and lets us know about the structure of the database, such as tables, columns, data types, views, and user privileges.
+
+It also shows information about all other DB the user has access to. It can be found as `information_schema` and is composed of the following structure:
 
 * **`information_schema.tables`:** Tables of DB
   * table\_catalog
@@ -26,13 +32,13 @@ DB that save information about all other DB the user has access, find as **`info
   * table\_name
   * table\_type
 * **`information_schema.columns`:** Information of every column from tables.
-  * table\_schema: DB where table is.
+  * table\_schema: DB where the table is.
   * table\_name: Name of the table.
   * column \_name: Name of column from a specified table.
 
+## <mark style="color:blue;">Queries</mark>
 
-
-## <mark style="color:blue;">Commands</mark>
+As mentioned earlier, SQL operates by using queries as commands that enable access and execute actions within the DB context. Some of the actions that can be performed include:
 
 * Show databases and tables
 
@@ -40,13 +46,13 @@ DB that save information about all other DB the user has access, find as **`info
 ```sql
 show databases;
 use $database; #Enter into a database
-show tables; #Only after enter a database
+show tables; #Only after entering a database
 ```
 {% endcode %}
 
 ***
 
-* Get an Specified column from a query and put it in a string separated by commas
+* Get a specific column from a query and put it in a string separated by commas
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -79,7 +85,7 @@ SELECT * from $table;-- #Specified everything after -- will be taken as comment
 
 ***
 
-* Select data from multiple tables
+* Select data from multiple tables.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -114,6 +120,3 @@ DELETE FROM $table; #Delete all rows
 DELETE FROM $table where username='martin'; #Delete all rows that match condition
 ```
 {% endcode %}
-
-***
-

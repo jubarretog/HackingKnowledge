@@ -8,69 +8,97 @@
 
 ## 🔑 Cybersecurity Basics
 
-* [General Concepts](cybersecurity-basics/general-concepts/README.md)
-  * [Attacks](cybersecurity-basics/general-concepts/attacks.md)
-  * [Malware](cybersecurity-basics/general-concepts/malware.md)
-  * [Vulnerabilities](cybersecurity-basics/general-concepts/vulnerabilities.md)
-* [Cyber Kill Chain](cybersecurity-basics/cyber-kill-chain.md)
-* [Security Models](cybersecurity-basics/security-models.md)
-* [Methodologies](cybersecurity-basics/methodologies.md)
-* [Legal Support](cybersecurity-basics/legal-support.md)
-* [Career Paths](cybersecurity-basics/career-paths.md)
-* [Certifications](cybersecurity-basics/certifications.md)
+* [Introduction](cybersecurity-basics/introduction.md)
+* [Vulnerabilities](cybersecurity-basics/vulnerabilities.md)
+* [Cyberattacks](cybersecurity-basics/cyberattacks/README.md)
+  * [Cyber Kill Chain](cybersecurity-basics/cyberattacks/cyber-kill-chain.md)
+  * [Malware](cybersecurity-basics/cyberattacks/malware.md)
+* [Security Models](cybersecurity-basics/security-models/README.md)
+  * [Methodologies](cybersecurity-basics/security-models/methodologies.md)
+  * [Legal Support](cybersecurity-basics/security-models/legal-support.md)
+* [Career Paths](cybersecurity-basics/career-paths/README.md)
+  * [Certifications](cybersecurity-basics/career-paths/certifications.md)
+* [Related Concepts](cybersecurity-basics/related-concepts.md)
 
 ## 🐧 Linux
 
-* [General Concepts](linux/general-concepts.md)
-* [Common Directories](linux/common-directories.md)
-* [File Permissions](linux/file-permissions.md)
-* [Environment Variables](linux/environment-variables.md)
-* [Crontabs](linux/crontabs.md)
+* [Introduction](linux/introduction.md)
+* [Functional Structure](linux/functional-structure/README.md)
+  * [File Permissions](linux/functional-structure/file-permissions.md)
+  * [Environment Variables](linux/functional-structure/environment-variables.md)
+  * [Crontabs](linux/functional-structure/crontabs.md)
 * [Commands](linux/commands/README.md)
   * [Command Operators](linux/commands/command-operators.md)
+* [Useful Shell Resources](linux/useful-shell-resources.md)
+* [Related Concepts](linux/related-concepts.md)
 
 ## 🪟 Windows
 
-* [General Concepts](windows/general-concepts.md)
-* [File Permissions](windows/file-permissions.md)
-* [System Variables and Tools](windows/system-variables-and-tools.md)
-* [System Events](windows/system-events.md)
+* [Introduction](windows/introduction.md)
+* [Functional Structure](windows/functional-structure/README.md)
+  * [File Permissions](windows/functional-structure/file-permissions.md)
+  * [System Variables and Tools](windows/functional-structure/system-variables-and-tools.md)
+  * [System Events](windows/functional-structure/system-events.md)
 * [Commands](windows/commands.md)
+* [Related Concepts](windows/related-concepts.md)
 
 ## 📶 Networks
 
-* [General Concepts](networks/general-concepts/README.md)
-  * [OSI Model](networks/general-concepts/osi-model.md)
-  * [TCP/IP Model](networks/general-concepts/tcp-ip-model.md)
-  * [Protocols](networks/general-concepts/protocols/README.md)
-    * [DNS](networks/general-concepts/protocols/dns.md)
-    * [HTTP](networks/general-concepts/protocols/http.md)
-* [URL](networks/url.md)
+* [Introduction](networks/introduction.md)
+* [Networking Frameworks](networks/networking-frameworks/README.md)
+  * [OSI Model](networks/networking-frameworks/osi-model.md)
+  * [TCP/IP Model](networks/networking-frameworks/tcp-ip-model.md)
+* [Protocols](networks/protocols/README.md)
+  * [DNS](networks/protocols/dns.md)
+  * [HTTP](networks/protocols/http.md)
 * [Hypervisors](networks/hypervisors.md)
-* [Tips](networks/tips.md)
-* [Tools](networks/tools.md)
+* [Related Concepts](networks/related-concepts.md)
+* [Tools and Utilities](networks/tools-and-utilities.md)
+* [Useful Tips](networks/useful-tips.md)
 
 ## 🔒 Cryptography
 
-* [General Concepts](cryptography/general-concepts/README.md)
-  * [Types of encryption](cryptography/general-concepts/types-of-encryption.md)
-  * [Methods](cryptography/general-concepts/methods.md)
+* [Introduction](cryptography/introduction.md)
 * [Hashing](cryptography/hashing.md)
-* [Tips](cryptography/tips.md)
-* [Tools](cryptography/tools.md)
+* [Blockchain](cryptography/blockchain.md)
+* [Types of encryption](cryptography/types-of-encryption.md)
+* [Methods](cryptography/methods.md)
+* [Related Concepts](cryptography/related-concepts.md)
+* [Tools and Utilities](cryptography/tools-and-utilities.md)
+* [Useful Tips](cryptography/useful-tips.md)
+
+## 👣 Digital Forensics
+
+* [Introduction](digital-forensics/introduction.md)
+* [Basic Plan](digital-forensics/basic-plan.md)
+* [Related Concepts](digital-forensics/related-concepts.md)
+* [Tools and Utilities](digital-forensics/tools-and-utilities.md)
+* [Useful Tips](digital-forensics/useful-tips.md)
 
 ## Penetration Testing
 
 * [Introduction](penetration-testing/introduction.md)
-* [Information Gathering](penetration-testing/information-gathering/README.md)
-  * [General Concepts](penetration-testing/information-gathering/general-concepts.md)
-  * [OSINT](penetration-testing/information-gathering/osint.md)
-  * [Tips](penetration-testing/information-gathering/tips.md)
-  * [Tools](penetration-testing/information-gathering/tools.md)
+* [Categorization](penetration-testing/categorization.md)
+* [Process Stages](penetration-testing/process-stages/README.md)
+  * [Pre-engagement](penetration-testing/process-stages/pre-engagement.md)
+  * [Information Gathering](penetration-testing/process-stages/information-gathering/README.md)
+    * [OSINT](penetration-testing/process-stages/information-gathering/osint.md)
+    * [Internal Enumeration](penetration-testing/process-stages/information-gathering/internal-enumeration.md)
+    * [Tools and Utilities](penetration-testing/process-stages/information-gathering/tools-and-utilities.md)
+    * [Useful Tips](penetration-testing/process-stages/information-gathering/useful-tips.md)
+  * [Exploitation](penetration-testing/process-stages/exploitation/README.md)
+    * [Tools and Utilities](penetration-testing/process-stages/exploitation/tools-and-utilities.md)
+    * [Useful Tips](penetration-testing/process-stages/exploitation/useful-tips.md)
+  * [Post-Exploitation](penetration-testing/process-stages/post-exploitation/README.md)
+    * [Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation.md)
+    * [Tools and Utilities](penetration-testing/process-stages/post-exploitation/tools-and-utilities.md)
+    * [Useful Tips](penetration-testing/process-stages/post-exploitation/useful-tips.md)
+  * [Post-engagement](penetration-testing/process-stages/post-engagement.md)
+* [Related Concepts](penetration-testing/related-concepts.md)
 
 ## 📡 Web Explotation
 
-* [General Concepts](web-explotation/general-concepts.md)
+* [Introduction](web-explotation/introduction.md)
 * [OWASP Top 10](web-explotation/owasp-top-10/README.md)
   * [Broken Access Control](web-explotation/owasp-top-10/broken-access-control.md)
   * [Cryptographic Failures](web-explotation/owasp-top-10/cryptographic-failures.md)
@@ -82,49 +110,35 @@
   * [Software and Data Integrity Failures](web-explotation/owasp-top-10/software-and-data-integrity-failures.md)
   * [Security Logging and Monitoring Failures](web-explotation/owasp-top-10/security-logging-and-monitoring-failures.md)
   * [Server-side Request Forgery](web-explotation/owasp-top-10/server-side-request-forgery.md)
-* [Uploaded File Exploits](web-explotation/uploaded-file-exploits.md)
-* [Wordpress Explotation](web-explotation/wordpress-explotation.md)
-* [Tips](web-explotation/tips.md)
-* [Tools](web-explotation/tools/README.md)
-  * [Fuzzing](web-explotation/tools/fuzzing.md)
+  * [Uploaded File Exploits](web-explotation/owasp-top-10/uploaded-file-exploits.md)
+  * [Wordpress Explotation](web-explotation/owasp-top-10/wordpress-explotation.md)
+* [Related Concepts](web-explotation/related-concepts.md)
+* [Tools and Utilities](web-explotation/tools-and-utilities.md)
+* [Useful Tips](web-explotation/useful-tips.md)
 
 ## Database Attacks
 
-* [General Concepts](database-attacks/general-concepts.md)
+* [Introduction](database-attacks/introduction.md)
 * [SQL](database-attacks/sql.md)
-* [SQL Injection](database-attacks/sql-injection.md)
-* [Tips](database-attacks/tips.md)
-* [Tools](database-attacks/tools.md)
+* [SQL Injection](database-attacks/sql-injection/README.md)
+  * [Specific Scenarios](database-attacks/sql-injection/specific-scenarios.md)
+* [Related Concepts](database-attacks/related-concepts.md)
+* [Tools and Utilities](database-attacks/tools-and-utilities.md)
+* [Useful Tips](database-attacks/useful-tips.md)
 
 ## 🧾 Scripting
 
+* [Introduction](scripting/introduction.md)
 * [Reverse Shell](scripting/reverse-shell.md)
-* [Tools](scripting/tools.md)
-* [Utilities](scripting/utilities.md)
-
-## ☠️ Privilege Escalation
-
-* [General Concepts](privilege-escalation/general-concepts.md)
-* [Introduction](privilege-escalation/introduction.md)
-* [Enumeration](privilege-escalation/enumeration/README.md)
-  * [Tools](privilege-escalation/enumeration/tools.md)
-* [Explotation](privilege-escalation/explotation/README.md)
-  * [Techniques](privilege-escalation/explotation/techniques.md)
-  * [Tools](privilege-escalation/explotation/tools.md)
-* [Post-Explotation](privilege-escalation/post-explotation.md)
+* [Tools and Utilities](scripting/tools-and-utilities.md)
+* [Useful Tips](scripting/useful-tips.md)
 
 ## 👥 Active Directory
 
-* [General Concepts](active-directory/general-concepts.md)
-* [Tips](active-directory/tips.md)
-* [Tools](active-directory/tools.md)
-
-## 👣 Digital Forensics
-
-* [General Concepts](digital-forensics/general-concepts.md)
-* [Basic Plan](digital-forensics/basic-plan.md)
-* [Tips](digital-forensics/tips.md)
-* [Tools](digital-forensics/tools.md)
+* [Introduction](active-directory/introduction.md)
+* [Related Concepts](active-directory/related-concepts.md)
+* [Tools and Utilities](active-directory/tools-and-utilities.md)
+* [Useful Tips](active-directory/useful-tips.md)
 
 ## 🚩 Practical Skill Development
 

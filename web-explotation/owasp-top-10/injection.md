@@ -190,7 +190,7 @@ PHPIDSESSID        $hijackedCookie     #We set the cookie obtained
 ## <mark style="color:purple;">SQL Injection</mark>
 
 * Poisoning estructured database queries based on SQL with the user input
-* To know more about this type of injection you can go [here](../../database-attacks/sql-injection.md)
+* To know more about this type of injection you can go [here](../../database-attacks/sql-injection/)
 
 
 
