@@ -16,7 +16,7 @@ layout:
 
 Linux OS is structured in a tree-like form and follows the Filesystem Hierarchy Standard (FHS). Below we find a diagram with the structure of the main file system folders:
 
-<figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption><p><a href="https://academy.hackthebox.com/module/18/section/94">https://academy.hackthebox.com/module/18/section/94</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (262).png" alt="" width="563"><figcaption><p><a href="https://academy.hackthebox.com/module/18/section/94">https://academy.hackthebox.com/module/18/section/94</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Common Directories</mark>
 

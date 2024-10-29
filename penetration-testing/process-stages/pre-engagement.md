@@ -18,10 +18,10 @@ For the pre-engagement process is necessary to stipulate the parameters, commitm
 
 <figure><img src="../../.gitbook/assets/image (48).png" alt="" width="375"><figcaption></figcaption></figure>
 
-Some of the usual documents we found for this purpose are the following:
+Some of the usual documents we found for this purpose, and that are defined in the pre-engagement meeting and kick-off meeting, are the following:
 
-* **NDA (Non-Disclosure Agreement):** Specifies the boundaries about the confidentiality and permissions to share the information received with third parties.
-* **Scoping Questionnaire:** Defines the services we are going to provide to the client.
+* **NDA (Non-Disclosure Agreement):** Specifies the boundaries about the confidentiality and permissions to share the information received with third parties. Could be unilateral, bilateral, or multilateral.
+* **Scoping Questionnaire:** Defines the services we are going to provide to the client. In this, we ask specifically for details about the procedures and wited results of the testing.
 * **Scoping Document:** Summarize the information of the Scoping Questionnaire.
 * **SoW:** Scope of Work or Penetration Testing Proposal, usually the contract that specifies the actions and scope of the assessment.
 * **RoE:** Rules of Engagement, a document that is created at the initial stages of a penetration testing engagement. This document consists of three main sections:

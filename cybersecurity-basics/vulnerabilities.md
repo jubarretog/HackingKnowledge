@@ -40,8 +40,8 @@ The CVEs follow the structure _CVE-YEAR-IDNUMBER._ For example, the _CVE-2017-01
 
 Some sources where we can access these reported vulnerabilities, or know how they are measured and categorized, are the following:
 
-* **CVE Mitre:** Website that keeps track of CVEs [https://www.cve.org/](https://www.cve.org/)
-* **NVD:** Vulnerabilities based on NIST framework [https://nvd.nist.gov/vuln/search](https://nvd.nist.gov/vuln/search)
-* **CVSS Calculator:** [https://www.first.org/cvss/calculator/4.0](https://www.first.org/cvss/calculator/4.0)
-* **NIST CVSS Calculator:** [https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator)
-* **CVEdetails:** [https://www.cvedetails.com/](https://www.cvedetails.com/)
+* [**CVE Mitre**](https://www.cve.org/)**:** Provides a reference system for publicly known information security vulnerabilities and exposures.
+* [**NVD**](https://nvd.nist.gov/vuln/search)**:** The National Vulnerability Database**,** managed by NIST, is a comprehensive database of vulnerability information, primarily based on CVE entries.&#x20;
+* [**CVSS Calculator**](https://www.first.org/cvss/calculator/4.0)**:** Online tool that helps to calculate the CVSS (Common Vulnerability Scoring System) score for a given vulnerability.
+* [**NIST CVSS Calculator:**](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator) Provided by NIST, enables users to calculate CVSS scores for vulnerabilities, offering a standardized approach to evaluating the potential impact of vulnerabilities.
+* [**CVEdetails**](https://www.cvedetails.com/)**:** Aggregates and displays information on CVE vulnerabilities, providing a detailed breakdown of the vulnerability, and being a useful tool for analyzing security risks and trends across different software and hardware products.

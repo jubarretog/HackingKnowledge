@@ -31,5 +31,5 @@ $MIN $HOUR $DOM $MON $DOW $COM   #Example below
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** The`*`let us skip specific values
+**Note:** The `*` let us skip specific values
 {% endhint %}

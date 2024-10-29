@@ -34,15 +34,15 @@ SELECT * from users WHERE username='%user%' and password='%password%' LIMIT 1;
 
 ***
 
-* Make a malicious insertion on the password field
+* We can do a malicious insertion on the password field
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
-' OR 1=1;--   #Use this comparison to cheat on verification
+' OR 1=1;-- #Use this comparison to cheat on verification
 #This will enumerate the users from the database
 ```
 {% endcode %}
 
 {% hint style="info" %}
-After the `;--` is mandatory to put a space
+After the `; --` is mandatory to put a space
 {% endhint %}

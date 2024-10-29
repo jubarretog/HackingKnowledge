@@ -140,5 +140,34 @@ Have a cipher identifier: [https://www.dcode.fr/cipher-identifier](https://www.d
 * [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/)
 
 {% hint style="info" %}
-The magic mode helps you identify and decode automatically the ciphertext
+The magic mode helps you identify and decode automatically the ciphert
 {% endhint %}
+
+## <mark style="color:green;">Crackstation</mark>
+
+* Online tool for identifying hashes and finding their related values.
+* [https://crackstation.net/](https://crackstation.net/)
+
+## <mark style="color:green;">Hash-identifier</mark>
+
+* Command line utility to identify possible hashing methods related to a value
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install hash-identifier
+```
+{% endcode %}
+
+***
+
+* Filter code of a hash mode
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+hash-identifier $hash
+```
+{% endcode %}

@@ -72,3 +72,8 @@ git clone https://github.com/rebootuser/LinEnum
 ./LinEnum.sh -s -k keyword -r report -e /tmp/ -t
 ```
 {% endcode %}
+
+## <mark style="color:green;">Spiderfoot</mark>
+
+* Open-source intelligence (OSINT) automation tool
+* [https://github.com/smicallef/spiderfoot](https://github.com/smicallef/spiderfoot)

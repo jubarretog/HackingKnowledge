@@ -63,3 +63,4 @@ Also, the attacks are typically classified into different types based on their m
 * **Rainbow Table:** Compares the hash of a password with those stored in a dictionary of precomputed hashes called _rainbow table._
 * **KRACK:** Key Reinstallation Attack, manipulating and replaying cryptographic handshake messages tricks a wi-fi WPA2 network into reinstalling an already-in-use key.
 * **Cryptojacking:** Hiding on a device or server and using it to mine cryptocurrencies without the user's consent or knowledge.
+* **Password Spraying:** Use one password to attempt to authenticate with as many different user names as possible, hoping for one successful authentication.

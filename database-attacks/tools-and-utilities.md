@@ -79,7 +79,7 @@ sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a 
 ```
 {% endcode %}
 
-## <mark style="color:green;">MySQL</mark>
+## <mark style="color:green;">mysql</mark>
 
 * CLI used to connect to MySQL databases
 
@@ -122,6 +122,9 @@ sudo apt install sqlmap
 sqlmap -u $URL #Show the sqli vulnerabilities
 sqlmap -u "$URL" --dbms $dbname #Specify what database is
 sqlmap -r $file.raw #Use a raw petition to set target information
-sqlmap -r $file.raw --dump --dbs #Detect vulnerabilities and extract information
+sqlmap -r $file.raw --dump --dbs #Extract information of the databases
+sqlmap -r $file.raw --dump --tables #Extract information of the tables
+sqlmap -r $file.raw --dump -T $table #Extract information of an specific table
+sqlmap -r $file.raw --level $level #Specify intensity level of the attack
 ```
 {% endcode %}

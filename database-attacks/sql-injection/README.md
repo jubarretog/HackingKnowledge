@@ -103,8 +103,6 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 ```
 {% endcode %}
 
-***
-
 #### <mark style="color:orange;">Case 2</mark>
 
 * Check if  vulnerable by sending a malformed petition with `'`
@@ -306,7 +304,3 @@ Depends on the DB feature of making some kind of external network call based on 
 ## <mark style="color:blue;">**Second-Order (Stored)**</mark>
 
 In this scenario, the attacker injects malicious data into the system that is not immediately executed but is stored and later used by the application. The SQL injection occurs at a later time when the data is used in another query.
-
-## <mark style="color:blue;">**NoSQL Injection**</mark>
-
-Targets NoSQL databases using unstructured queries. These attacks typically exploit applications that handle user input unsafely when interacting with NoSQL databases.

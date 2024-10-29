@@ -16,7 +16,7 @@ layout:
 
 Implements the TCP protocol to control the flow of data between two endpoints, and the Internet Protocol (IP) to control how packets are addressed and sent. With TCP/IP any data that is lost or corrupted on transmission is re-sent.
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption><p><a href="https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/">https://freedomtoteach.collins.co.uk/teaching-the-basics-of-computer-networking/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (280).png" alt=""><figcaption></figcaption></figure>
 
 The TCP/IP model uses a method called _Three-way Handshake_ to establish a connection between devices. It works as follows:
 

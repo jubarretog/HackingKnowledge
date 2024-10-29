@@ -12,7 +12,7 @@ layout:
     visible: true
 ---
 
-# General Concepts
+# Related Concepts
 
 * **Kernel:** It manages the resources for the system's I/O devices at the hardware level.
 * **Daemons:** Background services, whose purpose is to ensure that key functions work correctly.
@@ -28,3 +28,7 @@ layout:
 * **SGID:** Set-group Identification, allows files to be executed with the permission level of the group owner.
 * **File Descriptor (FD):** Indicator of connection to perform I/O operations. In Windows-based operating systems, it is called filehandle.
 * **Service:** A special type of application that runs in the background.
+* **CVSS:** Common Vulnerability Scoring System, is a standardized framework used to assess the severity of security vulnerabilities in software and systems. It provides a numerical score that reflects the severity of a vulnerability.
+* **Shell:** A program that receives input from the user (normally a command) and passes it to the operating system to perform a related action or function.
+* Reverse shell: Shell from a target machine that we get by initiating a connection back to a listener on our machine.&#x20;
+* Bind shell "Binds" to a specific port on the target host and waits for a connection from our attack box. Web shell Runs operating system commands via the web browser, typically not interactive or semi-interactive. It can also be used to run single commands (i.e., leveraging a file upload vulnerability and uploading a PHP script to run a single command.

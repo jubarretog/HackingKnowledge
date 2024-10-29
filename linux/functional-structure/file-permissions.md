@@ -18,15 +18,15 @@ File permissions in Linux determine who can read, write, or execute a file or di
 
 By executing `ls -l` we can see a list of details from a file or directory. The first part represents the permissions associated with the file. It looks like a combination of symbols `-` and letters `d` `r` `c` `w` `s`. These can be understood as follows:
 
-* First indicates the type of file: Not special`-`, directory `d`
-* Then, three sections of three letters, each one indicating: `owner`, `group` and `others`
-* Each letter indicates the permissions: read `r` write: `w` or execute `x` for the respective section
+* First indicates the type of file: Not special (`-`), directory (`d`).
+* Then, we find three sections of three letters, each one indicating: _owner_, _group_, and _other_.
+* Each letter indicates the permissions: read (`r`), write (`w`), or execute (`x`) for the respective section.
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-drw-r--r-x     #Directory, Owner read and write, Groups read and Other read and execute
--rwsr--r-x     #This has SUID permissions
--rw-r-sr-x     #This has SGID permissions
+drw-r--r-x     #Is a Directory, the Owner can read and write, the Group can read and Other can read and execute
+-rwsr--r-x     #This has SUID permissions because has s on the Owner section
+-rw-r-sr-x     #This has SGID permissions because has s on the Group section
 ```
 {% endcode %}
 

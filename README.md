@@ -20,7 +20,7 @@ Hi! This is **Hacking Knowledge**, a page I've created to compile the knowledge 
 
 <figure><img src=".gitbook/assets/Hacking_Knowledge_7.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
-This page compiles all concepts, tools, recommendations, and practices that I consider relevant to annotate, in the form of a guidebook for anyone interested in ethical hacking, offensive security, and cybersecurity in general.
+This page compiles all concepts, tools, recommendations, and practices that I consider relevant to annotate, in the form of a knowledge base for anyone interested in ethical hacking, offensive security, and cybersecurity in general.
 
 Furthermore, the final part contains a compilation of my write-ups from machines and CTF challenges I've completed on platforms such as [Hack The Box](https://www.hackthebox.com/), [TryHackMe](https://tryhackme.com/), and [PicoCT](https://picoctf.org/).
 

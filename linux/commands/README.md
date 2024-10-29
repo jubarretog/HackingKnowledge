@@ -381,6 +381,7 @@ grep "$text" $filename
 grep -i "$text" $filename   #Ignore the value given
 grep -v "$text" $filename   #Returns non-matching results
 grep -e "$ReGex" $filename  #Use regular expressions
+egrep "$ReGex" $filename    #Alternative for use of regular expressions
 ```
 {% endcode %}
 

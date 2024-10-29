@@ -31,7 +31,7 @@ Here are some of the key penetration testing frameworks that provide structured 
 
 Helps to identify, assess, and prioritize potential threats to a system, application, or network, where the primary goal is to understand the security risks associated with a system and develop strategies to mitigate those risks.
 
-Some strategies and methodologies for applying this are:
+Here we find some strategies that apply this methodology:
 
 * **STRIDE:** Spoofing identity, Tampering with data, Repudiation threats, Information disclosure, Denial of Service, and Elevation of privileges.
 * **PASTA:** Process for Attack Simulation and Threat Analysis, is a risk-centric threat modeling methodology that focuses on the probability of each attack.
