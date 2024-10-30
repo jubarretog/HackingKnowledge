@@ -17,3 +17,4 @@ layout:
 Here we can find some tips for maximizing the use of information-gathering concepts, tools, and utilities:
 
 * Check the _TTL_ value when doing `ping` to a machine, to determine what operating system is the machine associated with.
+* On HTTPS sites check the certificate to gather information about the encryption and the server.

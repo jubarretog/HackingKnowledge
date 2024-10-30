@@ -1,6 +1,6 @@
 # Table of contents
 
-## 🏠​  Homepage
+## 🏠​ Homepage
 
 * [Welcome!!](README.md)
 * [About Me](homepage/about-me.md)
@@ -20,7 +20,7 @@
 * [Certifications](cybersecurity-basics/certifications.md)
 * [Related Concepts](cybersecurity-basics/related-concepts.md)
 
-## 🐧  Linux
+## 🐧 Linux
 
 * [Introduction](linux/introduction.md)
 * [Functional Structure](linux/functional-structure/README.md)
@@ -32,7 +32,7 @@
 * [Useful Shell Resources](linux/useful-shell-resources.md)
 * [Related Concepts](linux/related-concepts.md)
 
-## ⊞  Windows
+## ⊞ Windows
 
 * [Introduction](windows/introduction.md)
 * [Functional Structure](windows/functional-structure/README.md)
@@ -42,7 +42,7 @@
 * [Commands](windows/commands.md)
 * [Related Concepts](windows/related-concepts.md)
 
-## 🌐  Networks
+## 🌐 Networks
 
 * [Introduction](networks/introduction.md)
 * [Networking Frameworks](networks/networking-frameworks/README.md)
@@ -56,7 +56,7 @@
 * [Tools and Utilities](networks/tools-and-utilities.md)
 * [Useful Tips](networks/useful-tips.md)
 
-## 🔐  Cryptography
+## 🔐 Cryptography
 
 * [Introduction](cryptography/introduction.md)
 * [Hashing (WIP)](cryptography/hashing-wip.md)
@@ -67,7 +67,7 @@
 * [Tools and Utilities](cryptography/tools-and-utilities.md)
 * [Useful Tips](cryptography/useful-tips.md)
 
-## 👣  Digital Forensics
+## 👣 Digital Forensics
 
 * [Introduction](digital-forensics/introduction.md)
 * [Basic Plan](digital-forensics/basic-plan.md)
@@ -75,7 +75,7 @@
 * [Tools and Utilities](digital-forensics/tools-and-utilities.md)
 * [Useful Tips](digital-forensics/useful-tips.md)
 
-## 🎯  Penetration Testing
+## 🎯 Penetration Testing
 
 * [Introduction](penetration-testing/introduction.md)
 * [Categorization](penetration-testing/categorization.md)
@@ -100,7 +100,7 @@
   * [Post-engagement](penetration-testing/process-stages/post-engagement.md)
 * [Related Concepts](penetration-testing/related-concepts.md)
 
-## 📡  Web Exploitation
+## 📡 Web Exploitation
 
 * [Introduction](web-exploitation/introduction.md)
 * [OWASP Top 10](web-exploitation/owasp-top-10/README.md)
@@ -122,7 +122,7 @@
 * [Tools and Utilities](web-exploitation/tools-and-utilities.md)
 * [Useful Tips](web-exploitation/useful-tips.md)
 
-## 🗄️  Database Attacks
+## 🗄️ Database Attacks
 
 * [Introduction](database-attacks/introduction.md)
 * [SQL](database-attacks/sql.md)
@@ -133,20 +133,22 @@
 * [Tools and Utilities](database-attacks/tools-and-utilities.md)
 * [Useful Tips](database-attacks/useful-tips.md)
 
-## 📜  Scripting
+## 📜 Scripting
 
 * [Introduction](scripting/introduction.md)
 * [Reverse Shell](scripting/reverse-shell.md)
+* [Bind shell](scripting/bind-shell.md)
+* [Web Shell](scripting/web-shell.md)
 * [Tools and Utilities](scripting/tools-and-utilities.md)
 
-## 👥  Active Directory
+## 👥 Active Directory
 
 * [Introduction](active-directory/introduction.md)
 * [Related Concepts (WIP)](active-directory/related-concepts-wip.md)
 * [Tools and Utilities (WIP)](active-directory/tools-and-utilities-wip.md)
 * [Useful Tips (WIP)](active-directory/useful-tips-wip.md)
 
-## 🚩  Practical Skill Development
+## 🚩 Practical Skill Development
 
 * [Learning Platforms](practical-skill-development/learning-platforms/README.md)
   * [Hack The Box](practical-skill-development/learning-platforms/hack-the-box.md)
@@ -154,7 +156,7 @@
   * [PicoCTF](practical-skill-development/learning-platforms/picoctf.md)
 * [Capture The Flag (CTF) Competitions](practical-skill-development/capture-the-flag-ctf-competitions.md)
 
-## 📝  Write-Ups
+## 📝 Write-Ups
 
 * [Introduction](write-ups/introduction.md)
 * [HTB Starting Point](write-ups/htb-starting-point/README.md)

@@ -668,6 +668,7 @@ curl -X $PETITION $URL             #Make an specific type of petition
 curl $firstpetition --next $secondpetition #Make various petition
 curl $URL -H "$header:$value"      #Specific header in a petition
 curl $URL -v                       #Get verbose output
+curl -IL $URL                      #Catch header, useful for banner grabbing
 wget $URL
 wget -O $URL/file          #Save a file with the same name
 wget -o $name $URL/file    #Save a file with a different name

@@ -77,3 +77,27 @@ git clone https://github.com/rebootuser/LinEnum
 
 * Open-source intelligence (OSINT) automation tool
 * [https://github.com/smicallef/spiderfoot](https://github.com/smicallef/spiderfoot)
+
+## <mark style="color:green;">Whatweb</mark>
+
+* Tool to extract web servers, supporting frameworks, and applications.
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install whatweb
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+whatweb $IP
+```
+{% endcode %}

@@ -24,3 +24,4 @@ layout:
 * **Vulnerability assessment:** A set of tests and practices that have the objective to identify possible vulnerabilities that a system could have. In comparison with Penetration Testing, it is just done with automated tools.
 * **Pillaging:** The process of collecting sensitive information locally on an already exploited host.
 * **Post-Remediation Testing**: Reaccess the target to verify that the reported vulnerabilities and vector attacks have been patched properly.
+* **Banner Grabbing:** Connect to a port hoping to get a response, which could help to identify what service is running.

@@ -96,6 +96,16 @@ smbclient //$IP/$ShareName -N -c "$comand"
 
 ***
 
+* Access with a user
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+smbclient //$IP/$ShareName -U $username
+```
+{% endcode %}
+
+***
+
 * Work in connection
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>smb: \> get $filename   #Download a file
@@ -611,3 +621,25 @@ sudo docker run $containerName -p $hostPort:$containerPort #Specificate run port
 sudo docker container stop $containerID #Stop a running container
 sudo docker compose up -d #Use .yml file to run various containers in the background
 </code></pre>
+
+## <mark style="color:green;">onesixtyone</mark>
+
+* SNMP scanner that is used to brute force the community string names.
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install&#x20;
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install onesixtyone
+```
+{% endcode %}
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+onesixtyone -c $dictionary $IP
+```
+{% endcode %}

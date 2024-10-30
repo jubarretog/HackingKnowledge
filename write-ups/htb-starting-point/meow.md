@@ -76,7 +76,7 @@ layout:
 
 * Now we can make an exhaustive scan
 
-<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap 10.129.54.192 -p- -Pn --min-rate 2000
+<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap 10.129.54.192 -p23 -sVC
 </strong></code></pre>
 
 <figure><img src="../../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>

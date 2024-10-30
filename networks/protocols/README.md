@@ -51,3 +51,4 @@ Here we find a list of the most well-known network protocols:
 * **SMTPS:** Simple Mail Transfer Protocol Secure, uses port 587.
 * **PPP:** Point-to-Point Protocol, occurs on the data link layer, used to establish a direct connection between to nodes of a network.
 * **POP:** Post Office Protocol, normally POP3, is used by local clients to get and manage mail messages from a remote POP server.
+* **SNMP:** Simple Network Management Protocol**,** is a network layer protocol based on IP which interchange information between enabled devices and the network management solution.
