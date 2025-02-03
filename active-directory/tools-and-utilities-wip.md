@@ -12,30 +12,36 @@ layout:
     visible: true
 ---
 
-# Tools and Utilities
+# Tools and Utilities (WIP)
 
-Here we can find some tools and utilities commonly used for processes related to Active Directory:
+Here we can find some tools and utilities commonly used for practices related to Active Directory:
 
 ## <mark style="color:green;">ADPEAS</mark>
 
-* Here goes information
+* H
 
 ## <mark style="color:green;">kerberos</mark>
 
-* Here goes information
+* H
 
 ## <mark style="color:green;">kerbruter</mark>
 
-* Here goes information
+* brute forcing attacks on kerberos environments
 
 ## <mark style="color:green;">ldapdomaindump</mark>
 
-* Here goes information
+* H
 
 ## <mark style="color:green;">bloodhound</mark>
 
-* Here goes information
+* H
 
 ## <mark style="color:green;">**certutil**</mark>
 
 * Binary for certificate management, encryption, decryption, hashing, file verification, and remote file download, among others.
+
+netexec: evolution of crackmaexec
+
+smbmap: enumeration of smb info
+
+en smbclient  recurse -> ls for recursive listing

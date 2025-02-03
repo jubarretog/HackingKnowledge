@@ -12,8 +12,8 @@ layout:
     visible: true
 ---
 
-# Useful Tips
+# Useful Tips (WIP)
 
-Here we can find some tips for maximizing the use of Active Directory concepts, tools, and utilities:
+Here are some tips to help you get the most out of  Active Directory concepts, tools, and utilities:
 
 *

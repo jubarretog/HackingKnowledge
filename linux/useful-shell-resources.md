@@ -14,13 +14,15 @@ layout:
 
 # Useful Shell Resources
 
-Here are some useful resources that can help in managing terminal environments and resolving common shell-related issues.
+Here are some useful resources that can help in managing terminal environments and resolving common shell-related issues:
 
 ## <mark style="color:orange;">TTY Sanitization</mark>
 
-Executing these commands lets us configure an interactive terminal and process keybinding like a normal bash. It is very useful when we get an external terminal, for example with a reverse shell.
+Executing these commands lets us configure an interactive terminal and process keybinding like a normal bash. It is very useful when we get an external terminal, for example with a Reverse Shell.
 
-First, we found the scenario when a connection through SSH is not completely sanitized:
+We can find two common scenarios:
+
+* A connection through _SSH_ is not completely sanitized
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -36,7 +38,9 @@ stty rows $rows columns $columns #This is on the SSH connection with the row and
 ```
 {% endcode %}
 
-Also, we can face the scenario where we have gained a reverse shell to another machine:
+***
+
+* We have gained a Reverse Shell from another machine
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -65,7 +69,7 @@ stty rows $rows columns $columns #This is on the remote connection with the row 
 
 ## <mark style="color:orange;">Corrupt history of</mark> <mark style="color:orange;"></mark>_<mark style="color:orange;">zsh</mark>_
 
-Sometimes when using _zsh_ for our shell, the history files get corrupted. To correct this issue we can use the following commands
+Sometimes when using _zsh_ for our shell, the history files get corrupted. To correct this issue we can use the following commands:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

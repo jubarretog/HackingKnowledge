@@ -14,9 +14,9 @@ layout:
 
 # Commands
 
-As Linux is a command-line-based operating system, the use of commands is crucial for interacting with the system, performing tasks, and managing files and applications.&#x20;
+As _Linux_ is a command-line-based operating system, the use of **commands** is crucial for interacting with the system, performing tasks, and managing files and applications.&#x20;
 
-Based on this, here is a list of essential and useful commands:
+Here is a list of essential and useful commands:
 
 * Create a bash instance
 
@@ -71,7 +71,7 @@ who    #Shows all logged-in users
 
 ***
 
-* Get the name of the machine (computer)
+* Get the name of the computer
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -107,7 +107,7 @@ Information comes in the following order separated by spaces:
 
 ***
 
-* Executes a command with superuser (root) permissions
+* Executes a command with superuser permissions
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -148,7 +148,7 @@ lsblk        #List disk partitions
 {% endcode %}
 
 {% hint style="info" %}
-Hidden files start with a dot.  **Ex:**_`.hiddenfile`_
+Hidden files start with a dot, for example _.hiddenfile_
 {% endhint %}
 
 ***
@@ -188,7 +188,7 @@ cd -      #Redirect to the last directory
 
 ***
 
-* Get the path of the file by searching in directories defined at PATH
+* Get the path of the file by searching in directories defined at the `$PATH` environment variable
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -198,7 +198,7 @@ which $filename
 
 ***
 
-* Get the path of a file by searching in **locate.db**
+* Get the path of a file by searching in _locate.db_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -208,12 +208,12 @@ sudo updatedb    #Update locate.db
 {% endcode %}
 
 {% hint style="info" %}
-`locate.db` is a built-in database of system files
+_locate.db_ is a built-in database of system files
 {% endhint %}
 
 ***
 
-* Update `locate.db` manually
+* Update _locate.db_ manually
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -269,7 +269,7 @@ export HISTTIMEFORMAT='$options'   #Set time format for history
 
 ***
 
-* Open a file
+* Open a file, usually graphic files such as images and PDFs
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -388,11 +388,11 @@ egrep "$ReGex" $filename    #Alternative for use of regular expressions
 {% hint style="info" %}
 Remembering the use of RegEx:
 
-(a) -> Close and expression\
-\[a-z] -> Indicates a class of characters (In this case letters)\
-{1,10} -> Indicates how many times a pattern must be repeated (In this case 1 to 10 times)\
-\| -> Works as the _OR_ logical operator\
-.\* -> Works as the _AND_ logical operator
+* (a) -> Close and expression
+* \[a-z] -> Indicates a class of characters (In this case letters)
+* {1,10} -> Indicates how many times a pattern must be repeated (In this case 1 to 10 times)
+* \| -> Works as the _OR_ logical operator
+* .\* -> Works as the _AND_ logical operator
 {% endhint %}
 
 ***
@@ -464,7 +464,7 @@ diff -u $file1 $file2     #Ouput in unified format
 {% endcode %}
 
 {% hint style="info" %}
-In `comm` output first column Represents unique lines for the first file, the second column the unique lines for the second file, and the third column the lines both share.
+In `comm` output first the columns. Represents unique lines for the first file, the second column the unique lines for the second file, and the third column the lines both share
 {% endhint %}
 
 ***
@@ -540,15 +540,6 @@ gpg -e $filename               #Encrypt data
 gpg -d $filename               #Decrypt data
 ```
 {% endcode %}
-
-***
-
-* Access to a remote machine through SSH
-
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>ssh $user@$IP
-</strong><strong>ssh -i $privatekey $user@$IP  #Connect with a private key
-</strong>ssh -T $user@$IP              #Connect trying tunneling
-</code></pre>
 
 ***
 
@@ -639,7 +630,7 @@ vimtutor          #Enter tutor mode for practicing
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** In Unix `^` represents Ctrl key
+In Unix the `^` symbol represents the _Ctrl_ key
 {% endhint %}
 
 ***
@@ -783,7 +774,7 @@ fg %-         #Refers to the previous job
 {% endcode %}
 
 {% hint style="info" %}
-&#x20;`bg` can only be used after stopping a process with `^z`
+`bg` can only be used after stopping a process with `^z`
 {% endhint %}
 
 ***
@@ -800,7 +791,7 @@ crontab -i     #Prompt actual crontab and delete it
 {% endcode %}
 
 {% hint style="info" %}
-Every user has only one crontab.
+Every user has only one crontab
 {% endhint %}
 
 ***
@@ -823,20 +814,17 @@ add-apt-repository         #Add repositories from developers to your apt lists
 apt-key add $filename      #Add key file to trusted keys list
 apt-key del $keyID         #Remove key trusted keys list
 apt-key list               #List all trusted keys
+apt list --installed | grep "installed" | wc -l #Check number of installed packages
+
 ```
 {% endcode %}
-
-{% hint style="info" %}
-To see how many packages are installed we can use the following command:\
-`apt list --installed | grep "installed" | wc -l`
-{% endhint %}
 
 ***
 
 * Manage packages via Debian
 
-```
-dpkg -i $packagename   #Install a package 
+```bash
+dpkg -i $packagename   #Install a package
 dpkg -r $packagename   #Remove a package 
 dpkg -P $packagename   #Delete package and its configuration
 ```
@@ -872,16 +860,17 @@ traceroute $IPaddress -T #Use TCP SYN for connection probes
 {% endcode %}
 
 {% hint style="info" %}
-An `*` on response represents that a package hasn't got an ICMP message from the router.
+A `*` symbol on the response represents that a package hasn't received an ICMP message from the router.
 {% endhint %}
 
 ***
 
-* Shows domain register information
+* Gather information about with DNS lookups
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-whois $URLdomain
+whois $URLdomain     #Get domain register information
+host 72.163.10.1     #Do reserve lookup to get a host names
 ```
 {% endcode %}
 
@@ -892,7 +881,11 @@ whois $URLdomain
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nslookup $URLdomain
+nslookup $URLdomain $serverIP #Change server used to perform lookups
 nslookup -type=$record $URLdomain    #Specify record type
+
+nslookup #Enter interactive mode
+> Exit   #Quit interactive mode
 ```
 {% endcode %}
 
@@ -903,8 +896,10 @@ nslookup -type=$record $URLdomain    #Specify record type
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 dig $URLdomain $record
+dig $URLdomain $serverIP #Change server used to perform lookups
 dig @$DNSIPaddress $URLdomain           #Look up DNS records
 dig @$DNSIPaddress $URLdomain $record   #Specify record type on DNS records
+dig -x $IP             #Perform reverse DNS lookups
 ```
 {% endcode %}
 
@@ -945,7 +940,7 @@ netstat -ano #Most common use, n to no resolve names, o to display timers
 {% endcode %}
 
 {% hint style="info" %}
-If with `netstat -p` the PID and name aren't shown it's because the process is owned by another user. Running the command with sudo could show this information.
+When using `netstat -p` if the PID and name aren't shown, it's because the process is owned by another user. Running the command with `sudo` could show this information
 {% endhint %}
 
 ***
@@ -960,7 +955,7 @@ getcap -r / 2>/dev/null #Is good practice to redirect errors if not run with sud
 
 ***
 
-* Modify users and groups
+* Modify users, groups and passwords
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

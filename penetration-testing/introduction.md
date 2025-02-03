@@ -18,7 +18,7 @@ layout:
 
 In contrast to vulnerability or security assessments, which are performed using purely automated tools, penetration tests can be done using any accessible tool, whether manual or automated.
 
-<figure><img src="../.gitbook/assets/image (37).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (37) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Since the first moment, the scope of the assessment must be defined. This scope could define network boundaries, assets we can interact with, tools and actions forbidden in the assessment, between other legal delimitations.
 

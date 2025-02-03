@@ -12,32 +12,32 @@ layout:
     visible: true
 ---
 
-# Redeemer
+# Redeemer (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
 
-* **Tier **<mark style="color:green;">**->**</mark> 0
+* **Tier&#x20;**<mark style="color:green;">**->**</mark> 0
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
 * **OS** <mark style="color:green;">**->**</mark> Linux
-* **Tags **<mark style="color:green;">**->**</mark> Redis / Vulnerability Assessment / Databases / Reconnaissance\
-  &#x20;             Anonymous-Guest Access
+* **Tags&#x20;**<mark style="color:green;">**->**</mark> Redis / Vulnerability Assessment / Databases / Reconnaissance\
+  &#x20;             / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (22) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22) (1) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
-* We start doing an initial scan
+* I started doing an initial port scan using [_Nmap_](../../networks/tools-and-utilities.md#nmap)
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap -p- -Pn --min-rate 2000 10.129.136.187
 </strong></code></pre>
 
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (105) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we can answer the first questions
+* With this and a little research, I answered the first questions
 
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**6379**_
 
@@ -45,112 +45,102 @@ layout:
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (91) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answe: _**redis**_
 
 ***
 
-* With this, we can answer the following questions
-
-<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**In-memory Database**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**redis-cli**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**-h**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**info**_
 
 ***
 
-* Now we can make an exhaustive scan
+* Then I did an exhaustive scan to get more information about the service running on the found port
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap -p6379 -sVC 10.129.136.187
 </strong></code></pre>
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (106) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we answer the next two questions
+* With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (101).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (101) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**5.0.7**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (102).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (102) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**select**_
 
 ***
 
-* Now we try to get access to the database using the _redis-cli_ tool
+* I found a [_Redis_](https://redis.io/) database, so I tried to get access to the database using the [_redis-cli_](../../database-attacks/tools-and-utilities.md#redis) utility and it worked successfully. Then, To get information about the database, I used the internal `info` command and got information from some of the keys that were configured
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>redis-cli -h 10.129.136.187
 </strong></code></pre>
 
-<figure><img src="../../.gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (110) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (111) (1).png" alt=""><figcaption><p>This result is snippet</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (112) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* To get information about the database, we use the `info` command on the Redis command line
+* With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (111).png" alt=""><figcaption><p>This result is snippet</p></figcaption></figure>
-
-<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* With this, we can answer the next two questions
-
-<figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (107) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**4**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (108) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**keys \***_
 
 ***
 
-* Now we select the index of the database, in this case _0,_ as we saw above it was _db0_
+* I selected the index of the database to work with it, in this case _0_ because the database name was _db0_ and was the first liste&#x64;_._ Then, I listed the keys using the `keys` and specifying to select all of them
 
-<figure><img src="../../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (113) (1).png" alt=""><figcaption></figcaption></figure>
 
-***
-
-* Now we list the keys using the `keys` command. To select all we use `*`
-
-<figure><img src="../../.gitbook/assets/image (114).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (114) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* We can see a key named _flag_ so we use the `get` command to see its content
+* I found an interesting entry named _flag_ so I used the internal `get` command to retrieve its content and with this, I found the root flag
 
-<figure><img src="../../.gitbook/assets/image (115).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (115) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we have got the root flag and have pawned the machine.
+* With this, I got the root flag and pwned the machine
 
-<figure><img src="../../.gitbook/assets/image (109).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (109) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**03e1d2b376c37ab3f5319922053953eb**_

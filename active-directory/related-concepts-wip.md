@@ -14,4 +14,4 @@ layout:
 
 # Related Concepts (WIP)
 
-* Here we find some concepts related to active directory :D
+*

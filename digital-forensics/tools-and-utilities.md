@@ -14,11 +14,11 @@ layout:
 
 # Tools and Utilities
 
-Here we can find some tools and utilities commonly used for processes related to digital forensics:
+Here are some tools and utilities commonly used for practices related to digital forensics:
 
-## <mark style="color:green;">PDF Info</mark>
+## <mark style="color:green;">Pdfinfo</mark>
 
-* Used to extract metadata of a PDF file
+* Used to extract metadata of  Portable Document Format (PDF) files
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -32,7 +32,7 @@ sudo apt install poppler-utils
 
 ***
 
-* Read the metadata of a pdf
+* Read the metadata of a PDF file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -42,7 +42,7 @@ pdfinfo $pdffilename
 
 ## <mark style="color:green;">ExifTool</mark>
 
-* Used to extract Metadata from files, especially image
+* Used to extract Metadata from files, especially images
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -66,7 +66,7 @@ exiftool $filename
 
 ## <mark style="color:green;">Steghide</mark>
 
-* Stenography tool that is used to hide data within image and audio files, and also to recover hidden data embedded in files.
+* Stenography tool that is used to hide data within image and audio files, and also to recover hidden data embedded in files
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -96,7 +96,7 @@ steghide extract -sf $filename #Extract data from file
 
 ## <mark style="color:green;">Shred</mark>
 
-* Used to delete and overwrite drive or file information in Linux
+* Used to delete and overwrite drive or file information in _Linux_
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -126,5 +126,5 @@ sudo shred -vu /dev/$unit   #Delete a memory unit or partition
 
 ## <mark style="color:green;">SDelete</mark>
 
-* Tool  to delete and overwrite drive or file information in Windows
+* Tool to delete and overwrite drive or file information in _Windows_
 * [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)

@@ -14,6 +14,6 @@ layout:
 
 # OSI Model
 
-Open Systems Interconnection Model, is a standardized model used to demonstrate the theory behind computer networking. Every layer adds a header to the data except for the Data Link Layer which also adds a trailer. Consist of 7 layers:
+**Open Systems Interconnection Model**, is a standardized model used to demonstrate the theory behind computer networking. It's based on the encapsulation of the data with every pass by a layer, adding a header to the data and with a little exception for the Data Link layer which also adds a trailer. Is composed of 7 layers:
 
-<figure><img src="../../.gitbook/assets/image (282).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (282) (1).png" alt=""><figcaption></figcaption></figure>

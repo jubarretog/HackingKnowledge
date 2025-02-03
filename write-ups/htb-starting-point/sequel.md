@@ -12,21 +12,21 @@ layout:
     visible: true
 ---
 
-# Sequel
+# Sequel (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
 
-* **Tier **<mark style="color:green;">**->**</mark> 1
+* **Tier&#x20;**<mark style="color:green;">**->**</mark> 1
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
 * **OS** <mark style="color:green;">**->**</mark> Linux
-* **Tags **<mark style="color:green;">**->**</mark> Vulnerability / Assessment / Databases / MySQL / SQL / Reconnaissance\
-  &#x20;             Weak Credentials
+* **Tags&#x20;**<mark style="color:green;">**->**</mark> Vulnerability / Assessment / Databases / MySQL / SQL / Reconnaissance\
+  &#x20;             / Weak Credentials
 
-<figure><img src="../../.gitbook/assets/image (118).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=1">https://app.hackthebox.com/starting-point?tier=1</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (118) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=1">https://app.hackthebox.com/starting-point?tier=1</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
-* We start doing an initial scan
+* I started doing an initial scan using [_Nmap_](../../networks/tools-and-utilities.md#nmap)
 
 {% code lineNumbers="true" %}
 ```bash
@@ -34,19 +34,19 @@ nmap -p- -Pn --min-rate 2000 10.129.122.150
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (179).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (179) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we can answer the first question
+* With this, I answered the first question
 
-<figure><img src="../../.gitbook/assets/image (170).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (170) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**3306**_
 
 ***
 
-* Now we make an exhaustive scan
+* Then I did an exhaustive scan to get information about the service running on the open port
 
 {% code lineNumbers="true" %}
 ```bash
@@ -54,88 +54,101 @@ nmap -p3306 -sVC 10.129.122.150
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (178).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (178) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this and some research, we can answer some questions
+* With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (171).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (171) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**MariaDB**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (172).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (172) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**-u**_
 
 ***
 
-* To access the database we use the _mysql_ Linux utility. As we don't know a username, we try inputting _root_ as username and we gain access without being asked for a password
+* As we found the service running was a [_MariaDB_](https://mariadb.org/) database I used the [_mysql_](../../database-attacks/tools-and-utilities.md#mysql) Linux utility to connect to it. As I didn't have any credentials, I tried using _root_ as username and gained access without being asked for a password
 
-<figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+mysql -h 10.129.122.150 -u root
+```
+{% endcode %}
+
+<figure><img src="../../.gitbook/assets/image (180) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this and some research, we can answer the next questions
+* With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (173).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (173) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**root**_
 
 ***
 
-* With this, we can answer the first question
-
-<figure><img src="../../.gitbook/assets/image (174).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (174) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**\***_
 
 ***
 
-* With this, we can answer the first question
-
-<figure><img src="../../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (175) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**;**_
 
 ***
 
-* Now we can enter SQL queries. We use the `show databases;` command to enumerate the databases.
+* With this, I could navigate through the database information using SQL queries. I enumerated the databases present noticing a particular one named _htb_ and accessed it
 
-<figure><img src="../../.gitbook/assets/image (181).png" alt=""><figcaption></figcaption></figure>
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+show databases;
+use htb;
+```
+{% endcode %}
+
+<figure><img src="../../.gitbook/assets/image (181) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (182) (1).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="success" %}
+To learn more about SQL you can go [here](../../database-attacks/sql.md)
+{% endhint %}
 
 ***
 
-* With this, we can answer the next question
+* With this, I answered the next question
 
-<figure><img src="../../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (176) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**htb**_
 
 ***
 
-* As we note, there is an unusual database called _htb_. We access it using the `use htb;` command
+* Then I listed the tables in that database and found an interesting one named _config_. So I retrieved all the information from that table and saw there was a parameter called _flag_, which gave me the flag of the machine&#x20;
 
-<figure><img src="../../.gitbook/assets/image (182).png" alt=""><figcaption></figcaption></figure>
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+show tables;
+select * from config;
+exit
+```
+{% endcode %}
 
-***
+<figure><img src="../../.gitbook/assets/image (183) (1).png" alt=""><figcaption></figcaption></figure>
 
-* Now we can list the tables in the database with the `show tables;` command
-
-<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* If we read all the information of the table _config_ with the `select * from config;` command, we see there is a parameter called _flag_, so we can copy it and close the database.
-
-<figure><img src="../../.gitbook/assets/image (186).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (186) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we have got the root flag and have pawned the machine.
+* With this, I got the root flag and pwned the machine
 
-<figure><img src="../../.gitbook/assets/image (133).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (133) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**7b4bec00d1a39e3dd4e021ec3d915da8**_

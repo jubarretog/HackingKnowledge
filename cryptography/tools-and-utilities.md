@@ -14,7 +14,7 @@ layout:
 
 # Tools and Utilities
 
-Here we can find some tools and utilities commonly used for processes related to cryptography:
+Here are some tools and utilities commonly used for practices related to cryptography:
 
 ## <mark style="color:green;">OpenSSL</mark>
 
@@ -54,7 +54,7 @@ openssl passwd -1 -salt AAA $password
 
 ## <mark style="color:green;">John the ripper</mark>
 
-* Password cracking tool, known for its speed and efficiency in cracking weak passwords.
+* Password cracking tool, known for its speed and efficiency in cracking weak passwords. Comes with various modules specialized for cracking and retrieving hashes from specific files.
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -72,7 +72,7 @@ sudo apt install john
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-john -w=$wordlist $hashfile
+john $hashfile -w=$wordlist 
 ```
 {% endcode %}
 
@@ -88,6 +88,17 @@ One famous dictionary is _rockyou.txt_ which can be found by default on Kali Lin
 ```bash
 unshadow $passwdFile $shadowFile > $outFile
 #passwdFile and shadowFile are the /etc/passwd and /etc/shadow files respectively
+```
+{% endcode %}
+
+***
+
+* Extract hash from zip file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+zip2john $zipfile
+zip2john $zipfile > $hashfile #To save the recovered hash
 ```
 {% endcode %}
 

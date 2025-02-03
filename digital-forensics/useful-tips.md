@@ -14,6 +14,6 @@ layout:
 
 # Useful Tips
 
-Here we can find some tips for maximizing the use of digital forensics concepts, tools, and utilities:
+Here are some tips to help you get the most out of digital forensics concepts, tools, and utilities:
 
 * Use the coordinates of file metadata to determine a location

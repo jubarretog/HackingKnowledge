@@ -1,0 +1,60 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# DNS
+
+The **Domain Name System** protocol acts like a phonebook for the Internet by translating human-friendly domain names into IP addresses, being a critical part of how the Internet functions. It  operates in the Application layer usually on UDP port 53
+
+For example, when users enter a domain name in their browser such as _google.com_, the DNS queries multiple servers to resolve the name into the corresponding IP address _8.8.8.8_ related to this domain. It's also possible that various IP addresses are related to the same domain name.
+
+## <mark style="color:blue;">Domain Hierarchy</mark>
+
+The Domain Hierarchy organizes domain names on the Internet. It is structured like an inverted tree with multiple levels, where each level represents a domain, and the entire system is organized from the most general to the most specific. Each part of a domain name corresponds to a level in this hierarchy.
+
+### <mark style="color:purple;">Root Level</mark>
+
+* The top level of the DNS Hierarchy
+* Represented as a dot invisible `.` hidden in domains
+* Is managed by root name servers that direct queries to the appropriate TLD servers
+
+### &#x20;<mark style="color:purple;">Top-Level Domain (TLD)</mark>
+
+* Is the righthand part of a domain name
+* They can only be composed of a-z, 0-9, and hyphens, and can't start or end with hyphens or have consecutive hyphens
+* Can be classified into two types:
+  * _**gTLD:**_ Generic Top-Level Domain, tell the user the domain name's purpose, for example, the _.edu_ domain for sites related to education
+  * _**ccTLD:**_ Country Code Top-Level Domain, used for geographical purposes, for example, the _.uk_ for the sites from the United Kingdom
+
+### <mark style="color:purple;">Second-Level Domain (SLD)</mark>
+
+* Is the most typical part of the domain which specifies the name of the page
+* Consist of a maximum of 63 characters
+* They are registered by individuals or organizations through domain registrars
+
+### <mark style="color:purple;">Subdomain</mark>
+
+* Are optional and normally describe the specific application of a page
+* Can use multiple subdomains but the length must be kept to 253 characters or less
+* There is no limit to the number of subdomains you can create for a domain name
+
+## <mark style="color:blue;">Record Types</mark>
+
+The records are entries in a DNS server that map domain names to IP addresses and other information. They have some types that define specific classes of information stored about a domain name, each one serving a different purpose. Here are the most common DNS record types:
+
+* **A Record (Address):** Resolve to IPv4 addresses
+* **AAAA Record (IPv6 Address):** Resolve to IPv6 addresses
+* **CNAME Record (Canonical Name):** Resolve to another domain name, then the DNS request redirects to the second domain to work out the IP address
+* **MX Record (Mail Exchange):** Resolve to the address of the servers that handle the email for the domain you are querying. Includes a priority flag that tells the client which mail server should be contacted first
+* **NS Record (Name Server):** Indicates the authoritative DNS servers for a domain
+* **TXT Record (Text):** Stores human-readable or machine-readable text. Commonly used for security. Help to list servers that have the authority to send an email on behalf of the domain. Can be used to verify ownership of the domain name when signing up for third-party services

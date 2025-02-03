@@ -14,7 +14,7 @@ layout:
 
 # Crontabs
 
-Special files with formatting that are recognized by the `cron` process to execute each line step-by-step at a regular time. They can be broken down as follows:
+The **Crontabs** are special files with formatting that are recognized by the _cron_ process to execute each line step-by-step at a regular time. They can be broken down as follows:
 
 * _**MIN:**_ What minute to execute at
 * _**HOUR:**_ What hour to execute at
@@ -31,5 +31,5 @@ $MIN $HOUR $DOM $MON $DOW $COM   #Example below
 {% endcode %}
 
 {% hint style="info" %}
-**Note:** The `*` let us skip specific values
+The `*` let are used to skip specific values
 {% endhint %}

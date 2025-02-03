@@ -14,9 +14,9 @@ layout:
 
 # SQL
 
-**Structured Query Language (SQL)**, is the standard language for managing and manipulating relational databases. It allows users to create, read, update, and delete data within a database through simple, structured commands.
+**Structured Query Language** is the standard language for managing and manipulating relational databases. It allows users to create, read, update, and delete data within a database through simple, structured commands.
 
-<figure><img src="../.gitbook/assets/image (276).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (276) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Mastery of SQL is essential for understanding and manipulating the queries used by systems that utilize this language.
 
@@ -24,17 +24,17 @@ Mastery of SQL is essential for understanding and manipulating the queries used 
 
 We can find that all the SQL Databases have a collection named _Information Schema_ that provides metadata about the database itself and lets us know about the structure of the database, such as tables, columns, data types, views, and user privileges.
 
-It also shows information about all other DB the user has access to. It can be found as `information_schema` and is composed of the following structure:
+It also shows information about all other databases the user has access to. It can be found as _information\_schema_ and is composed of the following structure:
 
-* **`information_schema.tables`:** Tables of DB
+* _**information\_schema.tables**_**:** Tables of the database
   * table\_catalog
   * table\_schem
   * table\_name
   * table\_type
-* **`information_schema.columns`:** Information of every column from tables.
-  * table\_schema: DB where the table is.
-  * table\_name: Name of the table.
-  * column \_name: Name of column from a specified table.
+* _**information\_schema.columns**_**:** Information of every column from tables
+  * table\_schema: Database where the table is
+  * table\_name: Name of the table
+  * column \_name: Name of column from a specified table
 
 ## <mark style="color:blue;">Queries</mark>
 
@@ -85,7 +85,7 @@ SELECT * from $table;-- #Specified everything after -- will be taken as comment
 
 ***
 
-* Select data from multiple tables.
+* Select data from multiple tables
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql

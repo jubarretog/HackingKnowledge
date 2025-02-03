@@ -16,7 +16,7 @@ layout:
 
 The **post-engagement** phase follows the completion of a penetration test or ethical hacking engagement. During this stage, the focus is on documenting the findings, cleaning up the systems we exploit, and delivering a comprehensive report to the client or organization.
 
-<figure><img src="../../.gitbook/assets/image (52).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (52) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 The report typically outlines vulnerabilities discovered, the methods used to exploit them, and the potential risks posed to the system or network.&#x20;
 

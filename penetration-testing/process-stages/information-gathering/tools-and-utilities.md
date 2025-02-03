@@ -18,23 +18,50 @@ Here we can find some tools and utilities commonly used for processes related to
 
 ## <mark style="color:green;">DNS Dumpster</mark>
 
-* Web tool that maps a Domain through DNS services it uses.&#x20;
+* Web tool that maps a Domain through DNS services it uses
 * [https://dnsdumpster.com/](https://dnsdumpster.com/)
+
+## <mark style="color:green;">DNSrecon</mark>
+
+* Tool to perform general enumeration of a domain
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install dnsrecon
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+dnsrecon -h #Get help with use
+dnsrecon -d $domain #Enumerate a domain
+dnsrecon -n $nameserver #Enumerate a name server
+dnsrecon -d $domain -t $type #Specify the type of enumeration
+```
+{% endcode %}
 
 ## <mark style="color:green;">Shodan.io</mark>
 
-* Online service that is built as a search engine for internet-connected devices.
-* The utility tries to connect to every device reachable online, once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable.
+* Online service that is built as a search engine for internet-connected devices
+* The utility tries to connect to every device reachable online, once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable
 * [https://www.shodan.io/](https://www.shodan.io/)
 
 ## <mark style="color:green;">**Wayback Machine**</mark>
 
-* A website that creates snapshots of pages in time and displays them to the user.
+* A website that creates snapshots of pages in time and displays them to the user
 * [https://archive.org/web/](https://archive.org/web/)
 
 ## <mark style="color:green;">Wappalyzer</mark>
 
-* A website that helps to determine what technologies a page uses. Also works as a Firefox extension.&#x20;
+* A website that helps to determine what technologies a page uses. Also works as a Firefox extension
 * Web site: [https://www.wappalyzer.com/](https://www.wappalyzer.com/)
 * Firefox extension: [https://addons.mozilla.org/es/firefox/addon/wappalyzer/](https://addons.mozilla.org/es/firefox/addon/wappalyzer/)
 
@@ -46,7 +73,7 @@ Here we can find some tools and utilities commonly used for processes related to
 ## <mark style="color:green;">**OWASP Favicon**</mark>
 
 * Database to identify typical icons of Development Frameworks
-* [https://wiki.owasp.org/index.php/OWASP\_favicon\_database](https://wiki.owasp.org/index.php/OWASP\_favicon\_database)
+* [https://wiki.owasp.org/index.php/OWASP\_favicon\_database](https://wiki.owasp.org/index.php/OWASP_favicon_database)
 
 ## <mark style="color:green;">LinEnum</mark>&#x20;
 
@@ -78,9 +105,84 @@ git clone https://github.com/rebootuser/LinEnum
 * Open-source intelligence (OSINT) automation tool
 * [https://github.com/smicallef/spiderfoot](https://github.com/smicallef/spiderfoot)
 
+### <mark style="color:yellow;">Usage</mark>
+
+* Click the _New Scan_ tab, enter a name for the scan, and select a target. Scanning can also be personalized by the type of information required or by choosing the individual scanner modules
+* To add API keys, go to the _Settings_ tab, open the page for the module you are looking for, and complete the table including the type of information the module searches for
+  * If you don't know how to get the API keys, click the `?` next to the _API_ option in the module and follow the instructions to get API keys
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install spiderfoot
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+spiderfoot -l 127.0.0.1:$port    #Deploy app locally in the specified port
+spiderfoot -M                    #Display available modules
+```
+{% endcode %}
+
+## <mark style="color:green;">OSINT Framework</mark>
+
+* OSINT Framework with several tools to gather information passively
+* [https://osintframework.com/](https://osintframework.com/)
+
+## <mark style="color:green;">Recon-ng</mark>
+
+* OSINT framework that consists of a series of modules that can be run in workspaces
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install recon-ng
+```
+{% endcode %}
+
+***
+
+* Usage
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">recon-ng    #Initiate fcommand interface
+recon-web   #Initiate web GUI
+
+#Inside the recon-ng console environment
+[recon-ng][default] > help
+[recon-ng][default] > workspaces create $wsname #Create workspace
+[recon-ng][default] > workspaces list #List created workspaces
+[recon-ng][default] > shell $command #Execute shell commands
+<strong>[recon-ng][default] > back #Exit current context
+</strong><strong>[recon-ng][default] > marketplace search #Check modules available
+</strong>[recon-ng][default] > marketplace search $name #Search specific modules
+[recon-ng][default] > marketplace refresh #Refresh available modules
+[recon-ng][default] > marketplace info $name #Check about an specific module
+[recon-ng][default] > marketplace install $name #Install a module
+[recon-ng][default] > modules search #Check installed modules
+[recon-ng][default] > modules load $name #Enter the context of a module to use it
+
+#Inside the context of a module
+[recon-ng][$module] > info #Get details about a module
+[recon-ng][$module] > options set $option #Set parameters for a module
+[recon-ng][$module] > run #Set parameters for a module
+[recon-ng][$module] > dashboard #Get results of the information gathered
+recon-ng][$module] > show $entry #Check for specific categories
+</code></pre>
+
 ## <mark style="color:green;">Whatweb</mark>
 
-* Tool to extract web servers, supporting frameworks, and applications.
+* Tool to extract web servers, supporting frameworks, and applications
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -98,6 +200,35 @@ sudo apt install whatweb
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-whatweb $IP
+whatweb $IPsslscan skillsforall.com
+```
+{% endcode %}
+
+## <mark style="color:green;">crt.sh</mark>
+
+* Obtain detailed certificate transparency information about a given domain
+* [https://crt.sh/](https://crt.sh/)
+
+## <mark style="color:green;">sslscan</mark>
+
+* Command-line tool for testing and analyzing SSL/TLS-enabled services, checking their configuration and security
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install sslscan
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sslscan $domain
 ```
 {% endcode %}

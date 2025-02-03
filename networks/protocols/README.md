@@ -14,41 +14,38 @@ layout:
 
 # Protocols
 
-Network protocols are the set of rules and conventions that govern how data is transmitted, received, and interpreted across a network. These protocols ensure that devices, systems, and applications can communicate efficiently and securely, regardless of their underlying infrastructure.&#x20;
+**Network protocols** are the set of rules and conventions that govern how data is transmitted, received, and interpreted across a network. These protocols ensure that devices, systems, and applications can communicate efficiently and securely, regardless of their underlying infrastructure.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt="" width="344"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27) (1).png" alt="" width="344"><figcaption></figcaption></figure>
 
 They play a crucial role in maintaining the integrity and reliability of communications over the Internet, local networks, and private systems, by defining standards from data formatting to error checking and packet routing.&#x20;
 
-Here we find a list of the most well-known network protocols:
+Here is a list of some well-known network protocols:
 
-* **ICMP:** Internet Control Message Protocol, occurs in the network layer, and diagnoses route state through error messages.
-* **ARP:** Address Resolution Protocol, responsible for finding the MAC address related to a specific IP address.
-  * A request is sent to every other device in the network. This is known as _Broadcast_.
-  * The device whose IP matches replies to the initial device with the MAC address.
-* **DHCP:** Dynamic Host Configuration Protocol, communicate via sending the following messages:
-  * **DHCP Discover:** See if any DHCP servers are on the network.
-  * **DHCP Offer:** The DHCP server then replies with an IP address that could be used.
-  * **DHCP Request:** The device replies confirming it wants the offered IP Address.
-  * **DHCP ACK:** The DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address.
-* **TCP:** Transmission Control Protocol, is a connection-based protocol that occurs in the transport layer, and would be used when accuracy is more important than speed. Divide the transmission into _segments_.
-* **UDP:** User Datagram Protocol, which occurs in the transport layer, would be used when speed is more important than accuracy. Divide the transmission in _datagrams_.
-* **FTP:** File Transfer Protocol, which occurs in the application layer, sends and receives files between systems connected through TCP.
-* **TFTP:** Trivial File Transfer Protocol.
-* **DNS:** Domain Name System, is a TCP/IP protocol that transforms domain URLs into IP addresses.
-* **HTTP:** HyperText Transfer Protocol, a set of rules used for communicating with web servers for the transmitting of webpage data. The usual port to access is 80.
-* **HTTPS:** HyperText Transfer Protocol Secure, is the secure version of HTTP where data is encrypted, and stops people from seeing the data you are receiving and sending. The usual port to access is 443.
-* **WHOIS:** Listens on TCP port 43 for incoming requests, server replies with various information related to the domain requested.
-* **SSH:** Secure Shell, Protocol, and program that lets remote access to a server via a secure channel. Allows us to remotely execute commands on another device. Any data between devices is encrypted went travels through the network. It listens on port 22.
-* **Telnet:** Used for terminal-to-terminal connections and used by other protocols to establish a Remote Control Channel. Usually used in port 23.
-* **SMB:** Server Message Block, a client-server protocol that controls file and directory access and other network resources, it is used a lot in Windows for file transfer or sending files to printers. The default port is 445.
-* **IRC:** Interner Realy Chat.
-* **NTP:** Network Time Protocol, an internet protocol that synchronizes system clocks via packet routing in a variable latency. Occurs on the transport layer using port 123.
-* **IRC:** Internet Relay Chat, a protocol based on real-time communication for chat channels where no previous communication has to be established between users. Use port 194.
-* **RIP:** Routing Information Protocol, used by routers for exchanging information about IP networks. Uses port 520.
-* **SNMP:** Simple Network Management Protocol, facilitates the exchange of management information between network devices and allows administrators to monitor the operation of the network. Uses port 161/162 UDP
-* **SMTP:** Simple Mail Transfer Protocol, occurs in the application layer used for sending and reception of e-mail. Uses port 25.
-* **SMTPS:** Simple Mail Transfer Protocol Secure, uses port 587.
-* **PPP:** Point-to-Point Protocol, occurs on the data link layer, used to establish a direct connection between to nodes of a network.
-* **POP:** Post Office Protocol, normally POP3, is used by local clients to get and manage mail messages from a remote POP server.
-* **SNMP:** Simple Network Management Protocol**,** is a network layer protocol based on IP which interchange information between enabled devices and the network management solution.
+* **ARP:** Address Resolution Protocol, operates in the Data Link layer, and is responsible for finding the MAC address related to a specific IP address
+* **PPP:** Point-to-Point Protocol, operates in the Data Link layer, used to establish a direct connection between to nodes of a network
+* **DHCP:** Dynamic Host Configuration Protocol, operates in the Data Link layer, and is used to automatically assign IP addresses and other network configuration parameters to devices on a network. Usually operates on UDP ports 67/68 and communicates by sending the following messages:
+  * **DHCP Discover:** See if any DHCP servers are on the network
+  * **DHCP Offer:** The DHCP server then replies with an IP address that could be used
+  * **DHCP Request:** The device replies confirming it wants the offered IP Address
+  * **DHCP ACK:** The DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address
+* **ICMP:** Internet Control Message Protocol, operates in the Network layer, and diagnoses route state through error messages
+* **TCP:** Transmission Control Protocol, is a connection-based protocol that operates in the Transport layer, and is used when accuracy is more important than speed, dividing the transmission into _segments_
+* **UDP:** User Datagram Protocol, a protocol that operates in the Transport layer, is used when speed is more important than accuracy, dividing the transmission into _datagrams_
+* **FTP:** File Transfer Protocol, operates in the Application layer, sending and receiving files between systems connected through TCP. Usually operates on port 21
+* **TFTP:** Trivial File Transfer Protocol, operates in the Application layer, using it is only possible to upload and download files under a server. Usually operates on UDP port 69
+* **DNS:** Domain Name System, operates in the Application layer, transforms domain URLs into IP addresses and vice versa. Usually operates on UDP port 53
+* **HTTP:** HyperText Transfer Protocol, operates in the Application layer, a set of rules used for communicating with web servers for the transmission of data. Usually operates on port 80
+* **HTTPS:** HyperText Transfer Protocol Secure, operates in the Application layer, is the secure version of _HTTP_ where data is encrypted, and stops people from seeing the sent or received data. Usually operates on port 443
+* **WHOIS:**  Operates in the Application layer, query databases that store information about domain names, IP addresses, and related entities. Usually operates on port 43
+* **SSH:** Secure Shell Protocol, operates in the Application layer, and manages remote access to a server via a secure channel. Allows to remotely execute commands on another device. Any data between devices is encrypted when traveling through the network. Usually operates on port 22
+* **Telnet:**  Operates in the Application layer, and is used for terminal-to-terminal connections, and by other protocols to establish a remote control channel. Usually operates on port 23
+* **SMB:** Server Message Block, operates in the Application layer, a client-server protocol that controls file and directory access and other network resources, it is used a lot in _Windows_ for file transfer or sending files to printers. Usually operates on port 445
+* **NTP:** Network Time Protocol, operates in the Application layer, an internet protocol that synchronizes system clocks via packet routing in a variable latency. Usually operates on UDP port 123
+* **IRC:** Internet Relay Chat, operates in the Application layer, and is based on real-time communication for chat channels where no previous communication has to be established between users. Usually operates on port 194
+* **RIP:** Routing Information Protocol, operates in the Application layer, and is used by routers for exchanging information about IP networks. Usually operates on UDP port 520
+* **SNMP:** Simple Network Management Protocol, operates in the Application layer, facilitates the exchange of management information between network devices, and allows administrators to monitor the operation of the network. Usually operates on UDP ports 161/162
+* **SMTP:** Simple Mail Transfer Protocol, operates in the Application layer, used for sending and reception of e-mail. Usually operates on port 25
+* **SMTPS:** Simple Mail Transfer Protocol Secure, operates in the Application layer, a variant of _SMTP_ that uses _SSL/TLS_ encryption to securely send emails. Usually operates on port 465
+* **POP:** Post Office Protocol, usually POP3, operates in the Application layer, and is used by local clients to get and manage mail messages from a remote POP server. Usually operates on port 110
+* **UPnP:** Universal Plug and Play, operates in the Application layer, allows devices to discover each other in a network and establish network services. Usually operates on UDP port 1900

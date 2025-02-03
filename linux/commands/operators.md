@@ -14,7 +14,7 @@ layout:
 
 # Operators
 
-Allow users to control the flow of commands and processes in the terminal, offering greater flexibility and efficiency. Here, we can explore some of their uses:
+The **Command Operators** allow users to control the flow of commands and processes in the terminal, offering greater flexibility and efficiency. Here is an explanation of their use:
 
 * Execute a command and send it to the background
 
@@ -50,7 +50,7 @@ $command > $filename
 {% endcode %}
 
 {% hint style="info" %}
-If the file doesn't exit it will be created, and if it exists it will be overwritten.
+If the file doesn't exit it will be created, and if it exists it will be overwritten
 {% endhint %}
 
 ***
@@ -71,8 +71,7 @@ If the file doesn't exit it will be created, and if it exists it will be overwri
 
 * Tooks content from a stream
 
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C;&#x3C; $stream
-</strong><strong>#Ex: cat &#x3C;&#x3C; EOF     
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C;&#x3C; $stream #Ex: cat &#x3C;&#x3C; EOF   
 </strong></code></pre>
 
 ***
@@ -90,5 +89,5 @@ If the file doesn't exit it will be created, and if it exists it will be overwri
 </strong></code></pre>
 
 {% hint style="info" %}
-The number `2` indicates the `STDERR`
+The number `2` indicates the `STDERR`. A common use is `2>/dev/null` to discard any error
 {% endhint %}

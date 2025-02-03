@@ -14,6 +14,6 @@ layout:
 
 # Useful Tips
 
-Here we can find some tips for maximizing the use of cryptography concepts, tools, and utilities:
+Here are some tips to help you get the most out of cryptography concepts, tools, and utilities:
 
-* Check if hashes in `/etc/shadow` are weak to obtain passwords.
+* Check if hashes in _/etc/shadow_ are weak to obtain system passwords

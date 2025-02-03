@@ -14,15 +14,15 @@ layout:
 
 # About Me
 
-Hey!! I'm Juan David, aka JuanDa. I'm studying Systems and Computer Engineering at the [Universidad Nacional de Colombia](https://unal.edu.co/) and I'm a member of the student working group in cybersecurity, [Uqbar](https://www.instagram.com/uqbarun/).
+Hi, I'm Juan David, aka _JuanDa_. I'm studying Systems and Computer Engineering at the [_Universidad Nacional de Colombia_](https://unal.edu.co/) and I'm a member and coordinator of the cybersecurity seedbed, [_Uqbar_](https://www.instagram.com/uqbarun/).
 
-<figure><img src="../.gitbook/assets/image (18) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
-I'm passionate about cybersecurity and ethical hacking practices, with knowledge in software development as well.
+I'm passionate about cybersecurity and ethical hacking practices, and an active player in [CTF](../practical-skill-development/capture-the-flag-ctf-competitions.md) competitions. Also, I know about software development as well.
 
-My interest in ethical hacking has grown thanks to all the people I've met in the cybersecurity community, and being part of [Uqbar](https://www.instagram.com/uqbarun/) is one of my greatest prides.
+My interest in ethical hacking has grown thanks to all the people I've met in the cybersecurity community, and being part of [_Uqbar_](https://www.instagram.com/uqbarun/) is my greatest pride right now.
 
-My main goal right now is to prepare for a penetration testing certification and become a certified professional ethical hacker.
+My main goal at this moment is to prepare for a penetration testing certification and become a professional ethical hacker.
 
 ## <mark style="color:blue;">Contact information</mark>
 

