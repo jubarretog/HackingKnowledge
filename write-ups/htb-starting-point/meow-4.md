@@ -27,7 +27,7 @@ layout:
 
 * With a little research, I started answering the first question
 
-<figure><img src="../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (60) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**873**_
 
@@ -41,13 +41,13 @@ nmap 10.129.197.128 -p- -Pn --min-rate 2500 -oN scan.txt
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * With this, I answered the next question
 
-<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (59) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**1**_
 
@@ -61,31 +61,31 @@ nmap 10.129.197.128 -p873 -sVC -oN serv_scan.txt
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * With this and a little research, I answered some questions
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (63) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: **31**
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**rsync**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**None**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**list-only**_
 
@@ -99,7 +99,7 @@ rsync --list-only 10.129.197.128::
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -123,6 +123,6 @@ cat flag.txt
 
 * With this, I got the root flag and pwned the machine
 
-<figure><img src="../../.gitbook/assets/image (39) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**72eaf5344ebb84908ae543a719830519**_

@@ -16,7 +16,7 @@ layout:
 
 **Security Methodologies** are structured approaches and frameworks used to manage, analyze, and address security risks and challenges, providing guidelines, best practices, and processes to help organizations protect their information systems and data effectively.
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 ## <mark style="color:blue;">Penetration Testing Frameworks</mark>
 

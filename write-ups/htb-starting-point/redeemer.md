@@ -22,7 +22,7 @@ layout:
 * **Tags&#x20;**<mark style="color:green;">**->**</mark> Redis / Vulnerability Assessment / Databases / Reconnaissance\
   &#x20;             / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (22) (1) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22) (1) (1) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 

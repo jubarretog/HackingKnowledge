@@ -21,19 +21,19 @@ layout:
 * **OS** <mark style="color:green;">**->**</mark> Windows
 * **Tags&#x20;**<mark style="color:green;">**->**</mark> Protocols / SMB / Reconnaissance / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (21) (1) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21) (1) (1) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
 * With a little research, I started answering the first questions
 
-<figure><img src="../../.gitbook/assets/image (68) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**Server Message Block**_
 
 ***
 
-<figure><img src="../../.gitbook/assets/image (69) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**445**_
 
@@ -44,13 +44,13 @@ layout:
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap -p- -Pn --min-rate 2000 10.129.76.14
 </strong></code></pre>
 
-<div data-full-width="false"><figure><img src="../../.gitbook/assets/image (71) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div data-full-width="false"><figure><img src="../../.gitbook/assets/image (71) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 ***
 
 * With this and a little research, I answered the next questions
 
-<figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**microsoft-ds**_
 

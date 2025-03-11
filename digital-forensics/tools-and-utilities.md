@@ -128,3 +128,8 @@ sudo shred -vu /dev/$unit   #Delete a memory unit or partition
 
 * Tool to delete and overwrite drive or file information in _Windows_
 * [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)
+
+## <mark style="color:green;">FOCA</mark>
+
+* Fingerprinting Organization with Collected Archives is a tool designed to find metadata and hidden information in documents, analyzing websites as well as Microsoft Office, Open Office, PDF, and other documents
+* [https://github.com/ElevenPaths/FOCA](https://github.com/ElevenPaths/FOCA)

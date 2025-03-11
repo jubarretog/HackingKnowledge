@@ -16,7 +16,7 @@ layout:
 
 Hi, I'm Juan David, aka _JuanDa_. I'm studying Systems and Computer Engineering at the [_Universidad Nacional de Colombia_](https://unal.edu.co/) and I'm a member and coordinator of the cybersecurity seedbed, [_Uqbar_](https://www.instagram.com/uqbarun/).
 
-<figure><img src="../.gitbook/assets/image (18) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 I'm passionate about cybersecurity and ethical hacking practices, and an active player in [CTF](../practical-skill-development/capture-the-flag-ctf-competitions.md) competitions. Also, I know about software development as well.
 

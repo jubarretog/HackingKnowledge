@@ -27,5 +27,5 @@ HTB machines come in different forms and can be categorized based on the followi
 * **State: D**etermine their availability, accessibility, and whether they contribute to your ranking and points. The main states are:
   * **Active:** Machines that are currently available for hacking and contribute to your ranking and points when completed. Every few weeks, old active machines are retired to make space for new ones
   * **Retired:** Machines that have been removed from the active rotation and no longer contribute to ranking or points. Can only be accessed by HTB VIP members, and official walkthroughs become available
-  * Seasonal: Special machines that are released every week, and let you earn ranking points. They only give this kind of points a week after its release and then pass to be active machines
+  * **Seasonal:** Special machines that are released every week, and let you earn ranking points. They only give this kind of points a week after its release and then pass to be active machines
 * **Tags:** Help to know the involved attack vectors, technologies, and skills a machine encompasses

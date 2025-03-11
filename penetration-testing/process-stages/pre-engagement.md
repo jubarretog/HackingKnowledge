@@ -16,7 +16,7 @@ layout:
 
 For the pre-engagement process is necessary to stipulate the parameters, commitments, tasks, scope, limitations, and related agreements documented in writing.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (48) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (48) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Some of the usual documents we found for this purpose, and that are defined in the pre-engagement meeting and kick-off meeting, are the following:
 

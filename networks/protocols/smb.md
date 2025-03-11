@@ -23,4 +23,4 @@ It is commonly used for:
 * Domain communication, critical for Active Directory (AD) authentication
 * Resource management across a network
 
-The RDP protocol can be accessed from _Linux_ using the [_smbclient_](../tools-and-utilities.md#smbclient) tool, among others.
+The SMB protocol can be accessed from _Linux_ using the [_smbclient_](../tools-and-utilities.md#smbclient) tool, among others.

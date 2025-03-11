@@ -25,12 +25,15 @@ Is the core communication pattern used in the HTTP protocol, where a client such
 The client initiates communication by sending an HTTP request to the server. This request contains various details, including:
 
 * **Method**: Specifies the type of action, such as retrieving, sending, or deleting data, among others. The most common HTTP methods are:
-  * **GET Request:** Used for getting content from a web server
-  * **POST Request:** Used for submitting data to the web server and potentially creating records
-  * **PUT Request:** Used for submitting data to a web server to update information
-  * **DELETE Request:** Used for deleting information/records from a web server
-  * **HEAD Request:** The only difference between HEAD and GET requests is that for HTTP HEAD, the server only returns headers without a body
-* **URL**: Uniform Resource Locator, provides the location of the resource and the protocol to be used to retrieve it. Have the structure: _scheme://user:password@host:port/path?query#fragment_.\
+  * **GET:** Used for getting content from a web server
+  * **POST:** Used for submitting data to the web server and potentially creating records
+  * **PUT:** Used for submitting data to a web server to update information
+  * **DELETE:** Used for deleting information/records from a web server
+  * **HEAD:** The only difference between HEAD and GET requests is that for HTTP HEAD, the server only returns headers without a body
+  * **OPTIONS:** Returns the HTTP methods that the server supports
+  * **CONNECT:** Converts the request connection to a transparent TCP/IP tunnel
+  * **TRACE:** Does a message loopback test along the path to the target resource
+* **URL**: Uniform Resource Locator, provides a resource's location and the protocol to retrieve it. Have the structure: _scheme://user:password@host:port/path?query#fragment_.\
   This can be broken down as follows:
   * **Scheme:** The protocol to use for accessing the resource
   * **User-Password:** For services that require authentication to log in, a username and password can be put into the URL

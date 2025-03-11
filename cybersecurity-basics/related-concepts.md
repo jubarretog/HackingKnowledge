@@ -44,3 +44,4 @@ layout:
 * **Malicious formatted package:** Collection of data improperly formatted that an application is unable to identify causing crashing or slowing down in the functions
 * **Cryptocurrency:** Digital money that can be used to buy goods and services, using strong encryption techniques to secure online transactions
 * **Hardening:** Process of securing a system by reducing its vulnerabilities or security holes, for which it is more prone
+* **CWE:** Common Weakness Enumeration, a list of software weaknesses to create a common language to describe software security weaknesses that are the root causes of given vulnerabilities

@@ -232,23 +232,32 @@ To make a line jump is necessary to press _Shift+Enter_
 
 * Open source tool for network exploration and security auditing which works as a network mapper
 
+### <mark style="color:yellow;">**Scan types**</mark>
+
+* _SYN_ scans are also known as _Half-open_ or _Stealth._ They are stealthier than _Connect_ scans
+* The difference between _Connect_ and _SYN_ scans is that _Connect_ performs a full three-way handshake with the target. Instead of that _SYN_ scans send back an _RST_ packet after receiving an _SYN/ACK_
+* The UDP scans are slower than TCP scans
+* In UDP scans if the port is open it will send no response and will be marked as _open|filtered_. If there's a response will be marked as _open_. If it's closed, the target responds with an ICMP packet containing a message that the port is unreachable
+* _NULL_, _FIN_, _Xmas_, and _ACK_ scans are stealthier than _SYN_ or UDP scans, usually used for firewall evasion
+* _NULL_ scans send a TCP request with no flags, the target host responds with _RST_ if the port is closed
+* _FIN_ scans send a TCP request with the _FIN_ flag, used to gracefully close an active connection, the target host responds with _RST_ if the port is closed
+* _Xmas_ scans send a malformed TCP packet, and the target host responds with _RST_ if the port is closed
+* Microsoft Windows may respond to a _NULL_, _FIN_ or _Xmas_ scan with a _RST_ for every port
+
 ### <mark style="color:yellow;">**NSE**</mark>
 
 * The [Nmap Scripting Engine](https://nmap.org/nsedoc/) is a library of scripts written in Lua that can be used for scanning vulnerabilities and automating exploits for them.
 * Every script has a category related to its use scenario
 * By default nmap stores scripts in _/usr/share/nmap/scripts/script.db_
 
-### <mark style="color:yellow;">**Scan types**</mark>
+### <mark style="color:yellow;">**Port State**</mark>
 
-* _SYN_ scans are also known as _Half-open_ or _Stealth._ They are stealthier than _Connect_ scans
-* The difference between _Connect_ and _SYN_ scans is that _Connect_ performs a full three-way handshake with the target. Instead of that _SYN_ scans send back an _RST_ packet after receiving an _SYN/ACK_
-* The UDP scans are slower than TCP scans
-* In UDP scans if the port is open it will send no response and will be marked as _open|filtered_. If there's a response will be marked as _open_. If is closed, the target responds with an ICMP packet containing a message that the port is unreachable
-* _NULL_, _FIN_, and _Xmas_ are stealthier than _SYN_ or UDP scans, usually used for firewall evasion
-* _NULL_ scans send a TCP request with no flags, the target host responds with _RST_ if the port is closed
-* _FIN_ scans send a TCP request with the _FIN_ flag, used to gracefully close an active connection, the target host responds with _RST_ if the port is closed
-* _Xmas_ scans send a malformed TCP packet, and the target host responds with _RST_ if the port is closed
-* Microsoft Windows may respond to a _NULL_, _FIN_ or _Xmas_ scan with a _RST_ for every port
+* **Open:** This indicates that the connection to the scanned port has been established
+* **Closed:** TCP protocol indicates that the packet we received back contains an RST flag. Can be used to determine if a target is alive or not
+* **Filtered:** Cannot correctly identify whether the scanned port is open or closed because it got no response or an error code from the target
+* **Unfiltered:** Only occurs during the TCP-ACK scan and means that the port is accessible, but it cannot be determined if it's open or closed
+* **Open|filtered:** Didn't get a response, so a firewall or packet filter could be protecting the port
+* **Closed|filtered:** Only occurs in the IP ID idle scans, indicating it was impossible to determine if a port is closed or filtered by a firewall
 
 ### <mark style="color:yellow;">**Commands**</mark>
 
@@ -287,10 +296,10 @@ nmap --excludefile $file #Scan excluding the IPs from a list
 ```bash
 nmap -sT $target  #TCP Connect scan, default if run without sudo
 nmap -sS $target  #TCP SYN scan, default if run with sudo
-nmap -sN $target  #TCP Null scan
-nmap -sF $target  #TCP FIN scan
-nmap -sX $target  #TCP Xmas scan
-nmap -sA $target  #TCP ACK scan
+nmap -sN $target  #TCP Null scan, good for firewall evasion
+nmap -sF $target  #TCP FIN scan, good for firewall evasion
+nmap -sX $target  #TCP Xmas scan, good for firewall evasion
+nmap -sA $target  #TCP ACK scan, good for firewall evasio
 ```
 {% endcode %}
 
@@ -301,7 +310,6 @@ nmap -sA $target  #TCP ACK scan
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nmap -sU $target
-nmap -sU --top-ports $numberofports $target   #Specify the most common UDP ports
 ```
 {% endcode %}
 
@@ -314,16 +322,19 @@ nmap -sU --top-ports $numberofports $target   #Specify the most common UDP ports
 nmap -p $port $target
 nmap -p $port-port $target   #Select a range of ports
 nmap -p- $target             #Scan all ports
+nmap --top-ports $numberofports $target   #Specify the most common ports
+nmap -F $target   #Scan the 100 most common ports
 ```
 {% endcode %}
 
 ***
 
-* Perform Ping Sweep (not pinging a port to confirm is open)
+* Scan without checking if target is alive
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap -Pn $target
+nmap -Pn $target #Don't ping a port to confirm if it is alive
+nmap --disable-arp-ping $target #Don't ping a port via ARP
 ```
 {% endcode %}
 
@@ -342,7 +353,7 @@ sudo nmap -sn -PU $ports $target #Use UDP ping
 </code></pre>
 
 {% hint style="info" %}
-If _ICMP_ scans return MAC addresses means the hosts are in the same subnet
+If _ICMP_ scans return MAC addresses, it means the hosts are in the same subnet
 {% endhint %}
 
 ***
@@ -351,8 +362,8 @@ If _ICMP_ scans return MAC addresses means the hosts are in the same subnet
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo nmap -n #Don't use reverse DNS
-sudo nmap -R #Use reverse DNS even with offline hosts
+sudo nmap -n $target #Don't use reverse DNS
+sudo nmap -R $target #Use reverse DNS even with offline hosts
 ```
 {% endcode %}
 
@@ -417,7 +428,8 @@ nmap -oA $target  #All 3 Formats at once
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nmap -T$timinglevel $target
+nmap -T $timinglevel $target
+nmap --min-rate $number $target #Specify the numbers of sent packets per second
 ```
 {% endcode %}
 
@@ -433,10 +445,20 @@ This mode is louder than normal
 </strong><strong>nmap --script=$scriptfile  $target
 </strong>nmap --script=$category  $target  #Active all scripts in the category
 nmap -p $port --script=$script --script-args $script.$arg='$argvalue' #Pass arguments to a script
-#Search scripts
-grep $keyword /usr/share/nmap/scripts/script.db    #Using grep
-ls -l /usr/share/nmap/scripts/*$keyword*           #Using ls
-</code></pre>
+sudo nmap --script-updatedb    #Update script database
+grep $keyword /usr/share/nmap/scripts/script.db    #Search scripts using grep
+ls -l /usr/share/nmap/scripts/*$keyword*           #Search scripts using ls
+find / -type f -name ftp* 2>/dev/null | grep scripts #Search scripts using find
+#Common scripts
+nmap $IP -p445 --script=smb-enum-users.nse    #Enumerate SMB users
+nmap $IP -p445 --script=smb-enum-groups.nse   #Enumerate SMB groups
+nmap $IP -p445 --script smb-enum-shares.nse   #Enumerate SMB shares
+nmap $IP -p445 --script smb-enum-processes.nse #Enunerate SMB processes
+<strong>nmap $IP --script=http-enum                    #Enumerate HTTP services
+</strong>nmap -sVC -p21 $IP --script=trace              #Enumerate FTP services
+nmap $IP -p25 --script=smtp-commands #List available commands on an SMTP server
+<strong>nmap $IP -p25 --script=smtp-open-relay #identify an SMTP server as an open relay
+</strong></code></pre>
 
 ***
 
@@ -480,6 +502,28 @@ nmap $target --badsum
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 nmap $target --data-length  $number  
+```
+{% endcode %}
+
+***
+
+* Specify the number of retries if a packet gets dropped or blocked
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nmap $target --max-retries $number 
+```
+{% endcode %}
+
+***
+
+* For firewall evasion
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+nmap $target -Pn -n -S $myIP -e $interface #Use different Source IP
+nmap $target -Pn -n --disable-arp-ping -D RND:$number $target #Use Decoys to vary between random IPs
+nmap $target -Pn -n --disable-arp-ping --source-port 53 #Use DNS service as proxy
 ```
 {% endcode %}
 
@@ -658,7 +702,274 @@ sudo apt install python3-impacket
 * Use of scripts
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">sudo impacket-$scriptname $options
+#Common scripts
 sudo impacket-mssqlclient  $hostname/$user@$ip #Connect to MS SQL server
 <strong>sudo impacket-mssqlclient  $hostname/$user@$ip -windows-auth #Use Windows authentication to connect to MS SQL server
 </strong>sudo impacket-psexec $username@$IP #Connect to the network service of a host
+sudo impacket-samrdump $IP #Bruteforce SMB user RDIs
+sudo impacket-wmiexec $username:"$password"@$IP "$hostname" #Chech WMI protocol 
 </code></pre>
+
+## <mark style="color:green;">Scapy</mark>
+
+* Powerful interactive packet manipulation library written in Python, used to forge or decode packets of a wide number of protocols, send, capture them, match requests and replies, and much more
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+pip install scapy
+```
+{% endcode %}
+
+***
+
+* Usage
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>sudo scapy #Enter interactive mode
+</strong><strong>>>> send(IP(dst="$IP")/ICMP()/"$Payload") #Send a ICMP package
+</strong>>>> ls() #List all available formats and protocols
+<strong>>>> ls($Protocol) #List all options and fields of a protocol or packet format
+</strong>>>> explore() #Navigate Scapy layers and protocols
+>>> explore($Protocol) #Navigate a specific protocol or packet format
+</code></pre>
+
+## <mark style="color:green;">Tshark</mark>
+
+* Packet capture tool used to capture ICMP packets. Comes by default in the Wireshark tool packet
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install wireshark
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo tshark host $IP
+```
+{% endcode %}
+
+## <mark style="color:green;">Aircrack-ng</mark>
+
+* Wireless security toolset used for monitoring, attacking, testing, and cracking Wi-Fi networks
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install aircrack-ng
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+airmon-ng start $NIC $channel    #Start monitoring
+airodump-ng $NIC                 #Sniff wireless packets
+aireplay-ng -0 0 -a $MAC $NIC    #Do de-authentication attack
+```
+{% endcode %}
+
+## <mark style="color:green;">rpcclient</mark>
+
+* Central tool to realize operational and work-sharing structures in networks and client-server architectures, useful for enumeration of SMB protocol
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install rpcclient
+```
+{% endcode %}
+
+***
+
+* Usage
+
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">rpcclient -U "$username" $IP # Conect to a host
+rpcclient -U "" $IP          # Connect anonymously
+<strong>rpcclient $> srvinfo	     # Get server information.
+</strong>rpcclient $> enumdomains     # Enumerate all deployed domains
+rpcclient $> querydominfo    # Get domain, server, and user information
+rpcclient $> netshareenumall # Enumerate all available shares
+rpcclient $> netsharegetinfo $share #Provide information about a share
+rpcclient $> enumdomusers    # Enumerate all domain users
+rpcclient $> queryuser $userID # Provide information about a user
+rpcclient $> querygroup $groupID # Provide information about a user
+</code></pre>
+
+***
+
+## <mark style="color:green;">smbmap</mark>
+
+* Security tool used for enumerating and interacting with SMB shares on a network
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install smbmap
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+smbmap -H $IP
+```
+{% endcode %}
+
+## <mark style="color:green;">CrackMapExec</mark>
+
+* Powerful post-exploitation tool used for network reconnaissance, credential validation, and lateral movement in Windows Active Directory (AD) environments
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install crackmapexec
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+crackmapexec smb $IP --shares -u '$username' -p '$password' #Enumerate
+crackmapexec smb $IP --shares -u '' -p '' #Enumerate anonymously
+```
+{% endcode %}
+
+
+
+## <mark style="color:green;">smtp-user-enum</mark>
+
+* Tool for making user enumeration for the [SMTP](protocols/smtp.md) protocol
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install smtp-user-enum
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+smtp-user-enum -M $smtpCommand -U $usersFile -t $IP
+
+#Example
+smtp-user-enum -M VRFY -U $wordlist -t $IP -w 15 -v
+```
+{% endcode %}
+
+## <mark style="color:green;">snmpwalk</mark>
+
+* Tool for getting information about the community string for a SNMP protocol
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install snmpwalk
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+snmpwalk -v2c -c public $IP #
+```
+{% endcode %}
+
+## <mark style="color:green;">odat</mark>
+
+* Oracle Database Attacking Tool, an open-source penetration testing tool that tests the security of [_Oracle_](https://www.oracle.com/co/) databases remotely
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install the tool and required components using the following script
+
+{% code title="Oracle_Tools.sh" overflow="wrap" lineNumbers="true" %}
+```bash
+#!/bin/bash
+
+sudo apt-get install libaio1 python3-dev alien -y
+git clone https://github.com/quentinhardy/odat.git
+cd odat/
+git submodule init
+git submodule update
+wget https://download.oracle.com/otn_software/linux/instantclient/2112000/instantclient-basic-linux.x64-21.12.0.0.0dbru.zip
+unzip instantclient-basic-linux.x64-21.12.0.0.0dbru.zip
+wget https://download.oracle.com/otn_software/linux/instantclient/2112000/instantclient-sqlplus-linux.x64-21.12.0.0.0dbru.zip
+unzip instantclient-sqlplus-linux.x64-21.12.0.0.0dbru.zip
+export LD_LIBRARY_PATH=instantclient_21_12:$LD_LIBRARY_PATH
+export PATH=/home/kali/Downloads/odat/instantclient_21_12:$PATH
+sudo apt install python3-cx-oracle -y
+sudo apt-get install python3-scapy -y
+sudo apt install python3-colorlog python3-termcolor python3-passlib python3-libnmap -y
+sudo apt-get install build-essential libgmp-dev -y
+sudo apt install python3-pycryptodome -y
+sed -i '9s/.*/from Cryptodome.Cipher import AES/' CVE_2012_3137.py
+```
+{% endcode %}
+
+{% hint style="info" %}
+The first time running odat there will be some errors, but it's normal and won't appear later
+{% endhint %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+./odat.py -h #Get help many, use to confirm installation was successful
+./odat.py all -s $IP #Scan target using all modules
+./sqlplus $User/$Password@$IP/$SIDfound #Log as an user
+./sqlplus $User/$Password@$IP/$SIDfound as sysdba #Log as System Database Admin
+
+#Once inside the database
+SQL> select table_name from all_tables; #Get table names
+SQL> select * from user_role_privs; #Check the privileges of the user
+SQL> select name, password from sys.user$; #Get passwords form users
+```
+{% endcode %}

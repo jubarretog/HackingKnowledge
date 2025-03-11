@@ -18,7 +18,7 @@ layout:
 
 This protocol allows users to remotely execute commands on a server, secure file transfer, port forwarding and tunneling, and cryptographic authentication.
 
-## <mark style="color:green;">**Command-line utility**</mark>
+## <mark style="color:green;">Interaction with protocol</mark>
 
 * Install
 

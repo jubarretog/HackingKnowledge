@@ -152,7 +152,7 @@ Get-ChildItem $path
 ```
 {% endcode %}
 
-* Generate a copy of files or directories from one location to another
+* Generate a copy of files or directories from one location to another, similar to `cp` in _Linux_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
@@ -162,7 +162,7 @@ Copy-Item -Path $path -Destination $destination
 
 ***
 
-* Displays the content of a file, similar to `cat` in Linux
+* Displays the content of a file, similar to `cat` in _Linux_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
@@ -177,5 +177,35 @@ Get-Content $filepath
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
 New-Item -Path $path -ItemType $type
+```
+{% endcode %}
+
+***
+
+* Move a file or folder, similar to `mv` in _Linux_
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Move-Item -Path $path -Destination $destination
+```
+{% endcode %}
+
+***
+
+* Finds text within a file
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Select-String -path $path --pattern $text
+```
+{% endcode %}
+
+***
+
+* Show the firewall rules
+
+{% code overflow="wrap" lineNumbers="true" %}
+```powershell
+Get-NetFirewallRule -all
 ```
 {% endcode %}

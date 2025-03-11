@@ -16,7 +16,7 @@ layout:
 
 Is the process of collecting as much publically accessible information about a target/organization as possible to obtain a deeper vision of the objective and possibly find vulnerable entry points.
 
-<figure><img src="../../../.gitbook/assets/image (49) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 In this process we can find two primordial steps:
 

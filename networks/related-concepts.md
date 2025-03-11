@@ -36,8 +36,9 @@ layout:
 * **Authoritative name servers:** Get requests from TLD servers, store DNS records for domains directly, and send a response with the relevant information back to you, allowing connection to the IP address behind the domain requested
 * **TTL:** Time to Live, tells how much time the information of a request stored in the local cache is being considered valid, before asking the answer to the server again
 * **Port:** Constructs used to direct traffic to the right application on a server. There are 65535 ports available on every computer, and the first 1024 of them are well-known, used for specific protocols
-* **RFC 793:** Norm that established de right behavior for TCP protocol
-* **RFC 3912:** Norm that established de right behavior for WHOIS protocol
+* **RFC 793:** Norm that establishes the right behavior for TCP protocol
+* **RFC 3912:** Norm that establishes the right behavior for WHOIS protocol
+* **RFC 5322:** Norm that establishes the right behavior for SMTP protocol
 * **Ping Sweep:** Send an ICMP packet to each possible IP address for a specified network to map it
 * **CIDR:** Classless Inter-Domain Routing, useful notation for identifying subnets. It takes the IP address and adds a netmask at the final part of the address\
   **Ex**: In _192.168.34.23/24_ the _/24_ represents the mask _255.255.255.0_
@@ -62,3 +63,8 @@ layout:
   * **MAC:** Mandatory access control, determine resource access based on the resource's security level and the user's security level or process requesting access
   * **RBAC:** Role-based access control, users are assigned roles based on their job responsibilities or other criteria, and each role is granted a set of permissions
 * **Monitoring:** Capturing, analyzing, and interpreting network traffic to identify security threats, performance issues, and suspicious behavior
+* **Workgroup:** Is a LAN peer-to-peer network that can support a maximum of 10 hosts in the same subnet in _Windows_, and identifies an arbitrary collection of computers and their resources on an SMB network
+* **LLMNR:** Link-Local Multicast Name Resolution, is a network protocol that seeks to resolve computer names and/or domains on a LAN network, without requiring any configuration
+* **CIFS:** Common Internet File System protocol is a cross-platform, transport-independent protocol that provides a mechanism for client systems to use file and print services made available by server systems over a network, considered a specific version of the SMB protocol
+* **Relay server:** An SMTP server that is known, trusted, and verified by all others
+* **Community strings:** Passwords used to determine whether the requested information can be viewed or not

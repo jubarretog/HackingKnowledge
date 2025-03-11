@@ -21,7 +21,7 @@ layout:
 * **OS** <mark style="color:green;">**->**</mark> Linux
 * **Tags&#x20;**<mark style="color:green;">**->**</mark> MongoDB / Databases / Reconnaissance Misconfiguration / Anonymous-Guest Access
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/starting-point?tier=0">https://app.hackthebox.com/starting-point?tier=0</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
@@ -33,7 +33,7 @@ nmap 10.129.1.138 -p- -Pn --min-rate 2500 -oN scan.txt
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (53) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -53,7 +53,7 @@ nmap 10.129.1.138 -p22,27017 -sVC -oN serv_scan.txt
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (54) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -103,7 +103,7 @@ mongosh mongodb://10.129.1.138:27017
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (55) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -114,12 +114,12 @@ mongosh mongodb://10.129.1.138:27017
 </strong>sensitive_information> db.flag.find().pretty()
 </code></pre>
 
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * With this, I got the root flag and pwned the machine
 
-<figure><img src="../../.gitbook/assets/image (39) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (39) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 > Answer: _**1b6e6fb359e7c40241b6d431427ba6ea**_

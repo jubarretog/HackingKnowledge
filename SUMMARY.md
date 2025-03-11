@@ -51,8 +51,9 @@
   * [TCP/IP Model](networks/networking-frameworks/tcp-ip-model.md)
 * [Protocols](networks/protocols/README.md)
   * [ARP](networks/protocols/arp.md)
-  * [SNMP](networks/protocols/snmp.md)
   * [TCP](networks/protocols/dns.md)
+  * [NetBIOS](networks/protocols/netbios.md)
+  * [SNMP](networks/protocols/snmp.md)
   * [DNS](networks/protocols/dns-1.md)
   * [HTTP](networks/protocols/http.md)
   * [Telnet](networks/protocols/telnet.md)
@@ -61,10 +62,14 @@
   * [SMB](networks/protocols/smb.md)
   * [RDP](networks/protocols/rdp.md)
   * [SSH](networks/protocols/ssh.md)
+  * [SMTP](networks/protocols/smtp.md)
+  * [POP 3](networks/protocols/pop-3.md)
+  * [IMAP](networks/protocols/imap.md)
+  * [Oracle TNS](networks/protocols/oracle-tns.md)
+  * [IPMI](networks/protocols/ipmi.md)
 * [Hypervisors](networks/hypervisors.md)
 * [Related Concepts](networks/related-concepts.md)
 * [Tools and Utilities](networks/tools-and-utilities.md)
-* [Useful Tips](networks/useful-tips.md)
 
 ## 🔐 Cryptography
 
@@ -98,7 +103,11 @@
       * [Dorking](penetration-testing/process-stages/information-gathering/osint/dorking.md)
       * [Searching breach data dumps](penetration-testing/process-stages/information-gathering/osint/searching-breach-data-dumps.md)
     * [Enumeration](penetration-testing/process-stages/information-gathering/enumeration/README.md)
+      * [Get information from SSL certificates](penetration-testing/process-stages/information-gathering/enumeration/get-information-from-ssl-certificates.md)
+      * [Retrieve information from IMAP/POP3 servers](penetration-testing/process-stages/information-gathering/enumeration/retrieve-information-from-imap-pop3-servers.md)
       * [Redirect HTTP traffic using Feroxbuster and ZAP](penetration-testing/process-stages/information-gathering/enumeration/redirect-http-traffic-using-feroxbuster-and-zap.md)
+      * [Mount accesible NFS Shares](penetration-testing/process-stages/information-gathering/enumeration/mount-accesible-nfs-shares.md)
+      * [Bruteforce subdomains](penetration-testing/process-stages/information-gathering/enumeration/bruteforce-subdomains.md)
     * [Tools and Utilities](penetration-testing/process-stages/information-gathering/tools-and-utilities.md)
     * [Useful Tips](penetration-testing/process-stages/information-gathering/useful-tips.md)
   * [Vulnerability Assessment](penetration-testing/process-stages/vulnerability-assessment.md)
@@ -106,6 +115,7 @@
     * [Tools and Utilities](penetration-testing/process-stages/exploitation/tools-and-utilities.md)
     * [Useful Tips](penetration-testing/process-stages/exploitation/useful-tips.md)
   * [Post-Exploitation](penetration-testing/process-stages/post-exploitation/README.md)
+    * [Techniques (WIP)](penetration-testing/process-stages/post-exploitation/techniques-wip.md)
     * [Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/README.md)
       * [Linux Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md)
       * [Windows Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/windows-privilege-escalation.md)
@@ -113,7 +123,8 @@
     * [Useful Tips](penetration-testing/process-stages/post-exploitation/useful-tips.md)
   * [Lateral Movement](penetration-testing/process-stages/lateral-movement.md)
   * [Proof-of-Concept](penetration-testing/process-stages/proof-of-concept.md)
-  * [Post-engagement](penetration-testing/process-stages/post-engagement.md)
+  * [Post-engagement](penetration-testing/process-stages/post-engagement/README.md)
+    * [Sample Report (WIP)](penetration-testing/process-stages/post-engagement/sample-report-wip.md)
 * [Related Concepts](penetration-testing/related-concepts.md)
 
 ## 📡 Web Exploitation
@@ -138,18 +149,19 @@
   * [XXE Injection](web-exploitation/broken-access-control/command-injection-1.md)
   * [Abuse File Upload](web-exploitation/broken-access-control/abuse-file-upload.md)
   * [Cross-Site Request Forgery](web-exploitation/broken-access-control/command-injection-2.md)
-  * [Server-Side Request Forgery](web-exploitation/broken-access-control/server-side-request-forgery.md)
   * [Header Poisoning](web-exploitation/broken-access-control/header-poisoning.md)
   * [HTTP Parameter Pollution](web-exploitation/broken-access-control/command-injection-3.md)
   * [Content Security Policy Bypass](web-exploitation/broken-access-control/content-security-policy-bypass.md)
   * [Exposed .htaccess and .htpasswd files](web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
+  * [Server-Side Request Forgery](web-exploitation/broken-access-control/server-side-request-forgery.md)
   * [Server-Side Template Injection](web-exploitation/broken-access-control/server-side-template-injection.md)
   * [Cookie Hijacking](web-exploitation/broken-access-control/cookie-hijacking.md)
   * [Null Byte Poisoning](web-exploitation/broken-access-control/techniques.md)
+  * [PHP - Abuse PHP Type Juggling](web-exploitation/broken-access-control/php-abuse-php-type-juggling.md)
+  * [PHP - Bypass using filters](web-exploitation/broken-access-control/php-bypass-using-filters.md)
   * [WordPress - Abuse Theme Configuration on templates](web-exploitation/broken-access-control/wordpress-exploitation.md)
   * [WordPress - Getting credentials from configuration files](web-exploitation/broken-access-control/wordpress-exploitation-1.md)
   * [CVE - Log4Shell](web-exploitation/broken-access-control/cve-log4shell.md)
-  * [PHP - Abuse PHP Type Juggling](web-exploitation/broken-access-control/php-abuse-php-type-juggling.md)
 * [Related Concepts](web-exploitation/related-concepts.md)
 * [Tools and Utilities](web-exploitation/tools-and-utilities.md)
 * [Useful Tips](web-exploitation/useful-tips.md)
@@ -157,23 +169,19 @@
 ## 🗄️ Database Attacks
 
 * [Introduction](database-attacks/introduction.md)
-* [SQL](database-attacks/sql.md)
+* [SQL](database-attacks/sql/README.md)
+  * [MySQL](database-attacks/sql/mysql.md)
+  * [MSSQL](database-attacks/sql/mssql.md)
+  * [SQLite3](database-attacks/sql/sqlite3.md)
 * [Attack Techniques](database-attacks/specific-scenarios/README.md)
   * [SQL Injection](database-attacks/specific-scenarios/sql-injection/README.md)
     * [Authentication Bypass](database-attacks/specific-scenarios/sql-injection/authentication-bypass.md)
   * [NoSQL Injection](database-attacks/specific-scenarios/nosql-injection.md)
   * [MS SQL - xp\_cmdshell Abuse](database-attacks/specific-scenarios/ms-sql-xp_cmdshell-abuse.md)
-  * [MongoDB - Impersonification via credentials change](database-attacks/specific-scenarios/mongodb-impersonification-via-credentials-change.md)
+  * [MongoDB - Impersonation via credentials change](database-attacks/specific-scenarios/mongodb-impersonation-via-credentials-change.md)
 * [Related Concepts](database-attacks/related-concepts.md)
 * [Tools and Utilities](database-attacks/tools-and-utilities.md)
 * [Useful Tips](database-attacks/useful-tips.md)
-
-## 📜 Scripting
-
-* [Introduction](scripting/introduction.md)
-* [Reverse Shell](scripting/reverse-shell.md)
-* [Bind shell](scripting/bind-shell.md)
-* [Web Shell](scripting/web-shell.md)
 
 ## 👥 Active Directory
 
@@ -181,6 +189,20 @@
 * [Related Concepts (WIP)](active-directory/related-concepts-wip.md)
 * [Tools and Utilities (WIP)](active-directory/tools-and-utilities-wip.md)
 * [Useful Tips (WIP)](active-directory/useful-tips-wip.md)
+
+## ☁️ CLOUD HACKING
+
+* [Introduction](cloud-hacking/introduction.md)
+* [Related Concepts](cloud-hacking/related-concepts-wip.md)
+* [Tools and Utilities (WIP)](cloud-hacking/tools-and-utilities-wip.md)
+* [Useful Tips (WIP)](cloud-hacking/useful-tips-wip.md)
+
+## 📜 Scripting
+
+* [Introduction](scripting/introduction.md)
+* [Reverse Shell](scripting/reverse-shell.md)
+* [Bind shell](scripting/bind-shell.md)
+* [Web Shell](scripting/web-shell.md)
 
 ## 🚩 Practical Skill Development
 
@@ -222,6 +244,14 @@
   * [Base (Tier 2)](write-ups/htb-starting-point/three-12.md)
 * [HTB Machines](write-ups/htb-machines-wip/README.md)
   * [Nibbles (Easy)](write-ups/htb-machines-wip/nibbles-easy.md)
+  * [BountyHunter (Easy)](write-ups/htb-machines-wip/bountyhunter-easy.md)
+  * [Crafty (Easy)](write-ups/htb-machines-wip/crafty-easy.md)
   * [Chemistry (Easy)](write-ups/htb-machines-wip/chemistry-easy.md)
+  * [Titanic (Easy)](write-ups/htb-machines-wip/titanic-easy.md)
+  * [Dog (Easy) (WIP)](write-ups/htb-machines-wip/dog-easy-wip.md)
 * [HTB Challenges](write-ups/htb-challenges-wip.md)
 * [HTB Advanced labs](write-ups/htb-challenges-wip-1.md)
+
+## Group 1
+
+* [Pending](group-1/pending.md)

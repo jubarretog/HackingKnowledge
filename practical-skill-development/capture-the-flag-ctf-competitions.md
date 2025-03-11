@@ -18,7 +18,7 @@ layout:
 
 Each challenge typically involves capturing "flags," which are hidden pieces of information or tokens that participants must find and submit to earn points.&#x20;
 
-<figure><img src="../.gitbook/assets/image (22) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 CTF competitions can take different forms:
 

@@ -16,7 +16,7 @@ layout:
 
 [_**Windows**_](https://www.microsoft.com/en-us/windows/) is a widely used operating system developed by [_Microsoft_](https://www.microsoft.com/) which has become the dominant platform for personal computers, widely known for its Graphical User Interface (GUI), ease of use, and broad software compatibility.&#x20;
 
-<figure><img src="../.gitbook/assets/image (21) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Unlike open-source systems like _Linux_, _Windows_ source code is owned by _Microsoft_ and not freely available for modification.
 

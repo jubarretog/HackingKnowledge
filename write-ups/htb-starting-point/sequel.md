@@ -118,7 +118,7 @@ use htb;
 <figure><img src="../../.gitbook/assets/image (182) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about SQL you can go [here](../../database-attacks/sql.md)
+To learn more about SQL you can go [here](../../database-attacks/sql/)
 {% endhint %}
 
 ***

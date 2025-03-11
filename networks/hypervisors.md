@@ -16,7 +16,7 @@ layout:
 
 A **hypervisor** is a software layer or hardware system that allows multiple operating systems to run on a single physical machine by creating and managing virtual machines and even creating virtual network environments between them.&#x20;
 
-<figure><img src="../.gitbook/assets/image (28) (1).png" alt="" width="339"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (28) (1) (1).png" alt="" width="339"><figcaption></figcaption></figure>
 
 Each virtual machine operates as if it has independent hardware, even though they share the physical resources of the host system.&#x20;
 
@@ -40,4 +40,4 @@ We can find two types of hypervisors:
 * Some well-known are [_VMware Workstation_](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) and [_Oracle VirtualBox_](https://www.virtualbox.org/)
 * Commonly used for development, testing, or personal virtual machine setups
 
-<figure><img src="../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption><p><a href="https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor">https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor">https://www.techtarget.com/searchitoperations/tip/Whats-the-difference-between-Type-1-vs-Type-2-hypervisor</a></p></figcaption></figure>

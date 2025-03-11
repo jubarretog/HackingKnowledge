@@ -18,7 +18,7 @@ Penetration Testing is a methodical process that follows distinct stages to ensu
 
 To take a look at the bigger picture, we can observe the following diagram that describes the process:
 
-<figure><img src="../../.gitbook/assets/image (53) (1).png" alt=""><figcaption><p><a href="https://academy.hackthebox.com/module/90/section/1569">https://academy.hackthebox.com/module/90/section/1569</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (53) (1) (1).png" alt=""><figcaption><p><a href="https://academy.hackthebox.com/module/90/section/1569">https://academy.hackthebox.com/module/90/section/1569</a></p></figcaption></figure>
 
 Here we can find 8 main stages that define the entire process of Penetration Testing, which are not always sequential:
 

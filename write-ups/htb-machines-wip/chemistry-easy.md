@@ -18,9 +18,10 @@ layout:
 
 * **Difficult** <mark style="color:green;">**->**</mark> Easy
 * **OS** <mark style="color:green;">**->**</mark> Linux
-* **State** <mark style="color:green;">-></mark> Active
+* **State** <mark style="color:green;">-></mark> Retired
+* **Tags** <mark style="color:green;">-></mark> Pending
 
-<figure><img src="../../.gitbook/assets/image (207).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (207).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/machines/631">https://app.hackthebox.com/machines/631</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
@@ -177,7 +178,7 @@ To learn more about the SSH protocol you can go [here](../../networks/protocols/
 
 ***
 
-* With that, I had proper reading permissions to read the &#x75;_&#x73;er.txt_ file in the _/home/rosa_ folder and retrieved th the user flag
+* With that, I had proper reading permissions to read the &#x75;_&#x73;er.txt_ file in the _/home/rosa_ folder and retrieved the user flag
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

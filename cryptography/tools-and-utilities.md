@@ -73,6 +73,7 @@ sudo apt install john
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 john $hashfile -w=$wordlist 
+john $hashfile --incremental    #Break by bruteforcing
 ```
 {% endcode %}
 

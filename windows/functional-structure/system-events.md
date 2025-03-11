@@ -30,4 +30,4 @@ The logs are also classified under categories and maintained by the operating sy
 
 Here are four of the key standard logs:
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://abdurrehmanrehan.medium.com/try-hack-me-windows-fundamentals-2-write-up-42602ed31e63">https://abdurrehmanrehan.medium.com/try-hack-me-windows-fundamentals-2-write-up-42602ed31e63</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://abdurrehmanrehan.medium.com/try-hack-me-windows-fundamentals-2-write-up-42602ed31e63">https://abdurrehmanrehan.medium.com/try-hack-me-windows-fundamentals-2-write-up-42602ed31e63</a></p></figcaption></figure>

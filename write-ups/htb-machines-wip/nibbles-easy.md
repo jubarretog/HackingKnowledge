@@ -22,7 +22,7 @@ layout:
 * **Tags&#x20;**<mark style="color:green;">**->**</mark> Vulnerability Assessment / Web Application / Security Tools / Software & OS Exploitation\
   Remote Code Execution / Default Credentials
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/machines/121/information">https://app.hackthebox.com/machines/121/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p><a href="https://app.hackthebox.com/machines/121/information">https://app.hackthebox.com/machines/121/</a></p></figcaption></figure>
 
 ## <mark style="color:blue;">Write-up</mark>
 
@@ -122,13 +122,13 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 
 * So I kept looking for an option that could let me upload a file to the system and abuse the vulnerability. After a while, I found there was a _Plugins_ section that could be interesting because sometimes a plugin can be added from external sources, so I accessed it
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * There I found some already installed plugins and after exploring them, the _My Image_ plugin caught my attention because it had an option to upload a picture file, a point that I could abuse
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -140,7 +140,7 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 To learn more about how to create a script for a Reverse Shell you can go [here](../../scripting/reverse-shell.md)
@@ -150,11 +150,11 @@ To learn more about how to create a script for a Reverse Shell you can go [here]
 
 * I saw a couple of warnings but the page told me that the file had been uploaded successfully. Then, I had to find out the location where the files were uploaded to execute it. I went back to search and after a while, I found under the _/content/private_ folder, a folder named _plugins._ Going there I found another folder related to the _My Image_ plugin so I went there to check its content&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -166,15 +166,15 @@ nc -nvlp 4444
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * I observed the page kept loading and checking the listener I noticed I had successfully caught the shell from the web. Then, I sanitized the terminal and checked which user I was, using the `whoami` command and with this I knew I was the _nibbler_ user
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 To learn about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
@@ -184,7 +184,7 @@ To learn about the sanitization process you can go [here](../../linux/useful-she
 
 * Then I navigated to the _/home_ folder where I found a folder for this user and inside it, a _user.txt_ file from which I got the user flag
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -198,13 +198,13 @@ To learn about the sanitization process you can go [here](../../linux/useful-she
 
 * After that, I had to search for a way to escalate privileges. I checked the `sudo` execution permissions that the user had, and it was able to execute a _monitor.sh_ file. But after searching in the filesystem, I didn't find the file
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * Looking again at the contents of the _/home/nibbler_ folder, I noticed a suspicious Zip file, so I decompressed it and checked its contents, which gave me the _monitor.sh_ file I was looking for
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -217,13 +217,13 @@ sudo /monitor.sh
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * Finally, I navigated to the _/root_ folder where I found a _root.txt_ file, and reading its content I got the root flag
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -235,7 +235,7 @@ sudo /monitor.sh
 
 ## <mark style="color:blue;">Alternative using Metasploit</mark>
 
-* Instead of searching through the web, I could check for known vulnerabilities using [_Metasploit_](../../penetration-testing/process-stages/exploitation/tools-and-utilities.md#metasploit). First, I started it and searched for vulnerabilities related to _nibbleblog_
+* Instead of searching through the web, I could check for known vulnerabilities using [_Metasploit_](broken-reference). First, I started it and searched for vulnerabilities related to _nibbleblog_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -272,10 +272,10 @@ msf6 exploit(multi/http/nibbleblog_file_upload) > set RHOSTS 10.129.93.176
 msf6 exploit(multi/http/nibbleblog_file_upload) > set TARGETURI /nibbleblog
 ```
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * After a while, I observed a _meterpreter_ session was spawned, and with this, I gained a shell for the user _nibbler_. With this, I could continue with the rest of the process
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>

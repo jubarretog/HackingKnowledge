@@ -298,8 +298,8 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM $table_f
 
 Depends on the DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
 
-* One is to launch the attack where SQLi is made to send a query
-* The other is to gather the results intercepting response from a DB
+* One to launch the attack where the SQLi can be done to send a query
+* The other is to gather the results by intercepting responses from a database or another external service
 
 ## <mark style="color:blue;">**Second-Order (Stored)**</mark>
 

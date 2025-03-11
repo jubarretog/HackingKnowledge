@@ -14,17 +14,17 @@ layout:
 
 # SNMP
 
-**Simple Network Management Protocol** operates in the Application layer on UDP ports 161/162. Is used for monitoring and managing network devices such as routers, switches, servers, printers, and IoT devices.
+**Simple Network Management Protocol** operates on UDP ports 161/162 in the Application layer. Is used for monitoring and managing network devices such as routers, switches, servers, printers, and IoT devices.
 
-Helps in remote monitoring by collecting device statistics like CPU usage, memory, and network traffic, allows remote configuration and troubleshooting of network devices, and alerts administrators about critical issues.
+It helps in remote monitoring by collecting device statistics like CPU usage, memory, and network traffic, allows remote configuration and troubleshooting of network devices, and alerts administrators about critical issues.
 
-&#x20;It operates operates in a **client-server model in the following way**:
+&#x20;It operates operates in a client-server model in the following way:
 
 * &#x20;The central system that requests and collects data from network devices is called _SNMP Manager_
 * The network devices that run software to collect and report data to the _SNMP Manager_ are called _SNMP Agents_
 * A database structure defining what information can be monitored and managed is called a _Management Information Base (MIB )_
 * To communicate it uses petitions sent across the network. There are:
-  * **GET:** The SNMP Manager asks for information from an SNMP Agent
-  * **SET:** The SNMP Manager changes a setting on a device
-  * **TRAP:** An SNMP Agent sends an alert to the SNMP Manager
-  * **WALK:** Retrieves multiple pieces of information at once
+  * GET: The SNMP Manager asks for information from an SNMP Agent
+  * SET: The SNMP Manager changes a setting on a device
+  * TRAP: An SNMP Agent sends an alert to the SNMP Manager
+  * WALK: Retrieves multiple pieces of information at once

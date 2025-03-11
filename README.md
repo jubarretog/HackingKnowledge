@@ -16,9 +16,9 @@ layout:
 
 Hi! This is **Hacking Knowledge**, a page I've created to compile the wisdom I've gained from my offensive cybersecurity study sessions.
 
-<figure><img src=".gitbook/assets/Hacking_Knowledge_7.jpeg" alt="" width="375"><figcaption></figcaption></figure>
-
 This page compiles all concepts, tools, recommendations, and practices that I consider relevant to annotate, in the form of a knowledge base for anyone interested in ethical hacking, offensive security, and cybersecurity in general.
+
+<figure><img src=".gitbook/assets/Hacking_Knowledge_7.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
 Furthermore, the final part contains a compilation of my write-ups from machines and [CTF](practical-skill-development/capture-the-flag-ctf-competitions.md) challenges I've completed on platforms such as [_Hack The Box_](https://www.hackthebox.com/), [_TryHackMe_](https://tryhackme.com/), and [_picoCTF_](https://picoctf.org/).
 

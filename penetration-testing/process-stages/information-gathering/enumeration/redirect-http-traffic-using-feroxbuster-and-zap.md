@@ -14,7 +14,7 @@ layout:
 
 # Redirect HTTP traffic using Feroxbuster and ZAP
 
-We can redirect our scan results from fuzzers to specialized tools such as _ZAP_ to handle petitions and analysis on endpoints found.
+We can redirect our scan results from fuzzers to specialized tools such as _ZAP_ to handle petitions and analyze the endpoints found.
 
 * Set and run a scan with the desired specifications using _feroxbuster_
 

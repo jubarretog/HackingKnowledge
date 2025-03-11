@@ -48,11 +48,32 @@ dnsrecon -d $domain -t $type #Specify the type of enumeration
 ```
 {% endcode %}
 
-## <mark style="color:green;">Shodan.io</mark>
+## <mark style="color:green;">Shodan</mark>
 
 * Online service that is built as a search engine for internet-connected devices
 * The utility tries to connect to every device reachable online, once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable
 * [https://www.shodan.io/](https://www.shodan.io/)
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install shodan
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+shodan init $APIkey #Set API key from your Shodana account
+shodan host $IP     #Search information about a host
+```
+{% endcode %}
 
 ## <mark style="color:green;">**Wayback Machine**</mark>
 
@@ -232,3 +253,133 @@ sudo apt install sslscan
 sslscan $domain
 ```
 {% endcode %}
+
+## <mark style="color:green;">enum4linux-ng</mark>
+
+* Command-line tool for doing reconnaissance and enumeration on _Linux_ hosts
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install enum4linux-ng
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+enum4linux-ng $IP
+enum4linux-ng -A $IP #Do all simple enumeration
+```
+{% endcode %}
+
+## <mark style="color:green;">SET</mark>
+
+* Social Engineering Toolkit, an open-source penetration testing framework designed for social engineering. Has many custom attack vectors that allow you to make a believable attack quickly
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install set
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+setoolkit     #Launch
+```
+{% endcode %}
+
+## <mark style="color:green;">BeEF</mark>
+
+* Browser Exploitation Framework, a tool that can be used to manipulate users by leveraging XSS vulnerabilities via sending fake notifications and stealing cookies, among others
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install beef-xss
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+beef-xss 
+```
+{% endcode %}
+
+## <mark style="color:green;">Censys</mark>
+
+* Tool used for passive reconnaissance to find information about devices and networks on the Internet
+* [https://censys.io](https://censys.io)
+
+## [<mark style="color:green;">domain.glass</mark>](https://domain.glass/)
+
+* Offers free DNS record, IP address, hostname, and WHOIS lookup information, providing transparent domain information
+* [https://domain.glass/](https://domain.glass/)
+
+## <mark style="color:green;">GrayHatWarfare</mark>
+
+* Provides a search engine for publicly accessible Amazon S3 buckets, allowing users to search for open storage buckets that may contain sensitive files, misconfigurations, or exposed data
+* [https://buckets.grayhatwarfare.com/](https://buckets.grayhatwarfare.com/)
+
+## <mark style="color:green;">DNSenum</mark>
+
+* Tool for information gathering and brute forcing of DNS domains and subdomains
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install dnsenum
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+dnsenum --dnsserver $DNSip --enum -o $outFile -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt $domain
+```
+{% endcode %}
+
+## <mark style="color:green;">DNSenum</mark>
+
+* Tool for information gathering and brute forcing of DNS domains and subdomains
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install dnsenum
+```
+{% endcode %}
+
+***
+
+* Usage

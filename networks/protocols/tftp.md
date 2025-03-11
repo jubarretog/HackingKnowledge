@@ -16,7 +16,7 @@ layout:
 
 **Trivial File Transfer Protocol** is a simplified version of [FTP](ftp.md) used for basic file transfers between network devices. It operates in the Application layer over UDP port 69 and lacks authentication, encryption, or any advanced features.
 
-## <mark style="color:green;">Command-line utility</mark>
+## <mark style="color:green;">Interaction with protocol</mark>
 
 * Install
 

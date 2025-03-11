@@ -18,6 +18,14 @@ The **Domain Name System** protocol acts like a phonebook for the Internet by tr
 
 For example, when users enter a domain name in their browser such as _google.com_, the DNS queries multiple servers to resolve the name into the corresponding IP address _8.8.8.8_ related to this domain. It's also possible that various IP addresses are related to the same domain name.
 
+## <mark style="color:blue;">Domain Types</mark>
+
+* **Authoritative Nameserver:** Hold authority for a particular zone, only answer queries from their area of responsibility, and their information is binding. If an authoritative name server cannot answer a client's query, the root name server takes over at that point
+* **Non-authoritative Nameserver:** Not responsible for a particular DNS zone, they collect information on specific DNS zones themselves, which is done using recursive or iterative DNS querying
+* **Caching DNS Server:** Cache information from other name servers for a specified period. The authoritative name server determines the duration of this storage
+* **Forwarding Server:** Forward DNS queries to another DNS server
+* **Resolver:** Non-authoritative DNS server that performs name resolution locally in a computer or router
+
 ## <mark style="color:blue;">Domain Hierarchy</mark>
 
 The Domain Hierarchy organizes domain names on the Internet. It is structured like an inverted tree with multiple levels, where each level represents a domain, and the entire system is organized from the most general to the most specific. Each part of a domain name corresponds to a level in this hierarchy.
@@ -27,6 +35,7 @@ The Domain Hierarchy organizes domain names on the Internet. It is structured li
 * The top level of the DNS Hierarchy
 * Represented as a dot invisible `.` hidden in domains
 * Is managed by root name servers that direct queries to the appropriate TLD servers
+* There are just 13 root servers in the world
 
 ### &#x20;<mark style="color:purple;">Top-Level Domain (TLD)</mark>
 
@@ -58,3 +67,5 @@ The records are entries in a DNS server that map domain names to IP addresses an
 * **MX Record (Mail Exchange):** Resolve to the address of the servers that handle the email for the domain you are querying. Includes a priority flag that tells the client which mail server should be contacted first
 * **NS Record (Name Server):** Indicates the authoritative DNS servers for a domain
 * **TXT Record (Text):** Stores human-readable or machine-readable text. Commonly used for security. Help to list servers that have the authority to send an email on behalf of the domain. Can be used to verify ownership of the domain name when signing up for third-party services
+* **PTR Record:** Applies reverse lookup to convert IP addresses into valid domain names
+* **SOA Record (Text):** Provides information about the corresponding DNS zone and email address of the administrative contact

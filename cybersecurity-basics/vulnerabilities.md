@@ -16,7 +16,7 @@ layout:
 
 A **vulnerability** is a weakness or flaw in the design, or implementation of a system or application that could be exploited by an attacker to compromise its security.&#x20;
 
-<figure><img src="../.gitbook/assets/image (12) (1).png" alt="" width="320"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt="" width="320"><figcaption></figcaption></figure>
 
 Vulnerabilities can arise from a variety of sources, such as poor coding practices, outdated software, misconfigurations, lack of encryption, or weak access controls. When left unaddressed, these weaknesses can allow attackers to gain unauthorized access, execute malicious code, escalate privileges, steal sensitive data, or disrupt services.
 

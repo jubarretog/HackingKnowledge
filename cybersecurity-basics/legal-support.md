@@ -16,7 +16,7 @@ layout:
 
 Within the field of cybersecurity, the legal aspect is critical for the correct management and mitigation of cyber risks. It encompasses a range of **legal frameworks, regulations, and practice**s designed to protect organizations and individuals from cyber threats while ensuring compliance with applicable laws.
 
-<figure><img src="../.gitbook/assets/image (18) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 To ensure to remain within the scope of an assessment it's necessary to keep in mind some preventive measures:
 
@@ -42,8 +42,8 @@ Various laws and regulations are established to protect sensitive information, e
 
 Cyber laws vary between countries, and nowadays each nation has its own regulations for IT infrastructures and management of data on digital systems or the Internet. Some well-known laws and regulations in various countries are:
 
-<figure><img src="../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption><p><a href="https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf">https://eccommonstorage.blob.core.windows.net/codered/uploads/lessons/resources/3HAiePjX9KtAEjMTID2IU1kcZ0rjCIUWUK3M1HfZ.pdf</a></p></figcaption></figure>

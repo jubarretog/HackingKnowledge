@@ -79,26 +79,6 @@ sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a 
 ```
 {% endcode %}
 
-## <mark style="color:green;">mysql</mark>
-
-* CLI used to connect to MySQL databases
-
-### <mark style="color:yellow;">Commands</mark>
-
-* Connect to a database
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-mysql -u $user #Set user
-mysql -h $host #Set host
-mysql -u $user -h $host -p #Prompt for password
-```
-{% endcode %}
-
-{% hint style="info" %}
-Once having access, we can use SQL queries to look for information
-{% endhint %}
-
 ## <mark style="color:green;">sqlmap</mark>
 
 * Detect and take advantage of SQL injection vulnerabilities

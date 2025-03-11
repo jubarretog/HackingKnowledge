@@ -900,6 +900,8 @@ dig $URLdomain $serverIP #Change server used to perform lookups
 dig @$DNSIPaddress $URLdomain           #Look up DNS records
 dig @$DNSIPaddress $URLdomain $record   #Specify record type on DNS records
 dig -x $IP             #Perform reverse DNS lookups
+dig CH TXT $URLdomain @$DNSIPaddress #Check DNS version
+dig axfr $URLdomain @$DNSIPaddress #Check zone transfer
 ```
 {% endcode %}
 
@@ -936,6 +938,7 @@ netstat -u   #List only UDP ports
 netstat -s   #List network usage statistics by protocol
 netstat -p   #List with PID and program name
 netstat -ano #Most common use, n to no resolve names, o to display timers
+netstat -tunap #Nice version
 ```
 {% endcode %}
 

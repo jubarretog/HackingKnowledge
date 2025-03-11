@@ -20,7 +20,7 @@ The **security models** define and enforce security policies to protect informat
 
 Is a fundamental model in cybersecurity that represents the three core principles of information security: **Confidentiality**, **Integrity**, and **Availability**. These principles serve as the foundation for developing security policies, practices, and strategies to protect sensitive information and systems.
 
-<figure><img src="../../.gitbook/assets/image (14) (1).png" alt="" width="397"><figcaption><p><a href="https://medium.com/@yadavtejas249/cia-and-dad-triad-ef84a94f9aee">https://medium.com/@yadavtejas249/cia-and-dad-triad-ef84a94f9aee</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (1) (1).png" alt="" width="397"><figcaption><p><a href="https://medium.com/@yadavtejas249/cia-and-dad-triad-ef84a94f9aee">https://medium.com/@yadavtejas249/cia-and-dad-triad-ef84a94f9aee</a></p></figcaption></figure>
 
 * **Confidentiality:** Protection of data from unauthorized access and misuse
 * **Integrity:** Information is kept accurate and consistent unless authorized changes are made
@@ -30,7 +30,7 @@ Is a fundamental model in cybersecurity that represents the three core principle
 
 Establish and evaluate information security initiatives by considering all of the related factors that impact them based on how Mandatory Access Control (MAC) policies can be applied in information security.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement">https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement">https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement</a></p></figcaption></figure>
 
 * **Critical information characteristics:**
   * **CIA Triad Elements:** Fundamental principles for protecting information.
@@ -47,7 +47,7 @@ Establish and evaluate information security initiatives by considering all of th
 
 Define the level of security implemented in a system, emphasizing the balance between critical aspects of security systems: **Security**, **Functionality**, and **Usability**, and how improving one aspect may negatively impact the others.
 
-<figure><img src="../../.gitbook/assets/image (15) (1).png" alt=""><figcaption><p><a href="https://securitcrs.wordpress.com/hacking/terminologia-esencial/">https://securitcrs.wordpress.com/hacking/terminologia-esencial/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption><p><a href="https://securitcrs.wordpress.com/hacking/terminologia-esencial/">https://securitcrs.wordpress.com/hacking/terminologia-esencial/</a></p></figcaption></figure>
 
 * **Security:** Stablish the restrictions and protection of systems, networks, and data from unauthorized access, attacks, and breaches
 * **Functionality:** The capability of a system or application to perform its intended tasks and meet user needs

@@ -18,7 +18,7 @@ As the digital landscape continues to evolve, cybersecurity has become a fundame
 
 With this have born a variety of specialized roles, each playing a vital part in protecting organizations from cyber threats.
 
-<figure><img src="../.gitbook/assets/image (10) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Some **career paths** in today's industry are:
 

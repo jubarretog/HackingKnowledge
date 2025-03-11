@@ -16,7 +16,7 @@ layout:
 
 **Network protocols** are the set of rules and conventions that govern how data is transmitted, received, and interpreted across a network. These protocols ensure that devices, systems, and applications can communicate efficiently and securely, regardless of their underlying infrastructure.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (27) (1).png" alt="" width="344"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27) (1) (1).png" alt="" width="344"><figcaption></figcaption></figure>
 
 They play a crucial role in maintaining the integrity and reliability of communications over the Internet, local networks, and private systems, by defining standards from data formatting to error checking and packet routing.&#x20;
 

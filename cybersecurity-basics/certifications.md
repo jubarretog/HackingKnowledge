@@ -16,7 +16,7 @@ layout:
 
 In cybersecurity, **certifications** play a crucial role in validating knowledge, skills, and expertise. They are highly valued by employers and can open doors to various career paths, from entry-level positions to specialized roles.&#x20;
 
-<figure><img src="../.gitbook/assets/image (11) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 Some well-known certifications in various fields of cybersecurity are:
 
