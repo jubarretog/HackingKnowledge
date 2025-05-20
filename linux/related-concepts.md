@@ -28,8 +28,7 @@ layout:
 * **SGID:** Set-group Identification, allows files to be executed with the permission level of the group owner
 * **File Descriptor (FD):** Indicator of connection to perform I/O operations. In Windows-based operating systems, it is called filehandle
 * **Service:** A special type of application that runs in the background
-* **CVSS:** Common Vulnerability Scoring System, is a standardized framework used to assess the severity of security vulnerabilities in software and systems. It provides a numerical score that reflects the severity of a vulnerability
-* **Shell:** A program that receives input from the user (normally a command) and passes it to the operating system to perform a related action or function
+* **Shell:** A program that receives input from the user (usually a command) and passes it to the operating system to perform a related action or function
 * **Reverse shell:** Shell from a target machine that we get by initiating a connection back to a listener on our machine
 * **Bind shell:** Ties to a specific port on the target host and waits for a connection from the attack machine
 * **Web shell:** Runs operating system commands via the web browser, typically not interactive or semi-interactive

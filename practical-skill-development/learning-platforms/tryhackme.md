@@ -24,6 +24,6 @@ The platform organizes its learning content into "rooms," which are themed, self
 
 ## <mark style="color:blue;">My Account</mark>
 
-<div align="center" data-full-width="false"><figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
+<div align="center" data-full-width="false"><figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure></div>
 
 {% embed url="https://tryhackme.com/p/KryptoCoder" %}

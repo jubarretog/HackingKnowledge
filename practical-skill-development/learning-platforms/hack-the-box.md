@@ -29,6 +29,6 @@ The ecosystem of the company consists of four principal sections:
 
 ## <mark style="color:blue;">My Account</mark>
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% embed url="https://app.hackthebox.com/profile/1448145" %}

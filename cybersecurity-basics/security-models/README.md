@@ -30,7 +30,7 @@ Is a fundamental model in cybersecurity that represents the three core principle
 
 Establish and evaluate information security initiatives by considering all of the related factors that impact them based on how Mandatory Access Control (MAC) policies can be applied in information security.
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement">https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement">https://www.securityinfowatch.com/cybersecurity/article/21230914/physical-securitys-1-cybersecurity-requirement</a></p></figcaption></figure>
 
 * **Critical information characteristics:**
   * **CIA Triad Elements:** Fundamental principles for protecting information.

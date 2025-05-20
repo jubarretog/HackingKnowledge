@@ -898,7 +898,7 @@ smtp-user-enum -M VRFY -U $wordlist -t $IP -w 15 -v
 
 ## <mark style="color:green;">snmpwalk</mark>
 
-* Tool for getting information about the community string for a SNMP protocol
+* Tool for getting information about the community string for an SNMP protocol
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -960,16 +960,37 @@ The first time running odat there will be some errors, but it's normal and won't
 
 * Usage
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-./odat.py -h #Get help many, use to confirm installation was successful
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">./odat.py -h #Get help many, use to confirm installation was successful
 ./odat.py all -s $IP #Scan target using all modules
 ./sqlplus $User/$Password@$IP/$SIDfound #Log as an user
 ./sqlplus $User/$Password@$IP/$SIDfound as sysdba #Log as System Database Admin
 
 #Once inside the database
-SQL> select table_name from all_tables; #Get table names
-SQL> select * from user_role_privs; #Check the privileges of the user
+<strong>SQL> select table_name from all_tables; #Get table names
+</strong>SQL> select * from user_role_privs; #Check the privileges of the user
 SQL> select name, password from sys.user$; #Get passwords form users
+</code></pre>
+
+## <mark style="color:green;">vnstat</mark>
+
+* Lightweight command-line network traffic monitoring that tracks bandwidth usage per network interface using data from the kernel
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install vnstat
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+vnstat -l -i $interface
 ```
 {% endcode %}

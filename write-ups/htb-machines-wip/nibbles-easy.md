@@ -128,7 +128,7 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 
 * There I found some already installed plugins and after exploring them, the _My Image_ plugin caught my attention because it had an option to upload a picture file, a point that I could abuse
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -140,7 +140,7 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 ```
 {% endcode %}
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 To learn more about how to create a script for a Reverse Shell you can go [here](../../scripting/reverse-shell.md)
@@ -150,11 +150,11 @@ To learn more about how to create a script for a Reverse Shell you can go [here]
 
 * I saw a couple of warnings but the page told me that the file had been uploaded successfully. Then, I had to find out the location where the files were uploaded to execute it. I went back to search and after a while, I found under the _/content/private_ folder, a folder named _plugins._ Going there I found another folder related to the _My Image_ plugin so I went there to check its content&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
@@ -235,7 +235,7 @@ sudo /monitor.sh
 
 ## <mark style="color:blue;">Alternative using Metasploit</mark>
 
-* Instead of searching through the web, I could check for known vulnerabilities using [_Metasploit_](broken-reference). First, I started it and searched for vulnerabilities related to _nibbleblog_
+* Instead of searching through the web, I could check for known vulnerabilities using [_Metasploit_](../../penetration-testing/process-stages/exploitation/tools-and-utilities.md#metasploit). First, I started it and searched for vulnerabilities related to _nibbleblog_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

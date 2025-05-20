@@ -64,15 +64,15 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 <figure><img src="../../.gitbook/assets/image (868).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
 * This made me think it could be vulnerable to an XSS vulnerability but after some tests, it didn't go through. So I decided to look at the petition sent when filling out this form with the help of [_FoxyProxy_](../../web-exploitation/tools-and-utilities.md#foxyproxy) and [_Burpsuite_](../../web-exploitation/tools-and-utilities.md#burp-suite) and noticed it was sending a data parameter with an encoded value in the body. I used the decoder tab to decode this first from URL and then from Base64, seeing the content was an XML petition
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (816).png" alt=""><figcaption></figcaption></figure>
 

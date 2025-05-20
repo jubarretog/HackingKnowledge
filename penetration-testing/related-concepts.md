@@ -26,3 +26,4 @@ layout:
 * **Post-Remediation Testing**: Reaccess the target to verify that the reported vulnerabilities and vector attacks have been patched properly
 * **Banner Grabbing:** Connect to a port hoping to get a response, which could help to identify what service is running
 * **RCE:** Remote Command Execution, a critical security vulnerability that allows an attacker to execute arbitrary code on a remote system or server without physical access
+* **Fingerprinting:** Extract technical details about the technologies used in an application

@@ -30,11 +30,12 @@ To ensure to remain within the scope of an assessment it's necessary to keep in 
 
 Various laws and regulations are established to protect sensitive information, ensure privacy, and guide organizations in handling data responsibly. These laws help organizations mitigate risks, respond to breaches, and comply with industry standards. Below are some of the most well-known security laws and regulations:
 
-* [**PCI DSS**](https://www.pcisecuritystandards.org)**:** Payment Card Industry Data Security Standard
+* [**PCI DSS**](https://www.pcisecuritystandards.org)**:** Payment Card Industry Data Security Standard, implements requirements for organizations that handle credit cards
 * [**ISO/IEC 27001:2013**](https://www.iso.org/home.html)**:** Framework for establishing, implementing, maintaining, and continuously improving an Information Security Management System (ISMS)
-* [**HIPAA**](https://www.hhs.gov/hipaa/index.html)**:** Health Insurance Portability and Accountability Act
+* [**HIPAA**](https://www.hhs.gov/hipaa/index.html)**:** Health Insurance Portability and Accountability Act, used to protect patients' data
+* [**FISMA**](https://csrc.nist.gov/)**:** The Federal Information Security Management Act, used to safeguard government operations and information
+* [**PTES**](http://www.pentest-standard.org/index.php/Main_Page)**:** Penetration Testing Execution Standard, outlines the phases of a penetration test and how they should be conducted
 * [**DMCA**](https://www.copyright.gov/)**:** The Digital Millennium Copyright Act
-* [**FISMA**](https://csrc.nist.gov/)**:** The Federal Information Security Management Act
 * [**GDPR**](https://gdpr.eu/)**:** General Data Protection Regulation
 * [**DPA**](https://www.legislation.gov.uk/ukpga/2018/12/contents/enacted)**:** Data Protection Act 2018
 

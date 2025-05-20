@@ -158,6 +158,16 @@ spiderfoot -M                    #Display available modules
 * OSINT Framework with several tools to gather information passively
 * [https://osintframework.com/](https://osintframework.com/)
 
+## <mark style="color:green;">Hunter.io</mark>
+
+* Professional tool designed to help users find and verify email addresses associated with businesses or domains
+* [https://hunter.io](https://hunter.io)
+
+## <mark style="color:green;">The Ultimate OSINT Collection</mark>
+
+* Comprehensive, curated resource hub for open-source intelligence (OSINT) enthusiasts, investigators, and cybersecurity professionals
+* [https://start.me/p/DPYPMz/the-ultimate-osint-collection](https://start.me/p/DPYPMz/the-ultimate-osint-collection?locale=es)
+
 ## <mark style="color:green;">Recon-ng</mark>
 
 * OSINT framework that consists of a series of modules that can be run in workspaces
@@ -362,13 +372,16 @@ sudo apt install dnsenum
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-dnsenum --dnsserver $DNSip --enum -o $outFile -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt $domain
+dnsenum --enum $domain -f $wordlist -r # Bruteforce domain recursively
+dnsenum --dnsserver $DNSip --enum $domain -f $wordlist #To use the Domain IP
+dnsenum --enum $domain -f $wordlist -o $outFile #Specify an output file
+dnsenum --dnsserver $DNSip --enum $domain -f /usr/share/seclists/Discovery/DNS/subdomains-top1million-110000.txt -o $outFile #Recommended way
 ```
 {% endcode %}
 
-## <mark style="color:green;">DNSenum</mark>
+## <mark style="color:green;">wafw00f</mark>
 
-* Tool for information gathering and brute forcing of DNS domains and subdomains
+* Tool user to detect the presence of a WAF on a web application
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -376,10 +389,70 @@ dnsenum --dnsserver $DNSip --enum -o $outFile -f /usr/share/seclists/Discovery/D
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-sudo apt install dnsenum
+pip install git+https://github.com/EnableSecurity/wafw00f
 ```
 {% endcode %}
 
 ***
 
 * Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+wafw00f $domain
+```
+{% endcode %}
+
+## <mark style="color:green;">Scrapy</mark>
+
+* Custom scraper tailored for reconnaissance written in python
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+pip install scrapy
+mkdir Scrapy && cd ./Scrapy
+wget -O ReconSpider.zip https://academy.hackthebox.com/storage/modules/144/ReconSpider.v1.2.zip
+unzip ReconSpider.zip
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+python3 ReconSpider.py http://inlanefreight.com #Run the crawler
+cat results.json #Check results
+```
+{% endcode %}
+
+## <mark style="color:green;">FinalRecon</mark>
+
+* Python-based reconnaissance tool with modules for different tasks like SSL certificate checking, Whois information gathering, header analysis, and crawling
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Installation
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install finalrecon
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+finalrecon --headers --url $url #Get headers information
+finalrecon --whois --url $url #Get whois lookup information
+finalrecon --crawl --url $url #Crawl target
+```
+{% endcode %}

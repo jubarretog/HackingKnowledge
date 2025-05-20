@@ -52,6 +52,17 @@ openssl passwd -1 -salt AAA $password
 ```
 {% endcode %}
 
+***
+
+* Encrypt/Decrypt files
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+openssl enc -aes256 -iter 100000 -pbkdf2 -in $file -out $encFile
+openssl enc -d -aes256 -iter 100000 -pbkdf2 -in $encFile -out $file
+```
+{% endcode %}
+
 ## <mark style="color:green;">John the ripper</mark>
 
 * Password cracking tool, known for its speed and efficiency in cracking weak passwords. Comes with various modules specialized for cracking and retrieving hashes from specific files.

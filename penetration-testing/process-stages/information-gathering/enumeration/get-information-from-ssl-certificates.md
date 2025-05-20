@@ -31,6 +31,7 @@ curl -s https://crt.sh/\?q\=$domain\&output\=json | jq .
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 curl -s https://crt.sh/\?q\=$domain\&output\=json | jq . | grep name | cut -d":" -f2 | grep -v "CN=" | cut -d'"' -f2 | awk '{gsub(/\\n/,"\n");}1;' | sort -u > subdomainlist.txt
+curl -s "https://crt.sh/?q=$domain&output=json" | jq -r '.[] | select(.name_value | contains("$subdomain")) | .name_value' | sort -u #Alternative
 ```
 {% endcode %}
 

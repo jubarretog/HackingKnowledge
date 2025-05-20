@@ -10,7 +10,8 @@
 ## 🔑 Cybersecurity Basics
 
 * [Introduction](cybersecurity-basics/introduction.md)
-* [Vulnerabilities](cybersecurity-basics/vulnerabilities.md)
+* [Vulnerabilities](cybersecurity-basics/vulnerabilities/README.md)
+  * [CVEs](cybersecurity-basics/vulnerabilities/cves.md)
 * [Cyberattacks](cybersecurity-basics/cyberattacks/README.md)
   * [Cyber Kill Chain](cybersecurity-basics/cyberattacks/cyber-kill-chain.md)
   * [Malware](cybersecurity-basics/cyberattacks/malware.md)
@@ -84,14 +85,6 @@
 * [Tools and Utilities](cryptography/tools-and-utilities.md)
 * [Useful Tips](cryptography/useful-tips.md)
 
-## 👣 Digital Forensics
-
-* [Introduction](digital-forensics/introduction.md)
-* [Basic Plan](digital-forensics/basic-plan.md)
-* [Related Concepts](digital-forensics/related-concepts.md)
-* [Tools and Utilities](digital-forensics/tools-and-utilities.md)
-* [Useful Tips](digital-forensics/useful-tips.md)
-
 ## 🎯 Penetration Testing
 
 * [Introduction](penetration-testing/introduction.md)
@@ -110,12 +103,15 @@
       * [Bruteforce subdomains](penetration-testing/process-stages/information-gathering/enumeration/bruteforce-subdomains.md)
     * [Tools and Utilities](penetration-testing/process-stages/information-gathering/tools-and-utilities.md)
     * [Useful Tips](penetration-testing/process-stages/information-gathering/useful-tips.md)
-  * [Vulnerability Assessment](penetration-testing/process-stages/vulnerability-assessment.md)
+  * [Vulnerability Assessment](penetration-testing/process-stages/vulnerability-assessment/README.md)
+    * [Tools and Utilities](penetration-testing/process-stages/vulnerability-assessment/tools-and-utilities.md)
   * [Exploitation](penetration-testing/process-stages/exploitation/README.md)
+    * [Windows - File Tranfer](penetration-testing/process-stages/exploitation/windows-file-tranfer.md)
+    * [Linux - File Tranfer](penetration-testing/process-stages/exploitation/linux-file-tranfer.md)
+    * [File Transfer using Programming Languages](penetration-testing/process-stages/exploitation/file-transfer-using-programming-languages.md)
     * [Tools and Utilities](penetration-testing/process-stages/exploitation/tools-and-utilities.md)
     * [Useful Tips](penetration-testing/process-stages/exploitation/useful-tips.md)
   * [Post-Exploitation](penetration-testing/process-stages/post-exploitation/README.md)
-    * [Techniques (WIP)](penetration-testing/process-stages/post-exploitation/techniques-wip.md)
     * [Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/README.md)
       * [Linux Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md)
       * [Windows Privilege Escalation](penetration-testing/process-stages/post-exploitation/privilege-escalation/windows-privilege-escalation.md)
@@ -142,19 +138,20 @@
   * [Security Logging and Monitoring Failures](web-exploitation/owasp-top-10/security-logging-and-monitoring-failures.md)
   * [Server-side Request Forgery](web-exploitation/owasp-top-10/server-side-request-forgery.md)
 * [Attack Techniques](web-exploitation/broken-access-control/README.md)
+  * [Username and Password Bruteforcing with BurpSuite](web-exploitation/broken-access-control/username-and-password-bruteforcing-with-burpsuite.md)
+  * [Exposed .htaccess and .htpasswd files](web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
   * [Local File Inclusion](web-exploitation/broken-access-control/local-file-inclusion.md)
   * [Remote File Inclusion](web-exploitation/broken-access-control/remote-file-inclusion.md)
   * [Cross-Site Scripting](web-exploitation/broken-access-control/cross-site-scripting.md)
-  * [Command injection](web-exploitation/broken-access-control/command-injection.md)
+  * [OS Command injection](web-exploitation/broken-access-control/command-injection.md)
   * [XXE Injection](web-exploitation/broken-access-control/command-injection-1.md)
   * [Abuse File Upload](web-exploitation/broken-access-control/abuse-file-upload.md)
-  * [Cross-Site Request Forgery](web-exploitation/broken-access-control/command-injection-2.md)
   * [Header Poisoning](web-exploitation/broken-access-control/header-poisoning.md)
-  * [HTTP Parameter Pollution](web-exploitation/broken-access-control/command-injection-3.md)
+  * [HTTP Parameter Pollution](web-exploitation/broken-access-control/command-injection-2.md)
   * [Content Security Policy Bypass](web-exploitation/broken-access-control/content-security-policy-bypass.md)
-  * [Exposed .htaccess and .htpasswd files](web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
   * [Server-Side Request Forgery](web-exploitation/broken-access-control/server-side-request-forgery.md)
   * [Server-Side Template Injection](web-exploitation/broken-access-control/server-side-template-injection.md)
+  * [Cross-Site Request Forgery](web-exploitation/broken-access-control/command-injection-3.md)
   * [Cookie Hijacking](web-exploitation/broken-access-control/cookie-hijacking.md)
   * [Null Byte Poisoning](web-exploitation/broken-access-control/techniques.md)
   * [PHP - Abuse PHP Type Juggling](web-exploitation/broken-access-control/php-abuse-php-type-juggling.md)
@@ -162,6 +159,7 @@
   * [WordPress - Abuse Theme Configuration on templates](web-exploitation/broken-access-control/wordpress-exploitation.md)
   * [WordPress - Getting credentials from configuration files](web-exploitation/broken-access-control/wordpress-exploitation-1.md)
   * [CVE - Log4Shell](web-exploitation/broken-access-control/cve-log4shell.md)
+  * [CVE - Shellshock](web-exploitation/broken-access-control/cve-shellshock.md)
 * [Related Concepts](web-exploitation/related-concepts.md)
 * [Tools and Utilities](web-exploitation/tools-and-utilities.md)
 * [Useful Tips](web-exploitation/useful-tips.md)
@@ -196,6 +194,14 @@
 * [Related Concepts](cloud-hacking/related-concepts-wip.md)
 * [Tools and Utilities (WIP)](cloud-hacking/tools-and-utilities-wip.md)
 * [Useful Tips (WIP)](cloud-hacking/useful-tips-wip.md)
+
+## 👣 Digital Forensics
+
+* [Introduction](digital-forensics/introduction.md)
+* [Basic Plan](digital-forensics/basic-plan.md)
+* [Related Concepts](digital-forensics/related-concepts.md)
+* [Tools and Utilities](digital-forensics/tools-and-utilities.md)
+* [Useful Tips](digital-forensics/useful-tips.md)
 
 ## 📜 Scripting
 
@@ -251,7 +257,3 @@
   * [Dog (Easy) (WIP)](write-ups/htb-machines-wip/dog-easy-wip.md)
 * [HTB Challenges](write-ups/htb-challenges-wip.md)
 * [HTB Advanced labs](write-ups/htb-challenges-wip-1.md)
-
-## Group 1
-
-* [Pending](group-1/pending.md)

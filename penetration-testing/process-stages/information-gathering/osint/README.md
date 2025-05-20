@@ -20,7 +20,12 @@ Between the techniques related to OSINT, we can find:
 
 * Advanced control of search engines
 * Social media profiling
-* Metadata extraction
+* Geolocalization
+* Image Analysis
+* FIle metadata extraction
 * Leaked data from breached databases
-* Email harvesting, among others
+* Email harvesting
+* Domain and subdomain study
+* Personal profiling
+* Exposed data
 

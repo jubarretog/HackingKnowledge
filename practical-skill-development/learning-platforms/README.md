@@ -20,7 +20,7 @@ These platforms offer interactive environments where individuals can practice th
 
 
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 By providing guided exercises, tutorials, and resources, these learning platforms empower users to gain practical experience, build confidence, and enhance their understanding of cybersecurity concepts.
 
