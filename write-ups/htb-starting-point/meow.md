@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Meow (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -83,7 +69,7 @@ layout:
 
 ***
 
-* I found a port running the Telnet protocol, so I tried to connect through this protocol using common credentials. When using _root_ as username to log in, fortunately, gained access without being asked for a password
+* I found a port running the Telnet protocol, so I tried to connect through this protocol using common credentials. When using _root_ as username to log in, I fortunately gained access without being asked for a password
 
 {% code lineNumbers="true" %}
 ```bash
@@ -109,7 +95,7 @@ To learn more about the Telnet protocol, you can go [here](../../networks/protoc
 
 ***
 
-* Once inside, I checked the files in the folder I was in and found a _flag.txt_ file, that when reading its content gave me the root flag
+* Once inside, I checked the files in the folder I was in and found a _flag.txt_ file, and reading its content, I retrieved the root flag
 
 <figure><img src="../../.gitbook/assets/image (41) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

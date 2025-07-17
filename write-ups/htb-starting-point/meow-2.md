@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Preignition (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -92,17 +78,17 @@ nmap 10.129.218.32 -p80 -sVC -oN serv_scan.txt
 
 ***
 
-* As I found a port was running the HTTP protocol, I checked the content deployed via the web browser, where I just found a default page for the [_Nginx_](https://nginx.org/en/) server
+* As I found a port running the HTTP protocol, I checked the content deployed via the web browser, where I just found a default page for the [_Nginx_](https://nginx.org/en/) server
 
 <figure><img src="../../.gitbook/assets/image (46) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* Checking the source code didn't give me any relevant information, so I tried to fuzz the URL of the site using [_gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster), and with this I found there was an available route in the _/admin.php_ direction
+* Checking the source code didn't give me any relevant information, so I tried to fuzz the URL of the site using [_gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster), and with that, I found there was an available route in the _/admin.php_ direction
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

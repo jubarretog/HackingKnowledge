@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Redeemer (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -98,7 +84,7 @@ layout:
 
 ***
 
-* I found a [_Redis_](https://redis.io/) database, so I tried to get access to the database using the [_redis-cli_](../../database-attacks/tools-and-utilities.md#redis) utility and it worked successfully. Then, To get information about the database, I used the internal `info` command and got information from some of the keys that were configured
+* I found a [_Redis_](https://redis.io/) database, so I tried to get access to the database using the [_redis-cli_](../../database-attacks/tools-and-utilities.md#redis) utility, and it worked successfully. Then, to get information about the database, I used the internal `info` command and got information from some of the keys that were configured
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>redis-cli -h 10.129.136.187
 </strong></code></pre>
@@ -125,7 +111,7 @@ layout:
 
 ***
 
-* I selected the index of the database to work with it, in this case _0_ because the database name was _db0_ and was the first liste&#x64;_._ Then, I listed the keys using the `keys` and specifying to select all of them
+* I selected the index of the database to work with it, in this case _0,_ because the database name was _db0_ and was the first liste&#x64;_._ Then, I listed the keys using the `keys` and specifying to select all of them
 
 <figure><img src="../../.gitbook/assets/image (113) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -133,7 +119,7 @@ layout:
 
 ***
 
-* I found an interesting entry named _flag_ so I used the internal `get` command to retrieve its content and with this, I found the root flag
+* I found an interesting entry named _flag,_ so I used the internal `get` command to retrieve its content, and with this, I found the root flag
 
 <figure><img src="../../.gitbook/assets/image (115) (1).png" alt=""><figcaption></figcaption></figure>
 

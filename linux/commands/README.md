@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Commands
 
 As _Linux_ is a command-line-based operating system, the use of **commands** is crucial for interacting with the system, performing tasks, and managing files and applications.&#x20;
@@ -43,7 +29,7 @@ exit
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 man $command
-man -k $keyword        #Make a search of command by a keyword
+man -k $keyword        #Make a search of a command by a keyword
 apropos $keyword       #Find a command by description
 ```
 {% endcode %}
@@ -93,16 +79,16 @@ uname -m #Print machine hardware name
 {% endcode %}
 
 {% hint style="info" %}
-Information comes in the following order separated by spaces:
+Information comes in the following order, separated by spaces:
 
-* kernel-name
-* nodename
-* kernel release
-* kernel version
-* machine architecture
-* processor architecture
-* hardware platform architecture
-* operating system
+* Kernel name
+* Nodename
+* Kernel release
+* Kernel version
+* Machine architecture
+* Processor architecture
+* Hardware platform architecture
+* Operating system
 {% endhint %}
 
 ***
@@ -112,7 +98,7 @@ Information comes in the following order separated by spaces:
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 sudo $command
-sudo -l #See what commands can use the user with sudo
+sudo -l #See what commands the user can use with sudo
 ```
 {% endcode %}
 
@@ -137,7 +123,7 @@ ls           #In the actual directory
 ls $path     #In path directory
 ls -a        #Include hidden files
 ls -1        #List each file in a single line
-ls -l        #File permissions, associated user and groups, creation date and hour
+ls -l        #File permissions, associated user and groups, creation date and time
 ls -l -lr    #List and order in z-a order
 ls -l -lt    #List and order by last modified
 ls -i        #List with index/inode number
@@ -153,7 +139,7 @@ Hidden files start with a dot, for example _.hiddenfile_
 
 ***
 
-* Change permissions of a file
+* Change the permissions of a file
 
 ```bash
 sudo chmod +$permision $filename      #Add permission
@@ -164,7 +150,7 @@ sudo chown $owner:$group $filename    #Change owner and group of a file
 
 ***
 
-* Shows Actual Working directory
+* Shows the actual working directory
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -188,7 +174,7 @@ cd -      #Redirect to the last directory
 
 ***
 
-* Get the path of the file by searching in directories defined at the `$PATH` environment variable
+* Get the path of the file by searching in the directories defined at the `$PATH` environment variable
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -280,7 +266,7 @@ display $imagefile
 
 ***
 
-* Assign a name for simplified a command or redefine a command
+* Assign a name for a simplified command or redefine a command
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -311,7 +297,7 @@ mkdir -p $dirname/{$subdir1,$subdir2} #Create a folder with subfolders
 
 ***
 
-* Shows file content in command-line
+* Show file content in the command line
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -322,8 +308,8 @@ head -n$number $filename #Shows the first $number lines
 tail $filename #Shows 10 final lines
 tail -n$number $filename #Shows the last $number lines
 tail -f $filename #Shows appended lines as data grows
-more $file #Charge one page of content at the time
-less $file #Same as more but have more features
+more $file #Charge one page of content at a time
+less $file #Same as more, but has more features
 ```
 {% endcode %}
 
@@ -332,8 +318,8 @@ less $file #Same as more but have more features
 * Find a file or directory
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>find .                      #All files and directories from the actual directory
-</strong>find /                      #All files and directories from root directory
-find $path                  #All files and directories from specific directory
+</strong>find /                      #All files and directories from the root directory
+find $path                  #All files and directories from a specific directory
 find . -name $filename      #Find by exact name
 find . -name "*.$extension" #All files with the specified extension
 find . -d $dir              #Only search directories
@@ -342,8 +328,8 @@ find . -f $dir              #Only search files
 </strong>find . -group $groupname    #Find by group
 find . -user  $username     #Find by owner
 find . -size  $size$unit    #Find by exact size, c for bytes, M for MB
-find . -size  +$size$unit   #Find by larger size than specified
-find . -size  -$size$unit   #Find by smaller size than specified
+find . -size  +$size$unit   #Find by a larger size than specified
+find . -size  -$size$unit   #Find by a smaller size than specified
 find . -mtime $n            #Files modified in the last n days
 find . -atime $n            #Files accessed in the last n days
 <strong>find . -cmin $n             #Files changed in the last n minutes
@@ -353,7 +339,7 @@ find . 2>/dev/null          #Exclude files with standard errors
 </code></pre>
 
 {% hint style="info" %}
-The `-perm`option can receive permission such as `777` or `a=x`
+The `-perm`option can receive permission, such as `777` or `a=x`
 {% endhint %}
 
 ***
@@ -389,8 +375,8 @@ egrep "$ReGex" $filename    #Alternative for use of regular expressions
 Remembering the use of RegEx:
 
 * (a) -> Close and expression
-* \[a-z] -> Indicates a class of characters (In this case letters)
-* {1,10} -> Indicates how many times a pattern must be repeated (In this case 1 to 10 times)
+* \[a-z] -> Indicates a class of characters (in this case, letters)
+* {1,10} -> Indicates how many times a pattern must be repeated (in this case, 1 to 10 times)
 * \| -> Works as the _OR_ logical operator
 * .\* -> Works as the _AND_ logical operator
 {% endhint %}
@@ -426,7 +412,7 @@ awk -F "$delimiter" '{print $field, $field}' #Spicify delimiter
 ```bash
 sort $filename     #Order by alphabet using the first character
 sort -f $filename  #Ignore Case sensitive
-sort -u $filename  #Count and not repeat if the same
+sort -u $filename  #Count and do not repeat if the same
 sort -r $filename  #Reverse the result
 sort -n $filename  #Compare as numerical value
 sort -k $field$delimitertor$position $filename #Order by field and position
@@ -464,12 +450,12 @@ diff -u $file1 $file2     #Ouput in unified format
 {% endcode %}
 
 {% hint style="info" %}
-In `comm` output first the columns. Represents unique lines for the first file, the second column the unique lines for the second file, and the third column the lines both share
+The first column of `comm` output represents unique lines for the first file, the second column represents the unique lines for the second file, and the third column represents the lines that both share
 {% endhint %}
 
 ***
 
-* Shows the content of a file with replacements on the output
+* Shows the content of a file with replacements in the output
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -485,7 +471,7 @@ tr $filename -d $expression #Delete what coincides with expression
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-column $file -t         #By default use space as a separator
+column $file -t         #By default, use space as a separator
 column $file -t -s $sep #Use set of characters as separator
 ```
 {% endcode %}
@@ -635,7 +621,7 @@ In Unix the `^` symbol represents the _Ctrl_ key
 
 ***
 
-* Shows estimated disk usage of a file
+* Shows the estimated disk usage of a file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -660,10 +646,11 @@ curl $firstpetition --next $secondpetition #Make various petition
 curl $URL -H "$header:$value"      #Specific header in a petition
 curl $URL -v                       #Get verbose output
 curl -IL $URL                      #Catch header, useful for banner grabbing
+curl -H "header:value" $URL # Set headers for the request
 wget $URL
 wget -O $URL/file          #Save a file with the same name
 wget -o $name $URL/file    #Save a file with a different name
-axel $URL                  #Dowload through various connections
+axel $URL                  #Download through various connections
 axel -n$number $URL        #Specify the number of connections to use
 axel -O $name $URL         #Save with a different name
 </code></pre>
@@ -680,7 +667,7 @@ md5sum $filename
 
 ***
 
-* Get and Send files via SCP
+* Get and send files via SCP
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -692,11 +679,11 @@ scp -r $dirname $user@$remoteIP:$remotepath   #For copying a directory
 
 ***
 
-* Execute python utilities
+* Execute Python utilities
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-python3 $filename         #Execute a python file
+python3 $filename         #Execute a Python file
 python3 -m $modulename    #Start a python module
 ```
 {% endcode %}
@@ -708,7 +695,7 @@ python3 -m $modulename    #Start a python module
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 ps                  #Show process run in the user session
-ps aux              #Shows other user and complete system processes
+ps aux              #Shows other users and complete system processes
 ps -A               #Shows all processes
 ps -f               #Display full format listing
 ps -C $commandname  #Shows process with a specified command
@@ -719,13 +706,13 @@ top                 #Real-time information about the system running processes
 
 ***
 
-* Kill a system process, we can send some signals to specify the type of killing
+* To kill a system process, we can send some signals to specify the type of killing
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 kill -9 $PID
-kill -s SIGTERM $PID   #Kill the process, but allow  to do some cleanup
-kill -s SIGKILL $PID   #Kill the process but doesn't do any cleanup
+kill -s SIGTERM $PID   #Kill the process, but allows it to do some cleanup
+kill -s SIGKILL $PID   #Kill the process, but doesn't do any cleanup
 kill -s SIGSTOP $PID   #Stop/suspend a process
 kill -s SIGINT $PID    #Interrupt a process (same as CTRL+C)
 kill -s SIGQUIT $PID   #Quit process (same as CTRL+D)
@@ -812,16 +799,15 @@ apt-cache search $toolname #Search for a tool in apt repositories
 apt show $packagename      #Show information about a package
 add-apt-repository         #Add repositories from developers to your apt lists
 apt-key add $filename      #Add key file to trusted keys list
-apt-key del $keyID         #Remove key trusted keys list
+apt-key del $keyID         #Remove key from trusted keys list
 apt-key list               #List all trusted keys
 apt list --installed | grep "installed" | wc -l #Check number of installed packages
-
 ```
 {% endcode %}
 
 ***
 
-* Manage packages via Debian
+* Manage packages via _Debian_
 
 ```bash
 dpkg -i $packagename   #Install a package
@@ -870,13 +856,13 @@ A `*` symbol on the response represents that a package hasn't received an ICMP m
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 whois $URLdomain     #Get domain register information
-host 72.163.10.1     #Do reserve lookup to get a host names
+host 72.163.10.1     #Do reverse lookup to get a host name
 ```
 {% endcode %}
 
 ***
 
-* Obtain IP and record information from a domain
+* Obtain the IP and record information from a domain
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -891,7 +877,7 @@ nslookup #Enter interactive mode
 
 ***
 
-* Query recursive DNS servers for domain's information
+* Query recursive DNS servers for the domain's information
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -931,7 +917,7 @@ iwconfig     #Check only wireless Interfaces
 ip route     #Check existing network routes
 ip link set $interface up #Activate a network interface
 netstat      #Check ports and active connections
-netstat -a   #List all ports and connection
+netstat -a   #List all ports and connections
 netstat -l   #List listening ports
 netstat -t   #List only TCP ports
 netstat -u   #List only UDP ports
@@ -948,25 +934,25 @@ When using `netstat -p` if the PID and name aren't shown, it's because the proce
 
 ***
 
-* List capabilities of all binary files
+* List the capabilities of all binary files
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-getcap -r / 2>/dev/null #Is good practice to redirect errors if not run with sudo
+getcap -r / 2>/dev/null
 ```
 {% endcode %}
 
 ***
 
-* Modify users, groups and passwords
+* Modify users, groups, and passwords
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-useradd    #Creates a new user or update default new user information
+useradd    #Creates a new user or updates the default user information
 userdel    #Deletes a user account and related files
 usermod    #Modifies a user account
 addgroup   #Adds a group to the system
-delgroup   #Deletes a group of the system
+delgroup   #Deletes a group from the system
 passwd     #Changes user password
 ```
 {% endcode %}

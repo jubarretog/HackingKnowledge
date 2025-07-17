@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Appointment (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -104,17 +90,17 @@ nmap -p80 -sVC 10.129.228.241
 
 ***
 
-* As I found an HTTP service running on port 80, I went to the browser to explore the content being deployed. I found a simple login page and tried to log in with default credentials but it didn't work
+* As I found an HTTP service running on port 80, I went to the browser to explore the content being deployed. I found a simple login page and tried to log in with some default credentials, but it didn't work
 
 <figure><img src="../../.gitbook/assets/image (136) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* So looking for another way to get through this, I tried doing some basic _SQL Injection_ tests assuming that was the way the credentials were being validated.  After some tries, I found out that by using the username _admin'#_ and providing any password (a basic test for _SQLi_ in PHP-based pages), I gained access, and a message with the flag was displayed
+* So, looking for another way to get through this, I tried doing some basic _SQL Injection_ tests, assuming that was the way the credentials were being validated.  After some tries, I found out that by using the username _admin'#_ and providing any password (a basic test for _SQLi_ in PHP-based pages), I gained access, and a message with the flag was displayed
 
 <figure><img src="../../.gitbook/assets/image (137) (1).png" alt=""><figcaption></figcaption></figure>
 

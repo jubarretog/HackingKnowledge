@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Explosion (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -99,7 +85,7 @@ nmap 10.129.1.13 -p135,139,445,3389,5985,47001 -sVC -oN serv_scan.txt
 
 ***
 
-* I observed the RDP protocol was running on port 3389, so I tried to access it using the [_xfreerdp_](../../networks/tools-and-utilities.md#xfreerdp) tool. But as I was only able to provide the IP, it asked for a domain and password which I didn't have. So I tried to log in using common credentials, and when using _administrator_ as username I could log in providing a blank password, gaining remote access to the machine as a privileged user
+* I observed the RDP protocol was running on port 3389, so I tried to access it using the [_xfreerdp_](../../networks/tools-and-utilities.md#xfreerdp) tool. But as I was only able to provide the IP, it asked for a domain and password, which I didn't have. So I tried to log in using common credentials, and when using _administrator_ as username, I could log in providing a blank password, gaining remote access to the machine as a privileged user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -115,7 +101,7 @@ xfreerdp /v:10.129.1.13 /u:administrator
 <figure><img src="../../.gitbook/assets/image (32) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the RDP protocol you can go [here](../../networks/protocols/rdp.md)
+To learn more about the RDP protocol, you can go [here](../../networks/protocols/rdp.md)
 {% endhint %}
 
 ***
@@ -128,7 +114,7 @@ To learn more about the RDP protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Once inside, I saw on the Desktop there was a file named _flag_ which seemed to be a text file, so I opened it to look at its content, and with this, I retrieved the root flag
+* Once inside, I saw on the Desktop there was a file named _flag,_ which seemed to be a text file, so I opened it to look at its content, and with this, I retrieved the root flag
 
 <figure><img src="../../.gitbook/assets/image (33) (1).png" alt=""><figcaption></figcaption></figure>
 

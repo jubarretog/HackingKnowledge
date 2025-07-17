@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Searching breach data dumps
 
 Obtaining data from previous breaches can be leveraged by letting us know passwords, usernames, and any other kind of exposed information.&#x20;
 
-The following are some tools that help us to search for breach data dumps:
+The following are some tools that help us search for breach data dumps:
 
 * **WhatBreach:** [_https://github.com/Ekultek/WhatBreach_](https://github.com/Ekultek/WhatBreach)
 * **LeakLooker:** [_https://github.com/woj-ciech/LeakLooker_](https://github.com/woj-ciech/LeakLooker)

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Authentication Bypass
 
 This method consists of considering that the web application isn't interested in the content of the username and password, but in making a matching pair in the users' table.
@@ -42,7 +28,7 @@ _%user%_ and _%password%_ are the values received on a login form
 {% endcode %}
 
 {% hint style="info" %}
-Sometimes and extra space after `;--` could make it work
+Sometimes, an extra space after `;--` could make it work
 {% endhint %}
 
 ***

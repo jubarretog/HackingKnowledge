@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introduction
 
 **Cloud Hacking** involves identifying misconfigurations, weak authentication mechanisms, and insecure APIs that could expose sensitive data or allow unauthorized access to cloud-based infrastructure.

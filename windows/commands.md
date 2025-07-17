@@ -1,24 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Commands
 
 In _Windows_, two built-in command-line interfaces allow users to execute **commands**, manage system settings, and automate tasks. It is important to be familiar with these utilities to fully leverage the potential of the operating system.
 
 ## <mark style="color:blue;">CMD</mark>
 
-Known as Command Prompt, is a command-line interpreter that allows users to execute commands from a text-based interface. It supports a wide range of commands for file manipulation, system configuration, and troubleshooting.&#x20;
+Known as Command Prompt, it is a command-line interpreter that allows users to execute commands from a text-based interface. It supports a wide range of commands for file manipulation, system configuration, and troubleshooting.&#x20;
 
 Some of the commands that can be used through this interface are:
 
@@ -39,7 +25,7 @@ whoami
 
 ***
 
-* &#x20;Show manual for a command
+* &#x20;Show the manual for a command
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```shell
@@ -74,7 +60,7 @@ netstat
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sh
-ping -n $IPadress
+ping -n $IPaddress
 ```
 {% endcode %}
 

@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introduction
 
-The **networks** are fundamental infrastructures that interconnected connect devices, systems, servers, and users, enabling communication and data exchange, that facilitate the sharing of resources and information. Networking involves the transmission of data through various mediums, including wired connections, like Ethernet, and wireless technologies, such as Wi-Fi.
+The **networks** are fundamental infrastructures that interconnect devices, systems, servers, and users, enabling communication and data exchange, which facilitates the sharing of resources and information. Networking involves the transmission of data through various mediums, including wired connections, like Ethernet, and wireless technologies, such as Wi-Fi.
 
 <figure><img src="../.gitbook/assets/image (25) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 

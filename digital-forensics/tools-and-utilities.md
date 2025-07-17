@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tools and Utilities
 
 Here are some tools and utilities commonly used for practices related to digital forensics:
@@ -66,7 +52,7 @@ exiftool $filename
 
 ## <mark style="color:green;">Steghide</mark>
 
-* Stenography tool that is used to hide data within image and audio files, and also to recover hidden data embedded in files
+* Stenography tool that is used to hide data within images and audio files, and also to recover hidden data embedded in files
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -89,10 +75,30 @@ steghide extract -sf $filename #Extract data from file
 ```
 {% endcode %}
 
+## <mark style="color:green;">unPacker</mark>
+
+* Used to unpack or deobfuscate JavaScript code
+* [https://matthewfl.com/unPacker.html](https://matthewfl.com/unPacker.html)
+
 ## <mark style="color:green;">d4js</mark>
 
-* Used to deobfuscated JavaScript code
+* Used to deobfuscate JavaScript code
 * [https://lelinhtinh.github.io/de4js/](https://lelinhtinh.github.io/de4js/)
+
+## <mark style="color:green;">deobfuscate.io</mark>
+
+* Also used to deobfuscate JavaScript code
+* [https://deobfuscate.io](https://deobfuscate.io)
+
+## <mark style="color:green;">obfuscator.io</mark>
+
+* Used to obfuscate JavaScript code
+* [https://obfuscator.io](https://obfuscator.io)
+
+## <mark style="color:green;">Obfuscator.io Deobfuscator</mark>
+
+* Tool to deobfuscate JavaScript code specifically done with _obfuscator.io_
+* [https://obf-io.deobfuscate.io](https://obf-io.deobfuscate.io)
 
 ## <mark style="color:green;">Shred</mark>
 
@@ -126,7 +132,7 @@ sudo shred -vu /dev/$unit   #Delete a memory unit or partition
 
 ## <mark style="color:green;">SDelete</mark>
 
-* Tool to delete and overwrite drive or file information in _Windows_
+* A tool to delete and overwrite drive or file information in _Windows_
 * [https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete](https://learn.microsoft.com/es-es/sysinternals/downloads/sdelete)
 
 ## <mark style="color:green;">FOCA</mark>

@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Telnet
 
-**Telecommunication Network** protocol, allows users to remotely access and control devices over a network, typically using port 23. It was widely used for remote administration of systems before being largely replaced by [SSH](ssh.md) due to security concerns due to sending the data in plain text, making it vulnerable to interception.
+The **Telecommunication Network** protocol allows users to remotely access and control devices over a network, typically using port 23. It was widely used for remote administration of systems before being largely replaced by [SSH](ssh.md) due to security concerns about sending the data in plain text, making it vulnerable to interception.
 
-## <mark style="color:green;">Interaction with protocol</mark>
+## <mark style="color:green;">Interaction with the protocol</mark>
 
 * Install
 
@@ -47,7 +33,7 @@ telnet: \> exit #Close connection
 </strong>
 #We send a petition
 GET / HTTP/1.1
-host: telnet      #After finishing hit enter twice to send
+host: telnet      #After finishing, hit enter twice to send
 </code></pre>
 
 {% hint style="warning" %}

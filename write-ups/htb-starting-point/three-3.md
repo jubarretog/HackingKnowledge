@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Funnel (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -66,7 +52,7 @@ ftp 10.129.219.72
 <figure><img src="../../.gitbook/assets/image (688).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
 {% endhint %}
 
 ***
@@ -101,7 +87,7 @@ To learn more about the FTP protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Now with this password, I could try to log in somewhere else. As I also found an SSH service running on the machine, I tried to log in there using one of the users exposed on the email. After trying with all the usernames I finally found that using _christine_ I successfully went in. After that, I sanitized the terminal to interact more comfortably with the system
+* Now with this password, I could try to log in somewhere else. As I also found an SSH service running on the machine, I tried to log in there using one of the users exposed in the email. After trying with all the usernames, I finally found that using _christine_ I successfully went in. After that, I sanitized the terminal to interact more comfortably with the system
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -114,7 +100,7 @@ ssh christine@10.129.219.72
 <figure><img src="../../.gitbook/assets/image (690).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization), and to learn more about the SSH protocol you can go [here](../../networks/protocols/ssh.md).
+To learn about the sanitization process, you can go [here](../../linux/useful-shell-resources.md#tty-sanitization), and to learn more about the SSH protocol, you can go [here](../../networks/protocols/ssh.md)
 {% endhint %}
 
 ***
@@ -139,7 +125,7 @@ ps aux | grep "127.0.0.1"
 
 ***
 
-* To get more details about it, I used the `ss` command to get information about the sockets running to relate any with the process found. I first listed the services showing the port the sockets were running on, and then the name of the service to relate them. With that, I confirmed that port 5432 was running the _postgresql program_
+* To get more details about it, I used the `ss` command to get information about the sockets running to relate any to the process found. I first listed the services, showing the port the sockets were running on, and then the name of the service to relate them. With that, I confirmed that port 5432 was running the _postgresql_ service
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -166,7 +152,7 @@ ss -tul
 
 ***
 
-* As the service was locally deployed, I couldn't access or interact with it, but as I had access via _SSH_, I could try to make a tunnel via Local Port Forwarding so I could access it from my machine. So I mounted the tunnel through _SSH_ and after that, I checked in my machine that the service had been forwarded properly
+* As the service was locally deployed, I couldn't access or interact with it, but as I had access via _SSH_, I could try to make a tunnel via Local Port Forwarding so I could access it from my machine. So I mounted the tunnel through _SSH_ and after that, I checked on my machine that the service had been forwarded properly
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -181,7 +167,7 @@ ss -tlp
 
 ***
 
-* Then I could interact with the service to connect to the database. I tried using the [_Postgresql_](../../database-attacks/tools-and-utilities.md#postgresql) command line utility, specifying the location of the service in my machine and using the credentials I had got. Once I had done it, I connected successfully to the database
+* Then I could interact with the service to connect to the database. I tried using the [_postgresql_](../../database-attacks/tools-and-utilities.md#postgresql) command line utility, specifying the location of the service on my machine and using the credentials I had obtained. Once I had done it, I connected successfully to the database
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -193,7 +179,7 @@ psql -h 127.0.0.1 -p 7777 -U christine
 
 ***
 
-* Once there, I listed the databases and found an interesting one named _secrets_, so I accessed it and listed the tables finding a table named _flag_. Last, I retrieved all of the information from this table, and inside that, I found the flag
+* Once there, I listed the databases and found an interesting one named _secrets_, so I accessed it and listed the tables, finding a table named _flag_. Last, I retrieved all of the information from this table, and inside that, I found the flag
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```plsql

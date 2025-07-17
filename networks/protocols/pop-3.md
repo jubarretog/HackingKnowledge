@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # POP 3
 
 **Post Office Protocol version 3** is an Application Layer protocol for retrieving emails from a mail server like IMAP. While [SMTP](smtp.md) is used for sending emails, these protocols handle receiving and managing them on client devices.
 
-POP3 works on Ports 110  and port 995 for encrypted communication via SSL/TLS. The main features it has are:
+POP3 works on ports 110 for simple communication, and 995 for encrypted communication via SSL/TLS. The main features it has are:
 
 * Downloads emails from the server to the client’s device
 * Best for single-device email access

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Useful Tips
 
 Here we can find some tips for maximizing the use of information-gathering concepts, tools, and utilities:
@@ -19,10 +5,10 @@ Here we can find some tips for maximizing the use of information-gathering conce
 * Make an initial port scan when you connect to a target machine
 * Check well-known ports of protocols
 * Check the _TTL_ value when doing `ping` to a machine, to determine what operating system the machine is associated with
-* On HTTPS sites check the certificate to gather information about the encryption and the server
-* Check DNS records to gather information about host names, domains and
+* On HTTPS sites, check the certificate to gather information about the encryption and the server
+* Check DNS records to gather information about host names and domains
 * Use `host` command to get domains and IP address information, and then pass it to `whois` command, to identify if a service is self-hosted or is using cloud services
-* Examine SSL certificates from websites to obtain information about domains, use tools such as [_crt.sh_](tools-and-utilities.md#crt.sh)
+* Examine SSL certificates from websites to obtain information about domains, and use tools such as [_crt.sh_](tools-and-utilities.md#crt.sh)
 * Check the DNS records of a host using commands like `whois`, `host` and `dig`&#x20;
 * Check default configuration files for network services like:
   * _/etc/samba/smb.conf_ for SMB configurations

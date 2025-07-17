@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Reverse Shell
 
 A **Reverse Shell** is a technique used to gain remote access to a victim's system by making the target machine initiate a connection back to the attacker. Unlike a traditional shell, this allows the target to "call back" to the attacker’s machine.&#x20;
@@ -49,7 +35,7 @@ Remember also to give execution permissions to the script
 
 ***
 
-* It can be also inserted as a command call from a terminal
+* It can also be inserted as a command call from a terminal
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -92,7 +78,7 @@ Remember to give execution permissions to the script
 ```
 {% endcode %}
 
-## <mark style="color:orange;">For Powershell on Windows hosts</mark>
+## <mark style="color:orange;">For PowerShell on Windows hosts</mark>
 
 * Establish a listener port on the host machine with [_Netcat_](../networks/tools-and-utilities.md#netcat)
 
@@ -160,7 +146,7 @@ nc -nvlp $portcat
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-python3 -m http.server $port #Must be created at the same place where the reverse shell script is
+python3 -m http.server $port #Must be created in the same place where the reverse shell script is
 ```
 {% endcode %}
 

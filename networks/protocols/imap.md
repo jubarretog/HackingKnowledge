@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # IMAP
 
-**Internet Message Access Protocol** is an Application Layer protocol for retrieving emails from a mail server like [POP3](pop-3.md). The main feature it has is that allows users to access and manage emails on the mail server without downloading them.
+**Internet Message Access Protocol** is an Application Layer protocol for retrieving emails from a mail server like [POP3](pop-3.md). Its main feature is to allow users to access and manage emails on the mail server without downloading them.
 
 IMAP usually works on port 143 and port 993 for encrypted communication via SSL/TLS. The main features it has are:
 

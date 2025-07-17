@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introduction
 
 **Digital forensics** is the practice of investigating, analyzing, and recovering data from digital devices to uncover evidence related to cybercrimes or incidents.&#x20;

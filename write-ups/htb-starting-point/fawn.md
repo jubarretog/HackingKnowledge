@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Fawn (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -101,7 +87,7 @@ nmap -p- -Pn --min-rate 2000 10.129.92.84
 
 ***
 
-* I identified a port that was running the FTP protocol, so I could try connecting through this. As I didn't have any credentials, I tried logging in as an anonymous user which wouldn't ask for a password, and with this, I successfully got in
+* I identified a port that was running the FTP protocol, so I could try connecting through this. As I didn't have any credentials, I tried logging in as an anonymous user, which wouldn't ask for a password, and with this, I successfully got in
 
 <pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>ftp 10.129.92.94
 </strong></code></pre>
@@ -111,7 +97,7 @@ nmap -p- -Pn --min-rate 2000 10.129.92.84
 <figure><img src="../../.gitbook/assets/image (58) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
 {% endhint %}
 
 ***
@@ -136,7 +122,7 @@ To learn more about the FTP protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Once inside, I listed the files being shared in the FTP server and found a _flag.txt_ file. So I used the internal `get` command to download the _flag.txt_ file from the server and then closed the connection
+* Once inside, I listed the files being shared on the FTP server and found a _flag.txt_ file. So I used the internal `get` command to download the _flag.txt_ file from the server, and then closed the connection
 
 <figure><img src="../../.gitbook/assets/image (63) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -144,7 +130,7 @@ To learn more about the FTP protocol you can go [here](../../networks/protocols/
 
 ***
 
-* Having it locally, I checked the content of the file finally retrieving the root flag
+* Having it locally, I checked the content of the file, finally retrieving the root flag
 
 <figure><img src="../../.gitbook/assets/image (64) (1) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Career Paths
 
 As the digital landscape continues to evolve, cybersecurity has become a fundamental aspect of every organization’s strategy to protect sensitive information and maintain operational integrity.
 
-With this have born a variety of specialized roles, each playing a vital part in protecting organizations from cyber threats.
+With this, a variety of specialized roles have born, each playing a vital part in protecting organizations from cyber threats.
 
 <figure><img src="../.gitbook/assets/image (10) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 

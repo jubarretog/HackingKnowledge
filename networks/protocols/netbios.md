@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # NetBIOS
 
-**Network Basic Input/Output System**, is an IBM standard protocol that operates on the Session layer and allows applications on different computers to communicate within a local area network.&#x20;
+**Network Basic Input/Output System** is an [_IBM_](https://www.ibm.com/us-en) standard protocol that operates on the Session layer and allows applications on different computers to communicate within a local area network.&#x20;
 
 This protocol provides three different services:
 

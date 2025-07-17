@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SMTP
 
-**Simple Mail Transfer Protocol** operates in the Application Layer and uses TCP ports 25, and 465/587 for encrypted communication. It is the primary protocol used for sending and relaying email messages across the Internet,  by transferring messages between mail servers and sending client applications. SMTP does not handle email retrieval, so it works alongside IMAP or POP3 for receiving emails.
+**Simple Mail Transfer Protocol** operates in the Application Layer and uses TCP ports 25 and 465/587 for encrypted communication. It is the primary protocol used for sending and relaying email messages across the Internet,  by transferring messages between mail servers and sending client applications. SMTP does not handle email retrieval, so it works alongside IMAP or POP3 for receiving emails.
 
 SMTP follows a client-server model in the following way:
 
@@ -28,13 +14,13 @@ To facilitate email transfer, SMTP uses a series of commands and response**s** b
 * `STARTTLS`**:** Switch plaintext connection to encrypted connection
 * `RCPT TO`**:** Defines the recipient’s email address
 * `DATA`**:** Transfers the content of the email
-* `RSET`**:** Abort initiated transmission but keep the connection
+* `RSET`**:** Abort initiated transmission, but keep the connection
 * `VRFY`**:** Check if a mailbox is available for message transfer
 * `QUIT`**:** Ends the session
 
-SMTP servers also use authentication and encryption mechanisms, such as SSL or TLS to secure email communication.
+SMTP servers also use authentication and encryption mechanisms, such as SSL or TLS, to secure email communication.
 
-## <mark style="color:green;">Interaction with protocol</mark>
+## <mark style="color:green;">Interaction with the protocol</mark>
 
 * Connect to an SMTP server using the [_Telnet_](telnet.md) protocol
 
@@ -45,10 +31,10 @@ telnet $IP 25
 # A message like this will be shown
 Trying $IP...
 Connected to $IP.
-Escape character is '^]'.
+The escape character is '^]'.
 220 $servername #220 code indicates the connection with the server was successful
 
-#Now is possible to interact with the server
+#Now it is possible to interact with the server
 HELO $domain  #Start connection 
 ```
 {% endcode %}
@@ -60,13 +46,13 @@ HELO $domain  #Start connection
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 VRFY $username
-252 2.0.0 $username #If exists, we get back a 252 code
+252 2.0.0 $username #If it exists, we get back a 252 code
 ```
 {% endcode %}
 
 ***
 
-* Set sender and receiver
+* Set the sender and receiver
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -89,7 +75,7 @@ DATA
 $line1
 $line2
 ...
-.    #When finished the . defines the end of the message
+.    #When finished, the . defines the end of the message
 
 250 2.0.0 Ok: queued as 6E1CF1681AB #Succesful response will look like this
 ```

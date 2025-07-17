@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # ARP
 
 **Address Resolution Protocol** operates in the Data Link layer, and is used to map IP addresses to MAC addresses within a local network. It allows devices to find the hardware address of another device on the same subnet when only the IP address is known.

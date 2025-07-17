@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Crocodile (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -63,12 +49,12 @@ nmap -p21,80 -sVC 10.129.1.15
 
 ***
 
-* I found the FTP protocol running on its default port, so I tried connecting to it. As I didn't have any credentials I tried using the _anonymous_ user and it let me in successfully
+* I found the FTP protocol running on its default port, so I tried connecting to it. As I didn't have any credentials, I tried using the _anonymous_ user and it let me in successfully
 
 <figure><img src="../../.gitbook/assets/image (200) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
 {% endhint %}
 
 ***
@@ -141,7 +127,7 @@ cat allowed.userlist allowed.userlist.passwd
 
 ***
 
-* With this information, I could check if these credentials work on the FTP service. But after trying all the usernames it notified me that it only allows anonymous connections
+* With this information, I could check if these credentials work on the FTP service. But after trying all the usernames, it notified me that it only allows anonymous connections
 
 <figure><img src="../../.gitbook/assets/image (201) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -152,12 +138,12 @@ cat allowed.userlist allowed.userlist.passwd
 <figure><img src="../../.gitbook/assets/image (202) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* After exploring the sections of the page I noticed the unique different thing was a form in the contact section which didn't seem to be working properly. To get some extra information about the components of the website, I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension but didn't give me anything relevant
+* After exploring the sections of the page, the unique interesting thing was a form in the contact section, which didn't seem to be working properly. To get some extra information about the components of the website, I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension, but it didn't give me anything relevant
 
 <figure><img src="../../.gitbook/assets/image (203) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -165,7 +151,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* As I didn't find anything interesting in the first instance, I tried to fuzz the page using [_Gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster) and a dictionary. Also as I knew the page was written on _PHP_ thanks to _Wappalyzer_ I specified this on the fuzzing options
+* As I didn't find anything interesting in the first instance, I tried to fuzz the page using [_Gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster) and a dictionary. Also, as I knew the page was written on _PHP,_ thanks to _Wappalyzer_, I specified this on the fuzzing options
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -177,7 +163,7 @@ gobuster dir -u -w http://10.129.1.15/ -w /usr/share/wordlists/dirbuster/directo
 
 ***
 
-* &#x20;The fuzz gave me some interesting directions, being one of those the _/login.php_ page, so I visited this direction and found a simple login page
+* &#x20;The fuzzing gave me some interesting directions, giving my attention to the _/login.php_ route, so I visited this direction and found a simple login page
 
 <figure><img src="../../.gitbook/assets/image (208) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -191,7 +177,7 @@ gobuster dir -u -w http://10.129.1.15/ -w /usr/share/wordlists/dirbuster/directo
 
 ***
 
-* Once there, I tried using again the credentials found in the previous lists, combining the usernames with the passwords, and by using the username _root_ and the password _rKXM59ESxesUFHAd_ I gained access to an administration panel where a message with the flag was displayed
+* Once there, I tried using again the credentials found in the previous lists, combining the usernames with the passwords, and by using the username _root_ and the password _rKXM59ESxesUFHAd,_ I gained access to an administration panel where a message with the flag was displayed
 
 <figure><img src="../../.gitbook/assets/image (207) (1).png" alt=""><figcaption></figcaption></figure>
 

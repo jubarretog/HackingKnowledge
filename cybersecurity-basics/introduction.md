@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introduction
 
 **Cybersecurity** is the discipline dedicated to actively protecting computer systems, networks, programs, and data from cyber threats, including unauthorized access, attacks, damage, or theft. The need for robust digital measures has become critical as individuals, businesses, and governments rely on digital resources to handle sensitive information and maintain operational integrity.

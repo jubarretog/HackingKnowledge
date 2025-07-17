@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Functional Structure
 
-_Linux_ operating system is **structured** in a tree-like form and follows the Filesystem Hierarchy Standard (FHS). The main file system folders that compose the structure can be represented in the following diagram:
+The _Linux_ operating system is **structured** in a tree-like form and follows the Filesystem Hierarchy Standard (FHS). The main file system folders that compose the structure can be represented in the following diagram:
 
 <figure><img src="../../.gitbook/assets/image (262) (1).png" alt="" width="563"><figcaption><p><a href="https://academy.hackthebox.com/module/18/section/94">https://academy.hackthebox.com/module/18/section/94</a></p></figcaption></figure>
 
@@ -22,23 +8,23 @@ _Linux_ operating system is **structured** in a tree-like form and follows the F
 
 Some common directories in a _Linux_ filesystem that play key roles in system configuration, file storage, operational functions, and performance are:
 
-* **`/`:** Root filesystem where all of the files required to boot Linux are stored
-* **`/etc`:** Store configuration files that are used by the operating system
-  * **`/etc/bash.bashrc`:** Script that contains bash settings
-  * **`/etc/passwd`:** List of all user accounts
-  * **`/etc/issue`:** Usually contains information about the OS
-  * **`/etc/crontab`:** Contains the cronjobs that are executed by the system
-  * **`/etc/shadow`:** Contains encrypted information about credentials
-* **`/var`:** Store data that is frequently accessed or written by services or applications running on the system
-  * **`/var/www/html`:** Default store for the server root folder
-* **`/root`:** Home directory of the root system user
-* **`/tmp`:** Temporary files, store data that is only needed to be accessed once or twice, once the computer is restarted, the content of this folder is cleared out
-* **`/opt`:** Stands for optional, normally third-party software information
-* **`/bin`:** Basic programs of Unix (binaries)
-* **`/sbin`:** Binary programs for system administration
-* **`/usr`:** Contain users' information
-  * **`/usr/bin`:** Installed packages and applications
-  * **`/usr/share`:** Application support and data files
-* **`/proc`:** Contains information about internal jobs and processes of the system
-  * **`/proc/version`:** Information about OS
-* **`/media`:** Where external devices are mounted
+* _**`/`**_**:** The root filesystem, where all of the files required to boot Linux are stored
+* _**`/etc`**_**:** Store configuration files that are used by the operating system
+  * _**`/etc/bash.bashrc`**_**:** Script that contains bash settings
+  * _**`/etc/passwd`**_**:** List of all user accounts
+  * _**`/etc/issue`**_**:** Usually contains information about the OS
+  * _**`/etc/crontab`**_**:** Contains the cron jobs that are executed by the system
+  * _**`/etc/shadow`**_**:** Contains encrypted information about credentials
+* _**`/var`**_**:** Store data that is frequently accessed or written by services or applications running on the system
+  * _**`/var/www/html`**_**:** Default store for the server root folder
+* _**`/root`**_**:** Home directory of the root system user
+* _**`/tmp`**_**:** Temporary files that store data that is only needed to be accessed once or twice. Once the computer is restarted, the content of this folder is cleared out
+* _**`/opt`**_**:** Stands for optional, normally third-party software information
+* _**`/bin`**_**:** Basic programs of Unix (binaries)
+* _**`/sbin`**_**:** Binary programs for system administration
+* _**`/usr`**_**:** Contain users' information
+  * _**`/usr/bin`**_**:** Installed packages and applications
+  * _**`/usr/share`**_**:** Application support and data files
+* _**`/proc`**_**:** Contains information about internal jobs and processes of the system
+  * _**`/proc/version`**_**:** Information about OS
+* _**`/media`**_**:** Where external devices are mounted

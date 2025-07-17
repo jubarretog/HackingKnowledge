@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Web Shell
 
-A **Web Shell** is a technique where we upload a script written on the programming language a website is based on, that lets the app accept commands through HTTP request parameters, and pass them to the server's system to be executed by the internal shell.
+A **Web Shell** is a technique where we upload a script written in the programming language a website is based on, that lets the app accept commands through HTTP request parameters, and pass them to the server's system to be executed by the internal shell.
 
-This process can be done when we have access to the target's root web directory and we can upload a script to be executed through the web browser.
+This process can be done when we have access to the target's root web directory, and we can upload a script to be executed through the web browser.
 
 ## <mark style="color:orange;">Basic script</mark>
 

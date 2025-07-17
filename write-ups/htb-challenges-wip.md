@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # HTB Challenges
 
 **HTB Challenges** are short, self-contained exercises designed to test and enhance specific cybersecurity skills without the need to compromise an entire machine,  ideal for sharpening techniques, learning new attack vectors, and practicing specialized areas of cybersecurity.
@@ -28,5 +14,5 @@ Their goal is to solve a single problem in a specific knowledge area, and some o
 * **Mobile Security:** Finding and exploiting vulnerabilities in mobile apps (Android/iOS), which can include reverse engineering APKs, bypassing security measures, and extracting sensitive information from mobile devices
 * **OSINT:** Focuses on gathering publicly available information to solve challenges. This can include searching social media, public records, or websites for hidden clues and patterns
 * **PWN:** Analyzing and exploiting vulnerabilities in compiled binary programs, such as buffer overflows, memory corruption, and use-after-free bugs, to gain unauthorized control of a system
-* **Reversing:** Deconstruct software or binaries to understand how they work, often involving disassembling code to find hidden functionalities or bypass protections
+* **Reversing:** Deconstructing software or binaries to understand how they work, often involving disassembling code to find hidden functionalities or bypass protections
 * **Web:** Finding and exploiting vulnerabilities in web applications

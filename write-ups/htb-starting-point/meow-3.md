@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Mongod (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -45,7 +31,7 @@ nmap 10.129.1.138 -p- -Pn --min-rate 2500 -oN scan.txt
 
 ***
 
-* Then I did an exhaustive scan of the ports we found for get information about the running services
+* Then I did an exhaustive scan of the ports we found to get information about the running services
 
 {% code lineNumbers="true" %}
 ```bash
@@ -95,7 +81,7 @@ nmap 10.129.1.138 -p22,27017 -sVC -oN serv_scan.txt
 
 ***
 
-* As we found a [_MongoDB_](https://www.mongodb.com/) database service running on port 27017, I tried connecting to the service using the utility [_mongosh_](../../database-attacks/tools-and-utilities.md#mongosh) and it worked successfully
+* As we found a [_MongoDB_](https://www.mongodb.com/) database service running on port 27017, I tried connecting to the service using the utility [_mongosh_](../../database-attacks/tools-and-utilities.md#mongosh)_,_ and it worked successfully
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

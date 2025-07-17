@@ -1,5 +1,6 @@
 ---
 layout:
+  width: default
   title:
     visible: true
   description:
@@ -12,5 +13,5 @@ layout:
     visible: true
 ---
 
-# Encryption (WIP)
+# Introduction (WIP)
 

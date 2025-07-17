@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # System Events
 
 These are **events** related to the operating system and its components that provide valuable information about the behavior and status of system-level operations such as hardware interactions, system services, device drivers, and the overall health of the system.

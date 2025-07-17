@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Dancing (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -76,7 +62,7 @@ nmap -p135,139,445,5985,47001,49664,49665,49666,49667,49668,49669 -sVC 10.129.76
 
 ***
 
-* I focused on port 445 which by default is used for the SMB protocol. I tried connecting using the [_sbmclient_](../../networks/tools-and-utilities.md#smbclient) tool to access the service to list the contents being shared. When asked for a password, I left it blank, and fortunately, I got the list of shares from the target machine
+* I focused on port 445, which by default is used for the SMB protocol. I tried connecting using the [_sbmclient_](../../networks/tools-and-utilities.md#smbclient) tool to access the service to list the contents being shared. When asked for a password, I left it blank, and fortunately, I got the list of shares from the target machine
 
 {% code lineNumbers="true" %}
 ```bash
@@ -87,7 +73,7 @@ smbclient -L 10.129.76.14
 <figure><img src="../../.gitbook/assets/image (76) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the SMB protocol you can go [here](../../networks/protocols/smb.md)
+To learn more about the SMB protocol, you can go [here](../../networks/protocols/smb.md)
 {% endhint %}
 
 ***
@@ -100,7 +86,7 @@ To learn more about the SMB protocol you can go [here](../../networks/protocols/
 
 ***
 
-* After this, I tried accessing the shared folders and when doing it with the one named _WorkShares_, I gained access without being asked for a password
+* After this, I tried accessing the shared folders, and when doing it with the one named _WorkShares_, I gained access without being asked for a password
 
 {% code lineNumbers="true" %}
 ```bash
@@ -126,7 +112,7 @@ smbclient //10.129.76.14/WorkShares
 
 ***
 
-* Then I listed the content of the shared folder where I found some folders that seemed to belong to users of the target system. So I explored them, and when reaching the _James.P_ directory, I listed its content and found a _flag.txt_ file
+* Then I listed the content of the shared folder, where I found some folders that seemed to belong to users of the target system. So I explored them, and when reaching the _James.P_ directory, I listed its content and found a _flag.txt_ file
 
 <figure><img src="../../.gitbook/assets/image (80) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -134,7 +120,7 @@ smbclient //10.129.76.14/WorkShares
 
 ***
 
-* Knowing this, I used the internal `get` command to download the file from the SMB server and then I closed the connection. Finally, I checked the content of the file, retrieving from it the root flag
+* Knowing this, I used the internal `get` command to download the file from the SMB server, and then I closed the connection. Finally, I checked the content of the file, retrieving from it the root flag
 
 <figure><img src="../../.gitbook/assets/image (82) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -1,24 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SSH
 
 **Secure Shell** is a cryptographic network protocol used for secure remote administration of systems over an unencrypted network. It provides encrypted communication between a client and a server, ensuring confidentiality, integrity, and authentication. SSH operates in the Application layer by default on port 22.
 
-This protocol allows users to remotely execute commands on a server, secure file transfer, port forwarding and tunneling, and cryptographic authentication.
+This protocol allows users to remotely execute commands on a server, secure file transfer, port forwarding, tunneling, and cryptographic authentication.
 
-## <mark style="color:green;">Interaction with protocol</mark>
+## <mark style="color:green;">Interaction with the protocol</mark>
 
 * Install
 

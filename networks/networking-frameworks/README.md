@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Networking Frameworks
 
 Serve as essential **frameworks** that define how data is transmitted and received across networks. These models provide a structured approach by breaking down communication into manageable layers, helping professionals to design, implement, and troubleshoot network communications effectively.

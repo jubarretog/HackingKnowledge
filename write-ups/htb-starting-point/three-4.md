@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Pennyworth (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -69,17 +55,17 @@ nmap 10.129.197.177 -p- -Pn --min-rate 2500 -oN scan.txt
 
 ***
 
-* I found the service was using the HTTP protocol on port 8080, so I visited the content being deployed through the browser. There I found a _Jenkins_ login page, and with a little [research](https://www.jenkins.io/), I learned this is an automation server for web services
+* I found the service was using the HTTP protocol on port 8080, so I visited the content being deployed through the browser. There, I found a _Jenkins_ login page, and with a little [research](https://www.jenkins.io/), I learned this is an automation server for web services
 
 <figure><img src="../../.gitbook/assets/image (559).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* I tried to log in with common credentials and after trying with the username _root_ and the password _password_, I got in successfully to an administration dashboard. I explored the site and noticed that by scrolling down to the bottom the version of the _Jenkins_ service was shown
+* I tried to log in with common credentials, and after trying with the username _root_ and the password _password_, I got in successfully to an administration dashboard. I explored the site and noticed that by scrolling down to the bottom, the version of the _Jenkins_ service was shown
 
 <figure><img src="../../.gitbook/assets/image (560).png" alt=""><figcaption><p>snippet</p></figcaption></figure>
 
@@ -95,7 +81,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* I searched for possible CVEs for this version of _Jenkins_ but didn't find anything. So I explored the options of the dashboard and found that by scrolling down under the _Manage Jenkins_ tab, there was an option named _Script Console_, and with some [research](https://www.jenkins.io/doc/book/managing/script-console/), I learned that it let to interact internally with the server via a type of script called _Groovy_
+* I searched for possible CVEs for this version of _Jenkins_ but didn't find anything. So I explored the options of the dashboard and found that by scrolling down under the _Manage Jenkins_ tab, there was an option named _Script Console_, and with some [research](https://www.jenkins.io/doc/book/managing/script-console/), I learned that it would allow me to interact internally with the server via a type of script called _Groovy_
 
 <figure><img src="../../.gitbook/assets/image (563).png" alt=""><figcaption><p>snippet</p></figcaption></figure>
 
@@ -113,7 +99,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* With this, I could search for more exploitation options under this service, being the objective to gain a shell from the target system. So, to find out possible payloads I looked for help on the _Reverse Shell Cheat Sheet_ from the [_PayloadsAllTheThings_](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master) repository. After exploring and testing some payloads for _Groovy_, we found [one](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#groovy) that worked, and let me gain a shell as the _root_ user. After that, I sanitized the terminal to interact better with the system
+* With this, I could search for more exploitation options under this service to gain a shell from the target system. So, to find out possible payloads, I looked for help on the _Reverse Shell Cheat Sheet_ from the [_PayloadsAllTheThings_](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master) repository. After exploring and testing some payloads for _Groovy_, we found [one](https://swisskyrepo.github.io/InternalAllTheThings/cheatsheets/shell-reverse-cheatsheet/#groovy) that worked and helped me gain a shell as the _root_ user. After that, I sanitized the terminal to interact better with the system
 
 {% code title="RevShell.Groovy" overflow="wrap" lineNumbers="true" %}
 ```groovy
@@ -143,7 +129,7 @@ s.close();
 <figure><img src="../../.gitbook/assets/image (567).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
+To learn about the sanitization process, you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
 {% endhint %}
 
 ***

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # MSSQL
 
 **Microsoft SQL Server** is a relational database management system that operates by default on port 1433, used for managing and querying structured data in enterprise environments.
@@ -23,13 +9,13 @@ Its main features are:
 * Allows TLS/SSL encryption for secure database connections
 * Role-based Access Control for specifying user permissions
 * Set firewall rules to control external access to the SQL server
-* racks database access and query execution for security monitoring
+* Tracks database access and query execution for security monitoring
 
-To interact with the service we can use tools such as the _mssqlclient_ utility which is part of the [_Impacket_](../../networks/tools-and-utilities.md#impacket) toolkit.
+To interact with the service, we can use tools such as the _mssqlclient_ utility, which is part of the [_Impacket_](../../networks/tools-and-utilities.md#impacket) toolkit.
 
-## <mark style="color:blue;">Query Syntax</mark>
+## <mark style="color:blue;">Interaction and Query Syntax</mark>
 
-* MSSQL uses standard SQL with a little variant for some commands
+* MSSQL uses standard SQL with a few variants for some commands
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql

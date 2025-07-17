@@ -1,20 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Bind shell
 
-A **Bind Shell** is a technique used to gain remote access to a victim's system by making it listen on a port and then connect to that listener. The shell sent to listen is attached to the target's shell on the target system, letting us take control of the internal shell by connecting to it.
+A **Bind Shell** is a technique used to gain remote access to a victim's system by making it listen on a port and then connecting to that listener. The shell sent to listen is attached to the target's shell on the target system, letting us take control of the internal shell by connecting to it.
+
+It is usually less effective than trying to get a [Reverse Shell](reverse-shell.md), as the hosts that use firewalls normally block incoming connections.
 
 ## <mark style="color:orange;">Basic script</mark>
 
@@ -56,7 +44,7 @@ nc $IP $port
 
 ## <mark style="color:orange;">Using PowerShell</mark>
 
-* &#x20;Use this command to establish a listening port on a _Windows_ target machine using the PowerShell
+* &#x20;Use this command to establish a listening port on a _Windows_ target machine using PowerShell
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

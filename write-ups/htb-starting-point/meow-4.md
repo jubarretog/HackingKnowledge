@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Synced (Tier 0)
 
 ## <mark style="color:blue;">Description</mark>
@@ -91,7 +77,7 @@ nmap 10.129.197.128 -p873 -sVC -oN serv_scan.txt
 
 ***
 
-* I found there was a port a service named _rsync_ that with a little research, I found it was a file synchronization application. Also, I found that it was possible to interact with it using the [_rsync_](../../networks/tools-and-utilities.md#rsync) command-line utility. So I tried using it to list the files being shared under this application specifying it was using a daemon to run this service and I saw it was successful
+* I found there was a service named _rsync_ that, with a little research, I found was a file synchronization application. Also, I found that it was possible to interact with it using the [_rsync_](../../networks/tools-and-utilities.md#rsync) command-line utility. So I tried using it to list the files being shared under this application, specifying it was using a daemon to run this service, and I saw it was successful
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -103,7 +89,7 @@ rsync --list-only 10.129.197.128::
 
 ***
 
-* I found a _public_ folder so I listed its content where I found a _flag.txt_ file, so I transferred it from the server to my machine and read its content finally finding the root flag
+* I found a _public_ folder, so I listed its content, where I found a _flag.txt_ file. So I transferred it from the server to my machine and read its content, finally finding the root flag
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

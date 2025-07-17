@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Welcome
 
 Hi! This is **Hacking Knowledge**, a page I've created to compile the wisdom I've gained from my offensive cybersecurity study sessions.

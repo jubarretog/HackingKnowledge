@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Sequel (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -48,11 +34,8 @@ nmap -p- -Pn --min-rate 2000 10.129.122.150
 
 * Then I did an exhaustive scan to get information about the service running on the open port
 
-{% code lineNumbers="true" %}
-```bash
-nmap -p3306 -sVC 10.129.122.150
-```
-{% endcode %}
+<pre class="language-bash" data-line-numbers><code class="lang-bash"><strong>nmap -p3306 -sVC 10.129.122.150
+</strong></code></pre>
 
 <figure><img src="../../.gitbook/assets/image (178) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -72,7 +55,7 @@ nmap -p3306 -sVC 10.129.122.150
 
 ***
 
-* As we found the service running was a [_MariaDB_](https://mariadb.org/) database I used the [_mysql_](../../database-attacks/tools-and-utilities.md#mysql) Linux utility to connect to it. As I didn't have any credentials, I tried using _root_ as username and gained access without being asked for a password
+* As we found the service running was a [_MariaDB_](https://mariadb.org/) database, I used the [_mysql_](../../database-attacks/tools-and-utilities.md#mysql) Linux utility to connect to it. As I didn't have any credentials, I tried using _root_ as username and gained access without being asked for a password
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -104,7 +87,7 @@ mysql -h 10.129.122.150 -u root
 
 ***
 
-* With this, I could navigate through the database information using SQL queries. I enumerated the databases present noticing a particular one named _htb_ and accessed it
+* With this, I could navigate through the database information using SQL queries. I enumerated the databases present, noticing a particular one named _htb,_ and accessed it
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```sql
@@ -118,7 +101,7 @@ use htb;
 <figure><img src="../../.gitbook/assets/image (182) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about SQL you can go [here](../../database-attacks/sql/)
+To learn more about SQL, you can go [here](../../database-attacks/sql/)
 {% endhint %}
 
 ***

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Ignition (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -58,17 +44,17 @@ nmap 10.129.246.174 -p80 -sVC -oN serv_scan.txt
 
 ***
 
-* As I found the HTTP protocol running on port 80, I visited the deployed content on the browser. When I tried to reach the site using the IP address it redirected me to the _ignition.htb_ domain whose content wasn't possible to display
+* As I found the HTTP protocol running on port 80, I visited the deployed content in the browser. When I tried to reach the site using the IP address, it redirected me to the _ignition.htb_ domain whose content wasn't possible to display
 
 <figure><img src="../../.gitbook/assets/image (670).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* To check what could be happening I used the `curl` command to get information from the response of the petition sent to the web. This could be because I didn't have the domain in our list of known hosts. So to solve that, I added it to the _/etc/hosts and &#x61;_&#x66;ter that visited the site again and it worked properly
+* To check what could be happenin,g I used the `curl` command to get information from the response of the petition sent to the web. This could be because I didn't have the domain in our list of known hosts. So to solve that, I added it to the _/etc/hosts and &#x61;_&#x66;ter that visited the site again and it worked properly
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -135,7 +121,7 @@ gobuster dir -u http://ignition.htb -w /usr/share/wordlists/SecLists/Discovery/W
 
 ***
 
-* As I didn't have any credentials I tried using some common credentials, and doing a little [research](https://community.spiceworks.com/t/most-common-passwords-of-2023-the-top-10/963430) about this topic, I found that by using the username _admin_ and the password _qwerty123_ I gained access to the administrator dashboard. Finally looking at the deployed content, I found the flag at first sight
+* As I didn't have any credentials, I tried using some common credentials, and doing a little [research](https://community.spiceworks.com/t/most-common-passwords-of-2023-the-top-10/963430) about this topic, I found that by using the username _admin_ and the password _qwerty123_ I gained access to the administrator dashboard. Finally, looking at the deployed content, I found the flag at first sight
 
 <figure><img src="../../.gitbook/assets/image (683).png" alt=""><figcaption></figcaption></figure>
 

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tools and Utilities
 
 Here are some tools and utilities commonly used for practices related to database attacks:
@@ -38,44 +24,6 @@ sudo apt install redis
 ```bash
 sudo redis-cli
 sudo redis-cli -h $hostname #Specify hostname
-```
-{% endcode %}
-
-## <mark style="color:green;">awscli</mark>
-
-* A utility used to connect to AWS services using the command line
-* It could interact with services such as S3 buckets
-
-### <mark style="color:yellow;">Commands</mark>
-
-* Install amazon cli
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-sudo apt install awscli
-```
-{% endcode %}
-
-***
-
-* Configure amazon
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-sudo aws configure #Set every parameter to temp
-```
-{% endcode %}
-
-***
-
-* Access to s3 service
-
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-sudo aws --endpoint=http://$url s3 $command #Execute a command on the bucket
-sudo aws --endpoint=http://$url s3 ls #List buckets
-sudo aws --endpoint=http://$url s3 ls s3://$listedurl #Lists elements in the bucket
-sudo aws --endpoint=http://$url s3 cp $file s3://$listedurl #Upload a file to a bucket
 ```
 {% endcode %}
 
@@ -161,7 +109,7 @@ mongosh mongodb://$IP:$PORT
 
 ## <mark style="color:green;">PostgreSQL</mark>
 
-* Command line utility used to connect or interact with [_PostgreSQL_](https://www.postgresql.org/) databases
+* A command-line utility used to connect or interact with [_PostgreSQL_](https://www.postgresql.org/) databases
 
 ### <mark style="color:yellow;">Commands</mark>
 

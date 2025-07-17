@@ -1,29 +1,15 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tools and Utilities
 
 Here we can find some tools and utilities commonly used for processes related to information gathering:
 
 ## <mark style="color:green;">DNS Dumpster</mark>
 
-* Web tool that maps a Domain through DNS services it uses
+* A web tool that maps a domain through the DNS services it uses
 * [https://dnsdumpster.com/](https://dnsdumpster.com/)
 
 ## <mark style="color:green;">DNSrecon</mark>
 
-* Tool to perform general enumeration of a domain
+* A tool to perform a general enumeration of a domain
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -50,8 +36,8 @@ dnsrecon -d $domain -t $type #Specify the type of enumeration
 
 ## <mark style="color:green;">Shodan</mark>
 
-* Online service that is built as a search engine for internet-connected devices
-* The utility tries to connect to every device reachable online, once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable
+* An online service that is built as a search engine for internet-connected devices
+* The utility tries to connect to every device reachable online. Once it gets a response, it collects all the information related to the service and saves it in the database to make it searchable
 * [https://www.shodan.io/](https://www.shodan.io/)
 
 ### <mark style="color:yellow;">Commands</mark>
@@ -70,7 +56,7 @@ sudo apt install shodan
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-shodan init $APIkey #Set API key from your Shodana account
+shodan init $APIkey #Set API key from your Shodan account
 shodan host $IP     #Search information about a host
 ```
 {% endcode %}
@@ -83,7 +69,7 @@ shodan host $IP     #Search information about a host
 ## <mark style="color:green;">Wappalyzer</mark>
 
 * A website that helps to determine what technologies a page uses. Also works as a Firefox extension
-* Web site: [https://www.wappalyzer.com/](https://www.wappalyzer.com/)
+* Website: [https://www.wappalyzer.com/](https://www.wappalyzer.com/)
 * Firefox extension: [https://addons.mozilla.org/es/firefox/addon/wappalyzer/](https://addons.mozilla.org/es/firefox/addon/wappalyzer/)
 
 ## <mark style="color:green;">**User-Agent Switcher and Manager**</mark>&#x20;
@@ -105,11 +91,8 @@ shodan host $IP     #Search information about a host
 
 * Installation
 
-{% code overflow="wrap" lineNumbers="true" %}
-```bash
-git clone https://github.com/rebootuser/LinEnum
-```
-{% endcode %}
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>git clone https://github.com/rebootuser/LinEnum
+</strong></code></pre>
 
 ***
 
@@ -129,7 +112,7 @@ git clone https://github.com/rebootuser/LinEnum
 ### <mark style="color:yellow;">Usage</mark>
 
 * Click the _New Scan_ tab, enter a name for the scan, and select a target. Scanning can also be personalized by the type of information required or by choosing the individual scanner modules
-* To add API keys, go to the _Settings_ tab, open the page for the module you are looking for, and complete the table including the type of information the module searches for
+* To add API keys, go to the _Settings_ tab, open the page for the module you are looking for, and complete the table, including the type of information the module searches for
   * If you don't know how to get the API keys, click the `?` next to the _API_ option in the module and follow the instructions to get API keys
 
 ### <mark style="color:yellow;">Commands</mark>
@@ -163,6 +146,11 @@ spiderfoot -M                    #Display available modules
 * Professional tool designed to help users find and verify email addresses associated with businesses or domains
 * [https://hunter.io](https://hunter.io)
 
+## <mark style="color:green;">Intelligence X</mark>
+
+* OSINT search engine designed for searching leaked data, darknet content, and public records. It does its snapshots of some sites, being useful to search deleted or previously indexed sites
+* [https://intelx.io](https://intelx.io)
+
 ## <mark style="color:green;">The Ultimate OSINT Collection</mark>
 
 * Comprehensive, curated resource hub for open-source intelligence (OSINT) enthusiasts, investigators, and cybersecurity professionals
@@ -186,7 +174,7 @@ sudo apt install recon-ng
 
 * Usage
 
-<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">recon-ng    #Initiate fcommand interface
+<pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">recon-ng    #Initiate command interface
 recon-web   #Initiate web GUI
 
 #Inside the recon-ng console environment
@@ -213,7 +201,7 @@ recon-ng][$module] > show $entry #Check for specific categories
 
 ## <mark style="color:green;">Whatweb</mark>
 
-* Tool to extract web servers, supporting frameworks, and applications
+* A tool to extract web servers, supporting frameworks, and applications
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -313,6 +301,11 @@ setoolkit     #Launch
 ```
 {% endcode %}
 
+## <mark style="color:green;">emkei.cz</mark>
+
+* An online tool for sending fake emails, useful for phishing attacks
+* [https://emkei.cz](https://emkei.cz)
+
 ## <mark style="color:green;">BeEF</mark>
 
 * Browser Exploitation Framework, a tool that can be used to manipulate users by leveraging XSS vulnerabilities via sending fake notifications and stealing cookies, among others
@@ -354,7 +347,7 @@ beef-xss
 
 ## <mark style="color:green;">DNSenum</mark>
 
-* Tool for information gathering and brute forcing of DNS domains and subdomains
+* A tool for information gathering and brute forcing of DNS domains and subdomains
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -381,7 +374,7 @@ dnsenum --dnsserver $DNSip --enum $domain -f /usr/share/seclists/Discovery/DNS/s
 
 ## <mark style="color:green;">wafw00f</mark>
 
-* Tool user to detect the presence of a WAF on a web application
+* A tool used to detect the presence of a WAF on a web application
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -405,7 +398,7 @@ wafw00f $domain
 
 ## <mark style="color:green;">Scrapy</mark>
 
-* Custom scraper tailored for reconnaissance written in python
+* Custom scraper tailored for reconnaissance written in Python
 
 ### <mark style="color:yellow;">Commands</mark>
 

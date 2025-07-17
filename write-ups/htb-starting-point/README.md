@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # HTB Starting Point
 
 The **HTB Starting Point** machines are the entry point for beginners and new people onto the Hack The Box platform, featuring very easy exploit paths to not only introduce you to the platform but also break the ice into the realm of penetration testing.

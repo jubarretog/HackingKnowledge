@@ -1,24 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tools and Utilities
 
 Here are some tools and utilities commonly used for practices related to networks:
 
 ## <mark style="color:green;">OpenVPN</mark>
 
-* VPN system which implements both client and server applications, including a command-line utility
+* VPN system that implements both client and server applications, including a command-line utility
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -89,7 +75,7 @@ sudo apt install responder
 
 ***
 
-* Change configuration file
+* Change the configuration file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -138,7 +124,7 @@ sudo apt install tcpdump
 
 ***
 
-* Set up listener
+* Set up a listener
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -148,7 +134,7 @@ sudo tcpdump -i $networkInterface port $port
 
 ## <mark style="color:green;">Netcat</mark>
 
-* Unix utility which reads and writes data across network connections
+* _Unix_ utility that reads and writes data across network connections
 * Can act as a server or as a listener
 * By default makes a TCP connection but can be used with TCP or UDP protocol
 
@@ -201,7 +187,7 @@ $incomingfile -h    #Check if the transmission was correct
 
 ***
 
-* Execute a program over the server
+* Execute a program on the server
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -220,7 +206,7 @@ sudo nc $ip 80 #We connect to HTTP service
 
 #We send a petition
 GET / HTTP/1.1
-host: netcat      #After finishing hit enter to send
+host: netcat      #After finishing, hit enter to send
 ```
 {% endcode %}
 
@@ -230,25 +216,25 @@ To make a line jump is necessary to press _Shift+Enter_
 
 ## <mark style="color:green;">Nmap</mark>
 
-* Open source tool for network exploration and security auditing which works as a network mapper
+* An open-source tool for network exploration and security auditing that works as a network mapper
 
 ### <mark style="color:yellow;">**Scan types**</mark>
 
 * _SYN_ scans are also known as _Half-open_ or _Stealth._ They are stealthier than _Connect_ scans
-* The difference between _Connect_ and _SYN_ scans is that _Connect_ performs a full three-way handshake with the target. Instead of that _SYN_ scans send back an _RST_ packet after receiving an _SYN/ACK_
+* The difference between _Connect_ and _SYN_ scans is that _Connect_ performs a full three-way handshake with the target. Instead of that, _SYN_ scans send back an _RST_ packet after receiving a _SYN/ACK_
 * The UDP scans are slower than TCP scans
-* In UDP scans if the port is open it will send no response and will be marked as _open|filtered_. If there's a response will be marked as _open_. If it's closed, the target responds with an ICMP packet containing a message that the port is unreachable
+* In UDP scans, if the port is open, it will send no response and will be marked as _open|filtered_. If there's a response will be marked as _open_. If it's closed, the target responds with an ICMP packet containing a message that the port is unreachable
 * _NULL_, _FIN_, _Xmas_, and _ACK_ scans are stealthier than _SYN_ or UDP scans, usually used for firewall evasion
 * _NULL_ scans send a TCP request with no flags, the target host responds with _RST_ if the port is closed
-* _FIN_ scans send a TCP request with the _FIN_ flag, used to gracefully close an active connection, the target host responds with _RST_ if the port is closed
+* _FIN_ scans send a TCP request with the _FIN_ flag, used to gracefully close an active connection. The target host responds with _RST_ if the port is closed
 * _Xmas_ scans send a malformed TCP packet, and the target host responds with _RST_ if the port is closed
-* Microsoft Windows may respond to a _NULL_, _FIN_ or _Xmas_ scan with a _RST_ for every port
+* Microsoft Windows may respond to a _NULL_, _FIN,_ or _Xmas_ scan with an _RST_ for every port
 
 ### <mark style="color:yellow;">**NSE**</mark>
 
-* The [Nmap Scripting Engine](https://nmap.org/nsedoc/) is a library of scripts written in Lua that can be used for scanning vulnerabilities and automating exploits for them.
+* The [_Nmap_ Scripting Engine](https://nmap.org/nsedoc/) is a library of scripts written in Lua that can be used for scanning vulnerabilities and automating exploits for them.
 * Every script has a category related to its use scenario
-* By default nmap stores scripts in _/usr/share/nmap/scripts/script.db_
+* By default, _Nmap_ stores scripts in _/usr/share/nmap/scripts/script.db_
 
 ### <mark style="color:yellow;">**Port State**</mark>
 
@@ -277,7 +263,7 @@ sudo apt install nmap
 ```bash
 nmap $scantype $options $target #General syntax
 nmap $ip  #Scan an IP
-nmap $domain  #Scan an IP using domain
+nmap $domain  #Scan an IP using the domain
 nmap $ip1 $ip2  # Scan some IPs
 nmap x.x.x.$range1-$range2 #Scan a range of IPs
 nmap x.x.x.x/$mask  #Scan using CIDR notation
@@ -299,7 +285,7 @@ nmap -sS $target  #TCP SYN scan, default if run with sudo
 nmap -sN $target  #TCP Null scan, good for firewall evasion
 nmap -sF $target  #TCP FIN scan, good for firewall evasion
 nmap -sX $target  #TCP Xmas scan, good for firewall evasion
-nmap -sA $target  #TCP ACK scan, good for firewall evasio
+nmap -sA $target  #TCP ACK scan, good for firewall evasion
 ```
 {% endcode %}
 
@@ -329,7 +315,7 @@ nmap -F $target   #Scan the 100 most common ports
 
 ***
 
-* Scan without checking if target is alive
+* Scan without checking if the target is alive
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -379,7 +365,7 @@ nmap -O $target
 
 ***
 
-* Get the version of services running
+* Get the versions of the services running
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -399,7 +385,7 @@ nmap -sL $targets
 
 ***
 
-* Increase verbosity level of output
+* Increase the verbosity level of the output
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -424,7 +410,7 @@ nmap -oA $target  #All 3 Formats at once
 
 ***
 
-* Increase the speed the scan runs at
+* Increase the speed the scan runs
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -453,7 +439,7 @@ find / -type f -name ftp* 2>/dev/null | grep scripts #Search scripts using find
 nmap $IP -p445 --script=smb-enum-users.nse    #Enumerate SMB users
 nmap $IP -p445 --script=smb-enum-groups.nse   #Enumerate SMB groups
 nmap $IP -p445 --script smb-enum-shares.nse   #Enumerate SMB shares
-nmap $IP -p445 --script smb-enum-processes.nse #Enunerate SMB processes
+nmap $IP -p445 --script smb-enum-processes.nse #Enumerate SMB processes
 <strong>nmap $IP --script=http-enum                    #Enumerate HTTP services
 </strong>nmap -sVC -p21 $IP --script=trace              #Enumerate FTP services
 nmap $IP -p25 --script=smtp-commands #List available commands on an SMTP server
@@ -487,7 +473,7 @@ nmap $target --scan-delay $number ms
 
 ***
 
-* Generate invalid checksum for packets
+* Generate an invalid checksum for packets
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -529,7 +515,7 @@ nmap $target -Pn -n --disable-arp-ping --source-port 53 #Use DNS service as prox
 
 ## <mark style="color:green;">ARP-Scan</mark>
 
-* Tool for making host discovery via [ARP](protocols/arp.md) protocol
+* A tool for making host discovery via the [ARP](protocols/arp.md) protocol
 * Only devices in the same subnet can be discovered
 
 ### <mark style="color:yellow;">**Commands**</mark>
@@ -556,7 +542,7 @@ arp-scan $tagetRange -I $netInterface #Specify which network interface to use
 
 ## <mark style="color:green;">Masscan</mark>
 
-* Tool for making port scanning, which is optimized for speed, making it particularly useful for large-scale scans
+* A tool for making port scanning, which is optimized for speed, making it particularly useful for large-scale scans
 
 ### <mark style="color:yellow;">**Commands**</mark>
 
@@ -581,7 +567,7 @@ masscan $targetRange ‐‐top-ports $number #Specify number of most used ports
 
 ## <mark style="color:green;">Docker</mark>
 
-* An open-source platform that allows to build, package, and run applications in isolated environments called containers
+* An open-source platform that allows building, packaging, and running applications in isolated environments called containers
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -613,7 +599,7 @@ sudo docker compose up -d #Use .yml file to run various containers in the backgr
 
 ## <mark style="color:green;">onesixtyone</mark>
 
-* Is an SNMP scanner used to brute force the community string names
+* An SNMP scanner which is used to brute force the community string names
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -635,7 +621,7 @@ onesixtyone -c $dictionary $IP
 
 ## <mark style="color:green;">xfreerdp</mark>
 
-* An open-source implementation for the [RDP](protocols/rdp.md) protocol
+* An open-source implementation of the [RDP](protocols/rdp.md) protocol
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -685,7 +671,7 @@ rsync $IP::$foldername/$filename $localroute #Transfer a shared file
 
 ## <mark style="color:green;">Impacket</mark>
 
-* Collection of Python classes for working with network protocols
+* A collection of Python classes for working with network protocols
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -738,7 +724,7 @@ pip install scapy
 
 ## <mark style="color:green;">Tshark</mark>
 
-* Packet capture tool used to capture ICMP packets. Comes by default in the Wireshark tool packet
+* A packet capture tool used to capture ICMP packets. Comes by default in the Wireshark tool packet
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -788,7 +774,7 @@ aireplay-ng -0 0 -a $MAC $NIC    #Do de-authentication attack
 
 ## <mark style="color:green;">rpcclient</mark>
 
-* Central tool to realize operational and work-sharing structures in networks and client-server architectures, useful for enumeration of SMB protocol
+* Central tool to realize operational and work-sharing structures in networks and client-server architectures, useful for the enumeration of the SMB protocol
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -871,7 +857,7 @@ crackmapexec smb $IP --shares -u '' -p '' #Enumerate anonymously
 
 ## <mark style="color:green;">smtp-user-enum</mark>
 
-* Tool for making user enumeration for the [SMTP](protocols/smtp.md) protocol
+* A tool for making user enumeration for the [SMTP](protocols/smtp.md) protocol
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -898,7 +884,7 @@ smtp-user-enum -M VRFY -U $wordlist -t $IP -w 15 -v
 
 ## <mark style="color:green;">snmpwalk</mark>
 
-* Tool for getting information about the community string for an SNMP protocol
+* A tool for getting information about the community string for an SNMP protocol
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -916,7 +902,31 @@ sudo apt install snmpwalk
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-snmpwalk -v2c -c public $IP #
+snmpwalk -v2c -c public $IP
+```
+{% endcode %}
+
+## <mark style="color:green;">snmp-check</mark>
+
+* Utility  for scanning resources via the SNMP protocol
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install snmp-check
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+snmp-check $IP
 ```
 {% endcode %}
 
@@ -962,13 +972,13 @@ The first time running odat there will be some errors, but it's normal and won't
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">./odat.py -h #Get help many, use to confirm installation was successful
 ./odat.py all -s $IP #Scan target using all modules
-./sqlplus $User/$Password@$IP/$SIDfound #Log as an user
+./sqlplus $User/$Password@$IP/$SIDfound #Log in as a user
 ./sqlplus $User/$Password@$IP/$SIDfound as sysdba #Log as System Database Admin
 
 #Once inside the database
 <strong>SQL> select table_name from all_tables; #Get table names
 </strong>SQL> select * from user_role_privs; #Check the privileges of the user
-SQL> select name, password from sys.user$; #Get passwords form users
+SQL> select name, password from sys.user$; #Get passwords from users
 </code></pre>
 
 ## <mark style="color:green;">vnstat</mark>
@@ -992,5 +1002,30 @@ sudo apt install vnstat
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 vnstat -l -i $interface
+```
+{% endcode %}
+
+## <mark style="color:green;">hping</mark>
+
+* A powerful command-line network tool used primarily for packet crafting and analysis, which allows sending custom TCP/IP packets and observing the responses
+
+### <mark style="color:yellow;">Commands</mark>
+
+* Install
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+sudo apt install hping
+```
+{% endcode %}
+
+***
+
+* Usage
+
+{% code overflow="wrap" lineNumbers="true" %}
+```bash
+hping3 -S -p 80 $Domain #Ping using TCP instead of ICMP
+hping3 --flood -S -p 80 $Domain #Make a DoS test with SYN packets
 ```
 {% endcode %}

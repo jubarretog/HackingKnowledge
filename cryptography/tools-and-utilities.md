@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tools and Utilities
 
 Here are some tools and utilities commonly used for practices related to cryptography:
@@ -34,7 +20,7 @@ openssl s_client -connect $IP:$port
 
 ***
 
-* Generate private key with RSA
+* Generate a private key with RSA
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -44,7 +30,7 @@ openssl genrsa -out $name 2048
 
 ***
 
-* Generate hash for Linux user
+* Generate a hash for a _Linux_ user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -63,7 +49,7 @@ openssl enc -d -aes256 -iter 100000 -pbkdf2 -in $encFile -out $file
 ```
 {% endcode %}
 
-## <mark style="color:green;">John the ripper</mark>
+## <mark style="color:green;">John the Ripper</mark>
 
 * Password cracking tool, known for its speed and efficiency in cracking weak passwords. Comes with various modules specialized for cracking and retrieving hashes from specific files.
 
@@ -89,7 +75,7 @@ john $hashfile --incremental    #Break by bruteforcing
 {% endcode %}
 
 {% hint style="info" %}
-One famous dictionary is _rockyou.txt_ which can be found by default on Kali Linux on _/usr/share/wordlists/rockyou.txt_
+One famous dictionary is _rockyou.txt,_ which can be found by default on _Kali Linux_ on _/usr/share/wordlists/rockyou.txt_
 {% endhint %}
 
 ***
@@ -99,13 +85,13 @@ One famous dictionary is _rockyou.txt_ which can be found by default on Kali Lin
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 unshadow $passwdFile $shadowFile > $outFile
-#passwdFile and shadowFile are the /etc/passwd and /etc/shadow files respectively
+#passwdFile and shadowFile are the /etc/passwd and /etc/shadow files, respectively
 ```
 {% endcode %}
 
 ***
 
-* Extract hash from zip file
+* Extract the hash from a ZIP file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -116,7 +102,7 @@ zip2john $zipfile > $hashfile #To save the recovered hash
 
 ## <mark style="color:green;">Hashcat</mark>
 
-* Password recovery tool that supports a wide range of hashing algorithms, primarily used for cracking passwords stored in hashed formats.
+* A password recovery tool that supports a wide range of hashing algorithms, primarily used for cracking passwords stored in hashed formats.
 
 ### <mark style="color:yellow;">Commands</mark>
 
@@ -130,7 +116,7 @@ sudo apt install hashcat
 
 ***
 
-* Filter code of a hash mode
+* Filter the code of a hash mode
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -163,12 +149,12 @@ Have a cipher identifier: [https://www.dcode.fr/cipher-identifier](https://www.d
 * [https://gchq.github.io/CyberChef/](https://gchq.github.io/CyberChef/)
 
 {% hint style="info" %}
-The magic mode helps you identify and decode automatically the ciphert
+The magic mode helps you identify and decode automatically the ciphertext
 {% endhint %}
 
 ## <mark style="color:green;">Crackstation</mark>
 
-* Online tool for identifying hashes and finding their related values.
+* An online tool for identifying hashes and finding their related values.
 * [https://crackstation.net/](https://crackstation.net/)
 
 ## <mark style="color:green;">Hash-identifier</mark>
@@ -187,10 +173,15 @@ sudo apt install hash-identifier
 
 ***
 
-* Filter code of a hash mode
+* Identify hash mode
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
 hash-identifier $hash
 ```
 {% endcode %}
+
+## <mark style="color:green;">CacheSleuth</mark>
+
+* Versatile online tool to assist in decoding a wide array of ciphers and codes, with an incorporated multidecoder
+* [https://www.cachesleuth.com/](https://www.cachesleuth.com/)

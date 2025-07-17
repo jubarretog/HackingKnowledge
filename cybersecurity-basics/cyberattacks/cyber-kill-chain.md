@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Cyber Kill Chain
 
 The [**Cyber Kill Chain**](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html) is a cybersecurity concept that explains the typical procedure that cybercriminals follow to complete a successful cyber attack. It is a framework that helps teams understand, detect, and prevent persistent cyber threats.

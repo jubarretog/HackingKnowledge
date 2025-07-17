@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # About Me
 
-Hi, I'm Juan David, aka _JuanDa_. I'm studying Systems and Computer Engineering at the [_Universidad Nacional de Colombia_](https://unal.edu.co/) and I'm a member and coordinator of the cybersecurity seedbed, [_Uqbar_](https://www.instagram.com/uqbarun/).
+Hi, I'm Juan David, aka _JuanDa_. I'm studying Systems and Computer Engineering at the [_Universidad Nacional de Colombia_](https://unal.edu.co/)_,_ and I'm a member and coordinator of the cybersecurity seedbed [_Uqbar_](https://www.instagram.com/uqbarun/).
 
 <figure><img src="../.gitbook/assets/image (18) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -28,4 +14,4 @@ My main goal at this moment is to prepare for a penetration testing certificatio
 
 * **Email:** [jubarretog@unal.edu.co](https://app.gitbook.com/u/cdbSbVEtWCP0IKRHa0p28S49E1o2)
 * **Github:** [KryptoCoder](https://github.com/jubarretog)
-* **Linkedin:** [Juan David Barreto Grattz](https://www.linkedin.com/in/juan-david-barreto-grattz/)
+* **LinkedIn:** [Juan David Barreto Grattz](https://www.linkedin.com/in/juan-david-barreto-grattz/)

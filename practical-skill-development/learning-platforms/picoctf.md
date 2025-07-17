@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # picoCTF
 
-[_**picoCTF**_](https://picoctf.org/) is a cybersecurity competition structured like a Capture The Flag (CTF) event which provides a unique platform for participants to solve a variety of challenges that cover different areas of cybersecurity.
+[_**picoCTF**_](https://picoctf.org/) is a cybersecurity competition structured like a Capture The Flag (CTF) event, which provides a unique platform for participants to solve a variety of challenges that cover different areas of cybersecurity.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p><a href="https://picoctf.org/">https://picoctf.org/</a></p></figcaption></figure>
 

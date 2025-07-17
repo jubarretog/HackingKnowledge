@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Get information from SSL certificates
 
-We can check the content and filter information from an SSL certificate of a website using the HTPPS protocol using the `curl` command, by checking the [_crt.sh_](../tools-and-utilities.md#crt.sh) registers for that site
+We can check the content and filter information from an SSL certificate of a website using the HTTPS protocol using the `curl` command, by checking the [_crt.sh_](../tools-and-utilities.md#crt.sh) registers for that site
 
 * Get info of the certificate as _JSON_
 
@@ -47,7 +33,7 @@ for i in $(cat subdomainlist.txt);do host $i | grep "has address" | grep inlanef
 
 ***
 
-* Use shodan to investigate the IP addresses found
+* Use [_Shodan_](../tools-and-utilities.md#shodan) to investigate the IP addresses found
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

@@ -1,24 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Useful Shell Resources
 
 Here are some useful resources that can help in managing terminal environments and resolving common shell-related issues:
 
 ## <mark style="color:orange;">TTY Sanitization</mark>
 
-Executing these commands lets us configure an interactive terminal and process keybinding like a normal bash. It is very useful when we get an external terminal, for example with a Reverse Shell.
+Executing these commands lets us configure an interactive terminal and process keybindings like a normal bash. It is very useful when we get an external terminal, for example, with a Reverse Shell.
 
 We can find two common scenarios:
 
@@ -52,7 +38,7 @@ python -c 'import pty;pty.spawn("/bin/bash")'
 #For fixing the keybinding
 ^Z #This refers to making CTRL+Z. It will send the process to the background
 stty raw -echo; fg
-reset xterm #In some occasions this will not be visible but still write it
+reset xterm # On some occasions, this will not be visible, but still write it
 export SHELL=bash #To ensure the commands will be interpreted correctly
 
 #For setting the terminal colors
@@ -69,7 +55,7 @@ stty rows $rows columns $columns #This is on the remote connection with the row 
 
 ## <mark style="color:orange;">Corrupt history of</mark> <mark style="color:orange;"></mark>_<mark style="color:orange;">zsh</mark>_
 
-Sometimes when using _zsh_ for our shell, the history files get corrupted. To correct this issue we can use the following commands:
+Sometimes, when using _zsh_ for our shell, the history files get corrupted. To correct this issue, we can use the following commands:
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Post-engagement
 
 The **post-engagement** phase follows the completion of a penetration test or ethical hacking engagement. During this stage, the focus is on documenting the findings, cleaning up the systems we exploit, and delivering a comprehensive report to the client or organization.

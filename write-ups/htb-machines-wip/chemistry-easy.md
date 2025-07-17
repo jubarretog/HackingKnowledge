@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Chemistry (Easy)
 
 ## <mark style="color:blue;">Description</mark>
@@ -56,28 +42,28 @@ nmap 10.129.92.228 -p22,5000 -sVC -oN serv_scan.txt
 <figure><img src="../../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* I didn't know about this type of file but the site also allowed me to download a sample file to check which parameters the page processed and the file format
+* I didn't know about this type of file, but the site also allowed me to download a sample file to check which parameters the page processed and the file format
 
 <figure><img src="../../.gitbook/assets/image (609).png" alt=""><figcaption></figcaption></figure>
 
 ***
 
-* As the web let me modify and reupload the file, it could lead to a possible File Upload vulnerability, so I could try to leverage it to gain a Reverse Shell from the server. To do so, I checked on the web for possible CV&#x45;_&#x73;_ and exploits. In this process, I found an interesting [repository](https://github.com/materialsproject/pymatgen/security/advisories/GHSA-vgv8-5cpj-qj2f) with a vulnerability that affected the _2024.2.8_ or lower versions and could help me gain RCE on the target
+* As I was able to modify and reupload the file to the web, it could lead to a possible File Upload vulnerability, so I could try to leverage it to gain a Reverse Shell from the server. To do so, I checked on the web for possible CV&#x45;_&#x73;_ and exploits. In this process, I found an interesting [repository](https://github.com/materialsproject/pymatgen/security/advisories/GHSA-vgv8-5cpj-qj2f) with a vulnerability that affected the _2024.2.8_ or lower versions and could help me gain RCE on the target
 
 <figure><img src="../../.gitbook/assets/image (556).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about File Upload exploitation you can go [here](../../web-exploitation/broken-access-control/abuse-file-upload.md)
+To learn more about File Upload exploitation, you can go [here](../../web-exploitation/broken-access-control/abuse-file-upload.md)
 {% endhint %}
 
 ***
 
-* With this, I crafted a modified version of the CIF file to execute commands remotely. In that case, I modify it by adding a script to gain the Reverse Shell
+* With this, I crafted a modified version of the CIF file to execute commands remotely. In that case, I modified it by adding a script to gain the Reverse Shell
 
 {% code title="exploit.cif" overflow="wrap" lineNumbers="true" %}
 ```
@@ -110,7 +96,7 @@ I used a custom payload for the reverse shell because some standard payloads did
 
 ***
 
-* After that, I uploaded the file to the system and set a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener in my machine to receive the connection. Then, I clicked the _View_ button to run the internal script, observing the page kept loading and checking that the listener had caught the shell from the host. I also sanitized the terminal to work more comfortably and checked which user I was. having now access as the _app_ user, the one from the web server
+* After that, I uploaded the file to the system and set a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener on my machine to receive the connection. Then, I clicked the _View_ button to run the internal script, observing that the page kept loading and checking that the listener had caught the shell from the host. I also sanitized the terminal to work more comfortably and checked which user I was, having now access as the _app_ user, the one from the web server
 
 {% code lineNumbers="true" %}
 ```bash
@@ -125,12 +111,12 @@ nc -nvlp 4444
 <figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the sanitization process you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
+To learn more about the sanitization process, you can go [here](../../linux/useful-shell-resources.md#tty-sanitization)
 {% endhint %}
 
 ***
 
-* Then I navigated through the system checking for a possible way to do lateral movement or privilege escalations. I found that in the _/home_ folder there was a folder for another user named _rosa_. I listed the files under this directory and found a _user.txt_ file, but when trying to read its content I didn't have the proper permissions
+* Then I navigated through the system, checking for a possible way to do lateral movement or privilege escalations. I found that in the _/home_ folder, there was a folder for another user named _rosa_. I listed the files under this directory and found a _user.txt_ file, but when trying to read its content, I didn't have the proper permissions
 
 <figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
 
@@ -142,7 +128,7 @@ To learn more about the sanitization process you can go [here](../../linux/usefu
 
 ***
 
-* Knowing this, I interacted with it and retrieved some information. I queried information about the tables and found a user table, and reading its information I found some users and values that could be hashes for passwords. I noticed in this case there was also a user _rosa_ in this database so I could assume it was the system user and try to crack the hash to obtain the password
+* Knowing this, I interacted with it and retrieved some information. I queried information about the tables and found a user table, and reading its information, I found some users and values that could be hashes for passwords. I noticed in this case, the same user _rosa_ was in this database, so I could assume it was the system user and try to crack the hash to obtain the password
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -161,19 +147,19 @@ sqlite> SELECT * FROM user;
 <figure><img src="../../.gitbook/assets/image (186).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about MD5 or other hashes you can go [here](../../cryptography/hashing-wip/#well-known-hashes)
+To learn more about MD5 or other hashes, you can go [here](../../cryptography/fundamental-concepts/hashing-wip/#well-known-hashes)
 {% endhint %}
 
 ***
 
-* Then, I tried to connect through SSH to the _rosa_ user using this password and got in successfully. I also sanitized again the terminal to interact better with it
+* Then, I tried to connect through SSH to the _rosa_ user using this password and got in successfully. I also sanitized the terminal again to interact with it better
 
 <figure><img src="../../.gitbook/assets/image (187).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (189).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the SSH protocol you can go [here](../../networks/protocols/ssh.md)
+To learn more about the SSH protocol, you can go [here](../../networks/protocols/ssh.md)
 {% endhint %}
 
 ***
@@ -198,13 +184,13 @@ cat user.txt
 
 ***
 
-* Then, I had to find a way to escalate privileges. I started searching but after a while, I didn't find anything. So to facilitate the process I tried using [_Linpeas_](../../penetration-testing/process-stages/post-exploitation/tools-and-utilities.md#linpeas) to help me find possible paths for the escalation. After importing it and running it, in the results obtained, I found there was a service running locally on port 8080, which is normally used for some web servers
+* Then, I had to find a way to escalate privileges. I started searching, but after a while, I didn't find anything. So, to facilitate the process, I tried using [_Linpeas_](../../penetration-testing/process-stages/post-exploitation/tools-and-utilities.md#linpeas) to help me find possible paths for the escalation. After importing it and running it, in the results obtained, I found there was a service running locally on port 8080, which is normally used for some web servers
 
 <figure><img src="../../.gitbook/assets/image (191).png" alt=""><figcaption><p>snippet</p></figcaption></figure>
 
 ***
 
-* As it is locally deployed, I couldn't access the service directly through a browser, but as I had access to the system via SSH, I could try to make a tunnel via local port forwarding to access it from my machine. I did the tunneling process and to confirm it had worked, I accessed the service on the browser and observed the web service deployed correctly
+* As it is locally deployed, I couldn't access the service directly through a browser, but as I had access to the system via SSH, I could try to make a tunnel via local port forwarding to access it from my machine. I did the tunneling process, and to confirm it had worked, I accessed the service on the browser and observed the web service deployed correctly
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -220,7 +206,7 @@ ssh -L 7777:127.0.0.1:8080 rosa@10.129.92.228
 
 ***
 
-* I explored the site which seemed to be a statistics service, but after a while, I didn't find anything interesting, so I tried to retrieve information on the components. I used the `curl` command to send a petition and retrieve some information based on the headers of the response
+* I explored the site, which seemed to be a statistics service, but after a while, I didn't find anything interesting, so I tried to retrieve information on the components. I used the `curl` command to send a petition and retrieve some information based on the headers of the response
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -232,23 +218,23 @@ curl http://localhost:7777 --head
 
 ***
 
-* I found the HTTP server was using the [_aiohttp_](https://docs.aiohttp.org/en/stable/) python library to deploy the web content and its corresponding version. With this, I searched for some possible related CVEs, and after some research, I found a _GitHub_ [repository](https://github.com/wizarddos/CVE-2024-23334) with a POC for the _CVE-2024-23334_ which exploited a Local File Inclusion vulnerability on versions 3.9.1 or lower of _aiohttp_ to read files as the _root_ user
+* I found the HTTP server was using the [_aiohttp_](https://docs.aiohttp.org/en/stable/) Python library to deploy the web content and its corresponding version. With this, I searched for some possible related CVEs, and after some research, I found a _GitHub_ [repository](https://github.com/wizarddos/CVE-2024-23334) with a POC for the _CVE-2024-23334,_ which exploited a Local File Inclusion vulnerability on versions 3.9.1 or lower of _aiohttp_ to read files as the _root_ user
 
 <figure><img src="../../.gitbook/assets/image (198).png" alt=""><figcaption><p><a href="https://github.com/wizarddos/CVE-2024-23334">https://github.com/wizarddos/CVE-2024-23334</a></p></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Local File Inclusion exploitation you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
+To learn more about Local File Inclusion exploitation, you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
 {% endhint %}
 
 ***
 
-* I downloaded the exploit and used it to automatize the attack, but I needed to find a static route to execute the attack. With a little [research](https://stackoverflow.com/questions/62499380/serving-static-files-in-an-http-server), I found some standard folders for static files. I tried some of them in the exploit and noticed that using the _/assets_ route it worked
+* I downloaded the exploit and used it to automate the attack, but I needed to find a static route to execute the attack. With a little [research](https://stackoverflow.com/questions/62499380/serving-static-files-in-an-http-server), I found some standard folders for static files. I tried some of them in the exploit and noticed that using the _/assets_ route, it worked
 
 <figure><img src="../../.gitbook/assets/image (199).png" alt=""><figcaption><p>snippet</p></figcaption></figure>
 
 ***
 
-* Finally, as I was reading files as the _root_ user, I tried accessing the _/root_ folder and reading the content of the _root.txt_ if existed, and with that, I luckily retrieved the root flag
+* Finally, as I was reading files as the _root_ user, I tried accessing the _/root_ folder and reading the content of the _root.txt_ if it existed, and with that, I luckily retrieved the root flag
 
 <figure><img src="../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
@@ -281,5 +267,5 @@ ssh root@10.129.92.228 -i id_rsa
 <figure><img src="../../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn in detail about the abuse of SSH keys for privilege escalation you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/#abusing-ssh-keys)
+To learn in detail about the abuse of SSH keys for privilege escalation, you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/#abusing-ssh-keys)
 {% endhint %}

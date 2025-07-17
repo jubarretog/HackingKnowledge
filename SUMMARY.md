@@ -11,8 +11,9 @@
 
 * [Introduction](cybersecurity-basics/introduction.md)
 * [Vulnerabilities](cybersecurity-basics/vulnerabilities/README.md)
-  * [CVEs](cybersecurity-basics/vulnerabilities/cves.md)
+  * [CVEs and CWEs](cybersecurity-basics/vulnerabilities/cves-and-cwes.md)
 * [Cyberattacks](cybersecurity-basics/cyberattacks/README.md)
+  * [IoCs vs IoAs](cybersecurity-basics/cyberattacks/iocs-vs-ioas.md)
   * [Cyber Kill Chain](cybersecurity-basics/cyberattacks/cyber-kill-chain.md)
   * [Malware](cybersecurity-basics/cyberattacks/malware.md)
 * [Security Models](cybersecurity-basics/security-models/README.md)
@@ -56,7 +57,8 @@
   * [NetBIOS](networks/protocols/netbios.md)
   * [SNMP](networks/protocols/snmp.md)
   * [DNS](networks/protocols/dns-1.md)
-  * [HTTP](networks/protocols/http.md)
+  * [HTTP](networks/protocols/http/README.md)
+    * [HTTPS](networks/protocols/http/https.md)
   * [Telnet](networks/protocols/telnet.md)
   * [FTP](networks/protocols/ftp.md)
   * [TFTP](networks/protocols/tftp.md)
@@ -75,12 +77,13 @@
 ## 🔐 Cryptography
 
 * [Introduction](cryptography/introduction.md)
-* [Encoding (WIP)](cryptography/encoding-wip.md)
-* [Encryption (WIP)](cryptography/blockchain-wip/README.md)
-  * [Types of encryption (WIP)](cryptography/blockchain-wip/types-of-encryption-wip.md)
-  * [Methods of Encryption (WIP)](cryptography/blockchain-wip/methods-of-encryption-wip.md)
-* [Hashing](cryptography/hashing-wip/README.md)
-  * [Well-known Hashes (WIP)](cryptography/hashing-wip/hashing-wip.md)
+* [Fundamental Concepts](cryptography/fundamental-concepts/README.md)
+  * [Encoding](cryptography/fundamental-concepts/encoding.md)
+  * [Encryption (WIP)](cryptography/fundamental-concepts/blockchain-wip/README.md)
+    * [Methods of Encryption (WIP)](cryptography/fundamental-concepts/blockchain-wip/methods-of-encryption-wip.md)
+  * [Hashing](cryptography/fundamental-concepts/hashing-wip/README.md)
+    * [Well-known Hashes (WIP)](cryptography/fundamental-concepts/hashing-wip/hashing-wip.md)
+* [XOR Attacks](cryptography/xor-attacks.md)
 * [Related Concepts](cryptography/related-concepts.md)
 * [Tools and Utilities](cryptography/tools-and-utilities.md)
 * [Useful Tips](cryptography/useful-tips.md)
@@ -89,7 +92,7 @@
 
 * [Introduction](penetration-testing/introduction.md)
 * [Categorization](penetration-testing/categorization.md)
-* [Process Stages](penetration-testing/process-stages/README.md)
+* [Process Stages (WIP)](penetration-testing/process-stages/README.md)
   * [Pre-engagement](penetration-testing/process-stages/pre-engagement.md)
   * [Information Gathering](penetration-testing/process-stages/information-gathering/README.md)
     * [OSINT](penetration-testing/process-stages/information-gathering/osint/README.md)
@@ -100,7 +103,8 @@
       * [Retrieve information from IMAP/POP3 servers](penetration-testing/process-stages/information-gathering/enumeration/retrieve-information-from-imap-pop3-servers.md)
       * [Redirect HTTP traffic using Feroxbuster and ZAP](penetration-testing/process-stages/information-gathering/enumeration/redirect-http-traffic-using-feroxbuster-and-zap.md)
       * [Mount accesible NFS Shares](penetration-testing/process-stages/information-gathering/enumeration/mount-accesible-nfs-shares.md)
-      * [Bruteforce subdomains](penetration-testing/process-stages/information-gathering/enumeration/bruteforce-subdomains.md)
+      * [Brute-force subdomains](penetration-testing/process-stages/information-gathering/enumeration/brute-force-subdomains.md)
+      * [Host Enumeration via NetBIOS](penetration-testing/process-stages/information-gathering/enumeration/host-enumeration-via-netbios.md)
     * [Tools and Utilities](penetration-testing/process-stages/information-gathering/tools-and-utilities.md)
     * [Useful Tips](penetration-testing/process-stages/information-gathering/useful-tips.md)
   * [Vulnerability Assessment](penetration-testing/process-stages/vulnerability-assessment/README.md)
@@ -120,12 +124,15 @@
   * [Lateral Movement](penetration-testing/process-stages/lateral-movement.md)
   * [Proof-of-Concept](penetration-testing/process-stages/proof-of-concept.md)
   * [Post-engagement](penetration-testing/process-stages/post-engagement/README.md)
-    * [Sample Report (WIP)](penetration-testing/process-stages/post-engagement/sample-report-wip.md)
+    * [Reporting](penetration-testing/process-stages/post-engagement/reporting.md)
+    * [Tools and Utilites](penetration-testing/process-stages/post-engagement/tools-and-utilites.md)
 * [Related Concepts](penetration-testing/related-concepts.md)
 
 ## 📡 Web Exploitation
 
 * [Introduction](web-exploitation/introduction.md)
+* [APIs (WIP)](web-exploitation/apis-wip.md)
+* [WebSockets (WIP)](web-exploitation/websockets-wip.md)
 * [OWASP Top 10](web-exploitation/owasp-top-10/README.md)
   * [Broken Access Control](web-exploitation/owasp-top-10/broken-access-control.md)
   * [Cryptographic Failures](web-exploitation/owasp-top-10/cryptographic-failures.md)
@@ -137,7 +144,7 @@
   * [Software and Data Integrity Failures](web-exploitation/owasp-top-10/software-and-data-integrity-failures.md)
   * [Security Logging and Monitoring Failures](web-exploitation/owasp-top-10/security-logging-and-monitoring-failures.md)
   * [Server-side Request Forgery](web-exploitation/owasp-top-10/server-side-request-forgery.md)
-* [Attack Techniques](web-exploitation/broken-access-control/README.md)
+* [Attack Techniques (WIP)](web-exploitation/broken-access-control/README.md)
   * [Username and Password Bruteforcing with BurpSuite](web-exploitation/broken-access-control/username-and-password-bruteforcing-with-burpsuite.md)
   * [Exposed .htaccess and .htpasswd files](web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
   * [Local File Inclusion](web-exploitation/broken-access-control/local-file-inclusion.md)
@@ -171,6 +178,7 @@
   * [MySQL](database-attacks/sql/mysql.md)
   * [MSSQL](database-attacks/sql/mssql.md)
   * [SQLite3](database-attacks/sql/sqlite3.md)
+* [NoSQL](database-attacks/nosql.md)
 * [Attack Techniques](database-attacks/specific-scenarios/README.md)
   * [SQL Injection](database-attacks/specific-scenarios/sql-injection/README.md)
     * [Authentication Bypass](database-attacks/specific-scenarios/sql-injection/authentication-bypass.md)
@@ -184,7 +192,13 @@
 ## 👥 Active Directory
 
 * [Introduction](active-directory/introduction.md)
-* [Related Concepts (WIP)](active-directory/related-concepts-wip.md)
+* [Structure](active-directory/structure.md)
+* [Core Protocols](active-directory/core-protocols/README.md)
+  * [Kerberos](active-directory/core-protocols/kerberos.md)
+  * [NTLM (WIP)](active-directory/core-protocols/ntlm-wip.md)
+  * [LDAP (WIP)](active-directory/core-protocols/ldap-wip.md)
+  * [SMB (WIP)](active-directory/core-protocols/smb-wip.md)
+* [Related Concepts](active-directory/related-concepts-wip.md)
 * [Tools and Utilities (WIP)](active-directory/tools-and-utilities-wip.md)
 * [Useful Tips (WIP)](active-directory/useful-tips-wip.md)
 
@@ -202,6 +216,11 @@
 * [Related Concepts](digital-forensics/related-concepts.md)
 * [Tools and Utilities](digital-forensics/tools-and-utilities.md)
 * [Useful Tips](digital-forensics/useful-tips.md)
+
+## ☠️ Binary Explotation
+
+* [Introduction (WIP)](binary-explotation/introduction-wip.md)
+* [Pwn (WIP)](binary-explotation/pwn-wip.md)
 
 ## 📜 Scripting
 
@@ -253,7 +272,8 @@
   * [BountyHunter (Easy)](write-ups/htb-machines-wip/bountyhunter-easy.md)
   * [Crafty (Easy)](write-ups/htb-machines-wip/crafty-easy.md)
   * [Chemistry (Easy)](write-ups/htb-machines-wip/chemistry-easy.md)
+  * [Active (Easy) (WIP)](write-ups/htb-machines-wip/active-easy-wip.md)
   * [Titanic (Easy)](write-ups/htb-machines-wip/titanic-easy.md)
-  * [Dog (Easy) (WIP)](write-ups/htb-machines-wip/dog-easy-wip.md)
+  * [Dog (Easy)](write-ups/htb-machines-wip/dog-easy.md)
 * [HTB Challenges](write-ups/htb-challenges-wip.md)
 * [HTB Advanced labs](write-ups/htb-challenges-wip-1.md)

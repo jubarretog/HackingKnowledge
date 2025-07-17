@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Learning Platforms
 
-Today cybersecurity skills are more important than ever, and dedicated **learning platforms** provide an engaging and effective way to develop these skills.&#x20;
+Today, cybersecurity skills are more important than ever, and dedicated **learning platforms** provide an engaging and effective way to develop these skills.&#x20;
 
 These platforms offer interactive environments where individuals can practice their cybersecurity knowledge through hands-on challenges and real-world scenarios.
 

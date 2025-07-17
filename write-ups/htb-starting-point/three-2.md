@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Bike (Tier 1)
 
 ## <mark style="color:blue;">Description</mark>
@@ -63,19 +49,19 @@ nmap 10.129.97.64 -p- -Pn --min-rate 2500 -oN scan.txt
 
 ***
 
-* As I found the HTTP service on port 80, I went to the browser to check the content being deployed. I found a simple website that let me introduce an email address and send this information. After filling out the form and hitting the _Submit_ button, I obtained a response from the website including the information submitted
+* As I found the HTTP service on port 80, I went to the browser to check the content being deployed. I found a simple website where I could submit an email address and send this information. After filling out the form and hitting the _Submit_ button, I obtained a response from the website, including the information submitted
 
 <figure><img src="../../.gitbook/assets/image (306).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (304).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* I reviewed the source code but didn't find anything interesting, so to learn more about the components of the website I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension
+* I reviewed the source code but didn't find anything interesting, so to learn more about the components of the website, I used the [_Wappalyzer_](../../web-exploitation/tools-and-utilities.md#wappalyzer) extension
 
 <figure><img src="../../.gitbook/assets/image (307).png" alt=""><figcaption></figcaption></figure>
 
@@ -95,17 +81,17 @@ To learn more about the HTTP protocol you can go [here](../../networks/protocols
 
 ***
 
-* To test some vulnerabilities in the insertion point, I inserted some XSS payloads in the form but didn't get any results. So after that, I tried with some SSTI payloads and noticed that using an input of _\{{7\*7\}}_ I caused an error on the page, letting us know it could be vulnerable to this attack
+* To test some vulnerabilities in the insertion point, I inserted some XSS payloads in the form, but didn't get any results. So after that, I tried with some SSTI payloads and noticed that using an input of _\{{7\*7\}}_ I caused an error on the page, letting us know it could be vulnerable to this attack
 
 <figure><img src="../../.gitbook/assets/image (317).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../web-exploitation/broken-access-control/cross-site-scripting.md), and to learn more about Server-Side Template Injection (SSTI) attacks you can go [here](../../web-exploitation/broken-access-control/server-side-template-injection.md)
+To learn more about Cross-Site Scripting (XSS) attacks, you can go [here](../../web-exploitation/broken-access-control/cross-site-scripting.md), and to learn more about Server-Side Template Injection (SSTI) attacks, you can go [here](../../web-exploitation/broken-access-control/server-side-template-injection.md)
 {% endhint %}
 
 ***
 
-* This gave me information about some folders and components being used by the server to deploy the web page, for example, that it was using the [_Handlebars_](https://www.npmjs.com/package/handlebars) template engine. So I reviewed some vector attacks for this engine and with some [research](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#handlebars-nodejs), I found a payload to abuse it
+* This gave me information about some folders and components being used by the server to deploy the web page, for example, that it was using the [_Handlebars_](https://www.npmjs.com/package/handlebars) template engine. So I reviewed some vector attacks for this engine, and with some [research](https://book.hacktricks.xyz/pentesting-web/ssti-server-side-template-injection#handlebars-nodejs), I found a payload to abuse it
 
 {% code title="SSTI_Found_Payload" overflow="wrap" lineNumbers="true" %}
 ```handlebars
@@ -141,7 +127,7 @@ To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../w
 
 ***
 
-* After that, I intercept the petition sent to modify the content and send this payload. To do so, I used [_Foxyproxy_](../../web-exploitation/tools-and-utilities.md#foxyproxy) to intercept the petition and send it to [_Burpsuite_](../../web-exploitation/tools-and-utilities.md#burp-suite) to modify it. After catching it with the proxy I sent it to the _Repeater_ tab to resend it
+* After that, I intercept the petition sent to modify the content and send this payload. To do so, I used [_FoxyProxy_](../../web-exploitation/tools-and-utilities.md#foxyproxy) to intercept the petition and send it to [_Burp Suite_](../../web-exploitation/tools-and-utilities.md#burp-suite) to modify it. After catching it with the proxy, I sent it to the _Repeater_ tab to resend it
 
 <figure><img src="../../.gitbook/assets/image (322).png" alt=""><figcaption></figcaption></figure>
 
@@ -181,7 +167,7 @@ To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../w
 
 ***
 
-* Searching about this error, I found out it was because the _require_ function used in line 9 of our payload, couldn't be in the internal environment of the deployment so I had to find a way to modify it for my purposes. After a little [research](https://nodejs.org/api/process.html#processmainmodule), we found an alternative to the use of the _require_ function via the _process.mainModule_ property. So I adapted the payload to work with this and resent it
+* Searching about this error, I found out it was because the _require_ function used in line 9 of our payload couldn't be in the internal environment of the deployment, so I had to find a way to modify it for my purposes. After a little [research](https://nodejs.org/api/process.html#processmainmodule), we found an alternative to the use of the _require_ function via the _process.mainModule_ property. So I adapted the payload to work with this and resent it
 
 {% code title="SSTI_New_Payload" overflow="wrap" lineNumbers="true" %}
 ```handlebars
@@ -211,7 +197,7 @@ To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../w
 
 ***
 
-* I noticed the server processed it without errors, but instead of executing the command was returning what seemed to be _JavaScript_ objects. This could be because the _exec_ function was not available within the environment context. After a lot of [research](https://nodejs.org/api/child_process.html), I found other possible functions from the _child\_process_ module that could let us execute commands. Trying all possible options we found that by using the _execSync_ function and resending the petition, I finally did it work
+* I noticed the server processed it without errors, but instead of executing the command was returning what seemed to be _JavaScript_ objects. This could be because the _exec_ function was not available within the environment context. After a lot of [research](https://nodejs.org/api/child_process.html), I found other possible functions from the _child\_process_ module that could let us execute commands. Trying all possible options, we found that by using the _execSync_ function and resending the petition, I finally made it work
 
 {% code title="SSLI_Final_Payload" overflow="wrap" lineNumbers="true" %}
 ```handlebars
@@ -249,7 +235,7 @@ To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../w
 
 ***
 
-* That revealed I had gained _RCE_ as the _root_ user, so by abusing this method, I listed the files from the _/root_ folder. There I found a _flag.txt_ file, and once again, used the _RCE_ to read the content of this file which gave me the flag
+* That revealed I had gained _RCE_ as the _root_ user, so by abusing this method, I listed the files from the _/root_ folder. There I found a _flag.txt_ file, and once again, used the _RCE_ to read the content of this file, which gave me the flag
 
 <figure><img src="../../.gitbook/assets/image (328).png" alt=""><figcaption></figcaption></figure>
 
@@ -265,7 +251,7 @@ To learn more about Cross-Site Scripting (XSS) attacks you can go [here](../../w
 
 ## <mark style="color:blue;">Alternative Reverse Shell</mark>
 
-* I tried to gain a reverse shell abusing the RCE and sending a proper payload. I started sending a [_Netcat_ ](../../networks/tools-and-utilities.md#netcat)listener on my machine and sent the petition with the payload
+* I tried to gain a reverse shell by abusing the RCE and sending a proper payload. I started sending a [_Netcat_ ](../../networks/tools-and-utilities.md#netcat)listener on my machine and sent the petition with the payload
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -301,6 +287,6 @@ nc -nlvp 4444
 
 ***
 
-* I observed I didn't receive any response from the server, but checking the listener I had caught a shell as the _root_ user
+* I observed that I didn't receive any response from the server, but checking the listener, I had caught a shell as the _root_ user
 
 <figure><img src="../../.gitbook/assets/image (590).png" alt=""><figcaption></figcaption></figure>

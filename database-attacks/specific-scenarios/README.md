@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Attack Techniques
 
 Databases are essential for modern applications, storing vast amounts of sensitive information, including user credentials, financial records, and proprietary data. Attackers target databases to extract, modify, or delete information, often leading to data breaches, privilege escalation, and system compromise.

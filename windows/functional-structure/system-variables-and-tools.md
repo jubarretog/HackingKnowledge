@@ -1,24 +1,10 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Environment Variables and System Tools
 
 In _Windows_, similar to _Linux_, **environment variables** play a crucial role in influencing how the operating system and its applications behave.
 
 They can be accessed through the Command Prompt, PowerShell, and other methods, and can be identified because they start and end with the `%` symbol.
 
-Here is a list of some of the most usual environment variables:
+Here is a list of some of the most common environment variables:
 
 * **`%WINDIR%`/ `%SystemRoot%`:** Location for the operating system files (_C:\Windows_)
 * &#x20;**`%PATH%`**: Specifies directories to search for executable files
@@ -31,8 +17,8 @@ Here is a list of some of the most usual environment variables:
 * **`%SystemDrive%`:** Drive letter where _Windows_ is installed (usually _C:_)
 * **`%COMPUTERNAME%`:** The name of the computer on the network
 * **`%USERNAME%`:** The name of the currently logged-in user
-* **`%DATE%`:** The current system date which is formatted based on the regional settings
-* **`%TIME%`:** The current system time which is formatted based on the regional settings
+* **`%DATE%`:** The current system date, which is formatted based on the regional settings
+* **`%TIME%`:** The current system time, which is formatted based on the regional settings
 * **`%NUMBER_OF_PROCESSORS%`:** The number of processors installed on the machine
 * **`%PROCESSOR_ARCHITECTURE%`:** The architecture of the processor, such as _AMD64_ for 64-bit or _x86_ for 32-bit
 * **`%SESSIONNAME%`:** The name of the current session, useful for differentiating between multiple user sessions
@@ -43,7 +29,7 @@ Also, _Windows_ provides a variety of **system tools** that allow users to confi
 * **`msconfig`:** System configuration, related to startup options
 * **`taskmgr`:** Task Manager
 * **`msinfo32`:** System information, view of your hardware, system components, and software environment
-* **`resmon`:** Resource Monitor, shows the process and aggregate CPU, memory, disk, and network usage information
+* **`resmon`:** Resource Monitor shows the process and aggregate CPU, memory, disk, and network usage information
 * **`compmgmt.msc`:** Computer Management
 * **`lusrmgr.msc`:** Information about local users and groups of the device
 * **`control.exe`:** Control Panel

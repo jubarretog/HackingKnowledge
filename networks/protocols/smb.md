@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SMB
 
 **Server Message Block** is a network file-sharing protocol that allows applications and users to access files, printers, and other resources on a remote server as if they were local. It operates in the Application layer on ports 445 and 139 and is widely used in _Windows_ networks.

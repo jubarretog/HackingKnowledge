@@ -1,20 +1,6 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
+# Brute-force subdomains
 
-# Bruteforce subdomains
-
-Knowing the domain of a site and its DNS server IP, we could bruteforce the subdomains to get access to other exposed sites
+Knowing the domain of a site and its DNS server IP, we could brute-force the subdomains to get access to other exposed sites.
 
 * Bruteforce using a dictionary of well-known names
 
@@ -25,7 +11,7 @@ for sub in $(cat /opt/useful/SecLists/Discovery/DNS/subdomains-top1million-11000
 {% endcode %}
 
 {% hint style="info" %}
-We have to set the _Domain_ and _DNSip_ values and the result will be saved in _subdomains.txt_
+We have to set the _Domain_ and _DNSip_ values, and the result will be saved in _subdomains.txt_
 {% endhint %}
 
 ***

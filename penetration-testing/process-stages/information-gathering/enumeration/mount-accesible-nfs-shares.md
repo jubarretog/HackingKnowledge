@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Mount accesible NFS Shares
 
-We can mount an NFS being shared over the network if we find an active NFS service running in a target machine.
+We can mount an NFS that is being shared over the network if we find an active NFS service running on a target machine.
 
-* Check if exist any NFS share
+* Check if any NFS share exists
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

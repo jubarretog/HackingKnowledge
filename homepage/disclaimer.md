@@ -1,21 +1,7 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Disclaimer
 
 {% hint style="danger" %}
-This page is intended solely for **educational and informational purposes**. All the practices and techniques presented here, are only for their application under the cybersecurity and ethical hacking boundaries. **They must not be used for any illegal or malicious activity.**
+This page is intended solely for **educational and informational purposes**. All the practices and techniques presented here are only for their application under the cybersecurity and ethical hacking boundaries. **They must not be used for any illegal or malicious activity.**
 
 &#x20;                                    <img src="../.gitbook/assets/image (266) (1).png" alt="" data-size="original">
 

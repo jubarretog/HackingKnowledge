@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Crontabs
 
 The **Crontabs** are special files with formatting that are recognized by the _cron_ process to execute each line step-by-step at a regular time. They can be broken down as follows:
@@ -31,5 +17,5 @@ $MIN $HOUR $DOM $MON $DOW $COM   #Example below
 {% endcode %}
 
 {% hint style="info" %}
-The `*` let are used to skip specific values
+The `*` is used to skip specific values
 {% endhint %}

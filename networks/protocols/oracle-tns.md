@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Oracle TNS
 
 The **Oracle Transparent Network Substrate** is a proprietary networking protocol used by Oracle Database to facilitate communication between clients and database servers. It operates at the Application Layer and typically uses TCP port 1521 by default.

@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # SQL
 
 **Structured Query Language** is the standard language for managing and manipulating relational databases. It allows users to create, read, update, and delete data within a database through simple, structured commands.
@@ -20,7 +6,7 @@ layout:
 
 Mastery of SQL is essential for understanding and manipulating the queries used by systems that utilize this language.
 
-## <mark style="color:blue;">Structure</mark>
+## <mark style="color:blue;">Database Structure</mark>
 
 We can find that all the SQL Databases have a collection named _Information Schema_ that provides metadata about the database itself and lets us know about the structure of the database, such as tables, columns, data types, views, and user privileges.
 
@@ -31,7 +17,7 @@ It also shows information about all other databases the user has access to. It c
   * table\_schem
   * table\_name
   * table\_type
-* _**information\_schema.columns**_**:** Information of every column from tables
+* _**information\_schema.columns**_**:** Information about every column from tables
   * table\_schema: Database where the table is
   * table\_name: Name of the table
   * column \_name: Name of column from a specified table

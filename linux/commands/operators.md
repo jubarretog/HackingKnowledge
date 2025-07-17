@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Operators
 
 The **Command Operators** allow users to control the flow of commands and processes in the terminal, offering greater flexibility and efficiency. Here is an explanation of their use:
@@ -36,7 +22,7 @@ $command1 ; $command2
 {% endcode %}
 
 {% hint style="info" %}
-When using `&&` the next command only will be executed if the previous one was successful
+When using `&&` the next command will only be executed if the previous one was successful
 {% endhint %}
 
 ***
@@ -50,40 +36,40 @@ $command > $filename
 {% endcode %}
 
 {% hint style="info" %}
-If the file doesn't exit it will be created, and if it exists it will be overwritten
+If the file doesn't exist, it will be created, and if it exists, it will be overwritten
 {% endhint %}
 
 ***
 
-* Redirects the output of a command to a file but it appends it to the final instead of overwriting it
+* Redirects the output of a command to a file, but it appends it to the final instead of overwriting it
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command >> $filename
 </strong></code></pre>
 
 ***
 
-* Tooks content from a file
+* Takes content from a file
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C; $filename
 </strong></code></pre>
 
 ***
 
-* Tooks content from a stream
+* Takes content from a stream
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command &#x3C;&#x3C; $stream #Ex: cat &#x3C;&#x3C; EOF   
 </strong></code></pre>
 
 ***
 
-* Pass the result of a command as a parameter for the other
+* Pass the result of a command as a parameter to another command
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 | $command2
 </strong></code></pre>
 
 ***
 
-* Cath an error into a file
+* Catch an error in a file
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>$command1 2>$filename
 </strong></code></pre>

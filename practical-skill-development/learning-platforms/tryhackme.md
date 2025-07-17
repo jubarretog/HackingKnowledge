@@ -1,22 +1,8 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # TryHackMe
 
-[_**Tryhackme**_](https://tryhackme.com) is an online cybersecurity training platform designed to provide hands-on learning through interactive labs, virtual machines, and challenges.
+[_**TryHackMe**_](https://tryhackme.com) is an online cybersecurity training platform designed to provide hands-on learning through interactive labs, virtual machines, and challenges.
 
-&#x20;It caters to individuals at all skill levels, from complete beginners to advanced professionals using a gamified approach to cybersecurity education, making learning engaging and accessible.
+&#x20;It caters to individuals at all skill levels, from complete beginners to advanced professionals, using a gamified approach to cybersecurity education, making learning engaging and accessible.
 
 <figure><img src="../../.gitbook/assets/tryhackme_logo_full.svg" alt=""><figcaption><p><a href="https://tryhackme.com/dashboard">https://tryhackme.com</a></p></figcaption></figure>
 

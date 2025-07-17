@@ -1,17 +1,3 @@
----
-layout:
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Introduction
 
 Refers to writing small programs called scripts to automate tasks, manage systems, or perform repetitive actions more efficiently. In cybersecurity, scripting is a powerful tool that allows professionals to streamline tasks such as network scanning, system monitoring, and vulnerability testing.&#x20;
