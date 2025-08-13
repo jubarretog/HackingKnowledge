@@ -54,7 +54,7 @@ nmap -p21,80 -sVC 10.129.1.15
 <figure><img src="../../.gitbook/assets/image (200) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp/)
 {% endhint %}
 
 ***

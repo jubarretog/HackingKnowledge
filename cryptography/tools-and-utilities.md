@@ -130,7 +130,9 @@ hashcat --help | grep -i $keyword
 
 {% code overflow="wrap" lineNumbers="true" %}
 ```bash
-hashcat -a $attackmode -m $modecode $file.hash $dictionary
+hashcat -a $attackmode -m $modecode $file $dictionary
+hashcat -a 0 -m 0 md5.txt /usr/share/wordlists/rockyou.txt #MD5 Cracking
+hashcat -a 0 -m 16500 jwt.txt /usr/share/wordlists/rockyou.txt #JWT Cracking
 ```
 {% endcode %}
 

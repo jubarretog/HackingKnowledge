@@ -22,4 +22,11 @@ Vulnerabilities are often categorized based on their nature and the type of thre
 
 The relationship between vulnerabilities, threats, and risks is essential for assessing and mitigating security issues effectively. This relation exposes that by reducing vulnerabilities and implementing security controls, organizations can lower their risk exposure to a threat as follows:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://s7280.pcdn.co/wp-content/uploads/2020/05/threat-risk.png">https://s7280.pcdn.co/wp-content/uploads/2020/05/threat-risk.png</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://s7280.pcdn.co/wp-content/uploads/2020/05/threat-risk.png">https://s7280.pcdn.co/wp-content/uploads/2020/05/threat-risk.png</a></p></figcaption></figure>
+
+These concepts can be understood as follows:
+
+* **Vulnerability:** A weakness in a system, process, or person that can be exploited by a threat
+* **Threat:** Any circumstance, event, or actor that can cause damage to an organization's information assets
+* **Risk:** The possibility of a threat exploiting a vulnerability and generating a negative impact. It is calculated as _Risk = Probability x Impact_
+  * **Impact:** The negative effect a security incident can have, which can affect confidentiality, integrity, availability, or cause financial or reputational damage

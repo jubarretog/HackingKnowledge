@@ -71,7 +71,7 @@ ftp 10.129.95.174
 <figure><img src="../../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp.md)
+To learn more about the FTP protocol, you can go [here](../../networks/protocols/ftp/)
 {% endhint %}
 
 ***

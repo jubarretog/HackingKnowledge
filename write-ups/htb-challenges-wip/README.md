@@ -2,7 +2,7 @@
 
 **HTB Challenges** are short, self-contained exercises designed to test and enhance specific cybersecurity skills without the need to compromise an entire machine,  ideal for sharpening techniques, learning new attack vectors, and practicing specialized areas of cybersecurity.
 
-Their goal is to solve a single problem in a specific knowledge area, and some of them are uploaded from previous HTB [CTF](../practical-skill-development/capture-the-flag-ctf-competitions.md) events. They are also categorized by difficulty in the same form as the machines, and by their field of knowledge as follows:
+Their goal is to solve a single problem in a specific knowledge area, and some of them are uploaded from previous HTB [CTF](../../practical-skill-development/capture-the-flag-ctf-competitions.md) events. They are also categorized by difficulty in the same form as the machines, and by their field of knowledge as follows:
 
 * **AI-ML:** Challenges related to attacking or defending AI and machine learning models
 * **Blockchain:** Tests knowledge of blockchain technology, cryptocurrency, and smart contracts

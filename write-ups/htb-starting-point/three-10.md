@@ -102,7 +102,7 @@ nmap 10.129.156.215 -sU -oN UDP_scan.txt
 <figure><img src="../../.gitbook/assets/image (428).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
-To learn more about the TFTP protocol, you can go [here](../../networks/protocols/tftp.md)
+To learn more about the TFTP protocol, you can go [here](../../networks/protocols/ftp/tftp.md)
 {% endhint %}
 
 ***

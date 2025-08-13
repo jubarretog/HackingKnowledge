@@ -1,6 +1,6 @@
-# Encoding
+# Encoding (WIP)
 
-**Encoding** is the process of transforming data into a different format using a specific scheme to standardize the way data can be stored, transmitted, or interpreted. Unlike encryption, encoding does not provide confidentiality or use a key, but plays a crucial role in interoperability and data exchange across diverse platforms and applications.
+**Encoding** is the process of transforming data into a different format using a specific scheme to standardize the way data can be stored, transmitted, or interpreted. Unlike encryption, encoding does not provide confidentiality or use a key, but plays a crucial role in compatibility for data exchange across diverse platforms and applications.
 
 Here we find some common encoding methods:
 
@@ -10,7 +10,7 @@ It is a 7-bit encoding standard that represents text using integer values in the
 
 Here we find a little function to convert ASCII values into a readable string:
 
-{% code title="ASCII_to_String.py" overflow="wrap" lineNumbers="true" %}
+{% code title="ASCII_Decode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts ASCII values to a string
 def ASCII_to_String(ascii_numbers): #This accepts a list
@@ -28,7 +28,7 @@ print("Recovered String:", ASCII_to_String(ascii_numbers))
 
 In the same way, here we find a little function to convert a string into ASCII values:
 
-{% code title="String_to_ASCII.py" overflow="wrap" lineNumbers="true" %}
+{% code title="ASCII_Encode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts a string to ASCII values
 def String_to_ASCII(message): #This accepts a string
@@ -53,7 +53,7 @@ It's common to use it to encode data for transport in a more portable format, an
 
 Here we find a little script to convert a hex string into bytes:
 
-{% code title="Hex_to_Bytes.py" overflow="wrap" lineNumbers="true" %}
+{% code title="Hex_Decode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts a base64 string to a string
 def Hex_to_Bytes(hex_value):
@@ -68,7 +68,7 @@ print("Recovered Bytes:", Hex_to_Bytes(hex_value))
 
 In the same way, here we find a little script to convert bytes into a hex string:
 
-{% code title="Bytes_to_Hex.py" overflow="wrap" lineNumbers="true" %}
+{% code title="Hex_Encode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts a string to a base64 string
 def Bytes_to_Hex(message):
@@ -91,7 +91,7 @@ Base64 is most commonly used online, so binary data such as images can be easily
 
 Here we find a little script to convert a base64 string into bytes:
 
-{% code title="Base64_to_Bytes" overflow="wrap" lineNumbers="true" %}
+{% code title="Base64_Decode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts a base string into bytes       
 import base64
@@ -108,7 +108,7 @@ print("Recovered Bytes:", Base64_to_Bytes(base64_value))
 
 In the same way, here we find a little script to convert bytes into a base64 string:
 
-{% code title="Bytes_to_Base64" overflow="wrap" lineNumbers="true" %}
+{% code title="Base64_Encode.py" overflow="wrap" lineNumbers="true" %}
 ```python
 # This script converts a string to base64 values
 import base64
@@ -120,5 +120,27 @@ def Bytes_to_Base64(message):
 #Usage Example
 message = b"FLAG{f4k3_fl4g_f0r_t3st1ng}"
 print("Hex String:", Bytes_to_Base64(message))
+```
+{% endcode %}
+
+## <mark style="color:blue;">URL</mark>
+
+This i
+
+Here we find a little script to convert a URL string into bytes:
+
+{% code title="URL_Decode.py" overflow="wrap" lineNumbers="true" %}
+```python
+# This script converts a base string into bytes       
+import base64
+```
+{% endcode %}
+
+In the same way, here we find a little script to convert bytes into a URL string:
+
+{% code title="URL_Encode.py" overflow="wrap" lineNumbers="true" %}
+```python
+# This script converts a string to base64 values
+import base64
 ```
 {% endcode %}

@@ -150,33 +150,3 @@ xored = b'KALJvk9f>Rka9jRk=\x7fRy>~y<cjp'
 print("Result", xor(xored, 13))
 ```
 {% endcode %}
-
-## <mark style="color:blue;">Modular Arithmetic</mark>
-
-It is a mathematical system that deals with integers and their remainders when divided by a specific positive number, known as the modulus.
-
-Instead of traditional arithmetic, where numbers can grow indefinitely, modular arithmetic operates on the principle of congruenc&#x65;**,** which gives a cyclic behavior to the numerical groups limited by the modulus value.
-
-It enables operations over bounded sets, supports cyclic structures, and ensures that results stay within predictable limits, making it ideal for environments with constraints on data size, such as embedded systems or secure key generation.
-
-It is implemented in many areas of computer science and cryptography, particularly in:
-
-* Hashing algorithms
-* Checksums and error detection
-* Cryptographic protocols like RSA and Diffie-Hellman
-* Finite fields in elliptic curve cryptography
-
-Here we can describe some important concepts that are part of this field:
-
-### <mark style="color:purple;">Congruence</mark>
-
-Two integers `a` and `b` are said to be congruent modulo `n` If they leave the same remainder when divided by `n`. This is written as:
-
-This could be understood in different ways:
-
-* `a` and `b` have the same remainder when divided by `n`. For example, `14%3 = 2` and `5%3 = 2`, where the symbol `%` represents the remainder of the division (Also known as the modulo operator)
-* `a` and `b` are congruent modulo `n` because `a-b` is divisible by `n`.\
-  For example, `14≡5 mod 3`. As `14-5=9`, and `9` is divisible by `3`
-* Exits a value k that satisfies `n*k = a-b`\
-  In the same way, `14` is congruent with `5` modulo `3` because with `k = 3` it satifies `3*3 = 14-5`
-

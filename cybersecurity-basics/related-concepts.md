@@ -23,7 +23,7 @@
 * **IPS:** Intrusion Prevention System uses a set of traffic signatures that match and block malicious traffic and attacks
 * **IDS:** Intrusion Detection System, detects unauthorized network and system intrusions. It will not take action and won't prevent attacks from happening, just detect, log, and report
 * **DLP:** Data Loss Prevention, a system designed to stop sensitive data from being stolen from or escaping a network
-* **SIEM:** Security Information and Event Management, the system collects and analyzes security alerts, logs, and other real-time and historical data
+* **SIEM:** Security Information and Event Management, when a system collects and analyzes security alerts, logs, and other real-time and historical data
 * **Defense-In-Depth:** Practice of putting different layers of security controls together in a system to guarantee security
 * **SAMM:** Software Assurance Maturity Model, a framework to help organizations evaluate and improve their software security practices. It provides a way to analyze and improve the secure development lifecycle. The most well-known is the [_OWASP_](https://owasp.org/www-project-samm/) version
 * **PIM:** Privileged Identity Management translates a user's role within an organization into an access role on a system
@@ -39,3 +39,7 @@
 * **Default Safe:** A security design principle where a system is configured to be in the safest possible state, unless an explicit action is taken to remove those protections
 * **CWE:** Common Weakness Enumeration, a list of software weaknesses to create a common language to describe software security weaknesses that are the root causes of given vulnerabilities
 * **PII:** Personally Identifiable Information is any information that can be used to identify an individual, either on its own or when combined with other data
+  * **Linkable Information:** Data that, when combined, allows a person to be identified.
+  * **Sensitive Information:** Data that affects the intimate life of the holder and must be treated with extreme care
+* **PCI:** Payment Card Industry refers to the information related to payment cards. It should be handled in compliance with PCI DSS standards to process this data securely
+* **S-SDLC:** Secure Software Development Life Cycle, Approach that seeks to integrate security at every stage of software development, identifying and mitigating vulnerabilities from the beginning

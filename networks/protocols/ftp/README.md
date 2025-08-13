@@ -2,7 +2,7 @@
 
 **File Transfer Protocol** is a standard network protocol used for transferring files between a client and a server. It operates in the Application layer and uses various authentication methods, including username and password authentication.&#x20;
 
-Similar to [Telnet](telnet.md), it sends data in plain text, making it vulnerable to eavesdropping, supports different network configurations to handle firewalls and NAT. Uses usually port 21, known as Control Channel, to handle commands and responses, and port 20, known as Data Channel, to transfer files.
+Similar to [Telnet](../telnet.md), it sends data in plain text, making it vulnerable to eavesdropping, supports different network configurations to handle firewalls and NAT. Uses usually port 21, known as Control Channel, to handle commands and responses, and port 20, known as Data Channel, to transfer files.
 
 ## <mark style="color:green;">Interaction with the protocol</mark>
 

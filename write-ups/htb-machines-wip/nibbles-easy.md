@@ -114,7 +114,7 @@ To learn more about File Upload exploitation, you can go [here](../../web-exploi
 
 * There I found some already installed plugins, and after exploring them, the _My Image_ plugin caught my attention because it had an option to upload a picture file, a point that I could abuse
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ***
 

@@ -8,7 +8,7 @@ On the other side, **Common Weakness Enumeration (CWE)** is a list and classific
 
 The **Common Vulnerability Scoring System** is an industry standard for categorizing the severity associated with an issue, calculating a score that consists of the exploitability and impact of an issue. This calculation is based on three principal groups of metrics:
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://www.first.org/cvss/v3-1/media/MetricGroups.svg">https://www.first.org/cvss/v3-1/media/MetricGroups.svg</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><a href="https://www.first.org/cvss/v3-1/media/MetricGroups.svg">https://www.first.org/cvss/v3-1/media/MetricGroups.svg</a></p></figcaption></figure>
 
 * **Base Metric Group:** Represents the vulnerability characteristics and consists of exploitability metrics, which are a way to evaluate the technical means needed to exploit the issue, and impact metrics, which represent the repercussions of successfully exploiting an issue and what is impacted in an environment based on the CIA triad
 * **Temporal Metric Group:** Details the availability of exploits or patches regarding the issue. Consists of the exploit code maturity, which represents the probability of an issue being exploited based on ease of exploitation techniques, the remediation level used to identify the prioritization of a vulnerability, and the report confidence represents the validation of the vulnerability and how accurate the technical details of the issue are

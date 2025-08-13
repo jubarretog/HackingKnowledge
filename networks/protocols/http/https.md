@@ -1,18 +1,3 @@
----
-layout:
-  width: default
-  title:
-    visible: true
-  description:
-    visible: false
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
----
-
 # HTTPS
 
 **HTTPS** is the secure version of HTTP,  used to transfer data between web browsers and websites securely. All the data transmitted is encrypted using protocols like TLS (Transport Layer Security) or its predecessor, SSL (Secure Sockets Layer).

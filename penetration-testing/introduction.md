@@ -4,6 +4,8 @@
 
 In contrast to vulnerability or security assessments, which are performed using purely automated tools, penetration tests can be done using any accessible tool, whether manual or automated.
 
+It is also different from Bug Bounty, as in this last one, we just want to find punctual vulnerabilities, while in Pentest, the usual objective is to compromise the whole server or even the network.
+
 <figure><img src="../.gitbook/assets/image (37) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 The scope of the assessment must be defined from the kick-off. This scope can define network boundaries, assets we can interact with, tools and actions forbidden during the assessment, and other legal limitations.

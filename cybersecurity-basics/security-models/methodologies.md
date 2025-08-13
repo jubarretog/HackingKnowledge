@@ -33,3 +33,15 @@ Processes used by organizations to prepare for, detect, respond to, and recover 
 * **Eradication:** Remove the active threat and block the entry points
 * **Recovery:** Perform a full review of impacted systems to return to business-as-usual operations&#x20;
 * **Lessons Learned:** The things that can be learned from the incident and how to improve security in the system
+
+## <mark style="color:blue;">Security controls</mark>
+
+Security controls are safeguards or countermeasures prescribed for information systems, designed to minimize or manage risks. These controls are implemented to prevent, detect, and correct threats or vulnerabilities, and are fundamental components of any robust cybersecurity framework.
+
+They can be classified into:
+
+* **Preventive:** Designed to inhibit security incidents before they happen. They focus on stopping security breaches and minimizing the possibility of threats exploiting vulnerabilities
+* **Detective:** Help identify and alert administrators to incidents that have occurred or are in progress. These measures don't prevent incidents, but discover security events quickly to respond
+* **Corrective:** Aim to limit the extent of damage after a security incident, restore normal operations, and address vulnerabilities to prevent recurrence
+* **Administrative:** Based on organizational policies, procedures, and regulatory guidelines. They focus on the human element of security, influencing the way people act within an organization
+* **Physical:** Safeguard the physical environment and elements
